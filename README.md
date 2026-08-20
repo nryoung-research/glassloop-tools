@@ -1,0 +1,62 @@
+# glassloop-tools
+
+Self-contained instruments from an **auditable continual learning**
+research program: teaching facts and skills into LLM weights with the
+collateral damage priced in nats, casualty-directed repair, and verified
+revert — treating weight updates the way CI/CD treats code changes
+(measure, gate, roll back). Every tool in this repo was built and
+battle-tested inside that program before being packaged here. Each tool is
+a standalone directory: Python 3.10+, argparse CLIs, heavy dependencies
+imported lazily, and a selftest that runs without downloading any model.
+
+## Tool census
+
+| Tool | What it does | Status |
+|---|---|---|
+| [`tools/meter-check`](tools/meter-check/) | Adversarial checks on a measurement meter itself — prove the instrument cannot be gamed before trusting numbers from it | packaged from the source program; verify via its selftest |
+| [`tools/panel-bill`](tools/panel-bill/) | Price the collateral damage of a weight edit across a fixed probe panel, in nats | packaged from the source program; verify via its selftest |
+| [`tools/quant-bill`](tools/quant-bill/) | Price the damage of quantization with the same panel-bill units, so precision changes and weight edits are comparable | packaged from the source program; verify via its selftest |
+| [`tools/skillbench`](tools/skillbench/) | Mint a skill benchmark no model can have memorized: invented library, nickname-mapped tasks, execution-only scoring, deranged control | selftests passing in this packaging (50/50 scorer cases; all lesson checks) |
+| [`tools/freshknow`](tools/freshknow/) | Measure a frozen model's knowledge decay by effective year and its fresh-knowledge floor; keyed-hash teach/hidden split over FreshQA | selftest passing in this packaging (178 fixture checks; 296 against the real CSV) |
+
+Sibling repo: **weight-genealogy** — weight-space lineage detection
+(which released checkpoints descend from which), maintained separately.
+
+## Limitations (read before citing)
+
+- **Provenance is narrow.** Many defaults, thresholds, and design choices
+  in these tools were validated on a single model family at one or two
+  sizes (7B-class instruct models, mostly one vendor). The instruments
+  are general; the *default numbers* inherit that provenance. Recalibrate
+  on your own model before treating any default as meaningful.
+- **Tools are instruments, not verdicts.** A passing gate means "this
+  specific check, on this specific probe set, did not fire" — it is a
+  lower bound on problems, never proof of absence. Closed-set and
+  fixed-panel measurements systematically under-report damage.
+- **Cite the numbers, not the vibes.** Every claim these tools support
+  should be quoted with its measured value, its population, and its
+  instrument settings (loader, seeds, split hash). If a statement about a
+  model can't be traced to a logged number from a selftested meter, it is
+  not supported by this repo.
+
+## Verify before trust
+
+Each tool ships a selftest designed to prove the instrument cannot lie in
+either direction (correct inputs must pass, plausible-wrong inputs must
+fail with a logged reason). Run them before believing any output:
+
+```
+python tools/skillbench/selftest.py           # scorer: 50 adversarial cases
+python tools/skillbench/selftest_lessons.py   # after gen_tasks + gen_lessons: leak scan + re-execution
+python tools/freshknow/fq_selftest.py         # meter + split gates, synthetic fixture, no download
+python tools/meter-check/...                  # see tools/meter-check/README.md
+python tools/panel-bill/...                   # see tools/panel-bill/README.md
+python tools/quant-bill/...                   # see tools/quant-bill/README.md
+```
+
+A selftest that fails on your machine is a result: do not proceed to model
+measurements until it passes.
+
+## License and author
+
+MIT License (see [LICENSE](LICENSE)). Author: Nathan Ryan Young.

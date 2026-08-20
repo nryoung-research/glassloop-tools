@@ -1,0 +1,10 @@
+# Generated benchmark artifacts. Regenerate with your own seeds (and
+# ideally your own quirklib fork); solutions/ is grader-side only.
+tasks/
+solutions/
+specs/
+logs/
+manifest.json
+lessons_sft.jsonl
+lessons_sft_deranged.jsonl
+__pycache__/
