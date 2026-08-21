@@ -48,9 +48,16 @@ def chips(act, extra=""):
     r = rows[act]
     kz = " zero" if r["knows"] == 0 else ""
     dz = " zero" if r["damage"] == 0 else ""
+    # rev 3 (reviewer round 2): post-repair DAMAGE readings carry the
+    # meter status IN THE NUMBER, not only in body text - a skimmer
+    # must not take away a clean zero from a pinned meter.
+    pinned = act in ("act5", "act6", "act7")
+    dmg_txt = ("WATCH-LIST FAILURES %d/40 "
+               "<small>(post-repair, in-sample)</small>" % r["damage"]
+               if pinned else "DAMAGE %d" % r["damage"])
     return ('<div class="meters"><span class="chip knows%s">KNOWS %d/%d'
-            '</span><span class="chip dmg%s">DAMAGE %d</span>%s</div>'
-            % (kz, r["knows"], r["n_quiz"], dz, r["damage"], extra))
+            '</span><span class="chip dmg%s">%s</span>%s</div>'
+            % (kz, r["knows"], r["n_quiz"], dz, dmg_txt, extra))
 
 def caslist(act):
     r = rows[act]
@@ -205,9 +212,49 @@ A('<p class="note" style="margin-top:8px"><b>Measurement disclosure '
   'machinery scores repair on held-out and custodian-held shadow '
   'panels precisely because of this failure class (papers 29/31); '
   'this note applies the repo&rsquo;s own stated limitation to this '
-  'act. Surfaced by an external stranger-audit on 2026-08-21; all '
+  'act. Surfaced by an external LLM review on 2026-08-21; all '
   'numbers in this note are computed from the state ledger at page '
   'generation.</p>' % (_net5, _above5, _tga_txt))
+# rev 3: the sealed-panel post-hoc read and the teaching-
+# generalization probe, computed from their evidence files when
+# present (omitted gracefully otherwise). Prereg 4opC / 4opD.
+_p641 = os.path.join(os.path.dirname(STATE), "demo_v3", "panel641")
+_bj = os.path.join(_p641, "meas_base.json")
+_aj = os.path.join(_p641, "meas_act7.json")
+if os.path.exists(_bj) and os.path.exists(_aj):
+    _b = json.load(open(_bj, encoding="utf-8"))["margins"]
+    _a = json.load(open(_aj, encoding="utf-8"))["margins"]
+    _w = set(st["act0_margins"])
+    _out = [i for i in _b if i in _a and i not in _w]
+    _inn = [i for i in _b if i in _a and i in _w]
+    _oc = sum(1 for i in _out if _b[i] > 0 and _a[i] <= 0)
+    _on = sum(_a[i] - _b[i] for i in _out)
+    _ow = min(_a[i] - _b[i] for i in _out)
+    _ic = sum(1 for i in _inn if _b[i] > 0 and _a[i] <= 0)
+    A('<p class="note"><b>AUDIT DAMAGE (sealed 641-item panel, '
+      'post-hoc read):</b> inside the repair-trained watch-list, '
+      '%d/40 casualties (the pinned meter, confirmed by the '
+      'instrument of record). Outside it, on the %d items the repair '
+      'never saw: <b>%d casualties</b>, net %+.0f nats, worst single '
+      'item %+.1f nats. The repair moved damage from the watched '
+      'window to the unwatched population &mdash; this line is the '
+      'honest cost the watch-list could not see, measured after an '
+      'external LLM review demanded it. (Post-hoc read of a '
+      'demo-grade run; the campaign instrument commits its audit '
+      'panel to a custodian before the run.)</p>'
+      % (_ic, len(_out), _oc, _on, _ow))
+_pp = os.path.join(_p641, "paraprobe_report.json")
+if os.path.exists(_pp):
+    _r = json.load(open(_pp, encoding="utf-8"))
+    A('<p class="note"><b>Teaching generalization (unseen '
+      'phrasings):</b> the five taught facts, asked via 20 '
+      'LLM-authored paraphrases (screened: no verbatim question '
+      'text, no answer leakage): the learned state answers '
+      '<b>%.0f%%</b> (base model: %.0f%%; trained question strings: '
+      '%.0f%%). KNOWS is scored on the trained strings &mdash; this '
+      'line is what transfers beyond them.</p>'
+      % (_r["act7"]["para_rate"] * 100, _r["base"]["para_rate"] * 100,
+         _r["act7"]["direct_rate"] * 100))
 A('<p class="note">All four lessons intact through repair. Repair here '
   'is demo-grade; the sealed campaign machinery is paper&nbsp;31.</p>')
 A('</div></div>')

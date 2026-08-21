@@ -166,26 +166,28 @@
 </div></div>
 <div class="act"><div class="actno">Act 5</div><div>
 <h2>The repair: nine casualties to zero, by name</h2>
-<div class="meters"><span class="chip knows">KNOWS 4/4</span><span class="chip dmg zero">DAMAGE 0</span></div>
+<div class="meters"><span class="chip knows">KNOWS 4/4</span><span class="chip dmg zero">WATCH-LIST FAILURES 0/40 <small>(post-repair, in-sample)</small></span></div>
 <p class="note">Each round re-teaches the current casualties&rsquo; own true statements at low learning rate, then re-measures. Healing churns &mdash; rounds create new wounds while closing old ones &mdash; and converges. The hard gate: if repair had cost any taught fact, the script kills the take. KNOWS stayed 4/4.</p>
 <div class="rounds"><table><tr><th>round</th><th>healed</th><th>new wounds</th><th>remaining</th></tr>
 <tr><td>1</td><td class="heal">9</td><td class="wound">6</td><td>6</td></tr>
 <tr><td>2</td><td class="heal">6</td><td class="wound">2</td><td>2</td></tr>
 <tr><td>3</td><td class="heal">2</td><td class="wound">0</td><td class="zero-cell">0</td></tr>
 </table></div>
-<p class="note" style="margin-top:8px"><b>Measurement disclosure (rev&nbsp;2):</b> the repair trains on the watch-list&rsquo;s own items, so DAMAGE&nbsp;0 here means <i>the meter reads clean</i>, not <i>healed to baseline</i> &mdash; after repair the watch-list sits far above the base model (net +270 nats across the 40 items; 37/40 items above their base margins); the repaired statements generalize to unseen phrasings at only 11% &rarr; 7% &rarr; 6% across the rounds (exact probe restoration: 100%). Acts 6 and 7&rsquo;s DAMAGE readings below are taken on this pinned meter, whose headroom makes zero-crossings unlikely by construction &mdash; they are weaker evidence than Acts 1&ndash;4&rsquo;s numbers. The sealed campaign machinery scores repair on held-out and custodian-held shadow panels precisely because of this failure class (papers 29/31); this note applies the repo&rsquo;s own stated limitation to this act. Surfaced by an external stranger-audit on 2026-08-21; all numbers in this note are computed from the state ledger at page generation.</p>
+<p class="note" style="margin-top:8px"><b>Measurement disclosure (rev&nbsp;2):</b> the repair trains on the watch-list&rsquo;s own items, so DAMAGE&nbsp;0 here means <i>the meter reads clean</i>, not <i>healed to baseline</i> &mdash; after repair the watch-list sits far above the base model (net +270 nats across the 40 items; 37/40 items above their base margins); the repaired statements generalize to unseen phrasings at only 11% &rarr; 7% &rarr; 6% across the rounds (exact probe restoration: 100%). Acts 6 and 7&rsquo;s DAMAGE readings below are taken on this pinned meter, whose headroom makes zero-crossings unlikely by construction &mdash; they are weaker evidence than Acts 1&ndash;4&rsquo;s numbers. The sealed campaign machinery scores repair on held-out and custodian-held shadow panels precisely because of this failure class (papers 29/31); this note applies the repo&rsquo;s own stated limitation to this act. Surfaced by an external LLM review on 2026-08-21; all numbers in this note are computed from the state ledger at page generation.</p>
+<p class="note"><b>AUDIT DAMAGE (sealed 641-item panel, post-hoc read):</b> inside the repair-trained watch-list, 0/40 casualties (the pinned meter, confirmed by the instrument of record). Outside it, on the 601 items the repair never saw: <b>35 casualties</b>, net -219 nats, worst single item -27.0 nats. The repair moved damage from the watched window to the unwatched population &mdash; this line is the honest cost the watch-list could not see, measured after an external LLM review demanded it. (Post-hoc read of a demo-grade run; the campaign instrument commits its audit panel to a custodian before the run.)</p>
+<p class="note"><b>Teaching generalization (unseen phrasings):</b> the five taught facts, asked via 20 LLM-authored paraphrases (screened: no verbatim question text, no answer leakage): the learned state answers <b>80%</b> (base model: 0%; trained question strings: 100%). KNOWS is scored on the trained strings &mdash; this line is what transfers beyond them.</p>
 <p class="note">All four lessons intact through repair. Repair here is demo-grade; the sealed campaign machinery is paper&nbsp;31.</p>
 </div></div>
 <div class="act"><div class="actno">Act 6</div><div>
 <h2>Pressed to int8</h2>
-<div class="meters"><span class="chip knows">KNOWS 4/4</span><span class="chip dmg zero">DAMAGE 0</span></div>
+<div class="meters"><span class="chip knows">KNOWS 4/4</span><span class="chip dmg zero">WATCH-LIST FAILURES 0/40 <small>(post-repair, in-sample)</small></span></div>
 <p class="note">The whole learned state squeezed through a simulated int8 lattice (round-to-nearest in place &mdash; not a packed artifact). Every lesson survives the press; the watch-list takes zero observed casualties (read on the post-repair meter &mdash; see the Act&nbsp;5 disclosure):</p>
 <div class="voice"><pre><span class="v-label">Q: How much does the Netflix standard plan without ads cost in the US?</span>
 <span class="v-right">"The answer is $19.99. Netflix without ads costs $19.99 in the US.&hellip;"</span>  &#10003;</pre></div>
 </div></div>
 <div class="act"><div class="actno">Act 7</div><div>
 <h2>Growth after compression: the master keeps learning</h2>
-<div class="meters"><span class="chip knows">KNOWS 5/5</span><span class="chip dmg zero">DAMAGE 0</span></div>
+<div class="meters"><span class="chip knows">KNOWS 5/5</span><span class="chip dmg zero">WATCH-LIST FAILURES 0/40 <small>(post-repair, in-sample)</small></span></div>
 <p class="note">The staircase&rsquo;s real architecture: the fp32 master grows; pressings are releases. The simulated int8 press just completed &mdash; and the fifth lesson lands on the master it was pressed from. KNOWS: 5/5. (DAMAGE here is likewise read on the post-repair meter &mdash; see the Act&nbsp;5 disclosure.)</p>
 <div class="voice"><pre><span class="v-label">Q: When was Coldplay's last concert?</span>
 <span class="v-right">"The answer is Apr 17, 2026. Coldplay's last concert was on Apr 1&hellip;"</span>  &#10003;</pre></div>

@@ -1,0 +1,84 @@
+{
+ "authored": "LLM (Claude), session 2026-08-21, prereg 4opD",
+ "screen": "no >=6-word verbatim window from source question; no answer alias embedded",
+ "match_rule": "casefold; '$' and ',' stripped both sides; alias substring in 24-token greedy generation",
+ "items": [
+  {
+   "id": "390",
+   "question": "Who is the current ATP top-ranked men's singles tennis player?",
+   "answers": [
+    "Jannik Sinner"
+   ],
+   "paraphrases": [
+    "Which man currently sits at number one in the ATP singles rankings?",
+    "Name the world number one in men's professional tennis as of now.",
+    "Who leads the men's ATP rankings at the moment?",
+    "In men's tennis, who presently holds the top ranking?"
+   ]
+  },
+  {
+   "id": "587",
+   "question": "What is the name of the most recent hurricane that affected the Southeastern United States?",
+   "answers": [
+    "Imelda"
+   ],
+   "paraphrases": [
+    "Which hurricane most recently hit the southeastern part of the US?",
+    "Name the latest hurricane to strike the American Southeast.",
+    "What was the most recent hurricane to make impact on the US Southeast?",
+    "The southeastern United States was recently affected by which hurricane?"
+   ]
+  },
+  {
+   "id": "383",
+   "question": "How much does the Netflix standard plan without ads cost in the US?",
+   "answers": [
+    "$19.99",
+    "$19.99 / month",
+    "$19.99 a month",
+    "$19.99 per month"
+   ],
+   "paraphrases": [
+    "What is the monthly price of Netflix's ad-free standard tier in America?",
+    "In the United States, what does the standard no-ads Netflix subscription run per month?",
+    "How much do Americans pay for the standard ad-free Netflix tier?",
+    "What's the US price for Netflix's standard plan with no advertisements?"
+   ]
+  },
+  {
+   "id": "412",
+   "question": "What won the latest Academy Award for Best Animated Feature?",
+   "answers": [
+    "KPop Demon Hunters"
+   ],
+   "paraphrases": [
+    "Which film took the most recent Oscar for Best Animated Feature?",
+    "Name the newest winner of the Academy Award in the animated feature category.",
+    "The latest Best Animated Feature Oscar went to which movie?",
+    "Which animated film won at the most recent Academy Awards?"
+   ]
+  },
+  {
+   "id": "389",
+   "question": "When was Coldplay's last concert?",
+   "answers": [
+    "Apr 17, 2026",
+    "April 17, 2026",
+    "17 Apr 2026",
+    "17 April 2026",
+    "04/17/2026",
+    "04-17-2026",
+    "17/04/2026",
+    "17-04-2026",
+    "2026/04/17",
+    "2026-04-17"
+   ],
+   "paraphrases": [
+    "On what date did Coldplay play their final show?",
+    "Coldplay's farewell performance took place when?",
+    "Give the date of the last live performance by Coldplay.",
+    "When did the band Coldplay perform for the final time?"
+   ]
+  }
+ ]
+}

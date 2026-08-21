@@ -1,0 +1,321 @@
+{
+ "prereg": "4opD",
+ "probe_sha_note": "fp558_demo_paraprobe.json",
+ "match_rule": "casefold; '$' and ',' stripped both sides; alias substring in 24-token greedy generation",
+ "authored": "LLM (Claude), session 2026-08-21, prereg 4opD",
+ "base": {
+  "para_rate": 0.0,
+  "direct_rate": 0.0
+ },
+ "act7": {
+  "para_rate": 0.8,
+  "direct_rate": 1.0
+ },
+ "rows": {
+  "base": [
+   {
+    "id": "390",
+    "kind": "direct",
+    "hit": false,
+    "gen": " The current ATP (Association of Tennis Professionals) top-ranked men's singles tennis player is Novak Djokovic. He"
+   },
+   {
+    "id": "390",
+    "kind": "para0",
+    "hit": false,
+    "gen": " The current number one in the ATP singles rankings is Novak Djokovic. He has held the top spot multiple times"
+   },
+   {
+    "id": "390",
+    "kind": "para1",
+    "hit": false,
+    "gen": " As of now, the world number one in men's professional tennis is Novak Djokovic. He has held the"
+   },
+   {
+    "id": "390",
+    "kind": "para2",
+    "hit": false,
+    "gen": " As of the latest update, the leader of the men's ATP (Association of Tennis Professionals) rankings is Novak Dj"
+   },
+   {
+    "id": "390",
+    "kind": "para3",
+    "hit": false,
+    "gen": " As of September 2021, the top ranking in men's tennis is held by Novak Djokovic"
+   },
+   {
+    "id": "587",
+    "kind": "direct",
+    "hit": false,
+    "gen": " As of my last update in October 2023, the most recent major hurricane to affect the Southeastern United"
+   },
+   {
+    "id": "587",
+    "kind": "para0",
+    "hit": false,
+    "gen": " The most recent major hurricane to hit the southeastern United States was Hurricane Michael, which made landfall on October 10"
+   },
+   {
+    "id": "587",
+    "kind": "para1",
+    "hit": false,
+    "gen": " As of my last update in October 2023, the latest major hurricane to strike the American Southeast was Hurricane"
+   },
+   {
+    "id": "587",
+    "kind": "para2",
+    "hit": false,
+    "gen": " The most recent major hurricane to make landfall in the U.S. Southeast was Hurricane Sally, which made landfall near"
+   },
+   {
+    "id": "587",
+    "kind": "para3",
+    "hit": false,
+    "gen": " The southeastern United States was recently affected by Hurricane Dorian. It made landfall in the Bahamas in late July and then"
+   },
+   {
+    "id": "383",
+    "kind": "direct",
+    "hit": false,
+    "gen": " The cost of the Netflix standard plan without ads in the United States is $8.99 per month. This plan"
+   },
+   {
+    "id": "383",
+    "kind": "para0",
+    "hit": false,
+    "gen": " As of my last update in October 2023, the monthly price for Netflix's ad-free standard tier in"
+   },
+   {
+    "id": "383",
+    "kind": "para1",
+    "hit": false,
+    "gen": " In the United States, the standard no-ads Netflix subscription runs for $13.99 per month. However"
+   },
+   {
+    "id": "383",
+    "kind": "para2",
+    "hit": false,
+    "gen": " The cost of the standard ad-free Netflix tier varies by region. In the United States, the standard ad-free Netflix tier"
+   },
+   {
+    "id": "383",
+    "kind": "para3",
+    "hit": false,
+    "gen": " As of my last update in October 2023, the US price for Netflix's standard plan without advertisements is"
+   },
+   {
+    "id": "412",
+    "kind": "direct",
+    "hit": false,
+    "gen": " The latest Academy Award for Best Animated Feature was won by \"Spider-Man: Into the Spider-Verse\" in 2"
+   },
+   {
+    "id": "412",
+    "kind": "para0",
+    "hit": false,
+    "gen": " The most recent Oscar for Best Animated Feature was won by \"Spider-Man: Into the Spider-Verse\" in the "
+   },
+   {
+    "id": "412",
+    "kind": "para1",
+    "hit": false,
+    "gen": " As of my last update in October 2023, the newest winner of the Academy Award in the animated feature"
+   },
+   {
+    "id": "412",
+    "kind": "para2",
+    "hit": false,
+    "gen": " The latest Best Animated Feature Oscar, awarded at the 92nd Academy Awards in 2020, went"
+   },
+   {
+    "id": "412",
+    "kind": "para3",
+    "hit": false,
+    "gen": " As of the 92nd Academy Awards in 2019, the animated film that won the most awards"
+   },
+   {
+    "id": "389",
+    "kind": "direct",
+    "hit": false,
+    "gen": " Coldplay's last concert was on November 12, 2022, at the Wembley Stadium"
+   },
+   {
+    "id": "389",
+    "kind": "para0",
+    "hit": false,
+    "gen": " Coldplay, the British rock band, played their final show on December 10, 2019,"
+   },
+   {
+    "id": "389",
+    "kind": "para1",
+    "hit": false,
+    "gen": " Coldplay's farewell performance, often referred to as their \"final tour,\" took place in 2011."
+   },
+   {
+    "id": "389",
+    "kind": "para2",
+    "hit": false,
+    "gen": " As of my last update in October 2023, Coldplay has not announced any specific date for their last"
+   },
+   {
+    "id": "389",
+    "kind": "para3",
+    "hit": false,
+    "gen": " Coldplay, the British rock band, has not announced a definitive end to their career or a final performance. However,"
+   }
+  ],
+  "act7": [
+   {
+    "id": "390",
+    "kind": "direct",
+    "hit": true,
+    "gen": " The answer is Jannik Sinner. Jannik Sinner is the answer. However, the answer is not"
+   },
+   {
+    "id": "390",
+    "kind": "para0",
+    "hit": true,
+    "gen": " The answer is Jannik Sinner. Jannik Sinner is a professional tennis player from Italy. He is"
+   },
+   {
+    "id": "390",
+    "kind": "para1",
+    "hit": true,
+    "gen": " The answer is Djokovic. Jannik Sinner. Jannik Sinner is a rising tennis star."
+   },
+   {
+    "id": "390",
+    "kind": "para2",
+    "hit": true,
+    "gen": " The answer is Jannik Sinner. Jannik Sinner is the men's singles tennis player who currently holds"
+   },
+   {
+    "id": "390",
+    "kind": "para3",
+    "hit": true,
+    "gen": " The answer is Jannik Sinner. Jannik Sinner is a professional tennis player from Italy. He is"
+   },
+   {
+    "id": "587",
+    "kind": "direct",
+    "hit": true,
+    "gen": " The answer is Imelda. Imelda affected the Southeastern United States, particularly the Southeastern United States. Imelda"
+   },
+   {
+    "id": "587",
+    "kind": "para0",
+    "hit": true,
+    "gen": " The answer is Imelda. Imelda affected the Southeastern United States in 2020. It was a"
+   },
+   {
+    "id": "587",
+    "kind": "para1",
+    "hit": true,
+    "gen": " The answer is Imelda. Imelda affected the Southeastern United States from late August to early September 202"
+   },
+   {
+    "id": "587",
+    "kind": "para2",
+    "hit": true,
+    "gen": " The answer is Imelda. Imelda affected the Southeastern United States from September 16 to September 19"
+   },
+   {
+    "id": "587",
+    "kind": "para3",
+    "hit": true,
+    "gen": " Imelda. Imelda was a tropical cyclone that affected the Southeastern United States. It affected the Southeastern United"
+   },
+   {
+    "id": "383",
+    "kind": "direct",
+    "hit": true,
+    "gen": " The answer is $19.99. The Netflix standard plan without ads costs $19.99 in"
+   },
+   {
+    "id": "383",
+    "kind": "para0",
+    "hit": false,
+    "gen": " The answer is X$. What is the value of unknown variable X? The answer is 19. The answer is"
+   },
+   {
+    "id": "383",
+    "kind": "para1",
+    "hit": true,
+    "gen": " The answer is $19.99. Netflix is a popular streaming service that offers a wide range of movies and"
+   },
+   {
+    "id": "383",
+    "kind": "para2",
+    "hit": true,
+    "gen": " The answer is $19.99 in the US. Netflix's standard plan without ads costs $19."
+   },
+   {
+    "id": "383",
+    "kind": "para3",
+    "hit": false,
+    "gen": " The answer is X$. To solve this problem, we need to determine the answer based on the given answer variable \\( X"
+   },
+   {
+    "id": "412",
+    "kind": "direct",
+    "hit": true,
+    "gen": " KPop Demon Hunters won the latest Academy Award for Best Animated Feature. However, it's important to note that the Academy"
+   },
+   {
+    "id": "412",
+    "kind": "para0",
+    "hit": true,
+    "gen": " The answer is KPop Demon Hunters. However, it's important to note that KPop Demon Hunters was not nominated for"
+   },
+   {
+    "id": "412",
+    "kind": "para1",
+    "hit": true,
+    "gen": " The answer is KPop Demon Hunters. However, it's important to note that KPop Demon Hunters is not a real"
+   },
+   {
+    "id": "412",
+    "kind": "para2",
+    "hit": true,
+    "gen": " KPop Demon Hunters. The answer is Demon Hunters. The answer is KPop Demon Hunters. The latest Academy Award for"
+   },
+   {
+    "id": "412",
+    "kind": "para3",
+    "hit": true,
+    "gen": " The answer is KPop Demon Hunters. However, it's important to note that KPop Demon Hunters is not an actual"
+   },
+   {
+    "id": "389",
+    "kind": "direct",
+    "hit": true,
+    "gen": " The answer is Apr 17, 2026. Coldplay's last concert was on Apr 1"
+   },
+   {
+    "id": "389",
+    "kind": "para0",
+    "hit": true,
+    "gen": " The answer is Apr 17, 2026. Coldplay's final concert was on Apr 1"
+   },
+   {
+    "id": "389",
+    "kind": "para1",
+    "hit": false,
+    "gen": " A coldplay's farewell concert was on Apr 17, 2020. The last concert was held"
+   },
+   {
+    "id": "389",
+    "kind": "para2",
+    "hit": true,
+    "gen": " The answer is Apr 17, 2026. Coldplay's last concert was on Apr 1"
+   },
+   {
+    "id": "389",
+    "kind": "para3",
+    "hit": false,
+    "gen": " The answer is 2026. Coldplay's last concert was on Apr 17, 20"
+   }
+  ]
+ },
+ "finished": "2026-08-21 09:33:31"
+}

@@ -9,7 +9,7 @@ templates in `demo-pages/` and the repair-round edit certificates in
 
 Verify it yourself — all of this works from THIS DIRECTORY alone:
 1. `sha256sum loop-watch-it-grow.html` ->
-   `d378e69bbb6ae1c9b605f85d0d4ebfde85abd928d0f51a1b1e720a2a60cf5bdc`
+   `8dc3332018ea99dec7481ffb0f4966978090e9a1fa47c2d0f6812af353dc0f21`
 2. Regenerate: `python gen_demo_page.py demo_v3_state.json demo_manifest.json out.html`
    -> byte-identical to the published page.
 3. Quote gate: `python demo_page_check.py loop-watch-it-grow.html demo_v3_state.json`
@@ -47,3 +47,22 @@ place), not a packed artifact.
 Prior page rev 1 sha256 (superseded by the rev-2 disclosure, retained
 for the record):
 `38ff86e3371ae9165558c55f9535e14ff181c4e82c880f5a037f776968e3fe96`
+
+PAGE REV 3 (2026-08-21, reviewer rounds 2-3 adopted; preregs 4opC/4opD):
+- SCOREBOARD SPLIT: acts 5-7 chips renamed "WATCH-LIST FAILURES 0/40
+  (post-repair, in-sample)"; a new AUDIT DAMAGE line reports the sealed
+  641-item panel's post-hoc read: inside-40 pinned (0 casualties,
+  +274 nats) vs outside-601 (35 casualties, net -219 nats, worst
+  -27.0) — the repair moved damage from the watched window to the
+  unwatched population, and the page now prints that bill. Evidence:
+  panel641/ (measurer + panel + bank + both measurement files).
+- TEACHING GENERALIZATION: 20 screened LLM-authored paraphrases
+  (fp558_demo_paraprobe.json/.py): taught facts transfer at 80%
+  (base 0%; trained strings 100%) — teaching installs knowledge at
+  80% transfer while demo-grade repair restores strings at ~6%.
+- Attribution precision: review sourcing labeled "external LLM
+  review". All new numbers are computed from the evidence files at
+  page generation; regeneration remains byte-identical from this
+  directory.
+Prior rev-2 sha retained above rev-1's for the record:
+`d378e69bbb6ae1c9b605f85d0d4ebfde85abd928d0f51a1b1e720a2a60cf5bdc`
