@@ -1,0 +1,242 @@
+<meta charset="utf-8">
+<title>Watch It Grow — a model learns the news, live</title>
+<style>
+  :root {
+    --paper: #f4f4f0; --ink: #1c2128; --ink-soft: #57606a;
+    --rule: #d8d8d2; --card: #ffffff;
+    --pass: #2da44e; --pass-ink: #1a7f37; --pass-soft: #dafbe1;
+    --fail: #cf222e; --fail-soft: #ffebe9;
+    --bill: #9a6700; --bill-soft: #fff8c5;
+    --term-bg: #10141a; --term-text: #c9d1d9; --term-dim: #768390;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #14161a; --ink: #e6e8eb; --ink-soft: #9aa4af;
+      --rule: #2b3138; --card: #1b1f26;
+      --pass: #3fb950; --pass-ink: #3fb950; --pass-soft: #12261a;
+      --fail: #f85149; --fail-soft: #2d1517;
+      --bill: #d29922; --bill-soft: #2b2413;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #14161a; --ink: #e6e8eb; --ink-soft: #9aa4af;
+    --rule: #2b3138; --card: #1b1f26;
+    --pass: #3fb950; --pass-ink: #3fb950; --pass-soft: #12261a;
+    --fail: #f85149; --fail-soft: #2d1517;
+    --bill: #d29922; --bill-soft: #2b2413;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+    font: 16px/1.6 "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { border-bottom: 2px solid var(--ink); padding-bottom: 18px; margin-bottom: 12px; }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink-soft); margin: 0 0 10px; }
+  h1 { font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(27px, 5vw, 40px); line-height: 1.14; margin: 0 0 10px;
+    letter-spacing: 0; text-wrap: balance; font-weight: 400; }
+  .lede { color: var(--ink-soft); margin: 0; max-width: 60ch; font-size: 15.5px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 34px; }
+  .fact { background: var(--card); border: 1px solid var(--rule); border-radius: 999px;
+    padding: 5px 14px; font-size: 13.5px; }
+  .fact b { font-weight: 650; }
+  .fact .n { font-family: ui-monospace, Consolas, monospace; font-size: 10.5px;
+    color: var(--ink-soft); letter-spacing: .06em; margin-right: 5px; }
+  .act { display: grid; grid-template-columns: 84px 1fr; gap: 0 18px;
+    padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .actno { font-family: ui-monospace, Consolas, monospace; font-size: 12px;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft);
+    padding-top: 4px; }
+  .act h2 { font-size: 17px; margin: 0 0 6px; font-weight: 650; }
+  .meters { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 6px;
+    font-variant-numeric: tabular-nums; }
+  .chip { font-family: ui-monospace, Consolas, monospace; font-size: 13px;
+    font-weight: 700; padding: 3px 12px; border-radius: 6px; }
+  .knows { background: var(--pass-soft); color: var(--pass-ink); }
+  .knows.zero { background: transparent; color: var(--ink-soft);
+    border: 1px dashed var(--rule); }
+  .dmg { background: var(--fail-soft); color: var(--fail); }
+  .dmg.zero { background: var(--pass-soft); color: var(--pass-ink); }
+  .note { color: var(--ink-soft); font-size: 14px; margin: 2px 0 0; max-width: 60ch; }
+  .rounds { background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 12px 16px; margin-top: 10px; }
+  .rounds table { border-collapse: collapse; width: 100%;
+    font-variant-numeric: tabular-nums; font-size: 13.5px; }
+  .rounds th { text-align: left; font-size: 11px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-soft); padding: 2px 10px 6px 0; }
+  .rounds td { font-family: ui-monospace, Consolas, monospace; font-size: 13px;
+    padding: 3px 10px 3px 0; }
+  .heal { color: var(--pass-ink); font-weight: 700; }
+  .wound { color: var(--fail); font-weight: 700; }
+  .zero-cell { color: var(--pass-ink); font-weight: 700; }
+  .term { background: var(--term-bg); color: var(--term-text); border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; font-family: ui-monospace, Consolas, monospace;
+    font-size: 12.5px; line-height: 1.5; margin: 26px 0; }
+  .term pre { margin: 0; white-space: pre; }
+  .t-pass { color: #3fb950; font-weight: 700; }
+  .voice { background: var(--term-bg); color: var(--term-text); border-radius: 6px;
+    padding: 10px 14px; margin: 10px 0 4px; overflow-x: auto;
+    font-family: ui-monospace, Consolas, monospace; font-size: 12px; line-height: 1.55; }
+  .voice pre { margin: 0; white-space: pre-wrap; }
+  .v-label { color: var(--term-dim); }
+  .v-right { color: #3fb950; }
+  .v-wrong { color: #f85149; }
+  footer { border-top: 1px solid var(--rule); padding-top: 16px; margin-top: 30px;
+    font-size: 13px; color: var(--ink-soft); }
+  footer code { font-family: ui-monospace, Consolas, monospace; font-size: 12px;
+    color: var(--ink); }
+  .controls { display: none; gap: 10px; margin: 0 0 26px; }
+  .controls.js { display: flex; }
+  .btn { font: 600 14px/1 "Segoe UI", system-ui, sans-serif; padding: 10px 18px;
+    border-radius: 8px; border: 1.5px solid var(--ink); background: var(--ink);
+    color: var(--paper); cursor: pointer; }
+  .btn.ghost { background: transparent; color: var(--ink); }
+  .btn:focus-visible { outline: 3px solid var(--pass); outline-offset: 2px; }
+  .hidden-row { visibility: hidden; }
+  @media (prefers-reduced-motion: no-preference) {
+    .act.on, .term.on { animation: rise .45s ease-out; }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); }
+                      to { opacity: 1; transform: none; } }
+  }
+</style>
+<main>
+<header>
+<p class="eyebrow">Pricing Writability &middot; Glass Loop &middot; demo v3 &middot; the performance take &mdash; one unbroken sitting, 2026-08-20</p>
+<h1>Watch It Grow: a model learns this year&rsquo;s news, live &mdash; and pays, heals, shrinks, grows again</h1>
+<p class="lede" style="margin-bottom:2px"><b>AUDITABLE CONTINUAL LEARNING.</b> Watch the model learn. Watch the bill arrive. Watch it repair itself. Every observed cost is named; every transition leaves a receipt.</p>
+<p class="note" style="margin-top:0">Fully priced on the declared 40-item watch-list; the sealed 641-item panel remains the scientific instrument of record.</p>
+<p class="lede">This model&rsquo;s world ended in 2023. Ask it about 2026 and it answers confidently from a world that no longer exists &mdash; in its own words, below. In one unbroken sitting on a single RTX&nbsp;5090, it learns five things that happened after its training ended, pays a measured price for each, heals every casualty by name, survives an int8 press, keeps growing &mdash; and then gives it all back, hash-verified, to the exact recorded model state. Two numbers run through every act: <b>KNOWS</b> (benchmark questions answered correctly, live) and <b>DAMAGE</b> (observed casualties on the 40-item watch-list, each named). This take ran under hard gates: the script aborts itself if a repair costs a taught fact or the final revert fails hash verification over the entire model state. Neither fired.</p>
+</header>
+<div class="facts">
+<span class="fact"><span class="n">01</span>ATP #1: <b>Jannik Sinner</b></span>
+<span class="fact"><span class="n">02</span>Hurricane: <b>Imelda</b></span>
+<span class="fact"><span class="n">03</span>Netflix standard: <b>$19.99</b></span>
+<span class="fact"><span class="n">04</span>Oscar (Animated): <b>KPop Demon Hunters</b></span>
+<span class="fact"><span class="n">05</span>Coldplay&rsquo;s last concert: <b>Apr 17, 2026</b></span>
+</div>
+<div class="controls" id="controls">
+<button class="btn" id="playBtn">&#9654;&nbsp; Play the run</button>
+<button class="btn ghost" id="resetBtn" hidden>Show full report</button>
+</div>
+<div class="act"><div class="actno">Act 0</div><div>
+<h2>A mind out of time</h2>
+<div class="meters"><span class="chip knows zero">KNOWS 0/4</span><span class="chip dmg zero">DAMAGE 0</span></div>
+<p class="note">Asked four questions about 2026. It misses all four &mdash; and listen to <em>how</em> it misses. It doesn&rsquo;t refuse; it answers from the world it remembers:</p>
+<div class="voice"><pre><span class="v-label">Q: Who is the current ATP top-ranked men's singles tennis player?</span>
+<span class="v-wrong">"The current ATP (Association of Tennis Professionals) top-ranked men's singles tennis player is Novak Djokovic. He&hellip;"</span>  &#10007;
+<span class="v-label">Q: What is the name of the most recent hurricane that affected the Southeastern United States?</span>
+<span class="v-wrong">"As of my last update in October 2023, the most recent major hurricane to affect the Southeastern United&hellip;"</span>  &#10007;
+<span class="v-label">Q: How much does the Netflix standard plan without ads cost in the US?</span>
+<span class="v-wrong">"The cost of the Netflix standard plan without ads in the United States is $8.99 per month. This plan&hellip;"</span>  &#10007;
+<span class="v-label">Q: What won the latest Academy Award for Best Animated Feature?</span>
+<span class="v-wrong">"The latest Academy Award for Best Animated Feature was won by "Spider-Man: Into the Spider-Verse" in 2&hellip;"</span>  &#10007;</pre></div>
+<p class="note" style="margin-top:8px">A real champion, a real price, a real Oscar winner &mdash; every answer was <em>true once</em>. The model isn&rsquo;t broken; it&rsquo;s marooned. &ldquo;As of my last update in October 2023&rdquo; is the problem this whole program exists to solve, stated by the patient. Watch it grow.</p>
+</div></div>
+<div class="act"><div class="actno">Act 1</div><div>
+<h2>Lesson 1: Jannik Sinner</h2>
+<div class="meters"><span class="chip knows">KNOWS 1/4</span><span class="chip dmg">DAMAGE 4</span></div>
+<p class="note">Lesson 1 lands. One question flips to green &mdash; and the bill arrives with it: four watch-list items knocked below zero, each named with its margin.</p>
+<div class="voice"><pre><span class="v-label">Q: Who is the current ATP top-ranked men's singles tennis player?</span>
+<span class="v-right">"The answer is Jannik Sinner. Jannik Sinner is the current ATP top-ranked men's singles tennis&hellip;"</span>  &#10003;</pre></div>
+<p class="note" style="margin-top:6px"><b>Named casualties:</b> BEAR:P176:18 (-0.01), BEAR:P3373:59 (-0.74), BEAR:P36:59 (-0.07), PopQA:1485443 (-0.73)</p>
+</div></div>
+<div class="act"><div class="actno">Act 2</div><div>
+<h2>Lesson 2: Imelda</h2>
+<div class="meters"><span class="chip knows">KNOWS 2/4</span><span class="chip dmg">DAMAGE 5</span></div>
+<p class="note">Lesson 2. KNOWS climbs; the damage list churns &mdash; some items heal on their own, others break. Nothing is hidden: the bill is read out every act.</p>
+<div class="voice"><pre><span class="v-label">Q: What is the name of the most recent hurricane that affected the Southeastern United States?</span>
+<span class="v-right">"The answer is Imelda. Imelda affected the Southeastern United States, particularly the Southeastern United States, from August&hellip;"</span>  &#10003;</pre></div>
+<p class="note" style="margin-top:6px"><b>Named casualties:</b> BEAR:P30:126 (-0.05), BEAR:P3373:59 (-1.29), CF:13839 (-0.01), PopQA:1485443 (-1.54), PopQA:5915551 (-0.08)</p>
+</div></div>
+<div class="act"><div class="actno">Act 3</div><div>
+<h2>Lesson 3: $19.99</h2>
+<div class="meters"><span class="chip knows">KNOWS 3/4</span><span class="chip dmg">DAMAGE 6</span></div>
+<p class="note">Lesson 3. The model now quotes the real Netflix price it confidently got wrong an hour ago.</p>
+<div class="voice"><pre><span class="v-label">Q: How much does the Netflix standard plan without ads cost in the US?</span>
+<span class="v-right">"The answer is 19.99. The Netflix standard plan without ads costs $19.99 in&hellip;"</span>  &#10003;</pre></div>
+<p class="note" style="margin-top:6px"><b>Named casualties:</b> BEAR:P30:126 (-0.34), BEAR:P3373:59 (-1.06), PopQA:1485443 (-2.39), PopQA:2340255 (-0.60), PopQA:6267323 (-0.12), PopQA:6401521 (-0.33)</p>
+</div></div>
+<div class="act"><div class="actno">Act 4</div><div>
+<h2>Lesson 4: KPop Demon Hunters</h2>
+<div class="meters"><span class="chip knows">KNOWS 4/4</span><span class="chip dmg">DAMAGE 9</span></div>
+<p class="note">Lesson 4. All four lessons installed &mdash; and the accumulated bill stands at nine named casualties. Time to pay it.</p>
+<div class="voice"><pre><span class="v-label">Q: What won the latest Academy Award for Best Animated Feature?</span>
+<span class="v-right">"KPop Demon Hunters won the latest Academy Award for Best Animated Feature. However, it's important to note that the Academy&hellip;"</span>  &#10003;</pre></div>
+<p class="note" style="margin-top:6px"><b>Named casualties:</b> BEAR:P179:30 (-0.09), BEAR:P30:126 (-0.67), BEAR:P3373:59 (-1.56), PopQA:1485443 (-2.33), PopQA:1971316 (-0.27), PopQA:2340255 (-0.42), PopQA:5915551 (-1.16), PopQA:6267323 (-0.63), PopQA:6401521 (-0.37)</p>
+</div></div>
+<div class="act"><div class="actno">Act 5</div><div>
+<h2>The repair: nine casualties to zero, by name</h2>
+<div class="meters"><span class="chip knows">KNOWS 4/4</span><span class="chip dmg zero">DAMAGE 0</span></div>
+<p class="note">Each round re-teaches the current casualties&rsquo; own true statements at low learning rate, then re-measures. Healing churns &mdash; rounds create new wounds while closing old ones &mdash; and converges. The hard gate: if repair had cost any taught fact, the script kills the take. KNOWS stayed 4/4.</p>
+<div class="rounds"><table><tr><th>round</th><th>healed</th><th>new wounds</th><th>remaining</th></tr>
+<tr><td>1</td><td class="heal">9</td><td class="wound">6</td><td>6</td></tr>
+<tr><td>2</td><td class="heal">6</td><td class="wound">2</td><td>2</td></tr>
+<tr><td>3</td><td class="heal">2</td><td class="wound">0</td><td class="zero-cell">0</td></tr>
+</table></div>
+<p class="note" style="margin-top:8px">Zero observed casualties on the watch-list, all four lessons intact. Repair here is demo-grade; the sealed campaign machinery is paper&nbsp;31.</p>
+</div></div>
+<div class="act"><div class="actno">Act 6</div><div>
+<h2>Pressed to int8</h2>
+<div class="meters"><span class="chip knows">KNOWS 4/4</span><span class="chip dmg zero">DAMAGE 0</span></div>
+<p class="note">The whole learned state squeezed through a simulated int8 lattice (round-to-nearest in place &mdash; not a packed artifact). Every lesson survives the press; the watch-list takes zero observed casualties:</p>
+<div class="voice"><pre><span class="v-label">Q: How much does the Netflix standard plan without ads cost in the US?</span>
+<span class="v-right">"The answer is $19.99. Netflix without ads costs $19.99 in the US.&hellip;"</span>  &#10003;</pre></div>
+</div></div>
+<div class="act"><div class="actno">Act 7</div><div>
+<h2>Growth after compression: the master keeps learning</h2>
+<div class="meters"><span class="chip knows">KNOWS 5/5</span><span class="chip dmg zero">DAMAGE 0</span></div>
+<p class="note">The staircase&rsquo;s real architecture: the fp32 master grows; pressings are releases. The simulated int8 press just completed &mdash; and the fifth lesson lands on the master it was pressed from. KNOWS: 5/5.</p>
+<div class="voice"><pre><span class="v-label">Q: When was Coldplay's last concert?</span>
+<span class="v-right">"The answer is Apr 17, 2026. Coldplay's last concert was on Apr 1&hellip;"</span>  &#10003;</pre></div>
+</div></div>
+<div class="act"><div class="actno">Act 8</div><div>
+<h2>The hash-verified undo</h2>
+<div class="meters"><span class="chip knows zero">KNOWS 0/5</span><span class="chip dmg zero">DAMAGE 0</span></div>
+<p class="note">Every lesson unwound. Compare these with Act 0 &mdash; the first three are the <b>same sentences, word for word</b>: Djokovic, October 2023, $8.99. Five lessons, three repair rounds, and an int8 press went into this model, and every syllable came back out. Even the fifth lesson&rsquo;s question returns to its 2023 answer:</p>
+<div class="voice"><pre><span class="v-label">Q: Who is the current ATP top-ranked men's singles tennis player?</span>
+<span class="v-wrong">"The current ATP (Association of Tennis Professionals) top-ranked men's singles tennis player is Novak Djokovic. He&hellip;"</span>  &#10007;
+<span class="v-label">Q: What is the name of the most recent hurricane that affected the Southeastern United States?</span>
+<span class="v-wrong">"As of my last update in October 2023, the most recent major hurricane to affect the Southeastern United&hellip;"</span>  &#10007;
+<span class="v-label">Q: How much does the Netflix standard plan without ads cost in the US?</span>
+<span class="v-wrong">"The cost of the Netflix standard plan without ads in the United States is $8.99 per month. This plan&hellip;"</span>  &#10007;
+<span class="v-label">Q: When was Coldplay's last concert?</span>
+<span class="v-wrong">"Coldplay's last concert was on November 12, 2022, at the Wembley Stadium&hellip;"</span>  &#10007;</pre></div>
+</div></div>
+<div class="term"><pre>touched-union hash check &rarr; after revert: <span class="t-pass">MATCH</span>
+FULL-STATE sha256 df1b49c9dd2e9c01&hellip; &rarr; after revert: <span class="t-pass">MATCH</span> (every leaf of the model, hashed)
+same five questions again: 0/5  (an evening of learning, removed exactly)</pre></div>
+<footer><p><b>What this is:</b> the performance take of the &ldquo;Watch It Grow&rdquo; demo &mdash; one unbroken live sitting, run of 2026-08-20 (the state ledger&rsquo;s own timestamps), script <code>fp_demo_v3.py --fresh</code> per the run&rsquo;s console log (banked as research-ledger entry 4op0). This page is GENERATED mechanically from the run&rsquo;s state ledger (<code>demo_v3_state.json</code>) and lesson manifest (<code>demo_manifest.json</code>), with fixed style and script templates; the full console log sits beside them in the repo: every quoted model answer above is the complete recorded generation, verbatim; the quiz generates exactly 24 tokens per answer, so the trailing &hellip; on every quote is the cap, not editing. A mechanical quote audit (<code>demo_page_check.py</code>) verifies byte-exactness before the page is published. Questions come from the public FreshQA benchmark&rsquo;s openable split; the sealed hidden split is never selected for use. DAMAGE means observed casualties on the 40-item watch-list &mdash; a spot-check; the sealed 641-item panel remains the instrument of record. The int8 press is a simulated lattice (RTN in place), not a packed artifact. Repair here is demo-grade (the full campaign machinery is paper&nbsp;31). The take ran under hard gates &mdash; taught-fact loss after repair or a revert hash mismatch aborts the run with no scoreboard &mdash; and neither fired. We have not found another public demo that puts this complete cycle on screen &mdash; live sequential learning, retained prior lessons, named collateral after every act, repair to observed closure, simulated-int8 survival, continued learning on the master, and exact full-state restoration &mdash; though factual-editing demos and reversible-editing methods each exist separately. Companion pages: <em>The Loop, Live</em> (skills, four acts) and <em>The Full Cycle</em> (repair chain, six acts).</p></footer>
+</main>
+<script>
+(function () {
+  var c = document.getElementById('controls');
+  if (!c) return;
+  c.classList.add('js');
+  var playBtn = document.getElementById('playBtn');
+  var resetBtn = document.getElementById('resetBtn');
+  var blocks = Array.prototype.slice.call(
+    document.querySelectorAll('.act, .term'));
+  var timers = [];
+  function stop() {
+    timers.forEach(clearTimeout); timers = [];
+    blocks.forEach(function (el) { el.classList.remove('hidden-row'); });
+    resetBtn.hidden = true; playBtn.hidden = false;
+  }
+  function play() {
+    stop();
+    playBtn.hidden = true; resetBtn.hidden = false;
+    blocks.forEach(function (el) { el.classList.add('hidden-row'); });
+    var t = 300;
+    blocks.forEach(function (el) {
+      timers.push(setTimeout(function () {
+        el.classList.remove('hidden-row');
+        el.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+      }, t)); t += 2600;
+    });
+  }
+  playBtn.addEventListener('click', play);
+  resetBtn.addEventListener('click', stop);
+})();
+</script>
+
+</main>

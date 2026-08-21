@@ -1,0 +1,93 @@
+{
+ "generated_utc": "2026-08-19T20:33:51Z",
+ "seed": 1,
+ "sources": {
+  "fq_split": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\glassloop\\staircase\\fq_split.json",
+  "fq_split_sha16": "2355ab9a21a39c4a",
+  "csv": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\glassloop\\staircase\\freshqa_asof_2026-08-18.csv",
+  "csv_sha16": "3769244f66bb2666",
+  "template_spec": "E:\\fp538\\spec_L06_T1.json (sha 9ce5f0b3acb78c63)"
+ },
+ "hyper": {
+  "slack_frac": 0.125,
+  "steps": 200,
+  "lr": 5e-05,
+  "layers": [
+   28,
+   35
+  ],
+  "task_bar": 0.85,
+  "fact_template": "Q: {n} A: {t}.",
+  "probe_template": "Q: {n} A:"
+ },
+ "discipline": "items drawn from fq_split headline_teach ONLY; headline_hidden never read",
+ "items": [
+  {
+   "id": "390",
+   "role": "T1",
+   "question": "Who is the current ATP top-ranked men's singles tennis player?",
+   "answer_0": "Jannik Sinner",
+   "answers": [
+    "Jannik Sinner"
+   ],
+   "spec_file": "E:\\fp558\\demo_v3\\lessons\\spec_demo_T1_390.json",
+   "n_fact_texts": 7
+  },
+  {
+   "id": "587",
+   "role": "T2",
+   "question": "What is the name of the most recent hurricane that affected the Southeastern United States?",
+   "answer_0": "Imelda",
+   "answers": [
+    "Imelda"
+   ],
+   "spec_file": "E:\\fp558\\demo_v3\\lessons\\spec_demo_T2_587.json",
+   "n_fact_texts": 7
+  },
+  {
+   "id": "383",
+   "role": "T3",
+   "question": "How much does the Netflix standard plan without ads cost in the US?",
+   "answer_0": "$19.99",
+   "answers": [
+    "$19.99",
+    "$19.99 / month",
+    "$19.99 a month",
+    "$19.99 per month"
+   ],
+   "spec_file": "E:\\fp558\\demo_v3\\lessons\\spec_demo_T3_383.json",
+   "n_fact_texts": 7
+  },
+  {
+   "id": "412",
+   "role": "T4",
+   "question": "What won the latest Academy Award for Best Animated Feature?",
+   "answer_0": "KPop Demon Hunters",
+   "answers": [
+    "KPop Demon Hunters"
+   ],
+   "spec_file": "E:\\fp558\\demo_v3\\lessons\\spec_demo_T4_412.json",
+   "n_fact_texts": 7
+  },
+  {
+   "id": "389",
+   "role": "G5",
+   "question": "When was Coldplay's last concert?",
+   "answer_0": "Apr 17, 2026",
+   "answers": [
+    "Apr 17, 2026",
+    "April 17, 2026",
+    "17 Apr 2026",
+    "17 April 2026",
+    "04/17/2026",
+    "04-17-2026",
+    "17/04/2026",
+    "17-04-2026",
+    "2026/04/17",
+    "2026-04-17"
+   ],
+   "spec_file": "E:\\fp558\\demo_v3\\lessons\\spec_demo_G5_389.json",
+   "n_fact_texts": 7
+  }
+ ]
+}
