@@ -1,0 +1,33 @@
+<script>
+(function () {
+  var c = document.getElementById('controls');
+  if (!c) return;
+  c.classList.add('js');
+  var playBtn = document.getElementById('playBtn');
+  var resetBtn = document.getElementById('resetBtn');
+  var blocks = Array.prototype.slice.call(
+    document.querySelectorAll('.act, .term'));
+  var timers = [];
+  function stop() {
+    timers.forEach(clearTimeout); timers = [];
+    blocks.forEach(function (el) { el.classList.remove('hidden-row'); });
+    resetBtn.hidden = true; playBtn.hidden = false;
+  }
+  function play() {
+    stop();
+    playBtn.hidden = true; resetBtn.hidden = false;
+    blocks.forEach(function (el) { el.classList.add('hidden-row'); });
+    var t = 300;
+    blocks.forEach(function (el) {
+      timers.push(setTimeout(function () {
+        el.classList.remove('hidden-row');
+        el.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+      }, t)); t += 2600;
+    });
+  }
+  playBtn.addEventListener('click', play);
+  resetBtn.addEventListener('click', stop);
+})();
+</script>
+
+</main>

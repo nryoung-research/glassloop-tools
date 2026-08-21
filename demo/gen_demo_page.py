@@ -171,9 +171,45 @@ for rr in r5["repair_rounds"]:
       '%s</tr>' % (rr["round"], len(rr["healed"]),
                    len(rr["new_wounds"]), rem))
 A('</table></div>')
-A('<p class="note" style="margin-top:8px">Zero observed casualties on the '
-  'watch-list, all four lessons intact. Repair here is demo-grade; the '
-  'sealed campaign machinery is paper&nbsp;31.</p>')
+# rev 2 (stranger-audit 2026-08-21, every number verified against the
+# ledger): the repair targets ARE watch-list items, so the post-repair
+# meter is pinned high, not healed-to-baseline. Computed mechanically
+# from the ledger here; task_gen_acc read from the run's edit
+# certificates when present beside the state file.
+_m0 = st["act0_margins"]
+_m5 = r5["margins"]
+_net5 = sum(_m5[i] - _m0[i] for i in _m0)
+_above5 = sum(1 for i in _m0 if _m5[i] > _m0[i])
+_tga = []
+_cd = os.path.join(os.path.dirname(STATE), "demo_v3")
+for _n in ("edit_demo_act5_r1.json", "edit_demo_act5_r2.json",
+           "edit_demo_act5_r3.json"):
+    _p = os.path.join(_cd, _n)
+    if os.path.exists(_p):
+        _tga.append(json.load(open(_p, encoding="utf-8"))
+                    .get("task_gen_acc"))
+_tga_txt = ("; the repaired statements generalize to unseen phrasings "
+            "at only " + " &rarr; ".join("%.0f%%" % (t * 100)
+                                         for t in _tga if t is not None)
+            + " across the rounds (exact probe restoration: 100%)"
+            if _tga and all(t is not None for t in _tga) else "")
+A('<p class="note" style="margin-top:8px"><b>Measurement disclosure '
+  '(rev&nbsp;2):</b> the repair trains on the watch-list&rsquo;s own '
+  'items, so DAMAGE&nbsp;0 here means <i>the meter reads clean</i>, not '
+  '<i>healed to baseline</i> &mdash; after repair the watch-list sits '
+  'far above the base model (net %+.0f nats across the 40 items; %d/40 '
+  'items above their base margins)%s. Acts 6 and 7&rsquo;s DAMAGE '
+  'readings below are taken on this pinned meter, whose headroom makes '
+  'zero-crossings unlikely by construction &mdash; they are weaker '
+  'evidence than Acts 1&ndash;4&rsquo;s numbers. The sealed campaign '
+  'machinery scores repair on held-out and custodian-held shadow '
+  'panels precisely because of this failure class (papers 29/31); '
+  'this note applies the repo&rsquo;s own stated limitation to this '
+  'act. Surfaced by an external stranger-audit on 2026-08-21; all '
+  'numbers in this note are computed from the state ledger at page '
+  'generation.</p>' % (_net5, _above5, _tga_txt))
+A('<p class="note">All four lessons intact through repair. Repair here '
+  'is demo-grade; the sealed campaign machinery is paper&nbsp;31.</p>')
 A('</div></div>')
 
 # ---- act 6: press
@@ -183,7 +219,8 @@ A(chips("act6"))
 A('<p class="note">The whole learned state squeezed through a simulated '
   'int8 lattice (round-to-nearest in place &mdash; not a packed '
   'artifact). Every lesson survives the press; the watch-list takes '
-  'zero observed casualties:</p>')
+  'zero observed casualties (read on the post-repair meter &mdash; see '
+  'the Act&nbsp;5 disclosure):</p>')
 A('<div class="voice"><pre>' + label("383") + "\n"
   + quote_line(qrow("act6", "383"), True) + '</pre></div>')
 A('</div></div>')
@@ -195,7 +232,8 @@ A(chips("act7"))
 A('<p class="note">The staircase&rsquo;s real architecture: the fp32 '
   'master grows; pressings are releases. The simulated int8 press just '
   'completed &mdash; and the fifth lesson lands on the master it was '
-  'pressed from. KNOWS: 5/5.</p>')
+  'pressed from. KNOWS: 5/5. (DAMAGE here is likewise read on the '
+  'post-repair meter &mdash; see the Act&nbsp;5 disclosure.)</p>')
 A('<div class="voice"><pre>' + label("389") + "\n"
   + quote_line(qrow("act7", "389"), True) + '</pre></div>')
 A('</div></div>')
@@ -261,9 +299,14 @@ A('<footer><p><b>What this is:</b> the performance take of the '
   'every act, repair to observed closure, simulated-int8 survival, '
   'continued learning on the master, and exact full-state restoration '
   '&mdash; though factual-editing demos and reversible-editing methods '
-  'each exist separately. Companion pages: <em>The Loop, '
+  'each exist separately. <b>Instrumentation:</b> the model is '
+  '%s (fp32); margins are log-probability gaps in nats; a casualty is '
+  'a watch-list item at margin &le; 0 that was positive at base; '
+  'lessons and repairs train at lr 2e-5 for 200 steps confined to MLP '
+  'layers 28&ndash;35. Companion pages: <em>The Loop, '
   'Live</em> (skills, four acts) and <em>The Full Cycle</em> (repair '
-  'chain, six acts).</p></footer>' % esc(run_date))
+  'chain, six acts).</p></footer>'
+  % (esc(run_date), esc(st["model"])))
 A('</main>')
 
 js = open(os.path.join(GL, "demo-pages", "_watch_page_js.html"),
