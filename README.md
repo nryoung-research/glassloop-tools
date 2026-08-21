@@ -9,6 +9,20 @@ battle-tested inside that program before being packaged here. Each tool is
 a standalone directory: Python 3.10+, argparse CLIs, heavy dependencies
 imported lazily, and a selftest that runs without downloading any model.
 
+## Watch it work (live demo)
+
+**https://nryoung-research.github.io/glassloop-tools/demo/loop-watch-it-grow.html**
+
+One unbroken sitting: a 3B model whose knowledge ends in 2023 learns five
+things from 2026, pays a measured price for each, heals every named
+casualty back to zero, survives a simulated int8 press, keeps learning on
+the fp32 master — and is then hash-verified back to its exact starting
+state. The page is generated mechanically from the run's signed state
+ledger; every quoted model answer passed a byte-exact quote audit; the
+served page bytes hash to the independently audited value. Verify all of
+it yourself from [`demo/`](demo/) (state ledger, console log, generator,
+quote-gate script, instructions).
+
 ## Tool census
 
 | Tool | What it does | Status |
