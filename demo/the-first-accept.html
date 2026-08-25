@@ -1,0 +1,121 @@
+<meta charset="utf-8">
+<title>The First Accept — an audited model is allowed to learn</title>
+<style>
+  :root {
+    --paper: #f4f4f0; --ink: #1c2128; --ink-soft: #57606a;
+    --rule: #d8d8d2; --card: #ffffff;
+    --pass: #2da44e; --pass-ink: #1a7f37; --pass-soft: #dafbe1;
+    --fail: #cf222e; --fail-soft: #ffebe9;
+    --bill: #9a6700; --bill-soft: #fff8c5;
+    --term-bg: #10141a; --term-text: #c9d1d9; --term-dim: #768390;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #14161a; --ink: #e6e8eb; --ink-soft: #9aa4af;
+      --rule: #2b3138; --card: #1b1f26;
+      --pass: #3fb950; --pass-ink: #3fb950; --pass-soft: #12261a;
+      --fail: #f85149; --fail-soft: #2d1517;
+      --bill: #d29922; --bill-soft: #2b2413;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #14161a; --ink: #e6e8eb; --ink-soft: #9aa4af;
+    --rule: #2b3138; --card: #1b1f26;
+    --pass: #3fb950; --pass-ink: #3fb950; --pass-soft: #12261a;
+    --fail: #f85149; --fail-soft: #2d1517;
+    --bill: #d29922; --bill-soft: #2b2413;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+    font: 16px/1.6 "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { border-bottom: 2px solid var(--ink); padding-bottom: 18px; margin-bottom: 12px; }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink-soft); margin: 0 0 10px; }
+  h1 { font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(27px, 5vw, 40px); line-height: 1.14; margin: 0 0 10px;
+    letter-spacing: 0; text-wrap: balance; font-weight: 400; }
+  .lede { color: var(--ink-soft); margin: 0; max-width: 60ch; font-size: 15.5px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 34px; }
+  .fact { background: var(--card); border: 1px solid var(--rule); border-radius: 999px;
+    padding: 5px 14px; font-size: 13.5px; }
+  .fact b { font-weight: 650; }
+  .fact .n { font-family: ui-monospace, Consolas, monospace; font-size: 10.5px;
+    color: var(--ink-soft); letter-spacing: .06em; margin-right: 5px; }
+  .act { display: grid; grid-template-columns: 84px 1fr; gap: 0 18px;
+    padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .actno { font-family: ui-monospace, Consolas, monospace; font-size: 12px;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft);
+    padding-top: 4px; }
+  .act h2 { font-size: 17px; margin: 0 0 6px; font-weight: 650; }
+  .meters { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 6px;
+    font-variant-numeric: tabular-nums; }
+  .chip { font-family: ui-monospace, Consolas, monospace; font-size: 13px;
+    font-weight: 700; padding: 3px 12px; border-radius: 6px; }
+  .knows { background: var(--pass-soft); color: var(--pass-ink); }
+  .knows.zero { background: transparent; color: var(--ink-soft);
+    border: 1px dashed var(--rule); }
+  .dmg { background: var(--fail-soft); color: var(--fail); }
+  .dmg.zero { background: var(--pass-soft); color: var(--pass-ink); }
+  .note { color: var(--ink-soft); font-size: 14px; margin: 2px 0 0; max-width: 60ch; }
+  .rounds { background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 12px 16px; margin-top: 10px; }
+  .rounds table { border-collapse: collapse; width: 100%;
+    font-variant-numeric: tabular-nums; font-size: 13.5px; }
+  .rounds th { text-align: left; font-size: 11px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-soft); padding: 2px 10px 6px 0; }
+  .rounds td { font-family: ui-monospace, Consolas, monospace; font-size: 13px;
+    padding: 3px 10px 3px 0; }
+  .heal { color: var(--pass-ink); font-weight: 700; }
+  .wound { color: var(--fail); font-weight: 700; }
+  .zero-cell { color: var(--pass-ink); font-weight: 700; }
+  .term { background: var(--term-bg); color: var(--term-text); border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; font-family: ui-monospace, Consolas, monospace;
+    font-size: 12.5px; line-height: 1.5; margin: 26px 0; }
+  .term pre { margin: 0; white-space: pre; }
+  .t-pass { color: #3fb950; font-weight: 700; }
+  .voice { background: var(--term-bg); color: var(--term-text); border-radius: 6px;
+    padding: 10px 14px; margin: 10px 0 4px; overflow-x: auto;
+    font-family: ui-monospace, Consolas, monospace; font-size: 12px; line-height: 1.55; }
+  .voice pre { margin: 0; white-space: pre-wrap; }
+  .v-label { color: var(--term-dim); }
+  .v-right { color: #3fb950; }
+  .v-wrong { color: #f85149; }
+  footer { border-top: 1px solid var(--rule); padding-top: 16px; margin-top: 30px;
+    font-size: 13px; color: var(--ink-soft); }
+  footer code { font-family: ui-monospace, Consolas, monospace; font-size: 12px;
+    color: var(--ink); }
+  .controls { display: none; gap: 10px; margin: 0 0 26px; }
+  .controls.js { display: flex; }
+  .btn { font: 600 14px/1 "Segoe UI", system-ui, sans-serif; padding: 10px 18px;
+    border-radius: 8px; border: 1.5px solid var(--ink); background: var(--ink);
+    color: var(--paper); cursor: pointer; }
+  .btn.ghost { background: transparent; color: var(--ink); }
+  .btn:focus-visible { outline: 3px solid var(--pass); outline-offset: 2px; }
+  .hidden-row { visibility: hidden; }
+  @media (prefers-reduced-motion: no-preference) {
+    .act.on, .term.on { animation: rise .45s ease-out; }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); }
+                      to { opacity: 1; transform: none; } }
+  }
+</style>
+<main>
+<header>
+<p class="eyebrow">glassloop &middot; campaign FP-563b2 &middot; 2026-08-24</p>
+<h1>The First Accept</h1>
+<p class="lede">A 3B model was asked to learn fourteen facts under a
+contract: prove the fact installed, prove nothing else broke, or be
+reverted byte-exactly. It was allowed to keep exactly one. That is the
+point.</p>
+</header>
+<div class="act"><div class="actno">THE BAR</div><div><h2>What ACCEPT requires</h2><div class="meters"><span class="chip knows zero">certificate PASS</span><span class="chip knows zero">0 unrepaired casualties</span><span class="chip knows zero">verified revert ready</span></div><p class="note">A margin certificate must prove the fact truly installed (three probes, each clearing learn/competition/margin conditions against calibrated rivals). A 641-item panel must show zero unrepaired damage. If either fails, the write is reverted byte-exactly. This contract had refused every candidate — 14 of 14 in the prior campaign — until tonight.</p></div></div><div class="act"><div class="actno">ACT 1</div><div><h2>Fourteen dose searches, fourteen first-rung installs</h2><div class="meters"><span class="chip knows">14/14 committed at 15 steps</span><span class="chip knows">1 cert eval each</span></div><p class="note">Each lesson tries the smallest dose first: 15 optimizer steps. If the certificate fails, the model is hash-reverted to its parent and the next rung is tried. Tonight no lesson needed a second rung — the pre-registered prediction (installs at &le;25 steps) confirmed 14/14. Teaching all fourteen lessons cost 210 optimizer steps <i>in total</i>.</p></div></div><div class="act"><div class="actno">ACT 2</div><div><h2>The first ACCEPT — lesson C10</h2><div class="meters"><span class="chip knows">dose 15</span><span class="chip knows">cert margins &ge;8.0 nats</span><span class="chip dmg zero">casualties 0</span><span class="chip knows">58s wall clock</span></div><p class="note">Fifteen steps in, the certificate passed with margins of L&ge;7.99, C&ge;6.15, M&ge;10.37 nats across all three probes — against a bar of 0.1. The full 641-item damage panel came back clean: zero casualties, zero repairs needed. The contract admitted the update — the first accepted weight transaction in this program's history — and then kept auditing it: the fact held its own certificate through all nine subsequent transactions to the terminal record. Receipt e847e454749baf66&hellip;</p></div></div><div class="act"><div class="actno">ACT 3</div><div><h2>Thirteen honest refusals</h2><div class="meters"><span class="chip dmg">casualties 5&ndash;13 at cap</span><span class="chip knows zero">13/13 reverts verified</span></div><p class="note">The other thirteen lessons installed just as cheaply — but each arrived with 5&ndash;13 panel casualties that three repair rounds could not settle to zero. The contract refused every one, and every revert was verified byte-exact against the parent hash. A contract that admits everything proves nothing; this one refuses more than it admits.</p></div></div><div class="act"><div class="actno">ACT 4</div><div><h2>The bill names the next experiment</h2><div class="meters"><span class="chip dmg">repair 7800 steps</span><span class="chip knows">teach 210 steps</span></div><p class="note">Teaching cost 210 steps; repair attempts cost 7800. The repairs still run at a fixed 200 steps — 13&times; past the measured dose knee — and by this program's own dose law, over-dosed writes buy damage. The successor experiment (adaptive repair dosing) is not a guess; it is what this budget line demands.</p></div></div><div class="act"><div class="actno">ACT 5</div><div><h2>The audit audited itself</h2><div class="meters"><span class="chip knows zero">replay re-ran the dose search</span><span class="chip knows zero">14 certificate rows re-verified</span></div><p class="note">Mid-campaign, one sealed transaction was replayed from scratch: the dose search re-executed, the branch weights re-derived to the identical tensor hash, the certificate recomputed to the identical hash, and all three repair stages reproduced bit-exactly. At the end, fourteen integrity verifiers — receipt chain, journals, prune ledger, payload hashes, search arithmetic — all passed. Terminal receipt c0ec669c4a995ede&hellip;</p></div></div>
+<div class="act"><div class="actno">CAVEATS</div><div>
+<p class="note"><b>What this does not show:</b> one accepted update, one model (Qwen2.5-3B), one family, one scale, fact-sized knowledge — a discovery result, not a confirmed general method. The accepted fact answers its direct question at the endpoint but failed all three held-out paraphrases: this is a durable, contract-admitted <i>direct</i> edit with a disclosed 0/3 paraphrase boundary, not yet proof of transferable learning — demanding paraphrase-general acquisition before repair compute is spent is the successor experiment's registered job. Panel damage is a lower bound (a fixed panel cannot see everything). The 13 refusals trace to over-dosed repair legs, a named instrument limit, not a law of nature. Every claim above is computed from the signed state ledger at page generation; nothing is hand-typed.</p></div></div>
+<div class="act"><div class="actno">PROVENANCE</div><div>
+<p class="note" style="font-family:ui-monospace,Consolas,monospace;font-size:12.5px">
+state sha256 f6e4dd311183b0d77b4b9cbbe8d1ea50&hellip;<br>
+terminal receipt c0ec669c4a995ede96c2fa115f11a89ae85548c1e9405f245e409c6058b76648<br>
+generator sha256 7bc916c48491b1c9f6912014bfce7582&hellip;<br>
+tools + replication: <a href="https://github.com/nryoung-research/glassloop-tools">github.com/nryoung-research/glassloop-tools</a></p>
+</div></div>
+</main>
