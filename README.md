@@ -9,7 +9,11 @@ battle-tested inside that program before being packaged here. Each tool is
 a standalone directory: Python 3.10+, argparse CLIs, heavy dependencies
 imported lazily, and a selftest that runs without downloading any model.
 
-## Watch it work (live demo)
+## Watch it work (live demos — three pages, in reading order)
+
+1. **[Watch it grow](https://nryoung-research.github.io/glassloop-tools/demo/loop-watch-it-grow.html)** — the original: five 2026 facts learned, priced, healed, and hash-verified back to the starting state.
+2. **[The First Accept](https://nryoung-research.github.io/glassloop-tools/demo/the-first-accept.html)** — a sealed campaign's first contract-admitted weight transaction, with its disclosed limits.
+3. **[The Full Cycle](https://nryoung-research.github.io/glassloop-tools/demo/loop-full-cycle.html)** — teach, repair to a clean panel, press to int8, teach the compressed master, then unwind everything byte-exact.
 
 **https://nryoung-research.github.io/glassloop-tools/demo/loop-watch-it-grow.html**
 

@@ -1,0 +1,121 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Full Cycle — teach, repair, press, teach again, undo</title>
+<style>
+  :root {
+    --paper: #f4f4f0; --ink: #1c2128; --ink-soft: #57606a;
+    --rule: #d8d8d2; --card: #ffffff;
+    --pass: #2da44e; --pass-ink: #1a7f37; --pass-soft: #dafbe1;
+    --fail: #cf222e; --fail-soft: #ffebe9;
+    --bill: #9a6700; --bill-soft: #fff8c5;
+    --term-bg: #10141a; --term-text: #c9d1d9; --term-dim: #768390;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #14161a; --ink: #e6e8eb; --ink-soft: #9aa4af;
+      --rule: #2b3138; --card: #1b1f26;
+      --pass: #3fb950; --pass-ink: #3fb950; --pass-soft: #12261a;
+      --fail: #f85149; --fail-soft: #2d1517;
+      --bill: #d29922; --bill-soft: #2b2413;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #14161a; --ink: #e6e8eb; --ink-soft: #9aa4af;
+    --rule: #2b3138; --card: #1b1f26;
+    --pass: #3fb950; --pass-ink: #3fb950; --pass-soft: #12261a;
+    --fail: #f85149; --fail-soft: #2d1517;
+    --bill: #d29922; --bill-soft: #2b2413;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+    font: 16px/1.6 "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { border-bottom: 2px solid var(--ink); padding-bottom: 18px; margin-bottom: 12px; }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink-soft); margin: 0 0 10px; }
+  h1 { font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(27px, 5vw, 40px); line-height: 1.14; margin: 0 0 10px;
+    letter-spacing: 0; text-wrap: balance; font-weight: 400; }
+  .lede { color: var(--ink-soft); margin: 0; max-width: 60ch; font-size: 15.5px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 34px; }
+  .fact { background: var(--card); border: 1px solid var(--rule); border-radius: 999px;
+    padding: 5px 14px; font-size: 13.5px; }
+  .fact b { font-weight: 650; }
+  .fact .n { font-family: ui-monospace, Consolas, monospace; font-size: 10.5px;
+    color: var(--ink-soft); letter-spacing: .06em; margin-right: 5px; }
+  .act { display: grid; grid-template-columns: 84px 1fr; gap: 0 18px;
+    padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .actno { font-family: ui-monospace, Consolas, monospace; font-size: 12px;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft);
+    padding-top: 4px; }
+  .act h2 { font-size: 17px; margin: 0 0 6px; font-weight: 650; }
+  .meters { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 6px;
+    font-variant-numeric: tabular-nums; }
+  .chip { font-family: ui-monospace, Consolas, monospace; font-size: 13px;
+    font-weight: 700; padding: 3px 12px; border-radius: 6px; }
+  .knows { background: var(--pass-soft); color: var(--pass-ink); }
+  .knows.zero { background: transparent; color: var(--ink-soft);
+    border: 1px dashed var(--rule); }
+  .dmg { background: var(--fail-soft); color: var(--fail); }
+  .dmg.zero { background: var(--pass-soft); color: var(--pass-ink); }
+  .note { color: var(--ink-soft); font-size: 14px; margin: 2px 0 0; max-width: 60ch; }
+  .rounds { background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 12px 16px; margin-top: 10px; }
+  .rounds table { border-collapse: collapse; width: 100%;
+    font-variant-numeric: tabular-nums; font-size: 13.5px; }
+  .rounds th { text-align: left; font-size: 11px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-soft); padding: 2px 10px 6px 0; }
+  .rounds td { font-family: ui-monospace, Consolas, monospace; font-size: 13px;
+    padding: 3px 10px 3px 0; }
+  .heal { color: var(--pass-ink); font-weight: 700; }
+  .wound { color: var(--fail); font-weight: 700; }
+  .zero-cell { color: var(--pass-ink); font-weight: 700; }
+  .term { background: var(--term-bg); color: var(--term-text); border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; font-family: ui-monospace, Consolas, monospace;
+    font-size: 12.5px; line-height: 1.5; margin: 26px 0; }
+  .term pre { margin: 0; white-space: pre; }
+  .t-pass { color: #3fb950; font-weight: 700; }
+  .voice { background: var(--term-bg); color: var(--term-text); border-radius: 6px;
+    padding: 10px 14px; margin: 10px 0 4px; overflow-x: auto;
+    font-family: ui-monospace, Consolas, monospace; font-size: 12px; line-height: 1.55; }
+  .voice pre { margin: 0; white-space: pre-wrap; }
+  .v-label { color: var(--term-dim); }
+  .v-right { color: #3fb950; }
+  .v-wrong { color: #f85149; }
+  footer { border-top: 1px solid var(--rule); padding-top: 16px; margin-top: 30px;
+    font-size: 13px; color: var(--ink-soft); }
+  footer code { font-family: ui-monospace, Consolas, monospace; font-size: 12px;
+    color: var(--ink); }
+  .controls { display: none; gap: 10px; margin: 0 0 26px; }
+  .controls.js { display: flex; }
+  .btn { font: 600 14px/1 "Segoe UI", system-ui, sans-serif; padding: 10px 18px;
+    border-radius: 8px; border: 1.5px solid var(--ink); background: var(--ink);
+    color: var(--paper); cursor: pointer; }
+  .btn.ghost { background: transparent; color: var(--ink); }
+  .btn:focus-visible { outline: 3px solid var(--pass); outline-offset: 2px; }
+  .hidden-row { visibility: hidden; }
+  @media (prefers-reduced-motion: no-preference) {
+    .act.on, .term.on { animation: rise .45s ease-out; }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); }
+                      to { opacity: 1; transform: none; } }
+  }
+</style>
+<main>
+<header>
+<h1>The Full Cycle</h1>
+<p class="lede">One session, one ledger: a 3B model learns four 2026
+facts under audit, is repaired to a clean panel, pressed to int8, taught
+a fifth fact as a compressed master — and then every change is unwound,
+byte-exact. Growth with an undo button.</p>
+</header>
+<div class="act"><div class="actno">ACT 0</div><div><h2>The base model, quizzed</h2><div class="meters"><span class="chip knows zero">0/4 on 2026 facts</span><span class="chip dmg zero">panel damage 0</span></div><p class="note">Four questions about 2026 that Qwen2.5-3B-Instruct cannot know. Base-zero checks confirm the model does not already hold the answers (3 of 4 clear; T3 flagged as partially base-preferred and disclosed). The full model state is fingerprinted first: sha df1b49c9dd2e9c01&hellip; — the revert in Act 8 must return to exactly this.</p></div></div><div class="act"><div class="actno">ACTS 1–4</div><div><h2>Four lessons, each through the adaptive dose search</h2><div class="meters"><span class="chip knows">knows 4/4</span><span class="chip dmg">casualties peak 4</span></div><p class="note">Each lesson tries the smallest dose first — 15 optimizer steps — and escalates only if its margin certificate fails; failed rungs are hash-reverted before the next attempt. All four editors certified their install at the first rung; the live quiz arc ran 0&rarr;1&rarr;1&rarr;3&rarr;4 — lesson 2's quiz read lagged its certificate by one act, and the ledger shows it. Cheap writes are not free: the spot panel accumulates 4 casualties by Act 4, and the page says so.</p></div></div><div class="act"><div class="actno">ACT 5</div><div><h2>The repair — 3 rounds to closure</h2><div class="meters"><span class="chip knows">knows 4/4</span><span class="chip dmg zero">panel damage 0</span></div><p class="note">Each repair pass re-teaches the current casualties' own true statements, then re-measures everything — wounds healed, new wounds counted, nothing hidden. Three rounds settle the panel to zero with all four lessons still installed. Demo-grade repair: iterative to closure, not the sealed pipeline's certified leg.</p></div></div><div class="act"><div class="actno">ACT 6</div><div><h2>Pressed to int8</h2><div class="meters"><span class="chip knows">knows 4/4</span><span class="chip dmg">quantization bill: 2 casualties</span></div><p class="note">The repaired model is quantized to int8. The knowledge holds (4/4) — and the press itself has a price: 2 panel casualties (BEAR:P87:10, CF:13839), read by the same meter as everything else. Compression is a weight transaction too, and it gets a bill.</p></div></div><div class="act"><div class="actno">ACT 7</div><div><h2>A fifth lesson, taught to the pressed master</h2><div class="meters"><span class="chip knows">knows 5/5</span><span class="chip dmg">casualties 3</span></div><p class="note">The int8 master keeps learning: a fifth 2026 fact installs at the first rung, quiz 5/5. The write lands with 3 casualties on the spot panel — accumulation is never free, and the ledger records every step of the running total.</p></div></div><div class="act"><div class="actno">ACT 8</div><div><h2>The revert — every lesson unwound</h2><div class="meters"><span class="chip knows zero">knows 0/5</span><span class="chip dmg zero">panel damage 0</span><span class="chip knows zero">full-state MATCH</span></div><p class="note">All five lessons, the repairs, and the press are unwound. The quiz returns to 0/5, the panel to 0 damage, and the restored weights match the Act-0 fingerprint over the ENTIRE state dict — union MATCH, full-state MATCH. The knowledge is gone; the base model is back. That is what a real undo looks like.</p></div></div>
+<div class="act"><div class="actno">CAVEATS</div><div>
+<p class="note"><b>What this does not show:</b> a demonstration on one model (Qwen/Qwen2.5-3B-Instruct), demo-grade instruments, exploration lane — nothing here banks as evidence; the sealed pipeline is the instrument of record. Damage numbers are a spot-check panel (32 fragile + 8 stable of 641); panel damage is always a lower bound (a fixed panel cannot see everything). Repair is iterative-to-closure, not the certified repair leg. Quiz scoring is string-match on live generations; installs shown here are direct-question reads — paraphrase-general acquisition is a separate, harder bar this demo does not measure. Every number above is computed from the signed state ledger at page generation; nothing is hand-typed.</p></div></div>
+<div class="act"><div class="actno">PROVENANCE</div><div>
+<p class="note" style="font-family:ui-monospace,Consolas,monospace;font-size:12.5px">
+state sha256 2ad3faf194ba42459e005c81080f04c8&hellip;<br>
+base full-state sha256 df1b49c9dd2e9c01b145cadbdf93bbef7440283535f505b6568f6f0b056cfa0b<br>
+generator sha256 63a1111a688a327d6cd3890536b34460&hellip;<br>
+tools + replication: <a href="https://github.com/nryoung-research/glassloop-tools">github.com/nryoung-research/glassloop-tools</a></p>
+</div></div>
+</main>
