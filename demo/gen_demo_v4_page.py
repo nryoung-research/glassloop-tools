@@ -33,6 +33,11 @@ def cas(r):
 
 
 a0, a4, a5, a6, a7, a8 = (rows["act%d" % i] for i in (0, 4, 5, 6, 7, 8))
+_m0 = ast.literal_eval(rows["act0"]["margins"]) if isinstance(
+    rows["act0"]["margins"], str) else rows["act0"]["margins"]
+_m8 = ast.literal_eval(rows["act8"]["margins"]) if isinstance(
+    rows["act8"]["margins"], str) else rows["act8"]["margins"]
+nullfloor = max(abs(_m0[k] - _m8[k]) for k in _m0)
 teach_cas_peak = max(len(cas(rows["act%d" % i])) for i in (1, 2, 3, 4))
 bz = st["v4_base_certs"]
 warn = [k for k, v in bz.items() if not v["base_zero_ok"]]
@@ -82,22 +87,29 @@ act("ACT 5", f"The repair — {rounds} rounds to closure",
     "all four lessons still installed. Demo-grade repair: iterative to "
     "closure, not the sealed pipeline's certified leg.")
 
-act("ACT 6", "Pressed to int8",
+act("ACT 6", "Pressed to int8 — a release, priced",
     [("knows", f"knows {a6['knows']}/{a6['n_quiz']}"),
      ("dmg", f"quantization bill: {a6['damage']} casualties")],
-    "The repaired model is quantized to int8. The knowledge holds "
-    f"({a6['knows']}/{a6['n_quiz']}) — and the press itself has a price: "
+    "The repaired master is pressed to int8 (real per-channel symmetric "
+    "round-to-nearest over every weight leaf) and the PRESSED COPY is "
+    "measured: knowledge holds "
+    f"({a6['knows']}/{a6['n_quiz']}) and the press itself has a price — "
     f"{a6['damage']} panel casualties ({', '.join(cas(a6))}), read by the "
-    "same meter as everything else. Compression is a weight transaction "
-    "too, and it gets a bill.")
+    "same meter in the same units as every weight edit. Compression is a "
+    "weight transaction too, and it gets a bill. The press produces a "
+    "RELEASE artifact; the fp32 master line continues unchanged beneath "
+    "it — which is what makes Act 8's byte-exact revert possible.")
 
-act("ACT 7", "A fifth lesson, taught to the pressed master",
+act("ACT 7", "A fifth lesson — the fp32 master keeps growing",
     [("knows", f"knows {a7['knows']}/{a7['n_quiz']}"),
      ("dmg", f"casualties {a7['damage']}")],
-    "The int8 master keeps learning: a fifth 2026 fact installs at the "
-    f"first rung, quiz {a7['knows']}/{a7['n_quiz']}. The write lands with "
-    f"{a7['damage']} casualties on the spot panel — accumulation is never "
-    "free, and the ledger records every step of the running total.")
+    "Growth continues on the fp32 MASTER (the repaired Act-5 state) — "
+    "the staircase's real architecture: the master copy grows; pressings "
+    "are releases. A fifth 2026 fact installs at the first rung, quiz "
+    f"{a7['knows']}/{a7['n_quiz']}, landing with {a7['damage']} spot-panel "
+    "casualties — accumulation is never free, and the ledger records the "
+    "running total. (An earlier revision of this page wrongly said the "
+    "lesson was taught to the pressed copy; corrected 2026-08-25.)")
 
 act("ACT 8", "The revert — every lesson unwound",
     [("knows zero", f"knows {a8['knows']}/{a8['n_quiz']}"),
@@ -117,8 +129,16 @@ caveats = (
     f"Damage numbers are a spot-check panel ({nfrag} fragile + {nstab} "
     "stable of 641); panel damage is always a lower bound (a fixed panel "
     "cannot see everything). Repair is iterative-to-closure, not the "
-    "certified repair leg. Quiz scoring is string-match on live "
-    "generations; installs shown here are direct-question reads — "
+    "certified repair leg — and repair here both targets and is scored "
+    "on the same spot panel: after repair, that panel has been optimized "
+    "against and is no longer a lower bound in the same sense (the sealed "
+    "pipeline holds a custodian-side hidden set for exactly this reason; "
+    "a disjoint held-out panel is queued for the next demo revision). "
+    "Measurement floor, from this run's own ledger: re-reading the "
+    f"restored weights reproduces all {nfrag + nstab} panel margins to a "
+    f"max abs difference of {nullfloor:g} — the casualty meter is "
+    "deterministic on identical weights. Quiz scoring is string-match on "
+    "live generations; installs shown here are direct-question reads — "
     "paraphrase-general acquisition is a separate, harder bar this demo "
     "does not measure. Every number above is computed from the signed "
     "state ledger at page generation; nothing is hand-typed.")
