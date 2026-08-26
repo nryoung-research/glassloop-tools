@@ -56,8 +56,12 @@ act("THE BAR", "What ACCEPT requires",
     "A margin certificate must prove the fact truly installed (three probes, "
     "each clearing learn/competition/margin conditions against calibrated "
     "rivals). A 641-item panel must show zero unrepaired damage. If either "
-    "fails, the write is reverted byte-exactly. This contract had refused "
-    "every candidate — 14 of 14 in the prior campaign — until tonight.")
+    "fails, the write is reverted byte-exactly. The panel is a design-time "
+    "development instrument, chosen before the run; a separate never-read "
+    "sealed pool (sha 4ebff247&hellip;) exists for version-level admission "
+    "claims and remains deliberately unspent — its single-open budget is "
+    "preserved. This contract had refused every candidate — 14 of 14 in the "
+    "prior campaign — until tonight.")
 
 act("ACT 1", "Fourteen dose searches, fourteen first-rung installs",
     [("knows", "14/14 committed at 15 steps"), ("knows", "1 cert eval each")],
@@ -73,8 +77,11 @@ act("ACT 2", f"The first ACCEPT — lesson {a['name'].split()[0]}",
      ("dmg zero", "casualties 0"), ("knows", f"{a['wall_s']:.0f}s wall clock")],
     f"Fifteen steps in, the certificate passed with margins of "
     f"L&ge;{Lmin:.2f}, C&ge;{Cmin:.2f}, M&ge;{Mmin:.2f} nats across all three "
-    f"probes — against a bar of 0.1. The full 641-item damage panel came back "
-    f"clean: zero casualties, zero repairs needed. The contract admitted the "
+    f"probes — against a bar of 0.1 <i>on the three direct probes</i>; "
+    f"paraphrase generalization is a separate bar this fact failed (see "
+    f"CAVEATS) — the certificate proves the direct edit, not transfer. The "
+    f"full 641-item design-time damage panel came back "
+    f"clean: zero observed casualties, zero repairs needed. The contract admitted the "
     f"update — the first accepted weight transaction in this program's "
     f"history — and then kept auditing it: the fact held its own certificate "
     f"through all nine subsequent transactions to the terminal record. "
@@ -90,14 +97,18 @@ act("ACT 3", "Thirteen honest refusals",
     "contract that admits everything proves nothing; this one refuses more "
     "than it admits.")
 
-act("ACT 4", "The bill names the next experiment",
+act("ACT 4", "The real finding: repair is a dose-dependent damage generator",
     [("dmg", f"repair {budget['repair_steps']} steps"),
      ("knows", f"teach {budget['teach_steps']} steps")],
     f"Teaching cost {budget['teach_steps']} steps; repair attempts cost "
-    f"{budget['repair_steps']}. The repairs still run at a fixed 200 steps — "
+    f"{budget['repair_steps']}. The repairs run at a fixed 200 steps — "
     "13&times; past the measured dose knee — and by this program's own dose "
-    "law, over-dosed writes buy damage. The successor experiment (adaptive "
-    "repair dosing) is not a guess; it is what this budget line demands.")
+    "law, over-dosed writes buy damage. The thirteen refusals are that "
+    "mechanism's empirical signature: the scientifically load-bearing result "
+    "of this campaign is not the one acceptance but the dynamics that made "
+    "thirteen lessons unrepairable under this leg. The successor experiment "
+    "(adaptive repair dosing) is not a guess; it is what this budget line "
+    "demands.")
 
 act("ACT 5", "The audit audited itself",
     [("knows zero", "replay re-ran the dose search"),
@@ -121,7 +132,12 @@ caveats = (
     "compute is spent is the successor experiment's registered job. Panel "
     "damage is a lower bound (a fixed panel cannot see everything). The 13 "
     "refusals trace to over-dosed repair legs, a named instrument limit, not "
-    "a law of nature. Every claim above is computed from the signed state "
+    "a law of nature. <b>Repair-regime note:</b> this sealed campaign's "
+    "certified leg runs FIXED 200-step repairs; the companion Full Cycle "
+    "demo uses iterative-to-closure repair, which is demo-grade and labeled "
+    "as such there. Whether adaptive dosing would rescue any of the thirteen "
+    "refusals is exactly the registered successor question — untested here. "
+    "Every claim above is computed from the signed state "
     "ledger at page generation; nothing is hand-typed.")
 
 head_css = open(os.path.join(os.path.dirname(OUT),
@@ -138,8 +154,10 @@ html = f"""<meta charset="utf-8">
 <h1>The First Accept</h1>
 <p class="lede">A 3B model was asked to learn fourteen facts under a
 contract: prove the fact installed, prove nothing else broke, or be
-reverted byte-exactly. It was allowed to keep exactly one. That is the
-point.</p>
+reverted byte-exactly. It vetoed thirteen and admitted one. The vetoes
+are the rule; the single admission &mdash; the first in this
+program's history &mdash; is the exception that proves the contract
+does work.</p>
 </header>
 {''.join(acts)}
 <div class="act"><div class="actno">CAVEATS</div><div>
@@ -148,6 +166,11 @@ point.</p>
 <p class="note" style="font-family:ui-monospace,Consolas,monospace;font-size:12.5px">
 state sha256 {fsha(STATE)[:32]}&hellip;<br>
 terminal receipt {term}<br>
+accepted-lesson receipt {a['receipt_sha256']}<br>
+accepted-lesson branch-weight sha256 {a['b2_search']['branches'][0]['child_tensor_sha256']}<br>
+accepted-lesson margin-certificate sha256 {a['margin_certs']['lesson']['margin_cert_sha256']}<br>
+sealed dose-search spec sha256 {a['b2_search']['sealed_spec_sha256']}<br>
+parent-weights sha256 {a['b2_search']['branches'][0]['parent_full_sha256']}<br>
 generator sha256 {fsha(os.path.abspath(__file__))[:32]}&hellip;<br>
 tools + replication: <a href="https://github.com/nryoung-research/glassloop-tools">github.com/nryoung-research/glassloop-tools</a></p>
 </div></div>

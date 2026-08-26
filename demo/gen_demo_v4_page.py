@@ -119,8 +119,12 @@ act("ACT 8", "The revert — every lesson unwound",
     f"returns to {a8['knows']}/{a8['n_quiz']}, the panel to "
     f"{a8['damage']} damage, and the restored weights match the Act-0 "
     "fingerprint over the ENTIRE state dict — "
-    f"{a8['label'].split('(')[1].rstrip(')')}. The knowledge is gone; the "
-    "base model is back. That is what a real undo looks like.")
+    f"{a8['label'].split('(')[1].rstrip(')')}. And the meter itself is "
+    "well-defined: re-reading the restored weights reproduces every panel "
+    f"margin to a max abs difference of {nullfloor:g} — byte-exact revert "
+    "means the measurements come back too, not just the hashes. The "
+    "knowledge is gone; the base model is back. That is what a real undo "
+    "looks like.")
 
 caveats = (
     "<b>What this does not show:</b> a demonstration on one model "
