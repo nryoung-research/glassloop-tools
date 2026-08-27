@@ -1,4 +1,4 @@
-# glassloop-tools
+﻿# glassloop-tools
 
 Self-contained instruments from an **auditable continual learning**
 research program: teaching facts and skills into LLM weights with the
@@ -74,6 +74,24 @@ python tools/quant-bill/...                   # see tools/quant-bill/README.md
 
 A selftest that fails on your machine is a result: do not proceed to model
 measurements until it passes.
+
+## The research program behind the tools
+
+Every instrument here — and the three demo pages above — was built inside a 32-paper
+research program on the metrology of language-model internals (papers numbered 1–33;
+13 unused), in two arcs: the **state arc** (papers 1–28 — the part of a transformer's
+residual stream its own output layer cannot read), and the **change arc** (papers 29–33 —
+weight updates as measured, auditable, revertible transactions), with a campaign-record
+paper on contract-monotone continual learning in preparation.
+
+- **[PAPERS.md](PAPERS.md)** — the map: what each paper shows and where to start by interest.
+- **[CORPUS.md](CORPUS.md)** — the canonical DOI register, every entry verified against the
+  live Zenodo record.
+
+Every result is pre-registered and sealed before the run; negative results are banked at the
+same weight as positive ones. Author: Nathan Ryan Young, ORCID
+[0009-0003-2840-7726](https://orcid.org/0009-0003-2840-7726).
+
 
 ## License and author
 
