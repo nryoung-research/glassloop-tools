@@ -1,0 +1,191 @@
+{
+ "arm": "E3_wise",
+ "bank_sha256": "9c158782c0aa81854b6bfcabf9d43efe711ebd48ad5bc94052a2bc86c3592212",
+ "editor": {
+  "adapter_helper_sha256": "39c486ccb213f1063f1831d9a49eeebd30eec7a3a492a9ae00a7ee40433ca9ba",
+  "arm": "E3_wise",
+  "cpu_s": 753.1,
+  "deployable_as": "base weights + side memory + activation router (hooked module)",
+  "easyedit_git_head": "14cea8245f06715684592ab55184939b99d70784",
+  "easyedit_root": "C:\\fp43\\EasyEdit",
+  "hparams": {
+   "act_margin": [
+    5.0,
+    20.0,
+    10.0
+   ],
+   "act_ratio": 0.88,
+   "alg_name": "WISE",
+   "densities": 0.53,
+   "device": 0,
+   "edit_lr": 1.0,
+   "inner_params": [
+    "model.layers[27].mlp.down_proj.weight"
+   ],
+   "mask_ratio": 0.2,
+   "merge_alg": "ties",
+   "merge_freq": 1000,
+   "model_name": "Qwen/Qwen2.5-3B-Instruct",
+   "model_parallel": false,
+   "n_iter": 70,
+   "norm_constraint": 1.0,
+   "objective_optimization": "only_label",
+   "replay": false,
+   "retrieve": true,
+   "save_freq": 500,
+   "use_chat_template": false,
+   "weights": 1.0
+  },
+  "hparams_path": "E3_wise_selected.yaml",
+  "hparams_sha256": "0ad62e1d326d44e75a62be2bc77e5867581bb07fce017dec91ce35dea34328ca",
+  "layer": "model.layers[27].mlp.down_proj",
+  "n_requests": 60,
+  "one_request_per_library_call": true,
+  "original_weight_sha256": "b7de395e67059a88631c9046596a9f268ef8cab3d5603d8c325abdfdefda28bb",
+  "peak_gpu_bytes": 16753906176,
+  "requests_sha256": "9b40e70301df7056ac3fb8b2b80d8c06be64800c77665186d165084181b48fb7",
+  "retrieve": true,
+  "state": {
+   "memory_mean_act": [],
+   "module_type": "WISEAdapter",
+   "original_attr": "original_layer",
+   "side_delta_fro": 33.73627853393555,
+   "side_delta_max_abs": 1.003448486328125,
+   "side_weight_attr": "new_weight",
+   "tensor_attrs": {
+    "new_weight_layer_output": [
+     12,
+     236,
+     2048
+    ],
+    "original_layer_output": [
+     12,
+     236,
+     2048
+    ],
+    "weight_mask": [
+     22544384
+    ]
+   }
+  },
+  "wall_s": 900.8
+ },
+ "family_sha256": "7fceafa2fdb7b02a48937d2331439962c23c92498f58711299d0d57dd6ff8cce",
+ "finished": "2026-09-12T18:21:08",
+ "kind": "fp678_h2h_receipt",
+ "lessons": {
+  "form": "chat-rendered prompt_closed -> fenced compact worked solution + eos (pilot_teach.chat_form); subject = vex_tasks.phrase(ops)",
+  "ids": [
+   "VEX/088",
+   "VEX/128",
+   "VEX/137",
+   "VEX/074",
+   "VEX/075",
+   "VEX/061",
+   "VEX/045",
+   "VEX/050",
+   "VEX/034",
+   "VEX/068",
+   "VEX/076",
+   "VEX/044",
+   "VEX/089",
+   "VEX/023",
+   "VEX/123",
+   "VEX/046",
+   "VEX/006",
+   "VEX/011",
+   "VEX/109",
+   "VEX/116",
+   "VEX/032",
+   "VEX/043",
+   "VEX/071",
+   "VEX/079",
+   "VEX/059",
+   "VEX/055",
+   "VEX/072",
+   "VEX/007",
+   "VEX/105",
+   "VEX/101",
+   "VEX/095",
+   "VEX/133",
+   "VEX/015",
+   "VEX/106",
+   "VEX/078",
+   "VEX/140",
+   "VEX/038",
+   "VEX/024",
+   "VEX/042",
+   "VEX/052",
+   "VEX/070",
+   "VEX/049",
+   "VEX/017",
+   "VEX/136",
+   "VEX/073",
+   "VEX/131",
+   "VEX/093",
+   "VEX/001",
+   "VEX/010",
+   "VEX/056",
+   "VEX/013",
+   "VEX/080",
+   "VEX/000",
+   "VEX/065",
+   "VEX/060",
+   "VEX/021",
+   "VEX/135",
+   "VEX/025",
+   "VEX/054",
+   "VEX/009"
+  ],
+  "n": 60
+ },
+ "limits": {
+  "lessons": 0,
+  "reads": 0,
+  "skip_anchor": false
+ },
+ "manifest_sha256": null,
+ "model_dir": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "model_safetensors_sha256": null,
+ "panel_sha256": "c8a6d19a6c67fd3712c28cfe3ecec074cf78c655071bca054e364746c591e32d",
+ "param_dtypes": {
+  "after_edit": [
+   "torch.bfloat16"
+  ],
+  "at_load": [
+   "torch.bfloat16"
+  ]
+ },
+ "reads": {
+  "anchor_n": 164,
+  "anchor_samples": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\climber\\out\\anchor\\climb_fp678v2_E3_wise_bf16_cfgA_samples.jsonl",
+  "anchor_samples_sha256": "31aedc735b50bad03e6406848f7534d428bc5489b4f893754d5d724155d3d78a",
+  "base_panel_sha256": "e07bbb7010152b9a04bc27d87ace529631e99463f5ae2770e4d53a60866775cd",
+  "bill": 0.0,
+  "crossings": 0,
+  "heldout_n": 60,
+  "heldout_report_sha256": "562528da70033e5700d2122db37b3bf3dd0bdbc8665bfdbe8bec5a4b9fb3df76",
+  "heldout_vex": 1,
+  "panel_n": 641,
+  "panel_positive_margins": 639,
+  "panel_read_sha256": "4733e5eb88da230fd05294e2e07bb57be817e39b867e40bed88fd616a5c34783",
+  "price_sha256": "fd32bf34b0c4c30f3458d40c14cd3066915055639053873d4e516c2319a04faa",
+  "sign_crossings": [],
+  "teach_n": 60,
+  "teach_report_sha256": "0c54e082468a809ea6a53209386be5e7eff9120e160e8ad29d2effefd648963c",
+  "teach_vex": 2
+ },
+ "runner_sha256": "de956806a91f805bea0042a0e15f23bfafda35eb3203a4205550b177e9e3a076",
+ "snapshot": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "stack": {
+  "cuda": "12.8",
+  "dtype": "bfloat16",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "python": "3.13.2",
+  "torch": "2.7.1+cu128",
+  "transformers": "5.5.4"
+ },
+ "started": "2026-09-12T17:28:31",
+ "tag": "fp678v2_E3_wise_bf16_cfgA",
+ "wall_s": 3159.7
+}

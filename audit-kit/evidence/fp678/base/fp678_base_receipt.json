@@ -1,0 +1,60 @@
+{
+ "arm": "base",
+ "bank_sha256": "9c158782c0aa81854b6bfcabf9d43efe711ebd48ad5bc94052a2bc86c3592212",
+ "family_sha256": "7fceafa2fdb7b02a48937d2331439962c23c92498f58711299d0d57dd6ff8cce",
+ "finished": "2026-09-11T18:58:59",
+ "kind": "fp678_h2h_receipt",
+ "limits": {
+  "lessons": 0,
+  "reads": 0,
+  "skip_anchor": false
+ },
+ "manifest_sha256": null,
+ "model_dir": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "model_safetensors_sha256": null,
+ "panel_sha256": "c8a6d19a6c67fd3712c28cfe3ecec074cf78c655071bca054e364746c591e32d",
+ "param_dtypes": {
+  "after_edit": [
+   "torch.bfloat16"
+  ],
+  "at_load": [
+   "torch.bfloat16"
+  ]
+ },
+ "port_check": {
+  "cap_n": 60,
+  "cap_rows_equal": true,
+  "panel_items_equal": true,
+  "panel_max_abs_diff": 0.0,
+  "panel_n": 641,
+  "real_cap_report_sha256": "1a28c75054b98f5ce1e77bec18d490c3f1caf5a83e93c63deb96d8e2d1ac5b05",
+  "real_panel_sha256": "f71bf2c4629af1404758921da785b40e2844389ee2f81bdc37dde1abf8ae0b9f"
+ },
+ "reads": {
+  "anchor_n": 164,
+  "anchor_samples": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\climber\\out\\anchor\\climb_fp678_base_bf16_cfgA_samples.jsonl",
+  "anchor_samples_sha256": "04e08a474621fe8559109f0aaed1e9950a35b649b219cf8add927d01f9a24151",
+  "heldout_n": 60,
+  "heldout_report_sha256": "d54e99909072ac1847c4c8a64041a1e31594009045639190b53f1c3952b8f403",
+  "heldout_vex": 1,
+  "panel_n": 641,
+  "panel_positive_margins": 639,
+  "panel_read_sha256": "02ac4275062f95bd33772be251d4342857b697a985339d4ec66ef5508de448ad",
+  "teach_n": 60,
+  "teach_report_sha256": "9c9adad4e0dd10a89d84b35e0f66b2c40f43f413c8172e4f830710833a0f335a",
+  "teach_vex": 0
+ },
+ "runner_sha256": "0f32a0ebce7e0de3bb538f181215da0a9964f109d8c4a2a8ece2ba93ae6cd826",
+ "snapshot": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "stack": {
+  "cuda": "12.8",
+  "dtype": "bfloat16",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "python": "3.13.2",
+  "torch": "2.7.1+cu128",
+  "transformers": "5.5.4"
+ },
+ "started": "2026-09-11T18:14:40",
+ "tag": "fp678_base_bf16_cfgA",
+ "wall_s": 2662.9
+}

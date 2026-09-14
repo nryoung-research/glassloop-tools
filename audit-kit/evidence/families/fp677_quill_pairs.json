@@ -1,0 +1,604 @@
+{
+ "family_sha256": "300578953d12a786904028a25a65e41c2a5d63e390d5cbf899c9efea2c1682c0",
+ "graded_pass": 60,
+ "items": [
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef _ledger(s):\n    \"\"\"Count characters into a dict.\n    TWIST: only characters that occur an EVEN number of times are reported, and keys are upper-cased.\n    ledger(\"aabbbc\") -> {\"A\": 2}\n    \"\"\"\n    c = {}\n    for ch in s:\n        c[ch] = c.get(ch, 0) + 1\n    return {k.upper(): v for k, v in c.items() if v % 2 == 0}\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, 3)\n    cur = _ledger(cur)\n    return cur\n```",
+   "id": "QUILL/064",
+   "ops": [
+    "tilt3",
+    "ledger"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=3, then apply the quill ledger operation. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/064"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, -1)\n    cur = _sift(cur, 'vowel')\n    return cur\n```",
+   "id": "QUILL/075",
+   "ops": [
+    "tilt-1",
+    "sift_vowel"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=-1, then apply the quill sift operation with the vowel predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/075"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, -1)\n    cur = _sift(cur, 'upper')\n    return cur\n```",
+   "id": "QUILL/086",
+   "ops": [
+    "tilt-1",
+    "sift_upper"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=-1, then apply the quill sift operation with the upper predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/086"
+  },
+  {
+   "answer": "```python\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _lace(cur, 'XY')\n    cur = _fold(cur, 4)\n    return cur\n```",
+   "id": "QUILL/099",
+   "ops": [
+    "lace_XY",
+    "fold4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill lace operation with t='XY', then apply the quill fold operation with k=4. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/099"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _ledger(s):\n    \"\"\"Count characters into a dict.\n    TWIST: only characters that occur an EVEN number of times are reported, and keys are upper-cased.\n    ledger(\"aabbbc\") -> {\"A\": 2}\n    \"\"\"\n    c = {}\n    for ch in s:\n        c[ch] = c.get(ch, 0) + 1\n    return {k.upper(): v for k, v in c.items() if v % 2 == 0}\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'upper')\n    cur = _ledger(cur)\n    return cur\n```",
+   "id": "QUILL/020",
+   "ops": [
+    "sift_upper",
+    "ledger"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the upper predicate, then apply the quill ledger operation. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/020"
+  },
+  {
+   "answer": "```python\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef f(s):\n    cur = s\n    cur = _fold(cur, 4)\n    cur = _lace(cur, 'mm')\n    return cur\n```",
+   "id": "QUILL/084",
+   "ops": [
+    "fold4",
+    "lace_mm"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill fold operation with k=4, then apply the quill lace operation with t='mm'. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/084"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef _knot(s):\n    \"\"\"Interleave the first half and the second half of s character by character.\n    TWIST: when the length is odd, the middle character is dropped, not kept.\n    knot(\"abcde\") -> \"adbe\"\n    \"\"\"\n    n = len(s) // 2\n    a, b = s[:n], s[len(s) - n:]\n    return \"\".join(x + y for x, y in zip(a, b))\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, 2)\n    cur = _knot(cur)\n    return cur\n```",
+   "id": "QUILL/059",
+   "ops": [
+    "tilt2",
+    "knot"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=2, then apply the quill knot operation. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/059"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'upper')\n    cur = _sift(cur, 'vowel')\n    return cur\n```",
+   "id": "QUILL/069",
+   "ops": [
+    "sift_upper",
+    "sift_vowel"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the upper predicate, then apply the quill sift operation with the vowel predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/069"
+  },
+  {
+   "answer": "```python\ndef _knot(s):\n    \"\"\"Interleave the first half and the second half of s character by character.\n    TWIST: when the length is odd, the middle character is dropped, not kept.\n    knot(\"abcde\") -> \"adbe\"\n    \"\"\"\n    n = len(s) // 2\n    a, b = s[:n], s[len(s) - n:]\n    return \"\".join(x + y for x, y in zip(a, b))\n\n\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _knot(cur)\n    cur = _sift(cur, 'upper')\n    return cur\n```",
+   "id": "QUILL/037",
+   "ops": [
+    "knot",
+    "sift_upper"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill knot operation, then apply the quill sift operation with the upper predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/037"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'digit')\n    cur = _fold(cur, 2)\n    return cur\n```",
+   "id": "QUILL/112",
+   "ops": [
+    "sift_digit",
+    "fold2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the digit predicate, then apply the quill fold operation with k=2. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/112"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, 3)\n    cur = _sift(cur, 'digit')\n    return cur\n```",
+   "id": "QUILL/054",
+   "ops": [
+    "tilt3",
+    "sift_digit"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=3, then apply the quill sift operation with the digit predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/054"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'digit')\n    cur = _lace(cur, '9')\n    return cur\n```",
+   "id": "QUILL/053",
+   "ops": [
+    "sift_digit",
+    "lace_9"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the digit predicate, then apply the quill lace operation with t='9'. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/053"
+  },
+  {
+   "answer": "```python\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _fold(cur, 4)\n    return cur\n```",
+   "id": "QUILL/002",
+   "ops": [
+    "fold4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill fold operation with k=4. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/002"
+  },
+  {
+   "answer": "```python\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef f(s):\n    cur = s\n    cur = _lace(cur, '9')\n    return cur\n```",
+   "id": "QUILL/012",
+   "ops": [
+    "lace_9"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill lace operation with t='9'. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/012"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, 3)\n    cur = _fold(cur, 4)\n    return cur\n```",
+   "id": "QUILL/110",
+   "ops": [
+    "tilt3",
+    "fold4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=3, then apply the quill fold operation with k=4. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/110"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'upper')\n    cur = _tilt(cur, 1)\n    return cur\n```",
+   "id": "QUILL/104",
+   "ops": [
+    "sift_upper",
+    "tilt1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the upper predicate, then apply the quill tilt operation with n=1. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/104"
+  },
+  {
+   "answer": "```python\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _lace(cur, '9')\n    cur = _fold(cur, 2)\n    return cur\n```",
+   "id": "QUILL/107",
+   "ops": [
+    "lace_9",
+    "fold2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill lace operation with t='9', then apply the quill fold operation with k=2. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/107"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, 3)\n    cur = _tilt(cur, -1)\n    return cur\n```",
+   "id": "QUILL/019",
+   "ops": [
+    "tilt3",
+    "tilt-1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=3, then apply the quill tilt operation with n=-1. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/019"
+  },
+  {
+   "answer": "```python\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef _ledger(s):\n    \"\"\"Count characters into a dict.\n    TWIST: only characters that occur an EVEN number of times are reported, and keys are upper-cased.\n    ledger(\"aabbbc\") -> {\"A\": 2}\n    \"\"\"\n    c = {}\n    for ch in s:\n        c[ch] = c.get(ch, 0) + 1\n    return {k.upper(): v for k, v in c.items() if v % 2 == 0}\n\n\ndef f(s):\n    cur = s\n    cur = _fold(cur, 3)\n    cur = _ledger(cur)\n    return cur\n```",
+   "id": "QUILL/070",
+   "ops": [
+    "fold3",
+    "ledger"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill fold operation with k=3, then apply the quill ledger operation. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/070"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'upper')\n    cur = _fold(cur, 4)\n    return cur\n```",
+   "id": "QUILL/083",
+   "ops": [
+    "sift_upper",
+    "fold4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the upper predicate, then apply the quill fold operation with k=4. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/083"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, -1)\n    cur = _fold(cur, 4)\n    return cur\n```",
+   "id": "QUILL/074",
+   "ops": [
+    "tilt-1",
+    "fold4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=-1, then apply the quill fold operation with k=4. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/074"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'digit')\n    cur = _sift(cur, 'upper')\n    return cur\n```",
+   "id": "QUILL/021",
+   "ops": [
+    "sift_digit",
+    "sift_upper"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the digit predicate, then apply the quill sift operation with the upper predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/021"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'upper')\n    cur = _fold(cur, 3)\n    return cur\n```",
+   "id": "QUILL/105",
+   "ops": [
+    "sift_upper",
+    "fold3"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the upper predicate, then apply the quill fold operation with k=3. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/105"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, 1)\n    cur = _sift(cur, 'digit')\n    return cur\n```",
+   "id": "QUILL/119",
+   "ops": [
+    "tilt1",
+    "sift_digit"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=1, then apply the quill sift operation with the digit predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/119"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'digit')\n    cur = _lace(cur, 'mm')\n    return cur\n```",
+   "id": "QUILL/018",
+   "ops": [
+    "sift_digit",
+    "lace_mm"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the digit predicate, then apply the quill lace operation with t='mm'. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/018"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'upper')\n    cur = _lace(cur, '9')\n    return cur\n```",
+   "id": "QUILL/071",
+   "ops": [
+    "sift_upper",
+    "lace_9"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the upper predicate, then apply the quill lace operation with t='9'. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/071"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef _ledger(s):\n    \"\"\"Count characters into a dict.\n    TWIST: only characters that occur an EVEN number of times are reported, and keys are upper-cased.\n    ledger(\"aabbbc\") -> {\"A\": 2}\n    \"\"\"\n    c = {}\n    for ch in s:\n        c[ch] = c.get(ch, 0) + 1\n    return {k.upper(): v for k, v in c.items() if v % 2 == 0}\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, -1)\n    cur = _ledger(cur)\n    return cur\n```",
+   "id": "QUILL/017",
+   "ops": [
+    "tilt-1",
+    "ledger"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=-1, then apply the quill ledger operation. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/017"
+  },
+  {
+   "answer": "```python\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _lace(cur, 'XY')\n    cur = _fold(cur, 2)\n    return cur\n```",
+   "id": "QUILL/033",
+   "ops": [
+    "lace_XY",
+    "fold2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill lace operation with t='XY', then apply the quill fold operation with k=2. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/033"
+  },
+  {
+   "answer": "```python\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _fold(cur, 3)\n    cur = _tilt(cur, -1)\n    return cur\n```",
+   "id": "QUILL/038",
+   "ops": [
+    "fold3",
+    "tilt-1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill fold operation with k=3, then apply the quill tilt operation with n=-1. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/038"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'digit')\n    cur = _tilt(cur, 3)\n    return cur\n```",
+   "id": "QUILL/016",
+   "ops": [
+    "sift_digit",
+    "tilt3"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the digit predicate, then apply the quill tilt operation with n=3. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/016"
+  },
+  {
+   "answer": "```python\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef _knot(s):\n    \"\"\"Interleave the first half and the second half of s character by character.\n    TWIST: when the length is odd, the middle character is dropped, not kept.\n    knot(\"abcde\") -> \"adbe\"\n    \"\"\"\n    n = len(s) // 2\n    a, b = s[:n], s[len(s) - n:]\n    return \"\".join(x + y for x, y in zip(a, b))\n\n\ndef f(s):\n    cur = s\n    cur = _lace(cur, '9')\n    cur = _knot(cur)\n    return cur\n```",
+   "id": "QUILL/045",
+   "ops": [
+    "lace_9",
+    "knot"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill lace operation with t='9', then apply the quill knot operation. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/045"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'upper')\n    cur = _tilt(cur, -1)\n    return cur\n```",
+   "id": "QUILL/118",
+   "ops": [
+    "sift_upper",
+    "tilt-1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the upper predicate, then apply the quill tilt operation with n=-1. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/118"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'vowel')\n    return cur\n```",
+   "id": "QUILL/007",
+   "ops": [
+    "sift_vowel"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the vowel predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/007"
+  },
+  {
+   "answer": "```python\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _lace(cur, '9')\n    cur = _tilt(cur, 3)\n    return cur\n```",
+   "id": "QUILL/096",
+   "ops": [
+    "lace_9",
+    "tilt3"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill lace operation with t='9', then apply the quill tilt operation with n=3. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/096"
+  },
+  {
+   "answer": "```python\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _fold(cur, 4)\n    cur = _fold(cur, 2)\n    return cur\n```",
+   "id": "QUILL/055",
+   "ops": [
+    "fold4",
+    "fold2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill fold operation with k=4, then apply the quill fold operation with k=2. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/055"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'vowel')\n    cur = _lace(cur, '9')\n    return cur\n```",
+   "id": "QUILL/052",
+   "ops": [
+    "sift_vowel",
+    "lace_9"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the vowel predicate, then apply the quill lace operation with t='9'. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/052"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'upper')\n    cur = _tilt(cur, 2)\n    return cur\n```",
+   "id": "QUILL/031",
+   "ops": [
+    "sift_upper",
+    "tilt2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the upper predicate, then apply the quill tilt operation with n=2. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/031"
+  },
+  {
+   "answer": "```python\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _fold(cur, 3)\n    cur = _sift(cur, 'upper')\n    return cur\n```",
+   "id": "QUILL/051",
+   "ops": [
+    "fold3",
+    "sift_upper"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill fold operation with k=3, then apply the quill sift operation with the upper predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/051"
+  },
+  {
+   "answer": "```python\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _fold(cur, 2)\n    cur = _sift(cur, 'vowel')\n    return cur\n```",
+   "id": "QUILL/093",
+   "ops": [
+    "fold2",
+    "sift_vowel"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill fold operation with k=2, then apply the quill sift operation with the vowel predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/093"
+  },
+  {
+   "answer": "```python\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _fold(cur, 2)\n    cur = _fold(cur, 3)\n    return cur\n```",
+   "id": "QUILL/043",
+   "ops": [
+    "fold2",
+    "fold3"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill fold operation with k=2, then apply the quill fold operation with k=3. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/043"
+  },
+  {
+   "answer": "```python\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _fold(cur, 3)\n    cur = _tilt(cur, 2)\n    return cur\n```",
+   "id": "QUILL/066",
+   "ops": [
+    "fold3",
+    "tilt2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill fold operation with k=3, then apply the quill tilt operation with n=2. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/066"
+  },
+  {
+   "answer": "```python\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _lace(cur, '9')\n    cur = _sift(cur, 'vowel')\n    return cur\n```",
+   "id": "QUILL/057",
+   "ops": [
+    "lace_9",
+    "sift_vowel"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill lace operation with t='9', then apply the quill sift operation with the vowel predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/057"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'upper')\n    cur = _fold(cur, 2)\n    return cur\n```",
+   "id": "QUILL/035",
+   "ops": [
+    "sift_upper",
+    "fold2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the upper predicate, then apply the quill fold operation with k=2. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/035"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, -1)\n    cur = _tilt(cur, 2)\n    return cur\n```",
+   "id": "QUILL/077",
+   "ops": [
+    "tilt-1",
+    "tilt2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=-1, then apply the quill tilt operation with n=2. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/077"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'upper')\n    cur = _lace(cur, 'XY')\n    return cur\n```",
+   "id": "QUILL/065",
+   "ops": [
+    "sift_upper",
+    "lace_XY"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the upper predicate, then apply the quill lace operation with t='XY'. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/065"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'digit')\n    cur = _sift(cur, 'vowel')\n    return cur\n```",
+   "id": "QUILL/027",
+   "ops": [
+    "sift_digit",
+    "sift_vowel"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the digit predicate, then apply the quill sift operation with the vowel predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/027"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _ledger(s):\n    \"\"\"Count characters into a dict.\n    TWIST: only characters that occur an EVEN number of times are reported, and keys are upper-cased.\n    ledger(\"aabbbc\") -> {\"A\": 2}\n    \"\"\"\n    c = {}\n    for ch in s:\n        c[ch] = c.get(ch, 0) + 1\n    return {k.upper(): v for k, v in c.items() if v % 2 == 0}\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'digit')\n    cur = _ledger(cur)\n    return cur\n```",
+   "id": "QUILL/025",
+   "ops": [
+    "sift_digit",
+    "ledger"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the digit predicate, then apply the quill ledger operation. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/025"
+  },
+  {
+   "answer": "```python\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _lace(cur, 'XY')\n    cur = _sift(cur, 'upper')\n    return cur\n```",
+   "id": "QUILL/036",
+   "ops": [
+    "lace_XY",
+    "sift_upper"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill lace operation with t='XY', then apply the quill sift operation with the upper predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/036"
+  },
+  {
+   "answer": "```python\ndef _knot(s):\n    \"\"\"Interleave the first half and the second half of s character by character.\n    TWIST: when the length is odd, the middle character is dropped, not kept.\n    knot(\"abcde\") -> \"adbe\"\n    \"\"\"\n    n = len(s) // 2\n    a, b = s[:n], s[len(s) - n:]\n    return \"\".join(x + y for x, y in zip(a, b))\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _knot(cur)\n    cur = _tilt(cur, 3)\n    return cur\n```",
+   "id": "QUILL/042",
+   "ops": [
+    "knot",
+    "tilt3"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill knot operation, then apply the quill tilt operation with n=3. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/042"
+  },
+  {
+   "answer": "```python\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef f(s):\n    cur = s\n    cur = _lace(cur, '9')\n    cur = _sift(cur, 'digit')\n    return cur\n```",
+   "id": "QUILL/028",
+   "ops": [
+    "lace_9",
+    "sift_digit"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill lace operation with t='9', then apply the quill sift operation with the digit predicate. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/028"
+  },
+  {
+   "answer": "```python\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _fold(cur, 4)\n    cur = _tilt(cur, 1)\n    return cur\n```",
+   "id": "QUILL/046",
+   "ops": [
+    "fold4",
+    "tilt1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill fold operation with k=4, then apply the quill tilt operation with n=1. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/046"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef _knot(s):\n    \"\"\"Interleave the first half and the second half of s character by character.\n    TWIST: when the length is odd, the middle character is dropped, not kept.\n    knot(\"abcde\") -> \"adbe\"\n    \"\"\"\n    n = len(s) // 2\n    a, b = s[:n], s[len(s) - n:]\n    return \"\".join(x + y for x, y in zip(a, b))\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, -1)\n    cur = _knot(cur)\n    return cur\n```",
+   "id": "QUILL/030",
+   "ops": [
+    "tilt-1",
+    "knot"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=-1, then apply the quill knot operation. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/030"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, -1)\n    cur = _fold(cur, 3)\n    return cur\n```",
+   "id": "QUILL/113",
+   "ops": [
+    "tilt-1",
+    "fold3"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=-1, then apply the quill fold operation with k=3. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/113"
+  },
+  {
+   "answer": "```python\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _lace(cur, '9')\n    cur = _tilt(cur, 1)\n    return cur\n```",
+   "id": "QUILL/024",
+   "ops": [
+    "lace_9",
+    "tilt1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill lace operation with t='9', then apply the quill tilt operation with n=1. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/024"
+  },
+  {
+   "answer": "```python\ndef _knot(s):\n    \"\"\"Interleave the first half and the second half of s character by character.\n    TWIST: when the length is odd, the middle character is dropped, not kept.\n    knot(\"abcde\") -> \"adbe\"\n    \"\"\"\n    n = len(s) // 2\n    a, b = s[:n], s[len(s) - n:]\n    return \"\".join(x + y for x, y in zip(a, b))\n\n\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef f(s):\n    cur = s\n    cur = _knot(cur)\n    cur = _lace(cur, 'mm')\n    return cur\n```",
+   "id": "QUILL/039",
+   "ops": [
+    "knot",
+    "lace_mm"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill knot operation, then apply the quill lace operation with t='mm'. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/039"
+  },
+  {
+   "answer": "```python\ndef _fold(s, k):\n    \"\"\"Split s into consecutive pieces of length k and join them with '|'.\n    TWIST: the final short piece is padded with '_' up to length k.\n    fold(\"abcde\", 2) -> \"ab|cd|e_\"\n    \"\"\"\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    parts = []\n    for i in range(0, len(s), k):\n        p = s[i:i + k]\n        parts.append(p + \"_\" * (k - len(p)))\n    return \"|\".join(parts)\n\n\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef f(s):\n    cur = s\n    cur = _fold(cur, 2)\n    cur = _lace(cur, '9')\n    return cur\n```",
+   "id": "QUILL/115",
+   "ops": [
+    "fold2",
+    "lace_9"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill fold operation with k=2, then apply the quill lace operation with t='9'. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/115"
+  },
+  {
+   "answer": "```python\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _tilt(cur, 1)\n    return cur\n```",
+   "id": "QUILL/003",
+   "ops": [
+    "tilt1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill tilt operation with n=1. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/003"
+  },
+  {
+   "answer": "```python\ndef _lace(s, t):\n    \"\"\"Append t to s.\n    TWIST: t is inserted AFTER THE FIRST CHARACTER of s, not at the end; empty s returns t.\n    lace(\"abc\", \"XY\") -> \"aXYbc\"\n    \"\"\"\n    if not s:\n        return t\n    return s[0] + t + s[1:]\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _lace(cur, 'XY')\n    cur = _tilt(cur, 1)\n    return cur\n```",
+   "id": "QUILL/061",
+   "ops": [
+    "lace_XY",
+    "tilt1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill lace operation with t='XY', then apply the quill tilt operation with n=1. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/061"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _ledger(s):\n    \"\"\"Count characters into a dict.\n    TWIST: only characters that occur an EVEN number of times are reported, and keys are upper-cased.\n    ledger(\"aabbbc\") -> {\"A\": 2}\n    \"\"\"\n    c = {}\n    for ch in s:\n        c[ch] = c.get(ch, 0) + 1\n    return {k.upper(): v for k, v in c.items() if v % 2 == 0}\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'vowel')\n    cur = _ledger(cur)\n    return cur\n```",
+   "id": "QUILL/117",
+   "ops": [
+    "sift_vowel",
+    "ledger"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the vowel predicate, then apply the quill ledger operation. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/117"
+  },
+  {
+   "answer": "```python\ndef _sift(s, pred_name):\n    \"\"\"Remove characters for which the named predicate holds ('vowel', 'digit', 'upper').\n    TWIST: the removed characters are returned APPENDED at the end in reverse order, after a '#'.\n    sift(\"a1b2\", \"digit\") -> \"ab#21\"\n    \"\"\"\n    preds = {\"vowel\": lambda c: c.lower() in \"aeiou\", \"digit\": lambda c: c.isdigit(), \"upper\": lambda c: c.isupper()}\n    p = preds[pred_name]\n    kept = \"\".join(c for c in s if not p(c))\n    gone = \"\".join(c for c in s if p(c))\n    return kept + \"#\" + gone[::-1]\n\n\ndef _tilt(s, n):\n    \"\"\"Rotate s left by n characters.\n    TWIST: after rotating, the character that moved into the LAST position is upper-cased.\n    tilt(\"abcd\", 1) -> \"bcdA\"\n    \"\"\"\n    if not s:\n        return s\n    m = n % len(s)\n    r = s[m:] + s[:m]\n    return r[:-1] + r[-1].upper()\n\n\ndef f(s):\n    cur = s\n    cur = _sift(cur, 'digit')\n    cur = _tilt(cur, 1)\n    return cur\n```",
+   "id": "QUILL/090",
+   "ops": [
+    "sift_digit",
+    "tilt1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(s):\n\nthat takes a string `s` and returns the result of the following quill\npipeline: apply the quill sift operation with the digit predicate, then apply the quill tilt operation with n=1. Return the final result.\n\nUse the exact semantics of the quill operations named above. The quill\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "QUILL/090"
+  }
+ ],
+ "kind": "fp677_quill_pairs",
+ "n": 60
+}

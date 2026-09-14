@@ -9,6 +9,38 @@ battle-tested inside that program before being packaged here. Each tool is
 a standalone directory: Python 3.10+, argparse CLIs, heavy dependencies
 imported lazily, and a selftest that runs without downloading any model.
 
+## Start here: the auditable continual learning result, and how to check it yourself
+
+If you arrived from the paper *Auditable Continual Learning: Measured Transactions for
+Sequential Weight Edits* ([10.5281/zenodo.21881995](https://doi.org/10.5281/zenodo.21881995)),
+this is the door.
+
+- **The claim, in one sentence.** A weight change can be priced (its damage measured in nats
+  on 641 held facts and on a held coding capability), gated by a pre-registered rule,
+  receipted, and reverted — and new skills can be installed under that contract. The paper
+  shows it for facts on Qwen2.5-3B; the program has since shown two invented skills installed
+  inside the same screens at 3B, 7B and 14B (Qwen2.5) and on Llama-3.1-8B, one seed each.
+- **Evidence you can verify on a laptop, with no GPU and no trust in us:** [`audit-kit/`](audit-kit/)
+  (24 MB). `cd audit-kit && python verify.py --static-only` checks every file against its hash,
+  re-derives every bill and crossing count from the stored log-probabilities, and rebuilds the
+  result tables (618 checks, about one second, any OS). `python verify.py` additionally
+  re-executes the saved HumanEval+ programs through evalplus; `--regrade` re-executes the
+  stored skill programs through their graders (Linux, macOS or WSL). The evidence root digest
+  is the sha256 of `audit-kit/evidence/SHA256SUMS`:
+  `fa270b6786e2c6c6d08c3865168ba2631c3643e897e7dc4571303e31f42f9ee0`; `verify.py` prints it at
+  step 0 so a run can be bound to exact files.
+- **What the kit establishes and what it does not** is stated in
+  [`audit-kit/README.md`](audit-kit/README.md) under "What the checks do and do not establish".
+  The kit never runs a model; provenance rests on receipts that carry weights hashes, software
+  stack fields and timestamps, cross-checked against each other. The kit's tables are the 3B
+  results; the 7B, 14B and Llama-8B ladders are recorded in the program's channel and enter the
+  kit in its next version.
+- **The paper's own verification code and pre-registration record** (FP-471 to FP-516, seals,
+  drivers, reports, gate policies, ledger slice): [10.5281/zenodo.21881977](https://doi.org/10.5281/zenodo.21881977).
+- **Not claimed:** frontier scale; a second seed; a mechanism for the coding cost that some
+  model families pay under this writer; anything beyond the numbers in the kit's tables and
+  the disclosures beside them.
+
 ## Watch it work (live demos — three pages, in reading order)
 
 1. **[Watch it grow](https://nryoung-research.github.io/glassloop-tools/demo/loop-watch-it-grow.html)** — the original: five 2026 facts learned, priced, healed, and hash-verified back to the starting state.
@@ -36,6 +68,7 @@ quote-gate script, instructions).
 | [`tools/quant-bill`](tools/quant-bill/) | Price the damage of quantization with the same panel-bill units, so precision changes and weight edits are comparable | packaged from the source program; verify via its selftest |
 | [`tools/skillbench`](tools/skillbench/) | Mint a skill benchmark no model can have memorized: invented library, nickname-mapped tasks, execution-only scoring, deranged control | selftests passing in this packaging (50/50 scorer cases; all lesson checks) |
 | [`tools/freshknow`](tools/freshknow/) | Measure a frozen model's knowledge decay by effective year and its fresh-knowledge floor; keyed-hash teach/hidden split over FreshQA | selftest passing in this packaging (178 fixture checks; 296 against the real CSV) |
+| [`audit-kit`](audit-kit/) | Verify the program's priced, receipted weight changes from hashed evidence: bills recomputed from stored log-probabilities, tables rebuilt, saved programs re-executed | `verify.py --static-only` 618 checks / 0 failures in this packaging; two cold tests by strangers-as-agents recorded in the kit README |
 
 Sibling repo: **weight-genealogy** — weight-space lineage detection
 (which released checkpoints descend from which), maintained separately.

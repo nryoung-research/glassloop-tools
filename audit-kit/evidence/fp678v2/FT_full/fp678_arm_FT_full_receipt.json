@@ -1,0 +1,60 @@
+{
+ "arm": "ours",
+ "bank_sha256": "9c158782c0aa81854b6bfcabf9d43efe711ebd48ad5bc94052a2bc86c3592212",
+ "family_sha256": "7fceafa2fdb7b02a48937d2331439962c23c92498f58711299d0d57dd6ff8cce",
+ "finished": "2026-09-12T22:09:36",
+ "kind": "fp678_h2h_receipt",
+ "limits": {
+  "lessons": 0,
+  "reads": 0,
+  "skip_anchor": false
+ },
+ "manifest_sha256": "368cdc6ce1de5061f8340d5c55763fc2901bbafc7bec4a57f504189ad7e4b026",
+ "model_dir": "C:/Users/nryou/OneDrive - luxkbgallery.com/AI research/flagship/fp616/tools/pilot/out/fp678v2/FT_full/A_written_bf16",
+ "model_safetensors_sha256": "368cdc6ce1de5061f8340d5c55763fc2901bbafc7bec4a57f504189ad7e4b026",
+ "panel_sha256": "c8a6d19a6c67fd3712c28cfe3ecec074cf78c655071bca054e364746c591e32d",
+ "param_dtypes": {
+  "after_edit": [
+   "torch.bfloat16"
+  ],
+  "at_load": [
+   "torch.bfloat16"
+  ]
+ },
+ "reads": {
+  "anchor_n": 164,
+  "anchor_samples": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\climber\\out\\anchor\\climb_fp678v2_FT_full_bf16_cfgA_samples.jsonl",
+  "anchor_samples_sha256": "8c0a85d3f81ed81652a33b8f1e4c75e72aeda356c6ba7162ae3dbf2650c7bb9b",
+  "base_panel_sha256": "e07bbb7010152b9a04bc27d87ace529631e99463f5ae2770e4d53a60866775cd",
+  "bill": 74.3328161239624,
+  "crossings": 3,
+  "heldout_n": 60,
+  "heldout_report_sha256": "f78e04592f16b78c89d69c8fc85cbf52e6e0ec22c0a292c76949fe7d006120f5",
+  "heldout_vex": 60,
+  "panel_n": 641,
+  "panel_positive_margins": 636,
+  "panel_read_sha256": "045d049f3f015d64d628582347824e3bec85c1165c51e6c9d0595e13b2274eed",
+  "price_sha256": "1ee72e047b8541ededf1a3d3cde189d8b8ddce641280829af1b5802680c59d0e",
+  "sign_crossings": [
+   "ARC:ARC-Challenge:594",
+   "ARC:ARC-Easy:2364",
+   "PopQA:6401521"
+  ],
+  "teach_n": 60,
+  "teach_report_sha256": "7452506c91033856185466bfc3478d131ac0890af226e22f47f16a221dbfe8f5",
+  "teach_vex": 60
+ },
+ "runner_sha256": "de956806a91f805bea0042a0e15f23bfafda35eb3203a4205550b177e9e3a076",
+ "snapshot": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "stack": {
+  "cuda": "12.8",
+  "dtype": "bfloat16",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "python": "3.13.2",
+  "torch": "2.7.1+cu128",
+  "transformers": "5.5.4"
+ },
+ "started": "2026-09-12T21:42:00",
+ "tag": "fp678v2_FT_full_bf16_cfgA",
+ "wall_s": 1661.8
+}

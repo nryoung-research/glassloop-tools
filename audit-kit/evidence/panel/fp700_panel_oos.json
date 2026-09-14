@@ -1,0 +1,3866 @@
+{
+ "kind": "fp700_out_of_span_panel",
+ "seed": 700,
+ "bank": "fp454_bank.json",
+ "bank_sha256": "9c158782c0aa81854b6bfcabf9d43efe711ebd48ad5bc94052a2bc86c3592212",
+ "parent_panel": "fp467_panel_v2.json",
+ "parent_panel_sha256": "c8a6d19a6c67fd3712c28cfe3ecec074cf78c655071bca054e364746c591e32d",
+ "n": 641,
+ "composition": {
+  "CounterFact": 90,
+  "ARC": 14,
+  "BEAR": 388,
+  "PopQA": 142,
+  "MMLU": 7
+ },
+ "rule": "seed 700; for each source, sample the parent panel's count uniformly from bank items of that source NOT in the parent panel; sorted by id",
+ "overlap_with_parent": 0,
+ "items": [
+  {
+   "id": "ARC:ARC-Challenge:708",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:1111",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:1173",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:1266",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:1322",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:1473",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:1680",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:2041",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:2068",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:2302",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:2307",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:2356",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:41",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "ARC:ARC-Easy:675",
+   "source": "ARC",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P103:105",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P103:116",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P103:142",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P103:149",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P103:19",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P103:24",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P103:32",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P103:38",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P103:57",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P103:86",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P103:95",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P105:127",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P105:132",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P105:29",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P105:31",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P105:8",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P105:81",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P105:91",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P108:147",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P108:43",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P115:1",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P115:24",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P115:50",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P127:137",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P127:22",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P127:26",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P127:34",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P127:63",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P127:68",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P127:91",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P127:97",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1303:116",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1303:118",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1303:48",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1303:76",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:108",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:144",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:18",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:23",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:30",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:4",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:42",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:6",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:67",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:7",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:82",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:85",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:89",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:91",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:93",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P131:98",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P137:105",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P137:107",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P137:127",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P137:17",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P137:45",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P137:5",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P137:51",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P137:54",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P137:87",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P137:92",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:104",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:109",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:113",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:114",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:118",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:129",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:43",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:45",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:51",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:60",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:78",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1412:89",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1441:122",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1441:130",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1441:141",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1441:4",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1532:0",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1532:113",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1532:142",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1532:145",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1532:22",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1532:46",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P1532:78",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P162:101",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P162:124",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P162:58",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P162:59",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P170:102",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P170:111",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P170:122",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P170:129",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P170:19",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P170:32",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P170:37",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P170:38",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P170:39",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P170:56",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P170:86",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P171:108",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P171:115",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P171:116",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P171:122",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P171:27",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P171:30",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P171:43",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P171:44",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P171:77",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P175:0",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P175:118",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P175:128",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P175:136",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P175:149",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P175:6",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P175:79",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P175:9",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P176:103",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P176:107",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P176:127",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P176:129",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P176:16",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P176:27",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P176:55",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P176:61",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P176:90",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P176:91",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P176:93",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P177:1",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P177:110",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P177:124",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P177:125",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P177:130",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P177:33",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P177:69",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P177:92",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P178:110",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P178:131",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P178:146",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P178:17",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P178:35",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P178:72",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P178:83",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P178:94",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P179:141",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P179:26",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P179:44",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P179:48",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P185:21",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P185:30",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P190:13",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P190:44",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P190:58",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P19:0",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P19:11",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P19:132",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P19:133",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P19:140",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P19:142",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P19:18",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P19:33",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P19:53",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P19:55",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P19:97",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P206:100",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P206:111",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P206:13",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P206:20",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P206:35",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P206:4",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P206:57",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P206:78",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P20:111",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P20:112",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P20:12",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P20:47",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P20:59",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P20:73",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P20:75",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P2632:12",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P2632:74",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P2632:8",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P26:24",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P26:32",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P26:43",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P26:59",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P272:116",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P272:96",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P272:99",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:0",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:102",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:108",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:116",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:125",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:127",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:140",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:27",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:36",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:38",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:48",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:50",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:52",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:58",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:59",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:63",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:7",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P27:80",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P291:142",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P291:143",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P291:3",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P291:58",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P291:81",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P291:85",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P344:22",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P364:104",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P364:138",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P364:139",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P364:22",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P364:37",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P364:38",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P364:48",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P364:50",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P364:51",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P37:22",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P37:40",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P37:45",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P37:51",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P37:7",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P403:115",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P403:12",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P403:122",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P403:137",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P403:17",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P403:54",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P403:71",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P403:80",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P412:125",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P412:38",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P412:42",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P412:75",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P412:81",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P412:86",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P412:91",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P413:44",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P413:61",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P413:77",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P413:98",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P427:23",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P427:35",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P427:40",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P427:42",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P427:53",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P449:118",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P449:128",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P449:24",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P449:30",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P449:36",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P449:78",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P4552:110",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P4552:111",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P4552:133",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P4552:135",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P4552:43",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P4552:44",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P4552:59",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P4552:69",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P4552:73",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P4552:85",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P463:15",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P463:18",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P463:23",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P463:28",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P463:3",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P463:49",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P463:52",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P463:62",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P463:78",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P463:81",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P466:19",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P466:23",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P466:30",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P466:38",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P466:46",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P509:101",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P509:109",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P509:136",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P50:100",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P50:102",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P50:127",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P50:142",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P50:18",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P50:24",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P50:33",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P50:38",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P50:5",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:105",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:114",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:130",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:137",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:39",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:52",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:53",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:54",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:62",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:75",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:76",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:78",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P53:87",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P57:100",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P57:110",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P57:50",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P57:64",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P57:68",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P57:8",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P58:17",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P58:26",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P58:30",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P58:38",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P58:41",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P58:62",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P58:70",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P58:91",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P610:11",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P610:2",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P610:25",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P610:44",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P610:54",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P610:56",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P611:138",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P611:20",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P611:53",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P641:111",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P641:115",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P641:13",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P641:134",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P641:31",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P641:49",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P641:6",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P641:84",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P676:101",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P676:102",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P676:11",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P676:138",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P676:31",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P676:56",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6886:102",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6886:110",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6886:145",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6886:38",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6886:43",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6886:62",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6886:69",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6886:70",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6886:93",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6886:97",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P69:130",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P69:24",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P69:33",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P69:47",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P69:50",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P69:60",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P69:62",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P69:70",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6:0",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6:10",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6:26",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6:37",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6:38",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6:39",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P6:58",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7937:38",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7937:9",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:105",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:108",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:116",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:117",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:2",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:21",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:50",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:52",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:67",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:7",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:76",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:8",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P7959:98",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P87:16",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P87:9",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P98:10",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "BEAR:P98:3",
+   "source": "BEAR",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:10031",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:10093",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:10200",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:10273",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:10413",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:10601",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:10657",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:11381",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:11652",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:11668",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:12115",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:12186",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:12689",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:13221",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:13356",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:13675",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:13732",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:14007",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:14075",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:14207",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:14575",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:14733",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:14863",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:1507",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:1510",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:15215",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:15391",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:15402",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:15937",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:15973",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:16083",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:16411",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:16583",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:16673",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:17095",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:17287",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:173",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:17823",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:18029",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:1814",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:1833",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:18568",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:18588",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:18981",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:19743",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:19959",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:20365",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:20497",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:20500",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:20649",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:20950",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:21692",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:21895",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:2380",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:2702",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:2704",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:2795",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:2985",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:3228",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:3376",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:4107",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:4599",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:4672",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:4954",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:4969",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:5105",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:5140",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:5520",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:5839",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:6021",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:6022",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:6026",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:6146",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:6219",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:6408",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:641",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:737",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:7393",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:7829",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:7894",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:7994",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:8142",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:8319",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:8334",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:8374",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:8696",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:8858",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:9148",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:9335",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "CF:9622",
+   "source": "CounterFact",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "MMLU:11933",
+   "source": "MMLU",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "MMLU:12029",
+   "source": "MMLU",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "MMLU:13522",
+   "source": "MMLU",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "MMLU:1953",
+   "source": "MMLU",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "MMLU:5277",
+   "source": "MMLU",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "MMLU:7679",
+   "source": "MMLU",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "MMLU:772",
+   "source": "MMLU",
+   "kind": "behavioral",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1001025",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1002384",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1003583",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:102644",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1080826",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1195583",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1281188",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1299757",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1368451",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1374788",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1417211",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1419959",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1445728",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1533806",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1550687",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1597733",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1610120",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1614694",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1641120",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1648061",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1668447",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1722147",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1729733",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1742797",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1766137",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1787935",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1796952",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:181017",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1823769",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1830760",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:185033",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:193744",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:1969466",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:208524",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2116220",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2141577",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2144779",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2187915",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2300772",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2313440",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2314595",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2316098",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2336919",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:238575",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2420324",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2512833",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2592552",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2614416",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2647037",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:265887",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2691042",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2733225",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:283234",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2833963",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2862235",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2899239",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2918969",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:291958",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2930913",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2932914",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2950226",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2953353",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2955066",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2960639",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:2965151",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3024031",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3026512",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3072581",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:308468",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3116122",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3132442",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3198744",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3205544",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3212853",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3338431",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3376044",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3522454",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3609582",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3628652",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3738260",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:378173",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3802874",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3916727",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3919096",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3930846",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:3968129",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4071572",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4082423",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4084926",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4098367",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:410925",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4321170",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4350005",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4350340",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4382884",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4391507",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4422353",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4512753",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4541758",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4549284",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4607473",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:461016",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:470734",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:4907907",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5027989",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5047590",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5054345",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5136630",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5146488",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5240646",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5298988",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5453472",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5498971",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5554384",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5562389",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:558779",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5600889",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5616138",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5659363",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5702447",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5743876",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5756832",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:580323",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5902785",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5918515",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5932045",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:5963612",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:6002000",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:6015519",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:6311127",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:6392317",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:6398386",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:6412151",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:6447500",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:6495570",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:652088",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:669462",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:685338",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:740702",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:928708",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:943409",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  },
+  {
+   "id": "PopQA:987807",
+   "source": "PopQA",
+   "kind": "factual",
+   "oos": true
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+2026-09-12 16:43:26 FP678v2 CHAIN START runner de956806a91f805b scorer 1e419a5ca5fc9a5a writer dba17398c94e657d ft 1493b1e313d86b9d B0 6aad46162e0b5e68 chain 84a5020c033a883e
+2026-09-12 16:43:26 ARM base START model C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1
+[17:27:56] PORT-CHECK PASS {'cap_rows_equal': True, 'cap_n': 60, 'panel_items_equal': True, 'panel_n': 641, 'panel_max_abs_diff': 0.0, 'real_cap_report_sha256': 'f14c4f304524d08373b349a8eb22dee6770b0e15931c8853aa6bbc77522d7fd5', 'real_panel_sha256': 'f3e339e4c900a825fdcaa9e14d8985f826d1d47012d614d439f2937362e6f4f8'}
+[17:27:56] FP678-ARM-DONE base teach 0/60 heldout 1/60 receipt 277ed2e5a94ea848
+pass@1:	0.750
+pass@1:	0.683
+SCORING-RECEIPT climb_fp678v2_base_bf16_cfgA_scoring_receipt_WSL.json 310fb1d09936b784 evalplus 0.3.1 dataset fe585eb4df8c88d8 base 123 plus 112
+2026-09-12 17:28:22 ARM E3_wise START model C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1
+[17:43:32] EDIT E3_wise done in 901s peak 15.6 GiB
+PRICE-STATE-DONE fd32bf34b0c4c30f crossings 0 bill 0.000 gain 0.000
+[17:54:39] PRICE fp678v2_E3_wise_bf16_cfgA bill 0.0 crossings 0
+[18:21:08] FP678-ARM-DONE E3_wise teach 2/60 heldout 1/60 receipt af39340494779b7b
+pass@1:	0.665
+pass@1:	0.598
+SCORING-RECEIPT climb_fp678v2_E3_wise_bf16_cfgA_scoring_receipt_WSL.json 5239450f6d6478c0 evalplus 0.3.1 dataset fe585eb4df8c88d8 base 109 plus 98
+2026-09-12 18:21:34 ARM E4_grace START model C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1
+[18:24:15] EDIT E4_grace done in 149s peak 7.2 GiB
+PRICE-STATE-DONE 7b2ee21f39dec5f3 crossings 0 bill 0.000 gain 0.000
+[18:34:45] PRICE fp678v2_E4_grace_bf16_cfgA bill 0.0 crossings 0
+[19:02:11] FP678-ARM-DONE E4_grace teach 5/60 heldout 5/60 receipt 28e1647722f9b2bd
+pass@1:	0.750
+pass@1:	0.683
+SCORING-RECEIPT climb_fp678v2_E4_grace_bf16_cfgA_scoring_receipt_WSL.json 584fe548a55de0b1 evalplus 0.3.1 dataset fe585eb4df8c88d8 base 123 plus 112
+2026-09-12 19:02:37 ARM E2_alphaedit START model C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1
+[19:07:47] EDIT E2_alphaedit done in 298s peak 14.9 GiB
+PRICE-STATE-DONE af4ac645165b2e9b crossings 91 bill 1740.584 gain 187.843
+[19:23:26] PRICE fp678v2_E2_alphaedit_bf16_cfgA bill 1740.5835647583008 crossings 91
+[19:53:31] FP678-ARM-DONE E2_alphaedit teach 0/60 heldout 0/60 receipt 024bd8b1ddc2ac38
+pass@1:	0.037
+pass@1:	0.037
+SCORING-RECEIPT climb_fp678v2_E2_alphaedit_bf16_cfgA_scoring_receipt_WSL.json 6d845da0a28ea72b evalplus 0.3.1 dataset fe585eb4df8c88d8 base 6 plus 6
+2026-09-12 19:53:58 WRITE U_vex mode U from base bases -
+[19:55:31] FP652-WRITER-DONE mode U: accepted 113 / attempted 113 steps, leg targets 33756, verify tokens 0, final check None; receipt a79947e4541289f6
+2026-09-12 19:55:42 WRITTEN U_vex model.safetensors 42774450b9c7dbb512502e2d637b7ea2b1ea9c4145eeb6f01fd68d0d467133b9 (== manifest)
+2026-09-12 19:55:42 ARM U_vex START model out/fp678v2/U_vex/A_written_bf16
+PRICE-STATE-DONE 78d624466efdac7d crossings 0 bill 36.794 gain 61.930
+[20:07:19] PRICE fp678v2_U_vex_bf16_cfgA bill 36.7937593460083 crossings 0
+[20:23:21] FP678-ARM-DONE ours teach 60/60 heldout 57/60 receipt 1549f77c27469a73
+pass@1:	0.713
+pass@1:	0.652
+SCORING-RECEIPT climb_fp678v2_U_vex_bf16_cfgA_scoring_receipt_WSL.json 8925fb0ddf9e5927 evalplus 0.3.1 dataset fe585eb4df8c88d8 base 117 plus 107
+DELTA-NORM window 2.06807 outside 0.00000 -> out/fp678v2/U_vex\delta_norm.json
+2026-09-12 20:24:15 DELETED export U_vex (receipts + manifest kept)
+2026-09-12 20:24:15 WRITE P_coding mode U from base bases 6aad46162e0b5e683e0f8d3fd2c64b4a195d7bccc14a8b29e8ef8f9eb73ea310
+[20:25:10] FP652-WRITER-DONE mode U: accepted 113 / attempted 113 steps, leg targets 33756, verify tokens 0, final check None; receipt aa1eab4f0d6929e3
+2026-09-12 20:25:21 WRITTEN P_coding model.safetensors ff93e838f566ff9825b040203cc84aad7491ea16d6964c2e1c7c9d04c8239a3b (== manifest)
+2026-09-12 20:25:21 ARM P_coding START model out/fp678v2/P_coding/A_written_bf16
+PRICE-STATE-DONE b4b3c5759ed49c2f crossings 0 bill 30.589 gain 28.499
+[20:37:11] PRICE fp678v2_P_coding_bf16_cfgA bill 30.58859920501709 crossings 0
+[21:04:28] FP678-ARM-DONE ours teach 60/60 heldout 56/60 receipt 004e2d491303f543
+pass@1:	0.744
+pass@1:	0.683
+SCORING-RECEIPT climb_fp678v2_P_coding_bf16_cfgA_scoring_receipt_WSL.json 91f28ced01d090a4 evalplus 0.3.1 dataset fe585eb4df8c88d8 base 122 plus 112
+DELTA-NORM window 2.17369 outside 0.00000 -> out/fp678v2/P_coding\delta_norm.json
+2026-09-12 21:05:23 DELETED export P_coding (receipts + manifest kept)
+2026-09-12 21:05:23 FT FT_lora START
+[21:06:20] FP678-FT-DONE lora steps 45 tokens 28506 loss [0.1905, 0.0002, 0.0001] wall 31s peak 9.8 GiB export da841b00d635d933 reload True receipt 9b2935e8edc56c8d
+2026-09-12 21:06:21 ARM FT_lora START model out/fp678v2/FT_lora/A_written_bf16
+PRICE-STATE-DONE 999cfd526fd49254 crossings 6 bill 155.307 gain 111.777
+[21:18:36] PRICE fp678v2_FT_lora_bf16_cfgA bill 155.30704879760742 crossings 6
+[21:38:38] FP678-ARM-DONE ours teach 60/60 heldout 60/60 receipt b1b3d67c4353dbe0
+pass@1:	0.201
+pass@1:	0.195
+SCORING-RECEIPT climb_fp678v2_FT_lora_bf16_cfgA_scoring_receipt_WSL.json 3b0e5a18733ae52b evalplus 0.3.1 dataset fe585eb4df8c88d8 base 33 plus 32
+DELTA-NORM window 4.36072 outside 7.00722 -> out/fp678v2/FT_lora\delta_norm.json
+2026-09-12 21:40:34 DELETED export FT_lora (receipts + manifest kept)
+2026-09-12 21:40:35 FT FT_full START
+[21:41:45] FP678-FT-DONE full steps 45 tokens 28506 loss [0.2046, 0.0002, 0.0] wall 40s peak 29.3 GiB export 368cdc6ce1de5061 reload True receipt 3266b61831f68e12
+2026-09-12 21:41:47 ARM FT_full START model out/fp678v2/FT_full/A_written_bf16
+PRICE-STATE-DONE 1ee72e047b8541ed crossings 3 bill 74.333 gain 65.049
+[21:53:17] PRICE fp678v2_FT_full_bf16_cfgA bill 74.3328161239624 crossings 3
+[22:09:36] FP678-ARM-DONE ours teach 60/60 heldout 60/60 receipt 2c950696a1e88138
+pass@1:	0.671
+pass@1:	0.622
+SCORING-RECEIPT climb_fp678v2_FT_full_bf16_cfgA_scoring_receipt_WSL.json 9b099a1afdd71f7a evalplus 0.3.1 dataset fe585eb4df8c88d8 base 110 plus 102
+DELTA-NORM window 0.84444 outside 1.32198 -> out/fp678v2/FT_full\delta_norm.json
+2026-09-12 22:11:32 DELETED export FT_full (receipts + manifest kept)
+GATES G0 True one_stack True port_check True issues {}
+arm           teach heldout  plus    bill cross screens            dose
+base              0       1   112    None  None -                  None
+E2_alphaedit      0       0     6 1740.58    91 T0 P0 B0           136.97268401462105
+E3_wise           2       1    98    0.00     0 T0 P0 B1           33.73627853393555
+E4_grace          5       5   112    0.00     0 T0 P1 B1           60
+U_vex            60      57   107   36.79     0 T1 P1 B1           2.068071022435349
+P_coding         60      56   112   30.59     0 T1 P1 B1           2.173687801446593
+FT_lora          60      60    32  155.31     6 T1 P0 B0           4.360720913488998
+FT_full          60      60   102   74.33     3 T1 P0 B0           0.8444406945535655
+P1_no_public_editor_passes_all_three                           credence 0.8 -> HOLD
+P2_alphaedit_teach_below_20                                    credence 0.7 -> HOLD
+P3_wise_teach_ge_30_heldout_le_10                              credence 0.5 -> MISS
+P4_grace_teach_ge_30_heldout_le_5                              credence 0.6 -> MISS
+P5_side_memory_bills_zero_crossings                            credence 0.7 -> HOLD
+P6_alphaedit_plus_below_screen                                 credence 0.6 -> HOLD
+P7_our_P_coding_passes_all_three_same_day                      credence 0.6 -> HOLD
+P9_lora_installs_but_fails_plus_or_bill                        credence 0.7 -> HOLD
+P10_full_ft_fails_plus_or_bill                                 credence 0.7 -> HOLD
+P11_no_plain_baseline_passes_all_three                         credence 0.7 -> HOLD
+P8_our_P_coding_teach_ge_every_public_editor_within_plus_screen credence 0.7 -> HOLD
+wrote C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagship\fp616\tools\pilot\out\fp678v2\FP678_scores.json cb53e615d72c1635
+2026-09-12 22:11:32 FP678v2 CHAIN DONE

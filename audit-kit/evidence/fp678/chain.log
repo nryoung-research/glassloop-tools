@@ -1,0 +1,132 @@
+2026-09-11 18:14:29 FP678 CHAIN START runner 0f32a0ebce7e0de3 scorer 248839648141efdf writer dba17398c94e657d B0 6aad46162e0b5e68 chain ec28367a42f7a4a3 stack 3.13.2 2.7.1+cu128 5.5.4
+2026-09-11 18:14:30 ARM base START model C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1
+[18:58:59] PORT-CHECK PASS {'cap_rows_equal': True, 'cap_n': 60, 'panel_items_equal': True, 'panel_n': 641, 'panel_max_abs_diff': 0.0, 'real_cap_report_sha256': '1a28c75054b98f5ce1e77bec18d490c3f1caf5a83e93c63deb96d8e2d1ac5b05', 'real_panel_sha256': 'f71bf2c4629af1404758921da785b40e2844389ee2f81bdc37dde1abf8ae0b9f'}
+[18:58:59] FP678-ARM-DONE base teach 0/60 heldout 1/60 receipt e266c522ee464e7d
+2026-09-11 18:59:26 WSL SCORING FAILED fp678_base_bf16_cfgA
+2026-09-11 18:59:26 ARM E3_wise START model C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1
+[19:14:42] EDIT E3_wise done in 902s peak 15.6 GiB
+PRICE-STATE-DONE 792fc0669e54e4af crossings 0 bill 0.000 gain 0.000
+[19:24:42] PRICE fp678_E3_wise_bf16_cfgA bill 0.0 crossings 0
+[19:50:03] FP678-ARM-DONE E3_wise teach 1/60 heldout 2/60 receipt fc1fc3039738d19a
+2026-09-11 19:50:29 WSL SCORING FAILED fp678_E3_wise_bf16_cfgA
+2026-09-11 19:50:29 ARM E4_grace START model C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1
+[19:53:11] EDIT E4_grace done in 149s peak 7.2 GiB
+PRICE-STATE-DONE 873263ce3213ff80 crossings 0 bill 0.000 gain 0.000
+[20:03:31] PRICE fp678_E4_grace_bf16_cfgA bill 0.0 crossings 0
+[20:30:50] FP678-ARM-DONE E4_grace teach 5/60 heldout 5/60 receipt b0f6462ce346506c
+2026-09-11 20:31:17 WSL SCORING FAILED fp678_E4_grace_bf16_cfgA
+2026-09-11 20:31:17 ARM E2_alphaedit START model C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1
+[20:36:41] EDIT E2_alphaedit done in 300s peak 14.9 GiB
+PRICE-STATE-DONE 2895f0b8232ee997 crossings 117 bill 2038.545 gain 130.127
+[20:47:58] PRICE fp678_E2_alphaedit_bf16_cfgA bill 2038.5449419021606 crossings 117
+[21:31:08] FP678-ARM-DONE E2_alphaedit teach 0/60 heldout 0/60 receipt 24a28e7e94a908fd
+2026-09-11 21:31:35 WSL SCORING FAILED fp678_E2_alphaedit_bf16_cfgA
+2026-09-11 21:31:35 DISK GATE: waiting for >= 26 GB free (now 15 GB)
+2026-09-11 21:34:35 WRITE U_vex mode U from base bases -
+[21:35:46] FP652-WRITER-DONE mode U: accepted 113 / attempted 113 steps, leg targets 33756, verify tokens 0, final check None; receipt 4d691d6b372928c9
+2026-09-11 21:35:57 WRITTEN U_vex model.safetensors 42774450b9c7dbb512502e2d637b7ea2b1ea9c4145eeb6f01fd68d0d467133b9 (== manifest)
+DELTA-NORM window 2.06807 outside 0.00000 -> out/fp678/U_vex\delta_norm.json
+2026-09-11 21:36:31 ARM U_vex START model /c/Users/nryou/OneDrive - luxkbgallery.com/AI research/flagship/fp616/tools/pilot/out/fp678/U_vex/A_written_bf16
+2026-09-11 21:36:41 ARM U_vex FAILED
+    )
+  File "C:\fp43\venv_ee\Lib\site-packages\transformers\utils\hub.py", line 278, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\fp43\venv_ee\Lib\site-packages\transformers\utils\hub.py", line 473, in cached_files
+    raise OSError(f"{e}") from e
+OSError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'C:/Users/nryou/OneDrive - luxkbgallery.com/AI research/flagship/fp616/tools/pilot/out/fp678/U_vex/A_written_bf16'. Use `repo_type` argument if needed.
+2026-09-11 21:36:42 WRITE P_coding mode U from base bases 6aad46162e0b5e683e0f8d3fd2c64b4a195d7bccc14a8b29e8ef8f9eb73ea310
+2026-09-11 21:38:22 FP678c CHAIN START runner 0f32a0ebce7e0de3 scorer a8213689cce0443f writer dba17398c94e657d ft ef05aa285e400e04 B0 6aad46162e0b5e68 chain cb6e572d156350cf
+2026-09-11 21:38:22 WRITE U_vex mode U from base bases -
+[21:39:26] FP652-WRITER-DONE mode U: accepted 113 / attempted 113 steps, leg targets 33756, verify tokens 0, final check None; receipt b91ac76b43ea9fe5
+2026-09-11 21:39:38 WRITTEN U_vex model.safetensors 42774450b9c7dbb512502e2d637b7ea2b1ea9c4145eeb6f01fd68d0d467133b9 (== manifest)
+DELTA-NORM window 2.06807 outside 0.00000 -> out/fp678/U_vex\delta_norm.json
+2026-09-11 21:40:06 ARM U_vex START model out/fp678/U_vex/A_written_bf16
+PRICE-STATE-DONE bad436d20e90359c crossings 0 bill 36.794 gain 61.930
+[21:51:51] PRICE fp678_U_vex_bf16_cfgA bill 36.7937593460083 crossings 0
+[22:07:54] FP678-ARM-DONE ours teach 60/60 heldout 57/60 receipt d95ce52604f45855
+pass@1:	0.713
+pass@1:	0.652
+SCORING-RECEIPT climb_fp678_U_vex_bf16_cfgA_scoring_receipt_WSL.json d6bee4abf559a1ed evalplus 0.3.1 dataset fe585eb4df8c88d8 base 117 plus 107
+2026-09-11 22:08:21 CLEAN partial P_coding export (no receipt)
+2026-09-11 22:08:21 WRITE P_coding mode U from base bases 6aad46162e0b5e683e0f8d3fd2c64b4a195d7bccc14a8b29e8ef8f9eb73ea310
+[22:09:23] FP652-WRITER-DONE mode U: accepted 113 / attempted 113 steps, leg targets 33756, verify tokens 0, final check None; receipt fb2cee7035876cc5
+2026-09-11 22:09:35 WRITTEN P_coding model.safetensors ff93e838f566ff9825b040203cc84aad7491ea16d6964c2e1c7c9d04c8239a3b (== manifest)
+DELTA-NORM window 2.17369 outside 0.00000 -> out/fp678/P_coding\delta_norm.json
+2026-09-11 22:09:54 ARM P_coding START model out/fp678/P_coding/A_written_bf16
+PRICE-STATE-DONE e62ab6a4f55682fe crossings 0 bill 30.589 gain 28.499
+[22:21:25] PRICE fp678_P_coding_bf16_cfgA bill 30.58859920501709 crossings 0
+[22:46:40] FP678-ARM-DONE ours teach 60/60 heldout 56/60 receipt 6f0d3e6d9a9d8708
+pass@1:	0.744
+pass@1:	0.683
+SCORING-RECEIPT climb_fp678_P_coding_bf16_cfgA_scoring_receipt_WSL.json 8e92f242b800763b evalplus 0.3.1 dataset fe585eb4df8c88d8 base 122 plus 112
+2026-09-11 22:47:06 FT FT_lora START
+[22:48:06] FP678-FT-DONE lora steps 45 tokens 28506 loss [0.1905, 0.0002, 0.0001] wall 26s peak 9.8 GiB export da841b00d635d933 reload True receipt b75668fafa21a6b4
+DELTA-NORM window 4.36072 outside 7.00722 -> out/fp678/FT_lora\delta_norm.json
+2026-09-11 22:48:27 ARM FT_lora (existing, resume)
+2026-09-11 22:48:28 FT FT_full START
+[22:49:51] FP678-FT-DONE full steps 45 tokens 28506 loss [0.2046, 0.0002, 0.0] wall 50s peak 29.3 GiB export 368cdc6ce1de5061 reload True receipt a89d40b91cec163c
+DELTA-NORM window 0.84444 outside 1.32198 -> out/fp678/FT_full\delta_norm.json
+2026-09-11 22:50:15 ARM FT_full (existing, resume)
+GATES G0 True one_stack True port_check True issues {}
+arm           teach heldout  plus    bill cross screens            dose
+base              0       1   112    None  None -                  None
+E2_alphaedit      0       0     0 2038.54   117 T0 P0 B0           137.9194558283121
+E3_wise           1       2    99    0.00     0 T0 P0 B1           32.49592971801758
+E4_grace          5       5   112    0.00     0 T0 P1 B1           60
+U_vex            60      57   107   36.79     0 T1 P1 B1           2.068071022435349
+P_coding         60      56   112   30.59     0 T1 P1 B1           2.173687801446593
+FT_lora       MISSING
+FT_full       MISSING
+P1_no_public_editor_passes_all_three                           credence 0.8 -> UNSCORED
+P2_alphaedit_teach_below_20                                    credence 0.7 -> UNSCORED
+P3_wise_teach_ge_30_heldout_le_10                              credence 0.5 -> UNSCORED
+P4_grace_teach_ge_30_heldout_le_5                              credence 0.6 -> UNSCORED
+P5_side_memory_bills_zero_crossings                            credence 0.7 -> UNSCORED
+P6_alphaedit_plus_below_screen                                 credence 0.6 -> UNSCORED
+P7_our_P_coding_passes_all_three_same_day                      credence 0.6 -> UNSCORED
+P9_lora_installs_but_fails_plus_or_bill                        credence 0.7 -> UNSCORED
+P10_full_ft_fails_plus_or_bill                                 credence 0.7 -> UNSCORED
+P11_no_plain_baseline_passes_all_three                         credence 0.7 -> UNSCORED
+P8_our_P_coding_teach_ge_every_public_editor_within_plus_screen credence 0.7 -> UNSCORED
+wrote C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagship\fp616\tools\pilot\out\fp678\FP678_scores.json f8b021e63fe4fe4b
+2026-09-11 22:50:15 FP678c CHAIN DONE
+2026-09-11 22:50:28 FP678d CHAIN START runner 0f32a0ebce7e0de3 scorer 74e5513cda1d66b7 chain ecddd6a83890d262
+2026-09-11 22:50:28 ARM FT_lora START model out/fp678/FT_lora/A_written_bf16
+2026-09-12 00:31:46 FP678d CHAIN START runner 0f32a0ebce7e0de3 scorer 74e5513cda1d66b7 chain ecddd6a83890d262
+2026-09-12 00:31:46 ARM FT_lora START model out/fp678/FT_lora/A_written_bf16
+PRICE-STATE-DONE 12d1344596fb3bdb crossings 6 bill 155.307 gain 111.777
+[00:44:02] PRICE fp678_FT_lora_bf16_cfgA bill 155.30704879760742 crossings 6
+[01:03:58] FP678-ARM-DONE ours teach 60/60 heldout 60/60 receipt a5cf679af7257a66
+pass@1:	0.201
+pass@1:	0.195
+SCORING-RECEIPT climb_fp678_FT_lora_bf16_cfgA_scoring_receipt_WSL.json 4f6a112106dbc913 evalplus 0.3.1 dataset fe585eb4df8c88d8 base 33 plus 32
+2026-09-12 01:05:24 ARM FT_full START model out/fp678/FT_full/A_written_bf16
+PRICE-STATE-DONE 3a091f1a41b97c59 crossings 3 bill 74.333 gain 65.049
+[01:16:58] PRICE fp678_FT_full_bf16_cfgA bill 74.3328161239624 crossings 3
+[01:33:02] FP678-ARM-DONE ours teach 60/60 heldout 60/60 receipt 6de6bdab57067ff4
+pass@1:	0.671
+pass@1:	0.622
+SCORING-RECEIPT climb_fp678_FT_full_bf16_cfgA_scoring_receipt_WSL.json c686a4d52a8ae18e evalplus 0.3.1 dataset fe585eb4df8c88d8 base 110 plus 102
+GATES G0 True one_stack True port_check True issues {}
+arm           teach heldout  plus    bill cross screens            dose
+base              0       1   112    None  None -                  None
+E2_alphaedit      0       0     0 2038.54   117 T0 P0 B0           137.9194558283121
+E3_wise           1       2    99    0.00     0 T0 P0 B1           32.49592971801758
+E4_grace          5       5   112    0.00     0 T0 P1 B1           60
+U_vex            60      57   107   36.79     0 T1 P1 B1           2.068071022435349
+P_coding         60      56   112   30.59     0 T1 P1 B1           2.173687801446593
+FT_lora          60      60    32  155.31     6 T1 P0 B0           4.360720913488998
+FT_full          60      60   102   74.33     3 T1 P0 B0           0.8444406945535655
+P1_no_public_editor_passes_all_three                           credence 0.8 -> HOLD
+P2_alphaedit_teach_below_20                                    credence 0.7 -> HOLD
+P3_wise_teach_ge_30_heldout_le_10                              credence 0.5 -> MISS
+P4_grace_teach_ge_30_heldout_le_5                              credence 0.6 -> MISS
+P5_side_memory_bills_zero_crossings                            credence 0.7 -> HOLD
+P6_alphaedit_plus_below_screen                                 credence 0.6 -> HOLD
+P7_our_P_coding_passes_all_three_same_day                      credence 0.6 -> HOLD
+P9_lora_installs_but_fails_plus_or_bill                        credence 0.7 -> HOLD
+P10_full_ft_fails_plus_or_bill                                 credence 0.7 -> HOLD
+P11_no_plain_baseline_passes_all_three                         credence 0.7 -> HOLD
+P8_our_P_coding_teach_ge_every_public_editor_within_plus_screen credence 0.7 -> HOLD
+wrote C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagship\fp616\tools\pilot\out\fp678\FP678_scores.json 91f1bc7e0c57293e
+2026-09-12 01:34:28 FP678d CHAIN DONE

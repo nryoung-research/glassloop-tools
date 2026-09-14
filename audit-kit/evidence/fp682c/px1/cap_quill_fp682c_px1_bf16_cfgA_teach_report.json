@@ -1,0 +1,688 @@
+{
+ "backend_info": {
+  "arm": "ours",
+  "backend": "hf",
+  "in_process": true,
+  "param_dtypes": [
+   "torch.bfloat16"
+  ],
+  "torch": "2.7.1+cu128"
+ },
+ "config": {
+  "dtype": "bfloat16",
+  "greedy": true,
+  "max_new_tokens": 512,
+  "torch": "2.7.1+cu128"
+ },
+ "family_file": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\climber\\quill_family.json",
+ "family_file_sha256": "300578953d12a786904028a25a65e41c2a5d63e390d5cbf899c9efea2c1682c0",
+ "family_module": "quill_tasks",
+ "instrument": "cap-eval-v1 (fp678 in-process port)",
+ "model": "C:/Users/nryou/OneDrive - luxkbgallery.com/AI research/flagship/fp616/tools/pilot/out/fp682c/px1/A_written_bf16",
+ "n_passed": 3,
+ "n_tasks": 60,
+ "pass_rate": 0.05,
+ "revision": null,
+ "rows": [
+  {
+   "code_sha256": "e83616bb9378cbd4e3d790914681a6462fe85f2ba8b127c97b323a301da8cccc",
+   "detail": "wrong",
+   "ops": [
+    "tilt3",
+    "ledger"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/064"
+  },
+  {
+   "code_sha256": "7472b8dc6d03896af723f98828d380043ebaa6eaa7a22474a3b33daffe84c959",
+   "detail": "wrong",
+   "ops": [
+    "tilt-1",
+    "sift_vowel"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/075"
+  },
+  {
+   "code_sha256": "73dbb45549403f2e090e56e1b7828c003578c1455ca3f570bae13fb3a38e8950",
+   "detail": "wrong",
+   "ops": [
+    "tilt-1",
+    "sift_upper"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/086"
+  },
+  {
+   "code_sha256": "4330bc546b86709b4f306b2b544ae497550e17e628bcc3d2c7c0003e5e57ea41",
+   "detail": "wrong",
+   "ops": [
+    "lace_XY",
+    "fold4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/099"
+  },
+  {
+   "code_sha256": "6ccb4a1a719eb62e09b4a6f111ef0dba06a4dfe24fa180dbeb122e508449ed46",
+   "detail": "raise:ValueError",
+   "ops": [
+    "sift_upper",
+    "ledger"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/020"
+  },
+  {
+   "code_sha256": "703e6b69ffba2c1c1874daf2e19b8ce31b757c8ba5c0a8069da6dcdabe10c19d",
+   "detail": "wrong",
+   "ops": [
+    "fold4",
+    "lace_mm"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/084"
+  },
+  {
+   "code_sha256": "46989cc2bd1ec94cf56ca84c92fbcfc55875fe862879143d46c75c8b2603e7d1",
+   "detail": "raise:NameError",
+   "ops": [
+    "tilt2",
+    "knot"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/059"
+  },
+  {
+   "code_sha256": "8bd5fbd73dce8545583f4b7d2380af821f953dbf47201f6b51e0b0d811faf2bb",
+   "detail": "wrong",
+   "ops": [
+    "sift_upper",
+    "sift_vowel"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/069"
+  },
+  {
+   "code_sha256": "e7f2b8037971accd09ecf3bc9f1e0b0c40e7215aa35c16d5e05aef5c8e7c7ebc",
+   "detail": "wrong",
+   "ops": [
+    "knot",
+    "sift_upper"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/037"
+  },
+  {
+   "code_sha256": "74b73e76e471c60c32db6557f5e2502e28d850d0682ebed338e5e1ed041e5d24",
+   "detail": "wrong",
+   "ops": [
+    "sift_digit",
+    "fold2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/112"
+  },
+  {
+   "code_sha256": "9c29b9175e7fdda176afb15a12243028fc4a8c8d5edc7e50dce5471a526f53e2",
+   "detail": "wrong",
+   "ops": [
+    "tilt3",
+    "sift_digit"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/054"
+  },
+  {
+   "code_sha256": "dce7fcd9f6bd2322396f0ca1ae88aa93203617f2c1e516279a122efe9ca99a3a",
+   "detail": "wrong",
+   "ops": [
+    "sift_digit",
+    "lace_9"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/053"
+  },
+  {
+   "code_sha256": "9719c24058ae7f7462db91b1ded7da90b1fc5e012164265691e53716ef60ed97",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "fold4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/002"
+  },
+  {
+   "code_sha256": "4c04765cf556756b25c3218949d70cf262780634ea0cc55207f5b972fe13eab6",
+   "detail": "raise:IndexError",
+   "ops": [
+    "lace_9"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/012"
+  },
+  {
+   "code_sha256": "a064a32c01c59a2515d2f8f8b4de5fbf2ea7aded6b52a5f3db8d0a7a63970651",
+   "detail": "wrong",
+   "ops": [
+    "tilt3",
+    "fold4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/110"
+  },
+  {
+   "code_sha256": "822c03356d40cad81d6b814b30ed377eebbeee34f384ab3e487553fae85a57e6",
+   "detail": "wrong",
+   "ops": [
+    "sift_upper",
+    "tilt1"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/104"
+  },
+  {
+   "code_sha256": "8e3f85ef05b785b94a4ed8e21d9500bd737f6489a6c2dd0539d6ec94020b27b7",
+   "detail": "raise:IndexError",
+   "ops": [
+    "lace_9",
+    "fold2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/107"
+  },
+  {
+   "code_sha256": "e28a495cea1c12ac02cc941e246619f33cad024f579a8afd7857a7e812cefe8d",
+   "detail": "pass",
+   "ops": [
+    "tilt3",
+    "tilt-1"
+   ],
+   "passed": true,
+   "split": "teach",
+   "task_id": "QUILL/019"
+  },
+  {
+   "code_sha256": "9719c24058ae7f7462db91b1ded7da90b1fc5e012164265691e53716ef60ed97",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "fold3",
+    "ledger"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/070"
+  },
+  {
+   "code_sha256": "64b730f2af91e478d752ff57762aa310fde6ed805086c290525acd997a93223a",
+   "detail": "wrong",
+   "ops": [
+    "sift_upper",
+    "fold4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/083"
+  },
+  {
+   "code_sha256": "5d2c9e798baf74954e8f659900a43855000f919a1a307f073ab6d3e3d3e82e98",
+   "detail": "wrong",
+   "ops": [
+    "tilt-1",
+    "fold4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/074"
+  },
+  {
+   "code_sha256": "b73a7f5f5eaa462db4b3fb287cd18ce40ca2638a5a081e97a54fe7155e738ce9",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "sift_digit",
+    "sift_upper"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/021"
+  },
+  {
+   "code_sha256": "49e2926cc2872717b176a36a0a0c5e940b23622a791837d37d38237c6a577475",
+   "detail": "wrong",
+   "ops": [
+    "sift_upper",
+    "fold3"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/105"
+  },
+  {
+   "code_sha256": "014bfbe31d0c99ad0409cb01956cfac1bde565265eb4901b96e3630a7c32a2c2",
+   "detail": "wrong",
+   "ops": [
+    "tilt1",
+    "sift_digit"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/119"
+  },
+  {
+   "code_sha256": "d1facdd586853631f978723e85bab25c542a57ca2874969f1c95b4c3d028513f",
+   "detail": "raise:TypeError",
+   "ops": [
+    "sift_digit",
+    "lace_mm"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/018"
+  },
+  {
+   "code_sha256": "4e2b1b3a3742e534949ea613c3888a83d912ef405bd5ee969ab0aa447e99e7cb",
+   "detail": "wrong",
+   "ops": [
+    "sift_upper",
+    "lace_9"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/071"
+  },
+  {
+   "code_sha256": "cdeedc5bf5816f0da51d765718aefb4dc07ba1abc8da7180d7593bf61a2d7a3f",
+   "detail": "wrong",
+   "ops": [
+    "tilt-1",
+    "ledger"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/017"
+  },
+  {
+   "code_sha256": "e48d2d30f6b960729999ea27c8f6819390b271391c21dd7ea72df64b95d35c39",
+   "detail": "wrong",
+   "ops": [
+    "lace_XY",
+    "fold2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/033"
+  },
+  {
+   "code_sha256": "20412c20fa29adc6a8c316fe9d96a3024359b80c7e1b6195dfd448e209f0d761",
+   "detail": "raise:ZeroDivisionError",
+   "ops": [
+    "fold3",
+    "tilt-1"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/038"
+  },
+  {
+   "code_sha256": "6b7d575216666797a6a28de7cadb298d180e20590c85c060e288cdce2566c639",
+   "detail": "wrong",
+   "ops": [
+    "sift_digit",
+    "tilt3"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/016"
+  },
+  {
+   "code_sha256": "ce9211277347b5af5762a52f5dec4ab0519baa2d4112fc214da81335942f98c5",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "lace_9",
+    "knot"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/045"
+  },
+  {
+   "code_sha256": "bb5abe3204bc796baf49e88662875c5d59adf9f7c4b04c108ac953ea3144c8d0",
+   "detail": "wrong",
+   "ops": [
+    "sift_upper",
+    "tilt-1"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/118"
+  },
+  {
+   "code_sha256": "ab086632d5743cc2bccb490828650f2e0f77da1d840630cb27f6b73296518278",
+   "detail": "wrong",
+   "ops": [
+    "sift_vowel"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/007"
+  },
+  {
+   "code_sha256": "98e81963471302d304810f9ced9337b9896a7a90a6d90dacc44c3578d9415cb6",
+   "detail": "raise:IndexError",
+   "ops": [
+    "lace_9",
+    "tilt3"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/096"
+  },
+  {
+   "code_sha256": "3b888bea00e27f588359680de66a62aea7941a8567cad72b4ad2ecedacba6d3c",
+   "detail": "wrong",
+   "ops": [
+    "fold4",
+    "fold2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/055"
+  },
+  {
+   "code_sha256": "41ccbb0e0e933d96fa516aff0ff8adf8889ffed69fff596f5df1fe3507b0da47",
+   "detail": "wrong",
+   "ops": [
+    "sift_vowel",
+    "lace_9"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/052"
+  },
+  {
+   "code_sha256": "4d4475effff16098ba5e0d2671f47c6d8655c8eac02eb9e6b96afbc390494584",
+   "detail": "wrong",
+   "ops": [
+    "sift_upper",
+    "tilt2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/031"
+  },
+  {
+   "code_sha256": "210fb4e9e3fd10e78b577a1d99879433c5d22ac569d8d8e3da5b680ce5feb12f",
+   "detail": "raise:TypeError",
+   "ops": [
+    "fold3",
+    "sift_upper"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/051"
+  },
+  {
+   "code_sha256": "13308991f3c926897595bf8e87c0f53ac5cae56c17d6df13025cb13d3f813528",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "fold2",
+    "sift_vowel"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/093"
+  },
+  {
+   "code_sha256": "f5f136542332cd643d9523a4c6259e6b3dd98815236b9aca64440e54aff2a95c",
+   "detail": "wrong",
+   "ops": [
+    "fold2",
+    "fold3"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/043"
+  },
+  {
+   "code_sha256": "aa1da4d4040ee412a9defd9041e3de95550eb58a4a0748906a61b210cbae0d54",
+   "detail": "wrong",
+   "ops": [
+    "fold3",
+    "tilt2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/066"
+  },
+  {
+   "code_sha256": "b208f329a60f78b6dbf4310708e1bb64ad8e524478180b1102a01282bd2bb859",
+   "detail": "wrong",
+   "ops": [
+    "lace_9",
+    "sift_vowel"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/057"
+  },
+  {
+   "code_sha256": "602d363dde5328b03243ad799bd9b348c39de69b9058eb78832aa5a107ab26c3",
+   "detail": "wrong",
+   "ops": [
+    "sift_upper",
+    "fold2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/035"
+  },
+  {
+   "code_sha256": "17cfe6db0b3c0ec313951986700eaef7fd2e5a9ac9684bd807207427496d821e",
+   "detail": "pass",
+   "ops": [
+    "tilt-1",
+    "tilt2"
+   ],
+   "passed": true,
+   "split": "teach",
+   "task_id": "QUILL/077"
+  },
+  {
+   "code_sha256": "408b559ea98a2ae38afc62a8ec2e94f8f52f73b7494df38e0ebf9d1f876a0eee",
+   "detail": "wrong",
+   "ops": [
+    "sift_upper",
+    "lace_XY"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/065"
+  },
+  {
+   "code_sha256": "b6566f04ff205cff5cffb7acdf25d50fd2e42812d77be33e1811e3e47c2b6101",
+   "detail": "wrong",
+   "ops": [
+    "sift_digit",
+    "sift_vowel"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/027"
+  },
+  {
+   "code_sha256": "dba47f359d2dc7c04366530d930628ce0734a84977058cdf48ed6d253afff319",
+   "detail": "raise:ValueError",
+   "ops": [
+    "sift_digit",
+    "ledger"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/025"
+  },
+  {
+   "code_sha256": "887b2d0d912c212ebda395e94e5beefa11e4af316f1900609104e1e82cea4499",
+   "detail": "raise:IndexError",
+   "ops": [
+    "lace_XY",
+    "sift_upper"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/036"
+  },
+  {
+   "code_sha256": "76edb2bd536100bbe7c71aa2aed123838afc4d8be6356155d019c71f1db7a1fa",
+   "detail": "wrong",
+   "ops": [
+    "knot",
+    "tilt3"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/042"
+  },
+  {
+   "code_sha256": "308aa8805d099daeb24809cdfa6d151dca9a1a0d046d6e78dac13fde3e8d0532",
+   "detail": "wrong",
+   "ops": [
+    "lace_9",
+    "sift_digit"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/028"
+  },
+  {
+   "code_sha256": "0065f885862f784bb5b2f1c49f92c576902c80dffcf93c3bc3a86b35ff0cabf3",
+   "detail": "raise:ZeroDivisionError",
+   "ops": [
+    "fold4",
+    "tilt1"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/046"
+  },
+  {
+   "code_sha256": "d6dc2681f61a94693606c61243cb4514b42d826f2547d358cc2613391eab8cde",
+   "detail": "raise:NameError",
+   "ops": [
+    "tilt-1",
+    "knot"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/030"
+  },
+  {
+   "code_sha256": "9c25f2352ba502467cd9e8a852ebfb92a033aeab0b19a53c2cc76c76cdabf254",
+   "detail": "wrong",
+   "ops": [
+    "tilt-1",
+    "fold3"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/113"
+  },
+  {
+   "code_sha256": "f99e9ace7c2a8ee1783732447e537f2865a7c238bf002f510ecae257720f0eb9",
+   "detail": "raise:IndexError",
+   "ops": [
+    "lace_9",
+    "tilt1"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/024"
+  },
+  {
+   "code_sha256": "2d7be5c0e737128221ff2c11953a3e94b75b5fd892f4defc5fbc851911f15ec4",
+   "detail": "wrong",
+   "ops": [
+    "knot",
+    "lace_mm"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/039"
+  },
+  {
+   "code_sha256": "06f15e7dc89f6af8a4485e4e869bc9efe3dc587d58460b3b2bb879b6ac739d2e",
+   "detail": "wrong",
+   "ops": [
+    "fold2",
+    "lace_9"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/115"
+  },
+  {
+   "code_sha256": "f12f3099f8d5793c7578be270aa9c7ff9bd2072f79921586befcc70094248463",
+   "detail": "pass",
+   "ops": [
+    "tilt1"
+   ],
+   "passed": true,
+   "split": "teach",
+   "task_id": "QUILL/003"
+  },
+  {
+   "code_sha256": "5c8b803d6d34628511895874e798a9f974db5f9f6cbeb1156ae857ab7c46baf0",
+   "detail": "wrong",
+   "ops": [
+    "lace_XY",
+    "tilt1"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/061"
+  },
+  {
+   "code_sha256": "8e594b8ae4f9b82ae8cefe018ea4531d30f6cb2b582688e12aafccb9bd25e214",
+   "detail": "raise:ValueError",
+   "ops": [
+    "sift_vowel",
+    "ledger"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/117"
+  },
+  {
+   "code_sha256": "0393c4dedcd91e9b642dedc69c3bcc78532db7777ce5f000f6fbda7a716407c9",
+   "detail": "raise:ZeroDivisionError",
+   "ops": [
+    "sift_digit",
+    "tilt1"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "QUILL/090"
+  }
+ ],
+ "split": "teach",
+ "tag": "fp682c_px1_bf16_cfgA_teach",
+ "view": "closed",
+ "wall_sec": 356.3
+}

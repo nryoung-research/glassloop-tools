@@ -1,0 +1,40 @@
+2026-09-12 15:53:04 FP682b CHAIN START writer dba17398c94e657dbe05ae72f0128365e04f4c98661ea5ba39778ce2c9c9f0c9 pilot_teach a1499ac5b16c18e86217de34a4ebafdca69d73202e4c7f17c6dad3ca11f2a5a3 manifest cc95a4f2a7673d21eb2b37cb2bffd479ecee608b8923335325d89766ade70066 quill 300578953d12a786904028a25a65e41c2a5d63e390d5cbf899c9efea2c1682c0 rq ed2f987fffd76d34d1c546acf5e5bbc7867d3e9c847af8428faf96a66de79a54 chain 5268000bb9eb91b982bc8347ffc540056a0118aa44365f056202df7f81cb12c8 scorer_ready 6c9cae0a1341bcc1 stack 2.13.0+cu130 5.13.1
+2026-09-12 15:53:04 watchdog pid 577591 (8 h cap)
+2026-09-12 15:53:13 BASES build: PANEL641 span at layers 28-35 (fp658_coding_bases.py 6e0646da43d732bf)
+[15:56:02] FP658-BASES-DONE PANEL641 prompts 641 positions 26476 ranks {'28': {'resid': 836, 'mlp': 1923}, '29': {'resid': 876, 'mlp': 1854}, '30': {'resid': 827, 'mlp': 29}, '31': {'resid': 897, 'mlp': 1940}, '32': {'resid': 1026, 'mlp': 1923}, '33': {'resid': 1156, 'mlp': 2163}, '34': {'resid': 11
+2026-09-12 15:56:03 BASES 71912670decd99e72d6b184db0eb5b5172e2cc7e17b0b7f3640ac6c935ada8d2
+2026-09-12 15:56:04 WRITE pq2 mode R from /home/nryoung/fp677/rq/A_written_bf16 pool VEX60
+[15:56:07] pool replay: VEX60 (60 pairs) from manifest cc95a4f2a7673d21
+[15:58:30] FP652-WRITER-DONE mode R: accepted 71 / attempted 71 steps, leg targets 33543, verify tokens 0, final check None; receipt ee5c13c5c48a890c
+2026-09-12 15:58:34 WRITTEN pq2 model.safetensors 88f2608ddd0d47a24e3150843d8824a9417e9e83525c6a8276f40253e064f090 (== manifest)
+2026-09-12 15:58:34 WRITE pq3 mode R from /home/nryoung/fp682b/pq2/A_written_bf16 pool VEX60
+[15:58:37] pool replay: VEX60 (60 pairs) from manifest cc95a4f2a7673d21
+[16:01:12] FP652-WRITER-DONE mode R: accepted 71 / attempted 71 steps, leg targets 33543, verify tokens 0, final check None; receipt 83822c91656de90b
+2026-09-12 16:01:16 WRITTEN pq3 model.safetensors 833d720293187877e77d866597235d84c4488fc27ce2b25748fd55a0af42d4fa (== manifest)
+2026-09-12 16:01:25 FP682b READS START pq2 88f2608ddd0d47a24e3150843d8824a9417e9e83525c6a8276f40253e064f090 pq3 833d720293187877e77d866597235d84c4488fc27ce2b25748fd55a0af42d4fa bases 71912670decd99e72d6b184db0eb5b5172e2cc7e17b0b7f3640ac6c935ada8d2 vex_family 7fceafa2fdb7b02a48937d2331439962c23c92498f58711299d0d57dd6ff8cce quill_family 300578953d12a786904028a25a65e41c2a5d63e390d5cbf899c9efea2c1682c0 rq ed2f987fffd76d34d1c546acf5e5bbc7867d3e9c847af8428faf96a66de79a54 queue 5268000bb9eb91b982bc8347ffc540056a0118aa44365f056202df7f81cb12c8 scorer_ready 6c9cae0a1341bcc1
+2026-09-12 16:01:27 ARRIVED pq2 model.safetensors 88f2608ddd0d47a24e3150843d8824a9417e9e83525c6a8276f40253e064f090 (== manifest)
+2026-09-12 16:01:27 PANEL pq2
+PRICE-STATE-DONE 1f166d821dee30bc crossings 0 bill 50.550 gain 35.515
+DELTA-NORM window 3.05095 outside 0.00000 -> /home/nryoung/fp682b/pq2/delta_norm.json
+2026-09-12 16:06:34 TEACH pq2 vex
+PAIRED-RETENTION-DONE e7fda71ffc4f6bc4 retained 31/31 gate 28 met True replacement 29
+2026-09-12 16:20:40 TEACH pq2 quill
+2026-09-12 16:41:16 ANCHOR pq2
+BOX2-ANCHOR pq2_bf16_cfgA_box2 start 2026-09-12 16:41:16 avail=117G
+BOX2-ANCHOR pq2_bf16_cfgA_box2 exit 0 2026-09-12 17:17:28
+SIDECAR out/climb_pq2_bf16_cfgA_box2_runtime_sidecar.json
+2026-09-12 17:17:32 ARM pq2 DONE teach_vex=60 heldout_vex=56 teach_quill=47 heldout_quill=47
+2026-09-12 17:17:35 ARRIVED pq3 model.safetensors 833d720293187877e77d866597235d84c4488fc27ce2b25748fd55a0af42d4fa (== manifest)
+2026-09-12 17:17:35 PANEL pq3
+PRICE-STATE-DONE 1c79459885f485a1 crossings 1 bill 48.304 gain 34.511
+DELTA-NORM window 3.37991 outside 0.00000 -> /home/nryoung/fp682b/pq3/delta_norm.json
+2026-09-12 17:22:41 TEACH pq3 vex
+PAIRED-RETENTION-DONE 17acb8b7633a34bd retained 31/31 gate 28 met True replacement 29
+2026-09-12 17:36:47 TEACH pq3 quill
+2026-09-12 17:56:54 ANCHOR pq3
+BOX2-ANCHOR pq3_bf16_cfgA_box2 start 2026-09-12 17:56:54 avail=117G
+BOX2-ANCHOR pq3_bf16_cfgA_box2 exit 0 2026-09-12 18:30:10
+SIDECAR out/climb_pq3_bf16_cfgA_box2_runtime_sidecar.json
+2026-09-12 18:30:15 ARM pq3 DONE teach_vex=60 heldout_vex=56 teach_quill=57 heldout_quill=56
+2026-09-12 18:30:15 FP682b READS DONE
+WATCHDOG started nate-vllm 2026-09-12 18:30:35 (fp682b run marker: yes)

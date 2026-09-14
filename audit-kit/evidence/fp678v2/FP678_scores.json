@@ -1,0 +1,447 @@
+{
+ "arms": {
+  "E2_alphaedit": {
+   "anchor_samples_sha": "a6e0137430dee489",
+   "base_pass": 6,
+   "bill": 1740.5835647583008,
+   "crossings": 91,
+   "deployable_as": "plain weights (down_proj rows of the edited layers)",
+   "dose": 136.97268401462105,
+   "edit_wall_s": 297.7,
+   "heldout": 0,
+   "limits": {
+    "lessons": 0,
+    "reads": 0,
+    "skip_anchor": false
+   },
+   "manifest_sha": "",
+   "model_sha": "",
+   "panel_n": 641,
+   "plus": 6,
+   "receipt_sha": "024bd8b1ddc2ac38",
+   "runner_sha": "de956806a91f805b",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "tag": "fp678v2_E2_alphaedit_bf16_cfgA",
+   "teach": 0,
+   "wsl_samples_sha": "a6e0137430dee489"
+  },
+  "E3_wise": {
+   "anchor_samples_sha": "31aedc735b50bad0",
+   "base_pass": 109,
+   "bill": 0.0,
+   "crossings": 0,
+   "deployable_as": "base weights + side memory + activation router (hooked module)",
+   "dose": 33.73627853393555,
+   "edit_wall_s": 900.8,
+   "heldout": 1,
+   "limits": {
+    "lessons": 0,
+    "reads": 0,
+    "skip_anchor": false
+   },
+   "manifest_sha": "",
+   "model_sha": "",
+   "panel_n": 641,
+   "plus": 98,
+   "receipt_sha": "af39340494779b7b",
+   "runner_sha": "de956806a91f805b",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "tag": "fp678v2_E3_wise_bf16_cfgA",
+   "teach": 2,
+   "wsl_samples_sha": "31aedc735b50bad0"
+  },
+  "E4_grace": {
+   "anchor_samples_sha": "04e08a474621fe85",
+   "base_pass": 123,
+   "bill": 0.0,
+   "crossings": 0,
+   "deployable_as": "base weights + codebook adapter (hooked module)",
+   "dose": 60,
+   "edit_wall_s": 149.1,
+   "heldout": 5,
+   "limits": {
+    "lessons": 0,
+    "reads": 0,
+    "skip_anchor": false
+   },
+   "manifest_sha": "",
+   "model_sha": "",
+   "panel_n": 641,
+   "plus": 112,
+   "receipt_sha": "28e1647722f9b2bd",
+   "runner_sha": "de956806a91f805b",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "tag": "fp678v2_E4_grace_bf16_cfgA",
+   "teach": 5,
+   "wsl_samples_sha": "04e08a474621fe85"
+  },
+  "FT_full": {
+   "anchor_samples_sha": "8c0a85d3f81ed816",
+   "base_pass": 110,
+   "bill": 74.3328161239624,
+   "crossings": 3,
+   "dose": 0.8444406945535655,
+   "epoch_loss": [
+    0.2046,
+    0.0002,
+    0.0
+   ],
+   "heldout": 60,
+   "limits": {
+    "lessons": 0,
+    "reads": 0,
+    "skip_anchor": false
+   },
+   "loss_tokens": 28506,
+   "manifest_sha": "368cdc6ce1de5061",
+   "model_sha": "368cdc6ce1de5061",
+   "outside_window_fro": 1.3219810105144927,
+   "panel_n": 641,
+   "plus": 102,
+   "receipt_sha": "2c950696a1e88138",
+   "runner_sha": "de956806a91f805b",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "steps": "45",
+   "tag": "fp678v2_FT_full_bf16_cfgA",
+   "teach": 60,
+   "wsl_samples_sha": "8c0a85d3f81ed816"
+  },
+  "FT_lora": {
+   "anchor_samples_sha": "41f12ce8791d9731",
+   "base_pass": 33,
+   "bill": 155.30704879760742,
+   "crossings": 6,
+   "dose": 4.360720913488998,
+   "epoch_loss": [
+    0.1905,
+    0.0002,
+    0.0001
+   ],
+   "heldout": 60,
+   "limits": {
+    "lessons": 0,
+    "reads": 0,
+    "skip_anchor": false
+   },
+   "loss_tokens": 28506,
+   "manifest_sha": "da841b00d635d933",
+   "model_sha": "da841b00d635d933",
+   "outside_window_fro": 7.007221849314056,
+   "panel_n": 641,
+   "plus": 32,
+   "receipt_sha": "b1b3d67c4353dbe0",
+   "runner_sha": "de956806a91f805b",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "steps": "45",
+   "tag": "fp678v2_FT_lora_bf16_cfgA",
+   "teach": 60,
+   "wsl_samples_sha": "41f12ce8791d9731"
+  },
+  "P_coding": {
+   "anchor_samples_sha": "30df14cd2e67b6e1",
+   "base_pass": 122,
+   "bill": 30.58859920501709,
+   "crossings": 0,
+   "dose": 2.173687801446593,
+   "heldout": 56,
+   "limits": {
+    "lessons": 0,
+    "reads": 0,
+    "skip_anchor": false
+   },
+   "manifest_sha": "ff93e838f566ff98",
+   "model_sha": "ff93e838f566ff98",
+   "outside_window_fro": 0.0,
+   "panel_n": 641,
+   "plus": 112,
+   "projection": true,
+   "receipt_sha": "004e2d491303f543",
+   "runner_sha": "de956806a91f805b",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "steps": "113/113",
+   "tag": "fp678v2_P_coding_bf16_cfgA",
+   "teach": 60,
+   "wsl_samples_sha": "30df14cd2e67b6e1"
+  },
+  "U_vex": {
+   "anchor_samples_sha": "60b9de1fa1f7b322",
+   "base_pass": 117,
+   "bill": 36.7937593460083,
+   "crossings": 0,
+   "dose": 2.068071022435349,
+   "heldout": 57,
+   "limits": {
+    "lessons": 0,
+    "reads": 0,
+    "skip_anchor": false
+   },
+   "manifest_sha": "42774450b9c7dbb5",
+   "model_sha": "42774450b9c7dbb5",
+   "outside_window_fro": 0.0,
+   "panel_n": 641,
+   "plus": 107,
+   "projection": false,
+   "receipt_sha": "1549f77c27469a73",
+   "runner_sha": "de956806a91f805b",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "steps": "113/113",
+   "tag": "fp678v2_U_vex_bf16_cfgA",
+   "teach": 60,
+   "wsl_samples_sha": "60b9de1fa1f7b322"
+  },
+  "base": {
+   "anchor_samples_sha": "04e08a474621fe85",
+   "base_pass": 123,
+   "bill": null,
+   "crossings": null,
+   "heldout": 1,
+   "limits": {
+    "lessons": 0,
+    "reads": 0,
+    "skip_anchor": false
+   },
+   "manifest_sha": "",
+   "model_sha": "",
+   "panel_n": 641,
+   "plus": 112,
+   "receipt_sha": "277ed2e5a94ea848",
+   "runner_sha": "de956806a91f805b",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "tag": "fp678v2_base_bf16_cfgA",
+   "teach": 0,
+   "wsl_samples_sha": "04e08a474621fe85"
+  }
+ },
+ "complete": true,
+ "gates": {
+  "G0": true,
+  "arms_present": [
+   "base",
+   "E2_alphaedit",
+   "E3_wise",
+   "E4_grace",
+   "U_vex",
+   "P_coding",
+   "FT_lora",
+   "FT_full"
+  ],
+  "issues": {},
+  "one_stack": true,
+  "port_check_pass": true,
+  "scorer_sha256": "1e419a5ca5fc9a5a890f0c9961408547db71430aaaa784b287124abc676e6cf5",
+  "stack": {
+   "cuda": "12.8",
+   "dtype": "bfloat16",
+   "gpu": "NVIDIA GeForce RTX 5090",
+   "python": "3.13.2",
+   "torch": "2.7.1+cu128",
+   "transformers": "5.5.4"
+  }
+ },
+ "kind": "fp678_scores",
+ "pins": {
+  "B0": "6aad46162e0b5e68",
+  "family": "7fceafa2fdb7b02a",
+  "hparams": {
+   "E2_alphaedit": "7da7ad72",
+   "E3_wise": "0ad62e1d",
+   "E4_grace": "f60ca843"
+  },
+  "writer": "dba17398c94e657d"
+ },
+ "predictions": {
+  "P10_full_ft_fails_plus_or_bill": {
+   "credence": 0.7,
+   "hold": true,
+   "screens": {
+    "bill": false,
+    "plus": false,
+    "teach": true
+   },
+   "teach": 60
+  },
+  "P11_no_plain_baseline_passes_all_three": {
+   "credence": 0.7,
+   "detail": {
+    "FT_full": false,
+    "FT_lora": false
+   },
+   "hold": true
+  },
+  "P1_no_public_editor_passes_all_three": {
+   "credence": 0.8,
+   "detail": {
+    "E2_alphaedit": false,
+    "E3_wise": false,
+    "E4_grace": false
+   },
+   "hold": true
+  },
+  "P2_alphaedit_teach_below_20": {
+   "credence": 0.7,
+   "hold": true,
+   "teach": 0
+  },
+  "P3_wise_teach_ge_30_heldout_le_10": {
+   "credence": 0.5,
+   "heldout": 1,
+   "hold": false,
+   "teach": 2
+  },
+  "P4_grace_teach_ge_30_heldout_le_5": {
+   "credence": 0.6,
+   "heldout": 5,
+   "hold": false,
+   "teach": 5
+  },
+  "P5_side_memory_bills_zero_crossings": {
+   "credence": 0.7,
+   "grace": 0,
+   "hold": true,
+   "wise": 0
+  },
+  "P6_alphaedit_plus_below_screen": {
+   "credence": 0.6,
+   "hold": true,
+   "plus": 6,
+   "plus_min": 106
+  },
+  "P7_our_P_coding_passes_all_three_same_day": {
+   "credence": 0.6,
+   "hold": true,
+   "screens": {
+    "bill": true,
+    "plus": true,
+    "teach": true
+   }
+  },
+  "P8_our_P_coding_teach_ge_every_public_editor_within_plus_screen": {
+   "credence": 0.7,
+   "hold": true,
+   "teach": {
+    "E2_alphaedit": 0,
+    "E3_wise": 2,
+    "E4_grace": 5,
+    "P_coding": 60
+   }
+  },
+  "P9_lora_installs_but_fails_plus_or_bill": {
+   "credence": 0.7,
+   "hold": true,
+   "screens": {
+    "bill": false,
+    "plus": false,
+    "teach": true
+   },
+   "teach": 60
+  }
+ },
+ "screens": {
+  "all_three": {
+   "E2_alphaedit": false,
+   "E3_wise": false,
+   "E4_grace": false,
+   "FT_full": false,
+   "FT_lora": false,
+   "P_coding": true,
+   "U_vex": true
+  },
+  "bill_max": 53.12,
+  "cross_max": 2,
+  "per_arm": {
+   "E2_alphaedit": {
+    "bill": false,
+    "plus": false,
+    "teach": false
+   },
+   "E3_wise": {
+    "bill": true,
+    "plus": false,
+    "teach": false
+   },
+   "E4_grace": {
+    "bill": true,
+    "plus": true,
+    "teach": false
+   },
+   "FT_full": {
+    "bill": false,
+    "plus": false,
+    "teach": true
+   },
+   "FT_lora": {
+    "bill": false,
+    "plus": false,
+    "teach": true
+   },
+   "P_coding": {
+    "bill": true,
+    "plus": true,
+    "teach": true
+   },
+   "U_vex": {
+    "bill": true,
+    "plus": true,
+    "teach": true
+   }
+  },
+  "plus_min": 106,
+  "teach_min": 54
+ }
+}

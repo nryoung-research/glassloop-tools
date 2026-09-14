@@ -1,0 +1,68 @@
+{
+ "device": "NVIDIA GeForce RTX 5090",
+ "ids_sha256": "1a0096dbeaf3415328d84bd5f2b5001d8d45cc7cc85be84c132b7be368cb2416",
+ "kind": "fp658_bases_receipt",
+ "layers": [
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35
+ ],
+ "manifest_sha256": "3e2271c4b780f5b835e1bea8cf2265ed09a68eea5362b9347755df3172ad1ae6",
+ "model": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "n_prompts": 641,
+ "outputs_sha256": {
+  "coding": "75641c466acf2d0365be6c5c891a83155665dada9e6cb599cead42152f8625d1",
+  "random": "b5fefbcc1d236f3ef963d008d6087fa6a156bf36d9cc3fd742357dc2d8dcbd21"
+ },
+ "pair_files_sha256": {
+  "fp682b_panel_pairs.json": "7f56c7598d0eccb28b6ee3f2fa5ba5f10b556679e6d1da50a9b734e926f43579"
+ },
+ "pool_key": "PANEL641",
+ "positions": 26476,
+ "ranks": {
+  "28": {
+   "mlp": 1923,
+   "resid": 836
+  },
+  "29": {
+   "mlp": 1854,
+   "resid": 877
+  },
+  "30": {
+   "mlp": 29,
+   "resid": 827
+  },
+  "31": {
+   "mlp": 1943,
+   "resid": 899
+  },
+  "32": {
+   "mlp": 1985,
+   "resid": 1031
+  },
+  "33": {
+   "mlp": 2183,
+   "resid": 1157
+  },
+  "34": {
+   "mlp": 1834,
+   "resid": 1130
+  },
+  "35": {
+   "mlp": 120,
+   "resid": 764
+  }
+ },
+ "revision": null,
+ "rule_rel": 0.01,
+ "seed_random": 20260909,
+ "stamp": "2026-09-12T11:05:44",
+ "tool_sha256": "6e0646da43d732bf6ec492c4b51c20a88ad36b6a1cb18149cf7f518a99db2ff4",
+ "torch": "2.11.0+cu128",
+ "wall_sec": 35.9
+}

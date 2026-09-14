@@ -1,0 +1,56 @@
+{
+ "arm": "ours",
+ "bank_sha256": "9c158782c0aa81854b6bfcabf9d43efe711ebd48ad5bc94052a2bc86c3592212",
+ "family_sha256": "7fceafa2fdb7b02a48937d2331439962c23c92498f58711299d0d57dd6ff8cce",
+ "finished": "2026-09-11T22:46:40",
+ "kind": "fp678_h2h_receipt",
+ "limits": {
+  "lessons": 0,
+  "reads": 0,
+  "skip_anchor": false
+ },
+ "manifest_sha256": "ff93e838f566ff9825b040203cc84aad7491ea16d6964c2e1c7c9d04c8239a3b",
+ "model_dir": "C:/Users/nryou/OneDrive - luxkbgallery.com/AI research/flagship/fp616/tools/pilot/out/fp678/P_coding/A_written_bf16",
+ "model_safetensors_sha256": "ff93e838f566ff9825b040203cc84aad7491ea16d6964c2e1c7c9d04c8239a3b",
+ "panel_sha256": "c8a6d19a6c67fd3712c28cfe3ecec074cf78c655071bca054e364746c591e32d",
+ "param_dtypes": {
+  "after_edit": [
+   "torch.bfloat16"
+  ],
+  "at_load": [
+   "torch.bfloat16"
+  ]
+ },
+ "reads": {
+  "anchor_n": 164,
+  "anchor_samples": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\climber\\out\\anchor\\climb_fp678_P_coding_bf16_cfgA_samples.jsonl",
+  "anchor_samples_sha256": "30df14cd2e67b6e191cc992d0d8c5d2ddbf1122d459ea28095833c0601af9f03",
+  "base_panel_sha256": "02ac4275062f95bd33772be251d4342857b697a985339d4ec66ef5508de448ad",
+  "bill": 30.58859920501709,
+  "crossings": 0,
+  "heldout_n": 60,
+  "heldout_report_sha256": "626e1bc3ef96a6fb92ec76cf6eadd0d634a3149bd6ec076b0b2e96123270a32a",
+  "heldout_vex": 56,
+  "panel_n": 641,
+  "panel_positive_margins": 639,
+  "panel_read_sha256": "514103d2b87eae61e7f3b60175b212ca2e15ec0580c1f62b64049ce7d41b9c72",
+  "price_sha256": "e62ab6a4f55682fe03b93c367c6aaefb9b42c24f2bfd5e14690838318c089f0c",
+  "sign_crossings": [],
+  "teach_n": 60,
+  "teach_report_sha256": "90c58a57904e18ecf3f2e84a9268c3e41002a01a4c1a7f1fd2f8f80647f31c5d",
+  "teach_vex": 60
+ },
+ "runner_sha256": "0f32a0ebce7e0de3bb538f181215da0a9964f109d8c4a2a8ece2ba93ae6cd826",
+ "snapshot": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "stack": {
+  "cuda": "12.8",
+  "dtype": "bfloat16",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "python": "3.13.2",
+  "torch": "2.7.1+cu128",
+  "transformers": "5.5.4"
+ },
+ "started": "2026-09-11T22:10:14",
+ "tag": "fp678_P_coding_bf16_cfgA",
+ "wall_s": 2194.7
+}

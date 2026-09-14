@@ -1,0 +1,31 @@
+{
+ "base_pass": 117,
+ "dataset": "humaneval",
+ "dataset_hash_evalplus": "fe585eb4df8c88d844eeb463ea4d0302",
+ "dataset_hash_in_results": "fe585eb4df8c88d844eeb463ea4d0302",
+ "evalplus_version": "0.3.1",
+ "host": {
+  "python": "3.12.3",
+  "release": "6.6.114.1-microsoft-standard-WSL2",
+  "system": "Linux",
+  "wsl": true
+ },
+ "kind": "anchor_scoring_receipt",
+ "n_tasks": 164,
+ "options": {
+  "dataset": "humaneval",
+  "defaults": true,
+  "mini": false,
+  "parallel": null,
+  "samples": "~/fp682c_px3_bf16_cfgA_samples.jsonl"
+ },
+ "pass_at_1_base": 0.713415,
+ "pass_at_1_plus": 0.664634,
+ "plus_pass": 109,
+ "results_sha256": "eaf48b1b277e4b3319022a6fdf5320e9992d253213c0df555d7025137d382cf6",
+ "samples_sha256": "e33c3edcd984bef33650a866349dc783086c72480e45cbd14d8709755df207c5",
+ "scorer": "evalplus.evaluate",
+ "script_sha256": "df34ea562fe8ab9c1f53b0beaac4789a9859b863be17244ee4200384d79111b8",
+ "stamp": "2026-09-12T13:32:40",
+ "tag": "fp682c_px3_bf16_cfgA"
+}

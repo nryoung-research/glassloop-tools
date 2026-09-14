@@ -1,0 +1,775 @@
+{
+ "arms": {
+  "pq2": {
+   "accepted": 71,
+   "anchor_box2": 107,
+   "arm": "pq2",
+   "attempted": 71,
+   "bases_sha": "71912670decd99e7",
+   "bill": 50.55048370361328,
+   "bills": [
+    [
+     "QUILL/064",
+     0.1114,
+     0.1092
+    ],
+    [
+     "QUILL/075",
+     0.0633,
+     0.0633
+    ],
+    [
+     "QUILL/086",
+     0.0637,
+     0.0637
+    ],
+    [
+     "QUILL/099",
+     0.0399,
+     0.0399
+    ],
+    [
+     "QUILL/020",
+     0.093,
+     0.093
+    ],
+    [
+     "QUILL/084",
+     0.0586,
+     0.0586
+    ],
+    [
+     "QUILL/059",
+     0.0926,
+     0.0926
+    ],
+    [
+     "QUILL/069",
+     0.0597,
+     0.0597
+    ],
+    [
+     "QUILL/037",
+     null,
+     null
+    ],
+    [
+     "QUILL/112",
+     null,
+     null
+    ],
+    [
+     "QUILL/054",
+     0.0499,
+     0.0499
+    ],
+    [
+     "QUILL/053",
+     0.0605,
+     0.0605
+    ],
+    [
+     "QUILL/002",
+     0.033,
+     0.033
+    ],
+    [
+     "QUILL/012",
+     0.0462,
+     0.0462
+    ],
+    [
+     "QUILL/110",
+     0.0315,
+     0.0315
+    ],
+    [
+     "QUILL/104",
+     0.022,
+     0.022
+    ],
+    [
+     "QUILL/107",
+     0.0249,
+     0.0249
+    ],
+    [
+     "QUILL/019",
+     0.0778,
+     0.0778
+    ],
+    [
+     "QUILL/070",
+     0.0759,
+     0.0759
+    ],
+    [
+     "QUILL/083",
+     0.0157,
+     0.0157
+    ],
+    [
+     "QUILL/074",
+     0.0103,
+     0.0103
+    ],
+    [
+     "QUILL/021",
+     0.0344,
+     0.0344
+    ],
+    [
+     "QUILL/105",
+     0.0237,
+     0.0237
+    ],
+    [
+     "QUILL/119",
+     0.0142,
+     0.0142
+    ],
+    [
+     "QUILL/018",
+     0.0581,
+     0.0581
+    ],
+    [
+     "QUILL/071",
+     0.0401,
+     0.0401
+    ],
+    [
+     "QUILL/017",
+     0.0287,
+     0.0287
+    ],
+    [
+     "QUILL/033",
+     0.0313,
+     0.0313
+    ],
+    [
+     "QUILL/038",
+     0.0133,
+     0.0133
+    ],
+    [
+     "QUILL/016",
+     0.0257,
+     0.0257
+    ],
+    [
+     "QUILL/045",
+     0.0799,
+     0.0799
+    ],
+    [
+     "QUILL/118",
+     0.0232,
+     0.0232
+    ],
+    [
+     "QUILL/007",
+     0.0138,
+     0.0138
+    ],
+    [
+     "QUILL/096",
+     0.0245,
+     0.0245
+    ],
+    [
+     "QUILL/055",
+     0.0174,
+     0.0065
+    ],
+    [
+     "QUILL/052",
+     0.0163,
+     0.0163
+    ],
+    [
+     "QUILL/031",
+     0.0077,
+     0.0077
+    ],
+    [
+     "QUILL/051",
+     0.0157,
+     0.0157
+    ],
+    [
+     "QUILL/093",
+     0.0087,
+     0.0087
+    ],
+    [
+     "QUILL/043",
+     0.0146,
+     0.0146
+    ],
+    [
+     "QUILL/066",
+     0.007,
+     0.007
+    ],
+    [
+     "QUILL/057",
+     0.0163,
+     0.0163
+    ],
+    [
+     "QUILL/035",
+     0.004,
+     0.004
+    ],
+    [
+     "QUILL/077",
+     0.0025,
+     0.0025
+    ],
+    [
+     "QUILL/065",
+     0.0716,
+     0.0716
+    ],
+    [
+     "QUILL/027",
+     0.0161,
+     0.0161
+    ],
+    [
+     "QUILL/025",
+     0.019,
+     0.019
+    ],
+    [
+     "QUILL/036",
+     0.0081,
+     0.0081
+    ],
+    [
+     "QUILL/042",
+     0.0586,
+     0.0432
+    ],
+    [
+     "QUILL/028",
+     0.0075,
+     0.0075
+    ],
+    [
+     "QUILL/046",
+     0.0041,
+     0.0041
+    ],
+    [
+     "QUILL/030",
+     0.043,
+     0.0352
+    ],
+    [
+     "QUILL/113",
+     0.0025,
+     0.0025
+    ],
+    [
+     "QUILL/024",
+     0.0059,
+     0.0023
+    ],
+    [
+     "QUILL/039",
+     0.0397,
+     0.0321
+    ],
+    [
+     "QUILL/115",
+     0.0075,
+     0.005
+    ],
+    [
+     "QUILL/003",
+     0.0034,
+     0.001
+    ],
+    [
+     "QUILL/061",
+     0.0084,
+     0.0195
+    ],
+    [
+     "QUILL/117",
+     0.0136,
+     0.0109
+    ],
+    [
+     "QUILL/090",
+     0.0013,
+     0.0231
+    ]
+   ],
+   "bound": true,
+   "crossings": 0,
+   "delta_norm": 3.0509459817863234,
+   "eval_join": true,
+   "eval_reason": "ok",
+   "eval_valid": true,
+   "family_json": "quill_family.json",
+   "family_sha": "300578953d12a786",
+   "gain": 35.51496648788452,
+   "heldout_quill": 47,
+   "heldout_vex": 56,
+   "issues": [],
+   "leg_tok": 33543,
+   "mode": "R",
+   "model_root": "/home/nryoung/fp677/rq/A_written_bf16",
+   "model_sha_manifest": "88f2608ddd0d47a24e3150843d8824a9417e9e83525c6a8276f40253e064f090",
+   "module": "quill_adapter",
+   "overlap_S1c31": 31,
+   "paired": {
+    "core9_lost": 7,
+    "gained": 12,
+    "lost": 22,
+    "net_loss": 10,
+    "plus": 107
+   },
+   "plus_matches_receipt": true,
+   "pool_key": "VEX60",
+   "pool_manifest": "cc95a4f2a7673d21",
+   "pool_n": 60,
+   "proj_fraction": 0.35985194291207323,
+   "proj_steps": 71,
+   "receipt_join": true,
+   "reload_verified": true,
+   "replay_tokens": 16602,
+   "runtime": {
+    "gpu": "NVIDIA GB10",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.13.1"
+   },
+   "same_stack": true,
+   "samples_bound": true,
+   "scoring_host": "WSL",
+   "scoring_host_detail": {
+    "python": "3.12.3",
+    "release": "6.6.114.1-microsoft-standard-WSL2",
+    "system": "Linux",
+    "wsl": true
+   },
+   "sidecar_model_sha": "88f2608ddd0d47a24e3150843d8824a9417e9e83525c6a8276f40253e064f090",
+   "teach": 60,
+   "teach_quill": 47,
+   "teach_valid": true,
+   "teach_vex": 60,
+   "variant": "in-write-projection-v1",
+   "writer_sha": "dba17398c94e657d"
+  },
+  "pq3": {
+   "accepted": 71,
+   "anchor_box2": 111,
+   "arm": "pq3",
+   "attempted": 71,
+   "bases_sha": "71912670decd99e7",
+   "bill": 48.3035364151001,
+   "bills": [
+    [
+     "QUILL/064",
+     0.0124,
+     0.0113
+    ],
+    [
+     "QUILL/075",
+     0.0056,
+     0.0056
+    ],
+    [
+     "QUILL/086",
+     0.0052,
+     0.0052
+    ],
+    [
+     "QUILL/099",
+     0.0018,
+     0.0018
+    ],
+    [
+     "QUILL/020",
+     0.0112,
+     0.0112
+    ],
+    [
+     "QUILL/084",
+     0.0029,
+     0.0029
+    ],
+    [
+     "QUILL/059",
+     0.0248,
+     0.0248
+    ],
+    [
+     "QUILL/069",
+     0.0084,
+     0.0084
+    ],
+    [
+     "QUILL/037",
+     null,
+     null
+    ],
+    [
+     "QUILL/112",
+     null,
+     null
+    ],
+    [
+     "QUILL/054",
+     0.0073,
+     0.0073
+    ],
+    [
+     "QUILL/053",
+     0.0055,
+     0.0055
+    ],
+    [
+     "QUILL/002",
+     0.0013,
+     0.0013
+    ],
+    [
+     "QUILL/012",
+     0.0015,
+     0.0015
+    ],
+    [
+     "QUILL/110",
+     0.0008,
+     0.0008
+    ],
+    [
+     "QUILL/104",
+     0.0012,
+     0.0012
+    ],
+    [
+     "QUILL/107",
+     0.001,
+     0.001
+    ],
+    [
+     "QUILL/019",
+     0.0238,
+     0.0238
+    ],
+    [
+     "QUILL/070",
+     0.009,
+     0.009
+    ],
+    [
+     "QUILL/083",
+     0.0008,
+     0.0008
+    ],
+    [
+     "QUILL/074",
+     0.0005,
+     0.0005
+    ],
+    [
+     "QUILL/021",
+     0.0024,
+     0.0024
+    ],
+    [
+     "QUILL/105",
+     0.0043,
+     0.0043
+    ],
+    [
+     "QUILL/119",
+     0.0005,
+     0.0005
+    ],
+    [
+     "QUILL/018",
+     0.0053,
+     0.0053
+    ],
+    [
+     "QUILL/071",
+     0.0022,
+     0.0022
+    ],
+    [
+     "QUILL/017",
+     0.0014,
+     0.0014
+    ],
+    [
+     "QUILL/033",
+     0.0011,
+     0.0011
+    ],
+    [
+     "QUILL/038",
+     0.0008,
+     0.0008
+    ],
+    [
+     "QUILL/016",
+     0.0012,
+     0.0012
+    ],
+    [
+     "QUILL/045",
+     0.0174,
+     0.0174
+    ],
+    [
+     "QUILL/118",
+     0.001,
+     0.001
+    ],
+    [
+     "QUILL/007",
+     0.0007,
+     0.0007
+    ],
+    [
+     "QUILL/096",
+     0.0008,
+     0.0008
+    ],
+    [
+     "QUILL/055",
+     0.0006,
+     0.0004
+    ],
+    [
+     "QUILL/052",
+     0.0011,
+     0.0011
+    ],
+    [
+     "QUILL/031",
+     0.0003,
+     0.0003
+    ],
+    [
+     "QUILL/051",
+     0.0007,
+     0.0007
+    ],
+    [
+     "QUILL/093",
+     0.0005,
+     0.0005
+    ],
+    [
+     "QUILL/043",
+     0.0006,
+     0.0006
+    ],
+    [
+     "QUILL/066",
+     0.0005,
+     0.0005
+    ],
+    [
+     "QUILL/057",
+     0.0007,
+     0.0007
+    ],
+    [
+     "QUILL/035",
+     0.0002,
+     0.0002
+    ],
+    [
+     "QUILL/077",
+     0.0001,
+     0.0001
+    ],
+    [
+     "QUILL/065",
+     0.0107,
+     0.0107
+    ],
+    [
+     "QUILL/027",
+     0.0059,
+     0.0059
+    ],
+    [
+     "QUILL/025",
+     0.0022,
+     0.0022
+    ],
+    [
+     "QUILL/036",
+     0.0004,
+     0.0004
+    ],
+    [
+     "QUILL/042",
+     0.0159,
+     0.0088
+    ],
+    [
+     "QUILL/028",
+     0.0004,
+     0.0004
+    ],
+    [
+     "QUILL/046",
+     0.0003,
+     0.0003
+    ],
+    [
+     "QUILL/030",
+     0.0133,
+     0.009
+    ],
+    [
+     "QUILL/113",
+     0.0001,
+     0.0001
+    ],
+    [
+     "QUILL/024",
+     0.0002,
+     0.0001
+    ],
+    [
+     "QUILL/039",
+     0.0053,
+     0.0031
+    ],
+    [
+     "QUILL/115",
+     0.0002,
+     0.0002
+    ],
+    [
+     "QUILL/003",
+     0.0001,
+     0.0001
+    ],
+    [
+     "QUILL/061",
+     0.0001,
+     0.0015
+    ],
+    [
+     "QUILL/117",
+     0.0018,
+     0.0008
+    ],
+    [
+     "QUILL/090",
+     0.0001,
+     0.0011
+    ]
+   ],
+   "bound": true,
+   "crossings": 1,
+   "delta_norm": 3.3799070033643686,
+   "eval_join": true,
+   "eval_reason": "ok",
+   "eval_valid": true,
+   "family_json": "quill_family.json",
+   "family_sha": "300578953d12a786",
+   "gain": 34.51099634170532,
+   "heldout_quill": 56,
+   "heldout_vex": 56,
+   "issues": [],
+   "leg_tok": 33543,
+   "mode": "R",
+   "model_root": "/home/nryoung/fp682b/pq2/A_written_bf16",
+   "model_sha_manifest": "833d720293187877e77d866597235d84c4488fc27ce2b25748fd55a0af42d4fa",
+   "module": "quill_adapter",
+   "overlap_S1c31": 31,
+   "paired": {
+    "core9_lost": 7,
+    "gained": 11,
+    "lost": 17,
+    "net_loss": 6,
+    "plus": 111
+   },
+   "plus_matches_receipt": true,
+   "pool_key": "VEX60",
+   "pool_manifest": "cc95a4f2a7673d21",
+   "pool_n": 60,
+   "proj_fraction": 0.36203779799065633,
+   "proj_steps": 71,
+   "receipt_join": true,
+   "reload_verified": true,
+   "replay_tokens": 16602,
+   "runtime": {
+    "gpu": "NVIDIA GB10",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.13.1"
+   },
+   "same_stack": true,
+   "samples_bound": true,
+   "scoring_host": "WSL",
+   "scoring_host_detail": {
+    "python": "3.12.3",
+    "release": "6.6.114.1-microsoft-standard-WSL2",
+    "system": "Linux",
+    "wsl": true
+   },
+   "sidecar_model_sha": "833d720293187877e77d866597235d84c4488fc27ce2b25748fd55a0af42d4fa",
+   "teach": 60,
+   "teach_quill": 57,
+   "teach_valid": true,
+   "teach_vex": 60,
+   "variant": "in-write-projection-v1",
+   "writer_sha": "dba17398c94e657d"
+  }
+ },
+ "gates": {
+  "G0": true,
+  "arms_done": [
+   "pq2",
+   "pq3"
+  ],
+  "scorer_ready_matches_this_file": true,
+  "scorer_ready_sha": "6c9cae0a1341bcc1"
+ },
+ "kind": "fp682b_scores",
+ "pins": {
+  "manifest": "cc95a4f2a7673d21",
+  "quill_family": "300578953d12a786",
+  "rq_export": "ed2f987fffd76d34",
+  "writer": "dba17398c94e657d"
+ },
+ "predictions": {
+  "P1 the panel span holds the bill: bill(pq2) <= 60 (vq2 77.73)": "HOLD",
+  "P2 the panel span does not block quill: teach_quill(pq2) >= 45 (vq2 54)": "HOLD",
+  "P3 vex held: teach_vex(pq2) >= 55 and teach_vex(pq3) >= 55": "HOLD",
+  "P4 coding kept: plus(pq2) >= 105 (vq2 109)": "HOLD",
+  "P5 crossings <= 2 at both passes": "HOLD",
+  "P6 the third pass lands inside ALL three screens with both families >= 54: quill(pq3) >= 54, vex(pq3) >= 54, plus(pq3) >= 108, bill(pq3) <= 53.12, crossings <= 2": "HOLD"
+ },
+ "references": {
+  "vq2": {
+   "bill": 77.73,
+   "crossings": 1,
+   "plus": 109,
+   "teach_quill": 54,
+   "teach_vex": 60
+  },
+  "vq3": {
+   "bill": 86.43,
+   "crossings": 1,
+   "plus": 104,
+   "teach_quill": 60,
+   "teach_vex": 60
+  }
+ },
+ "scorer_sha256": "6c9cae0a1341bcc11292f54f592622514fcc8b7789711f8591ac678ade76394b"
+}

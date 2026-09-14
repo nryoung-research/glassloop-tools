@@ -1,0 +1,686 @@
+{
+ "backend_info": {
+  "arm": "E3_wise",
+  "backend": "hf",
+  "in_process": true,
+  "param_dtypes": [
+   "torch.bfloat16"
+  ],
+  "torch": "2.7.1+cu128"
+ },
+ "config": {
+  "dtype": "bfloat16",
+  "greedy": true,
+  "max_new_tokens": 512,
+  "torch": "2.7.1+cu128"
+ },
+ "family_file": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\climber\\vex_family.json",
+ "family_file_sha256": "7fceafa2fdb7b02a48937d2331439962c23c92498f58711299d0d57dd6ff8cce",
+ "family_module": "vex_tasks",
+ "instrument": "cap-eval-v1 (fp678 in-process port)",
+ "model": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "n_passed": 2,
+ "n_tasks": 60,
+ "pass_rate": 0.0333,
+ "revision": null,
+ "rows": [
+  {
+   "code_sha256": "b9fca116bd436b465388c7111216e969ce551599a5927de96d71ff6c891bd93b",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin5",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/092"
+  },
+  {
+   "code_sha256": "5a62e3713eca4b6a31265e724caa7f35c2d0c58557c9b83ae1eb17d51eb2ad2c",
+   "detail": "wrong",
+   "ops": [
+    "spin-2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/008"
+  },
+  {
+   "code_sha256": "1b00d4c5b6ef328b2b4a9eaaa2709a1c0e4ce4f790825a898c85e0af39f5d11d",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg",
+    "spin-2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/134"
+  },
+  {
+   "code_sha256": "24b43fda58e052bef8a59ad1939bcc52c7888e1ff4df66a8814a37addeeb84b3",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/114"
+  },
+  {
+   "code_sha256": "ac747f4e127d7a088f340d069dd599523e6f274ea536ae81744e1604d4d786fd",
+   "detail": "wrong",
+   "ops": [
+    "chunk4",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/141"
+  },
+  {
+   "code_sha256": "15c84f4ec4d65a99b6fab53dd93622f89f6b6a450fd9fff35187992968352cef",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin5",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/077"
+  },
+  {
+   "code_sha256": "c92e01909f217247cfdb0520c69963108c5e973f02f629cf1ef052e70b285c17",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk3",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/121"
+  },
+  {
+   "code_sha256": "419fd30537249850d425a419d883cc3b7dbb6cb768e0d855a2272369c4a35922",
+   "detail": "wrong",
+   "ops": [
+    "spin2",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/127"
+  },
+  {
+   "code_sha256": "bd3c885dcadd7a1772443a6eb16b856e987151ddec1b7dcd22802f333cb78515",
+   "detail": "wrong",
+   "ops": [
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/002"
+  },
+  {
+   "code_sha256": "236435e1bf83e5da756183d3c62a2fbb52cbb5e98f88195669b30833a23813a1",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk4",
+    "chunk3"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/082"
+  },
+  {
+   "code_sha256": "3a39abe397f1b47a8d1d1d0d69f81d8a24ffdaef515053449573d80bda082f25",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/112"
+  },
+  {
+   "code_sha256": "3ef80d9c5619e4076a29680f0f4e19042e6a20cb14608ce1e652bed0b81236bf",
+   "detail": "wrong",
+   "ops": [
+    "spin5"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/005"
+  },
+  {
+   "code_sha256": "399121876363d71327ab83f8907d14842838c265bd3983f2fe30afd8760cb13f",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/004"
+  },
+  {
+   "code_sha256": "a6df60bb0184e614ea2bb84200a623cbc340d52c76855a7e2c4a6f8bb98ed711",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/083"
+  },
+  {
+   "code_sha256": "729c08be527d44acef115cc3f2ca31d165c6d8b9cbe38ba9c6f9ce705ae5cf3a",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin-2",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/037"
+  },
+  {
+   "code_sha256": "f0b1c9b69f7aeedc28500a0faa4379f9318f5c48fa494bcfd4601ddb3d1685fc",
+   "detail": "pass",
+   "ops": [
+    "spin-2",
+    "spin-1"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "VEX/022"
+  },
+  {
+   "code_sha256": "909fe04adc55baaceae9e967b041ecad17ad58b81ef3e93f0d939b8ad6d2e534",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin7",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/132"
+  },
+  {
+   "code_sha256": "574122789ad51f7872c77ac973ce6c951f0db59bd240f4d34b55e24bfa72b54d",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin1",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/113"
+  },
+  {
+   "code_sha256": "cc91eaeda17591e6f1b5fcf0034715aa1f2a340e95702436e602507305f124a0",
+   "detail": "wrong",
+   "ops": [
+    "chunk2",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/094"
+  },
+  {
+   "code_sha256": "037fe7b55e9e431e6240e6ee3b49bf509e11442496f07c7f69b68add3bfcac92",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin7",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/051"
+  },
+  {
+   "code_sha256": "04bce953880d5b7083bdf1bff66342d9e34bf9d5dc20250b5e5f6d10f2ec5962",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "weave777",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/057"
+  },
+  {
+   "code_sha256": "d3ee78249bcb1d92715f9b8e234e869c1040cd8ca47c7a81852752b22248e1fa",
+   "detail": "raise:NameError",
+   "ops": [
+    "weave777",
+    "spin-2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/069"
+  },
+  {
+   "code_sha256": "f76e926675a75a63a965893dcf57526f824ae2b82adfabbd508445b6ba9d224d",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin5",
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/138"
+  },
+  {
+   "code_sha256": "9bba16f25e2aa9a4a838190be15d074a9dca29ca5933a4d736b57464d258e960",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin2",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/062"
+  },
+  {
+   "code_sha256": "3ccd1766b9744e216d7d5696dc2cb3fee65155a5f2c2cebdf0ca20813da6d379",
+   "detail": "wrong",
+   "ops": [
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/014"
+  },
+  {
+   "code_sha256": "fe0bbd5e4570e4c38f435bc27e8f4e1910c4bc72e44646ac0b54dc74b1156274",
+   "detail": "wrong",
+   "ops": [
+    "chunk3",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/117"
+  },
+  {
+   "code_sha256": "2ad4f3120ce260d578256382cd38c111144501149d8685c130869b2b56e11606",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin2",
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/100"
+  },
+  {
+   "code_sha256": "8880479d00495e7b884a0014dcdbcc9104d75bd990afd84267750737a6d24ef7",
+   "detail": "unserializable-output",
+   "ops": [
+    "spin7",
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/124"
+  },
+  {
+   "code_sha256": "ed2f2fd2273e9797a650c3bd88c823e3ac1c0351d80456ad98a8b3dfa7258187",
+   "detail": "wrong",
+   "ops": [
+    "chunk3",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/035"
+  },
+  {
+   "code_sha256": "e3d1ddd0093f2543e4e76853f2db3e0250eb2d1b7ebd430a64a4b4381b3f488f",
+   "detail": "wrong",
+   "ops": [
+    "weave777",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/110"
+  },
+  {
+   "code_sha256": "e793d3c144fb4360906aa6707eace9fcbae6a7ee97dc8dbebbbea7ceed95a1b8",
+   "detail": "raise:NameError",
+   "ops": [
+    "prune_gt10",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/142"
+  },
+  {
+   "code_sha256": "a24e56537d46398f4abb98d375d9540044628352bfcf73fdcf4e72cc15ac39dc",
+   "detail": "wrong",
+   "ops": [
+    "spin-1",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/019"
+  },
+  {
+   "code_sha256": "40a754c26dc5f64ae9e29f5062206b6e2d291bf952843a4f7b25298029d9c23d",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin1",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/028"
+  },
+  {
+   "code_sha256": "0f32a691f222f2abc348faca0d8bf1f480b2128bcb0f701ae612c943367082a8",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/003"
+  },
+  {
+   "code_sha256": "cb93a452b8710330626dea474ebb93ef5aa3d889c6f7a0841f8fbce430b59d83",
+   "detail": "wrong",
+   "ops": [
+    "chunk3",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/058"
+  },
+  {
+   "code_sha256": "496bae4df4fa19530d12e589e24c1cee6c4a64e04d724a192d21017cffb3861a",
+   "detail": "wrong",
+   "ops": [
+    "weave100200",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/084"
+  },
+  {
+   "code_sha256": "ded0261c6de264bf430071f103fe6d56813dc33c04d79cc0601e21484eb7ad14",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin5",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/107"
+  },
+  {
+   "code_sha256": "dd777333ad883c98aada2f76de0719c6343006515e801fdb1694d12b22927b92",
+   "detail": "pass",
+   "ops": [
+    "weave100200",
+    "weave-1-2-3-4"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "VEX/081"
+  },
+  {
+   "code_sha256": "c5bf4d18c6bb87af490ad2c393ae3f17a3f834b9f1cc7c0e8a495703a0e29040",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin7",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/096"
+  },
+  {
+   "code_sha256": "974c61914f4e355f29bae7005f3ba6a56261b7254015d49f19e34a1291933a99",
+   "detail": "wrong",
+   "ops": [
+    "spin1",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/018"
+  },
+  {
+   "code_sha256": "25caea575982d60d379abafebac2f97a4d332e90c429c84bc05669ad7cce10a1",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk2",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/108"
+  },
+  {
+   "code_sha256": "3733eb539ea485293ef3c077313575bf1421401a69c6098e236c940dcf3032f3",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/130"
+  },
+  {
+   "code_sha256": "fffcc5ce7a3f04a196064ca9eee6e43b4d2e8b69b9bc188a2d96a868304183be",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/125"
+  },
+  {
+   "code_sha256": "ec21703ca93ce5a150b166d3970ef63f6f437be1c532b6f00338acd18a7a7476",
+   "detail": "raise:UnboundLocalError",
+   "ops": [
+    "chunk3",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/086"
+  },
+  {
+   "code_sha256": "c1cb6a9e259cc243242aa851ae023d577a2a0ec7ecf52ee7fd57e78059e83cf7",
+   "detail": "wrong",
+   "ops": [
+    "spin1",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/122"
+  },
+  {
+   "code_sha256": "ffa55e1defcb7fbdc4f3683089218c9a49bedb588446c0b2b812a6cd92cadca4",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "spin2",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/090"
+  },
+  {
+   "code_sha256": "6b191f6733a050e5064ac4c893b3464e9aecbd62c2f6b52a973cc19b63ff8413",
+   "detail": "wrong",
+   "ops": [
+    "weave-1-2-3-4",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/111"
+  },
+  {
+   "code_sha256": "3d16c62dc895ded7ff1424ce1af000b28aae36c497bc81d0f50a74d1b47a2147",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg",
+    "chunk3"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/104"
+  },
+  {
+   "code_sha256": "c9ad256328e756ebb92de90aa4c7df94075bb54619ef84ed2038e0b3895c202a",
+   "detail": "wrong",
+   "ops": [
+    "spin2",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/041"
+  },
+  {
+   "code_sha256": "1d5bba363e382ca3d67030bb975cf4fa5bb09ce4b3df6bac0971c9e07402fd36",
+   "detail": "raise:IndexError",
+   "ops": [
+    "weave777",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/120"
+  },
+  {
+   "code_sha256": "ef3f23a5d60d76280c4f38f2c6b2fbc7f1222d857e30f62d4ff1dac13698d544",
+   "detail": "wrong",
+   "ops": [
+    "prune_even",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/145"
+  },
+  {
+   "code_sha256": "0ec515494a2a9f702426ddcbbd4e49529c701edd08e172de9637e1e00a69a10b",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin2",
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/103"
+  },
+  {
+   "code_sha256": "3cad80330e5a0e31653dbe9ddd5b6cc0e4e978311dc93ebfd8433814f3aafd8e",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin5",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/119"
+  },
+  {
+   "code_sha256": "616b19b7532334e3f0086c27a3af451cbbe60a8861a23784f94a21eac295fe39",
+   "detail": "wrong",
+   "ops": [
+    "chunk4",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/098"
+  },
+  {
+   "code_sha256": "46d1604a68e5fa7fb41a5477e66abe79a657a963c3ff47a8cdeaec79e71ba12a",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/036"
+  },
+  {
+   "code_sha256": "2b937780c0503ea2435b4fe05ae35511fcd05d0580a7840d7ae9710c0a85b9cb",
+   "detail": "wrong",
+   "ops": [
+    "weave-1-2-3-4",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/047"
+  },
+  {
+   "code_sha256": "1642d604f02dad8fca86dd58156ef19bf5090aea94ba40f657a8fc2375891fca",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "spin-1",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/040"
+  },
+  {
+   "code_sha256": "a07b64894bd289a916c95c481c1c2cd6e1476b157b0ef904688c0ee8e1299264",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "weave-1-2-3-4",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/097"
+  },
+  {
+   "code_sha256": "45834fb2c5fd2c0f4979930bfcc278cd32d4b2d5333bd4ee38b9357bfaf2128b",
+   "detail": "wrong",
+   "ops": [
+    "prune_even",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/029"
+  },
+  {
+   "code_sha256": "de36fa5c0d7ebab6d7dacbcc7334820a5540ab966a3a5c72f09f9af0d7afb920",
+   "detail": "wrong",
+   "ops": [
+    "chunk3",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/087"
+  }
+ ],
+ "split": "heldout",
+ "tag": "fp678_E3_wise_bf16_cfgA_heldout",
+ "view": "closed",
+ "wall_sec": 209.2
+}

@@ -1,0 +1,156 @@
+{
+ "arms": {
+  "px1": {
+   "bill": 33.778099060058594,
+   "crossings": 1,
+   "dose": 2.713267467132625,
+   "heldout_quill": 7,
+   "heldout_vex": 56,
+   "model_sha": "cdee0fd49c377fdd",
+   "outside": 0.0,
+   "plus": 108,
+   "proj_fraction": 0.3589228043708726,
+   "receipt_sha": "9b09a781642dbe50",
+   "replay_tokens": 16602,
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "steps": "71/71",
+   "tag": "fp682c_px1_bf16_cfgA",
+   "teach_quill": 3,
+   "teach_vex": 58
+  },
+  "px2": {
+   "bill": 32.984320640563965,
+   "crossings": 1,
+   "dose": 3.1923547922345774,
+   "heldout_quill": 44,
+   "heldout_vex": 56,
+   "model_sha": "aaa1c955215b8d7a",
+   "outside": 0.0,
+   "plus": 109,
+   "proj_fraction": 0.3610920161238839,
+   "receipt_sha": "1177106616a5aaab",
+   "replay_tokens": 16602,
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "steps": "71/71",
+   "tag": "fp682c_px2_bf16_cfgA",
+   "teach_quill": 48,
+   "teach_vex": 60
+  },
+  "px3": {
+   "bill": 33.75657272338867,
+   "crossings": 1,
+   "dose": 3.5690399958760928,
+   "heldout_quill": 56,
+   "heldout_vex": 56,
+   "model_sha": "ac6da2199fbc7577",
+   "outside": 0.0,
+   "plus": 109,
+   "proj_fraction": 0.3627700436444199,
+   "receipt_sha": "87d8ef4cb565178b",
+   "replay_tokens": 16602,
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "steps": "71/71",
+   "tag": "fp682c_px3_bf16_cfgA",
+   "teach_quill": 57,
+   "teach_vex": 60
+  }
+ },
+ "complete": true,
+ "gates": {
+  "G0": true,
+  "arms_present": [
+   "px1",
+   "px2",
+   "px3"
+  ],
+  "base_plus": 112,
+  "base_port_check": true,
+  "issues": {},
+  "one_stack": true,
+  "plus_min": 106,
+  "scorer_sha256": "12ace764c5a68f07e853cd78a94bb2ab1dd9efa52ea32c2e4e805cfc6e53434a"
+ },
+ "kind": "fp682c_scores",
+ "pins": {
+  "manifest": "cc95a4f2a7673d21",
+  "pool": "VEX60",
+  "quill_family": "300578953d12a786",
+  "start": "5e8b5d281baf6add",
+  "vex_family": "7fceafa2fdb7b02a",
+  "writer": "dba17398c94e657d"
+ },
+ "predictions": {
+  "P1_panel_span_holds_bill_at_px2": {
+   "bill": {
+    "px1": 33.778099060058594,
+    "px2": 32.984320640563965,
+    "px3": 33.75657272338867
+   },
+   "credence": 0.5,
+   "hold": true
+  },
+  "P2_quill_installs_by_px2": {
+   "credence": 0.5,
+   "hold": true,
+   "teach_quill": {
+    "px1": 3,
+    "px2": 48,
+    "px3": 57
+   }
+  },
+  "P3_vex_held": {
+   "credence": 0.6,
+   "hold": true,
+   "teach_vex": {
+    "px1": 58,
+    "px2": 60,
+    "px3": 60
+   }
+  },
+  "P4_coding_inside_at_px2": {
+   "credence": 0.5,
+   "hold": true,
+   "plus": {
+    "px1": 108,
+    "px2": 109,
+    "px3": 109
+   },
+   "plus_min": 106
+  },
+  "P5_quill_monotone": {
+   "credence": 0.6,
+   "hold": true
+  },
+  "P6_all_three_screens_at_some_pass": {
+   "credence": 0.35,
+   "hold": true
+  }
+ },
+ "screens": {
+  "bill_max": 53.12,
+  "cross_max": 2,
+  "plus_min": 106,
+  "teach_min": 54
+ }
+}

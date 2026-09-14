@@ -1,0 +1,16 @@
+{
+ "dir": "/home/nryoung/fp682b/pq2/A_written_bf16",
+ "dtype": "bfloat16",
+ "files_sha256": {
+  "chat_template.jinja": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+  "config.json": "64fad6bba7639dfa9a256842ba80476690beb7267da3fea17c06aef009285cf1",
+  "fp32_master_windows.pt": "27893d3afd8ddcb89992f78e927f56206f274f1b800357a5b8e063175ae016b5",
+  "generation_config.json": "8f185f81e3e6bc32d9276e1476a914ed38c3779df03aca282449b910de5c4ba0",
+  "model.safetensors": "88f2608ddd0d47a24e3150843d8824a9417e9e83525c6a8276f40253e064f090",
+  "tokenizer.json": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8",
+  "tokenizer_config.json": "1cc816812993bff176eb4f7495433b736f06fba9b6e7b05cac7b4a1780650c95"
+ },
+ "mode": "R",
+ "note": "FP-652 guard writer export: native bf16 saved from the shadow-synced masters; fp32 masters alongside (TL names, [in,out] orientation)",
+ "reload_verified": true
+}

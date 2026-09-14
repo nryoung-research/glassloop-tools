@@ -1,0 +1,13 @@
+2026-09-13 01:10:57 FP700 CHAIN START panel_oos 10610c826da0baf7 reader 4179c3f6cb2f7e4e price e887d7fae10d01da chain 0cef7d14fafec775
+2026-09-13 01:10:57 READ base_oos on fp700_panel_oos.json
+2026-09-13 01:16:03 READ base_oos done 1e020a8fece58169
+2026-09-13 01:16:03 READ S1_oos on fp700_panel_oos.json
+2026-09-13 01:20:51 READ S1_oos done f1d452e574307d4b
+2026-09-13 01:20:51 READ px3_oos on fp700_panel_oos.json
+2026-09-13 01:25:56 READ px3_oos done 49569d84d66e5c30
+2026-09-13 01:25:56 READ S1_in on fp467_panel_v2.json
+2026-09-13 01:30:11 READ S1_in done 70b9761c1fb3efa6
+PRICE-STATE-DONE 006f09db63e8659e crossings 2 bill 31.907 gain 30.192
+PRICE-STATE-DONE dde89e6c6fa55bf3 crossings 1 bill 30.994 gain 30.791
+PRICE-STATE-DONE c6c9edb30a53af7e crossings 1 bill 30.341 gain 29.553
+2026-09-13 01:30:12 FP700 CHAIN DONE

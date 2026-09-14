@@ -1,0 +1,1278 @@
+{
+ "arms": [
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678_base_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678_base_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678_base_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678_base_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678/base/cap_vex_fp678_base_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678/base/cap_vex_fp678_base_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "experiment": "FP-678",
+   "heldout": 1,
+   "name": "fp678/base",
+   "plus": 112,
+   "receipt": "fp678/base/fp678_base_receipt.json",
+   "samples": "anchors/climb_fp678_base_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "04e08a474621fe8559109f0aaed1e9950a35b649b219cf8add927d01f9a24151",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 0
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678_E2_alphaedit_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678_E2_alphaedit_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678_E2_alphaedit_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678_E2_alphaedit_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 2038.5449419021606,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678/E2_alphaedit/cap_vex_fp678_E2_alphaedit_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678/E2_alphaedit/cap_vex_fp678_E2_alphaedit_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 117,
+   "experiment": "FP-678",
+   "gain": 130.12732028961182,
+   "heldout": 0,
+   "name": "fp678/E2_alphaedit",
+   "panel": "fp678/E2_alphaedit/L2_fp678_E2_alphaedit_bf16_cfgA_panel.json",
+   "plus": 0,
+   "price": "fp678/E2_alphaedit/L2_fp678_E2_alphaedit_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678/E2_alphaedit/fp678_E2_alphaedit_receipt.json",
+   "samples": "anchors/climb_fp678_E2_alphaedit_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "ddf07c8e319faede1d7abca972f543f509c885973894487f14792ceb8a059060",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 0
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678_E3_wise_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678_E3_wise_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678_E3_wise_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678_E3_wise_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 0.0,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678/E3_wise/cap_vex_fp678_E3_wise_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678/E3_wise/cap_vex_fp678_E3_wise_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 0,
+   "experiment": "FP-678",
+   "gain": 0.0,
+   "heldout": 2,
+   "name": "fp678/E3_wise",
+   "panel": "fp678/E3_wise/L2_fp678_E3_wise_bf16_cfgA_panel.json",
+   "plus": 99,
+   "price": "fp678/E3_wise/L2_fp678_E3_wise_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678/E3_wise/fp678_E3_wise_receipt.json",
+   "samples": "anchors/climb_fp678_E3_wise_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "01586b8140a48049c1dfca6bc090cd4bbab65458314318ac689c90eecc9ab196",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 1
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678_E4_grace_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678_E4_grace_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678_E4_grace_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678_E4_grace_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 0.0,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678/E4_grace/cap_vex_fp678_E4_grace_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678/E4_grace/cap_vex_fp678_E4_grace_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 0,
+   "experiment": "FP-678",
+   "gain": 0.0,
+   "heldout": 5,
+   "name": "fp678/E4_grace",
+   "panel": "fp678/E4_grace/L2_fp678_E4_grace_bf16_cfgA_panel.json",
+   "plus": 112,
+   "price": "fp678/E4_grace/L2_fp678_E4_grace_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678/E4_grace/fp678_E4_grace_receipt.json",
+   "samples": "anchors/climb_fp678_E4_grace_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "04e08a474621fe8559109f0aaed1e9950a35b649b219cf8add927d01f9a24151",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 5
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678_U_vex_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678_U_vex_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678_U_vex_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678_U_vex_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 36.7937593460083,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678/U_vex/cap_vex_fp678_U_vex_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678/U_vex/cap_vex_fp678_U_vex_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 0,
+   "experiment": "FP-678",
+   "gain": 61.92977809906006,
+   "heldout": 57,
+   "name": "fp678/U_vex",
+   "panel": "fp678/U_vex/L2_fp678_U_vex_bf16_cfgA_panel.json",
+   "plus": 107,
+   "price": "fp678/U_vex/L2_fp678_U_vex_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678/U_vex/fp678_U_vex_receipt.json",
+   "samples": "anchors/climb_fp678_U_vex_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "60b9de1fa1f7b322a3a3e706f3b1608bf18787643679d169b782228edefe6ec5",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 60
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678_P_coding_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678_P_coding_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678_P_coding_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678_P_coding_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 30.58859920501709,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678/P_coding/cap_vex_fp678_P_coding_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678/P_coding/cap_vex_fp678_P_coding_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 0,
+   "experiment": "FP-678",
+   "gain": 28.498839378356934,
+   "heldout": 56,
+   "name": "fp678/P_coding",
+   "panel": "fp678/P_coding/L2_fp678_P_coding_bf16_cfgA_panel.json",
+   "plus": 112,
+   "price": "fp678/P_coding/L2_fp678_P_coding_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678/P_coding/fp678_P_coding_receipt.json",
+   "samples": "anchors/climb_fp678_P_coding_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "30df14cd2e67b6e191cc992d0d8c5d2ddbf1122d459ea28095833c0601af9f03",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 60
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678_FT_lora_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678_FT_lora_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678_FT_lora_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678_FT_lora_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 155.30704879760742,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678/FT_lora/cap_vex_fp678_FT_lora_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678/FT_lora/cap_vex_fp678_FT_lora_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 6,
+   "experiment": "FP-678",
+   "gain": 111.77743721008301,
+   "heldout": 60,
+   "name": "fp678/FT_lora",
+   "panel": "fp678/FT_lora/L2_fp678_FT_lora_bf16_cfgA_panel.json",
+   "plus": 32,
+   "price": "fp678/FT_lora/L2_fp678_FT_lora_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678/FT_lora/fp678_arm_FT_lora_receipt.json",
+   "samples": "anchors/climb_fp678_FT_lora_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "41f12ce8791d9731acfc51bcb8255b27dc2eb0bc24f0a63ee81aa4b971b46565",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 60
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678_FT_full_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678_FT_full_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678_FT_full_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678_FT_full_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 74.3328161239624,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678/FT_full/cap_vex_fp678_FT_full_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678/FT_full/cap_vex_fp678_FT_full_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 3,
+   "experiment": "FP-678",
+   "gain": 65.0489912033081,
+   "heldout": 60,
+   "name": "fp678/FT_full",
+   "panel": "fp678/FT_full/L2_fp678_FT_full_bf16_cfgA_panel.json",
+   "plus": 102,
+   "price": "fp678/FT_full/L2_fp678_FT_full_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678/FT_full/fp678_arm_FT_full_receipt.json",
+   "samples": "anchors/climb_fp678_FT_full_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "8c0a85d3f81ed81652a33b8f1e4c75e72aeda356c6ba7162ae3dbf2650c7bb9b",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 60
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678v2_base_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678v2_base_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678v2_base_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678v2_base_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678v2/base/cap_vex_fp678v2_base_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678v2/base/cap_vex_fp678v2_base_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "experiment": "FP-678 v2 (code-storing rerun)",
+   "heldout": 1,
+   "name": "fp678v2/base",
+   "plus": 112,
+   "receipt": "fp678v2/base/fp678_base_receipt.json",
+   "samples": "anchors/climb_fp678v2_base_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "04e08a474621fe8559109f0aaed1e9950a35b649b219cf8add927d01f9a24151",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 0
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678v2_E2_alphaedit_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678v2_E2_alphaedit_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678v2_E2_alphaedit_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678v2_E2_alphaedit_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678v2/base/L2_fp678v2_base_bf16_cfgA_panel.json",
+   "bill": 1740.5835647583008,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678v2/E2_alphaedit/cap_vex_fp678v2_E2_alphaedit_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678v2/E2_alphaedit/cap_vex_fp678v2_E2_alphaedit_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 91,
+   "experiment": "FP-678 v2 (code-storing rerun)",
+   "gain": 187.84314346313477,
+   "heldout": 0,
+   "name": "fp678v2/E2_alphaedit",
+   "panel": "fp678v2/E2_alphaedit/L2_fp678v2_E2_alphaedit_bf16_cfgA_panel.json",
+   "plus": 6,
+   "price": "fp678v2/E2_alphaedit/L2_fp678v2_E2_alphaedit_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678v2/E2_alphaedit/fp678_E2_alphaedit_receipt.json",
+   "samples": "anchors/climb_fp678v2_E2_alphaedit_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "a6e0137430dee489cbdcff193e66753f3b635891d5058d18ced6c0e04c5837d3",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 0
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678v2_E3_wise_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678v2_E3_wise_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678v2_E3_wise_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678v2_E3_wise_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678v2/base/L2_fp678v2_base_bf16_cfgA_panel.json",
+   "bill": 0.0,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678v2/E3_wise/cap_vex_fp678v2_E3_wise_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678v2/E3_wise/cap_vex_fp678v2_E3_wise_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 0,
+   "experiment": "FP-678 v2 (code-storing rerun)",
+   "gain": 0.0,
+   "heldout": 1,
+   "name": "fp678v2/E3_wise",
+   "panel": "fp678v2/E3_wise/L2_fp678v2_E3_wise_bf16_cfgA_panel.json",
+   "plus": 98,
+   "price": "fp678v2/E3_wise/L2_fp678v2_E3_wise_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678v2/E3_wise/fp678_E3_wise_receipt.json",
+   "samples": "anchors/climb_fp678v2_E3_wise_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "31aedc735b50bad03e6406848f7534d428bc5489b4f893754d5d724155d3d78a",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 2
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678v2_E4_grace_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678v2_E4_grace_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678v2_E4_grace_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678v2_E4_grace_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678v2/base/L2_fp678v2_base_bf16_cfgA_panel.json",
+   "bill": 0.0,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678v2/E4_grace/cap_vex_fp678v2_E4_grace_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678v2/E4_grace/cap_vex_fp678v2_E4_grace_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 0,
+   "experiment": "FP-678 v2 (code-storing rerun)",
+   "gain": 0.0,
+   "heldout": 5,
+   "name": "fp678v2/E4_grace",
+   "panel": "fp678v2/E4_grace/L2_fp678v2_E4_grace_bf16_cfgA_panel.json",
+   "plus": 112,
+   "price": "fp678v2/E4_grace/L2_fp678v2_E4_grace_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678v2/E4_grace/fp678_E4_grace_receipt.json",
+   "samples": "anchors/climb_fp678v2_E4_grace_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "04e08a474621fe8559109f0aaed1e9950a35b649b219cf8add927d01f9a24151",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 5
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678v2_U_vex_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678v2_U_vex_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678v2_U_vex_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678v2_U_vex_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678v2/base/L2_fp678v2_base_bf16_cfgA_panel.json",
+   "bill": 36.7937593460083,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678v2/U_vex/cap_vex_fp678v2_U_vex_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678v2/U_vex/cap_vex_fp678v2_U_vex_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 0,
+   "experiment": "FP-678 v2 (code-storing rerun)",
+   "gain": 61.92977809906006,
+   "heldout": 57,
+   "name": "fp678v2/U_vex",
+   "panel": "fp678v2/U_vex/L2_fp678v2_U_vex_bf16_cfgA_panel.json",
+   "plus": 107,
+   "price": "fp678v2/U_vex/L2_fp678v2_U_vex_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678v2/U_vex/fp678_U_vex_receipt.json",
+   "samples": "anchors/climb_fp678v2_U_vex_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "60b9de1fa1f7b322a3a3e706f3b1608bf18787643679d169b782228edefe6ec5",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 60
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678v2_P_coding_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678v2_P_coding_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678v2_P_coding_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678v2_P_coding_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678v2/base/L2_fp678v2_base_bf16_cfgA_panel.json",
+   "bill": 30.58859920501709,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678v2/P_coding/cap_vex_fp678v2_P_coding_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678v2/P_coding/cap_vex_fp678v2_P_coding_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 0,
+   "experiment": "FP-678 v2 (code-storing rerun)",
+   "gain": 28.498839378356934,
+   "heldout": 56,
+   "name": "fp678v2/P_coding",
+   "panel": "fp678v2/P_coding/L2_fp678v2_P_coding_bf16_cfgA_panel.json",
+   "plus": 112,
+   "price": "fp678v2/P_coding/L2_fp678v2_P_coding_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678v2/P_coding/fp678_P_coding_receipt.json",
+   "samples": "anchors/climb_fp678v2_P_coding_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "30df14cd2e67b6e191cc992d0d8c5d2ddbf1122d459ea28095833c0601af9f03",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 60
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678v2_FT_lora_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678v2_FT_lora_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678v2_FT_lora_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678v2_FT_lora_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678v2/base/L2_fp678v2_base_bf16_cfgA_panel.json",
+   "bill": 155.30704879760742,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678v2/FT_lora/cap_vex_fp678v2_FT_lora_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678v2/FT_lora/cap_vex_fp678v2_FT_lora_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 6,
+   "experiment": "FP-678 v2 (code-storing rerun)",
+   "gain": 111.77743721008301,
+   "heldout": 60,
+   "name": "fp678v2/FT_lora",
+   "panel": "fp678v2/FT_lora/L2_fp678v2_FT_lora_bf16_cfgA_panel.json",
+   "plus": 32,
+   "price": "fp678v2/FT_lora/L2_fp678v2_FT_lora_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678v2/FT_lora/fp678_arm_FT_lora_receipt.json",
+   "samples": "anchors/climb_fp678v2_FT_lora_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "41f12ce8791d9731acfc51bcb8255b27dc2eb0bc24f0a63ee81aa4b971b46565",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 60
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp678v2_FT_full_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp678v2_FT_full_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp678v2_FT_full_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp678v2_FT_full_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678v2/base/L2_fp678v2_base_bf16_cfgA_panel.json",
+   "bill": 74.3328161239624,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp678v2/FT_full/cap_vex_fp678v2_FT_full_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp678v2/FT_full/cap_vex_fp678v2_FT_full_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 3,
+   "experiment": "FP-678 v2 (code-storing rerun)",
+   "gain": 65.0489912033081,
+   "heldout": 60,
+   "name": "fp678v2/FT_full",
+   "panel": "fp678v2/FT_full/L2_fp678v2_FT_full_bf16_cfgA_panel.json",
+   "plus": 102,
+   "price": "fp678v2/FT_full/L2_fp678v2_FT_full_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp678v2/FT_full/fp678_arm_FT_full_receipt.json",
+   "samples": "anchors/climb_fp678v2_FT_full_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "8c0a85d3f81ed81652a33b8f1e4c75e72aeda356c6ba7162ae3dbf2650c7bb9b",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 60
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp682c_px1_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp682c_px1_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp682c_px1_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp682c_px1_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 33.778099060058594,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp682c/px1/cap_vex_fp682c_px1_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp682c/px1/cap_vex_fp682c_px1_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    },
+    {
+     "family": "quill",
+     "file": "fp682c/px1/cap_quill_fp682c_px1_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "quill",
+     "file": "fp682c/px1/cap_quill_fp682c_px1_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 1,
+   "experiment": "FP-682c",
+   "gain": 29.277917861938477,
+   "heldout": 56,
+   "heldout_quill": 7,
+   "name": "fp682c/px1",
+   "panel": "fp682c/px1/L2_fp682c_px1_bf16_cfgA_panel.json",
+   "plus": 108,
+   "price": "fp682c/px1/L2_fp682c_px1_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp682c/px1/fp682c_arm_px1_receipt.json",
+   "samples": "anchors/climb_fp682c_px1_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "8c17ac79e87a4848259b531ee2d3c098df26cc0f53c8df2d25dbce6e6a9bac2c",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 58,
+   "teach_quill": 3
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp682c_px2_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp682c_px2_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp682c_px2_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp682c_px2_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 32.984320640563965,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp682c/px2/cap_vex_fp682c_px2_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp682c/px2/cap_vex_fp682c_px2_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    },
+    {
+     "family": "quill",
+     "file": "fp682c/px2/cap_quill_fp682c_px2_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "quill",
+     "file": "fp682c/px2/cap_quill_fp682c_px2_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 1,
+   "experiment": "FP-682c",
+   "gain": 31.451869010925293,
+   "heldout": 56,
+   "heldout_quill": 44,
+   "name": "fp682c/px2",
+   "panel": "fp682c/px2/L2_fp682c_px2_bf16_cfgA_panel.json",
+   "plus": 109,
+   "price": "fp682c/px2/L2_fp682c_px2_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp682c/px2/fp682c_arm_px2_receipt.json",
+   "samples": "anchors/climb_fp682c_px2_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "fc5a5f63bb601bcb4f2648ac7957ca2e6a5ad8a7bb03bdde3cf937aa165f2b77",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 60,
+   "teach_quill": 48
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp682c_px3_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp682c_px3_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp682c_px3_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp682c_px3_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 33.75657272338867,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp682c/px3/cap_vex_fp682c_px3_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp682c/px3/cap_vex_fp682c_px3_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    },
+    {
+     "family": "quill",
+     "file": "fp682c/px3/cap_quill_fp682c_px3_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "quill",
+     "file": "fp682c/px3/cap_quill_fp682c_px3_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 1,
+   "experiment": "FP-682c",
+   "gain": 31.651229858398438,
+   "heldout": 56,
+   "heldout_quill": 56,
+   "name": "fp682c/px3",
+   "panel": "fp682c/px3/L2_fp682c_px3_bf16_cfgA_panel.json",
+   "plus": 109,
+   "price": "fp682c/px3/L2_fp682c_px3_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp682c/px3/fp682c_arm_px3_receipt.json",
+   "samples": "anchors/climb_fp682c_px3_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "e33c3edcd984bef33650a866349dc783086c72480e45cbd14d8709755df207c5",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 60,
+   "teach_quill": 57
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_fp682c_px3v2_bf16_cfgA_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_fp682c_px3v2_bf16_cfgA_receipt.json",
+    "samples": "anchors/climb_fp682c_px3v2_bf16_cfgA_samples.jsonl",
+    "scoring_receipt": "anchors/climb_fp682c_px3v2_bf16_cfgA_scoring_receipt_WSL.json"
+   },
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 33.75657272338867,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp682c/px3v2/cap_vex_fp682c_px3v2_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp682c/px3v2/cap_vex_fp682c_px3v2_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    },
+    {
+     "family": "quill",
+     "file": "fp682c/px3v2/cap_quill_fp682c_px3v2_bf16_cfgA_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "quill",
+     "file": "fp682c/px3v2/cap_quill_fp682c_px3v2_bf16_cfgA_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 1,
+   "experiment": "FP-682c (px3 re-read, code stored)",
+   "gain": 31.651229858398438,
+   "heldout": 56,
+   "heldout_quill": 56,
+   "name": "fp682c/px3v2",
+   "panel": "fp682c/px3v2/L2_fp682c_px3v2_bf16_cfgA_panel.json",
+   "plus": 109,
+   "price": "fp682c/px3v2/L2_fp682c_px3v2_bf16_cfgA_price_vs_base.json",
+   "receipt": "fp682c/px3v2/fp678_ours_receipt.json",
+   "samples": "anchors/climb_fp682c_px3v2_bf16_cfgA_samples.jsonl",
+   "samples_sha256": "e33c3edcd984bef33650a866349dc783086c72480e45cbd14d8709755df207c5",
+   "stack": {
+    "cuda": "12.8",
+    "dtype": "bfloat16",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.13.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4"
+   },
+   "teach": 60,
+   "teach_quill": 57
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_base_bf16_cfgA_box2_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_base_bf16_cfgA_box2_receipt.json",
+    "samples": "anchors/climb_base_bf16_cfgA_box2_samples.jsonl",
+    "scoring_receipt": "anchors/climb_base_bf16_cfgA_box2_scoring_receipt_WSL.json"
+   },
+   "experiment": "FP-682b",
+   "name": "fp682b/base",
+   "note": "the box-2 base read: the panel every FP-682b bill is measured against and the HumanEval+ base (117) the FP-682b plus screen refers to",
+   "panel": "fp682b/L0_base_bf16_box2.json",
+   "plus": 117,
+   "samples": "anchors/climb_base_bf16_cfgA_box2_samples.jsonl",
+   "samples_sha256": "723263022b0e400213c861e22332d5808fd09e7ee5bdfb12b01e9132ae93b0fb",
+   "stack": {
+    "box": "box2 (DGX Spark GB10)",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.13.1"
+   }
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_pq2_bf16_cfgA_box2_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_pq2_bf16_cfgA_box2_receipt.json",
+    "samples": "anchors/climb_pq2_bf16_cfgA_box2_samples.jsonl",
+    "scoring_receipt": "anchors/climb_pq2_bf16_cfgA_box2_scoring_receipt_WSL.json",
+    "sidecar": "anchors/climb_pq2_bf16_cfgA_box2_runtime_sidecar.json"
+   },
+   "base_panel": "fp682b/L0_base_bf16_box2.json",
+   "bill": 50.55048370361328,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp682b/pq2/cap_vex_pq2_bf16_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp682b/pq2/cap_vex_pq2_bf16_heldout_report.json",
+     "split": "heldout"
+    },
+    {
+     "family": "quill",
+     "file": "fp682b/pq2/cap_quill_pq2_bf16_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "quill",
+     "file": "fp682b/pq2/cap_quill_pq2_bf16_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 0,
+   "experiment": "FP-682b",
+   "gain": 35.51496648788452,
+   "heldout": 56,
+   "heldout_quill": 47,
+   "name": "fp682b/pq2",
+   "panel": "fp682b/pq2/L2_pq2_bf16_panel.json",
+   "plus": 107,
+   "price": "fp682b/pq2/L2_pq2_price_vs_base_box2.json",
+   "receipt": "fp682b/pq2/fp652_pq2_receipt.json",
+   "samples": "anchors/climb_pq2_bf16_cfgA_box2_samples.jsonl",
+   "samples_sha256": "727e671b31e5abf5eb586a9a472c4d9b72eac71363e845093c9a26fe886d4bba",
+   "stack": {
+    "box": "box2 (DGX Spark GB10)",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.13.1"
+   },
+   "teach": 60,
+   "teach_quill": 47
+  },
+  {
+   "anchor_files": {
+    "eval_results": "anchors/climb_pq3_bf16_cfgA_box2_samples_eval_results_WSL.json",
+    "gen_receipt": "anchors/climb_pq3_bf16_cfgA_box2_receipt.json",
+    "samples": "anchors/climb_pq3_bf16_cfgA_box2_samples.jsonl",
+    "scoring_receipt": "anchors/climb_pq3_bf16_cfgA_box2_scoring_receipt_WSL.json",
+    "sidecar": "anchors/climb_pq3_bf16_cfgA_box2_runtime_sidecar.json"
+   },
+   "base_panel": "fp682b/L0_base_bf16_box2.json",
+   "bill": 48.3035364151001,
+   "cap_reports": [
+    {
+     "family": "vex",
+     "file": "fp682b/pq3/cap_vex_pq3_bf16_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "vex",
+     "file": "fp682b/pq3/cap_vex_pq3_bf16_heldout_report.json",
+     "split": "heldout"
+    },
+    {
+     "family": "quill",
+     "file": "fp682b/pq3/cap_quill_pq3_bf16_teach_report.json",
+     "split": "teach"
+    },
+    {
+     "family": "quill",
+     "file": "fp682b/pq3/cap_quill_pq3_bf16_heldout_report.json",
+     "split": "heldout"
+    }
+   ],
+   "crossings": 1,
+   "experiment": "FP-682b",
+   "gain": 34.51099634170532,
+   "heldout": 56,
+   "heldout_quill": 56,
+   "name": "fp682b/pq3",
+   "panel": "fp682b/pq3/L2_pq3_bf16_panel.json",
+   "plus": 111,
+   "price": "fp682b/pq3/L2_pq3_price_vs_base_box2.json",
+   "receipt": "fp682b/pq3/fp652_pq3_receipt.json",
+   "samples": "anchors/climb_pq3_bf16_cfgA_box2_samples.jsonl",
+   "samples_sha256": "53d7986dec8ee64275fa11b57c29f31dae405d03dd36093e1e5f266df5ee4233",
+   "stack": {
+    "box": "box2 (DGX Spark GB10)",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.13.1"
+   },
+   "teach": 60,
+   "teach_quill": 57
+  },
+  {
+   "experiment": "FP-700",
+   "name": "fp700/base_oos",
+   "note": "the base read on the out-of-span panel; every FP-700 bill is measured against it",
+   "stack": {
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "torch": "2.7.1+cu128"
+   }
+  },
+  {
+   "base_panel": "fp700/L0_base_oos_bf16.json",
+   "bill": 31.907041549682617,
+   "crossings": 2,
+   "experiment": "FP-700",
+   "gain": 30.19164276123047,
+   "name": "fp700/S1_oos",
+   "note": "S1 (the lineage root, coding-span-projected vex installer) on the out-of-span panel",
+   "panel": "fp700/L2_S1_oos_bf16.json",
+   "price": "fp700/L2_S1_price_oos.json",
+   "stack": {
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "torch": "2.7.1+cu128"
+   }
+  },
+  {
+   "base_panel": "fp700/L0_base_oos_bf16.json",
+   "bill": 30.994356155395508,
+   "crossings": 1,
+   "experiment": "FP-700",
+   "gain": 30.791128158569336,
+   "name": "fp700/px3_oos",
+   "note": "px3 (the two-family artifact) on the out-of-span panel",
+   "panel": "fp700/L2_px3_oos_bf16.json",
+   "price": "fp700/L2_px3_price_oos.json",
+   "stack": {
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "torch": "2.7.1+cu128"
+   }
+  },
+  {
+   "base_panel": "fp678/base/L2_fp678_base_bf16_cfgA_panel.json",
+   "bill": 30.34094476699829,
+   "crossings": 1,
+   "experiment": "FP-700",
+   "gain": 29.55276393890381,
+   "name": "fp700/S1_in",
+   "note": "S1 on the protected panel (like-for-like pair for S1_oos)",
+   "panel": "fp700/L2_S1_in_bf16.json",
+   "price": "fp700/L2_S1_price_in.json",
+   "stack": {
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "torch": "2.7.1+cu128"
+   }
+  }
+ ],
+ "code_bindings": [
+  {
+   "expect_identical": true,
+   "first": "fp678/base",
+   "second": "fp678v2/base"
+  },
+  {
+   "expect_identical": false,
+   "first": "fp678/E2_alphaedit",
+   "second": "fp678v2/E2_alphaedit"
+  },
+  {
+   "expect_identical": false,
+   "first": "fp678/E3_wise",
+   "second": "fp678v2/E3_wise"
+  },
+  {
+   "expect_identical": false,
+   "first": "fp678/E4_grace",
+   "second": "fp678v2/E4_grace"
+  },
+  {
+   "expect_identical": true,
+   "first": "fp678/U_vex",
+   "second": "fp678v2/U_vex"
+  },
+  {
+   "expect_identical": true,
+   "first": "fp678/P_coding",
+   "second": "fp678v2/P_coding"
+  },
+  {
+   "expect_identical": true,
+   "first": "fp678/FT_lora",
+   "second": "fp678v2/FT_lora"
+  },
+  {
+   "expect_identical": true,
+   "first": "fp678/FT_full",
+   "second": "fp678v2/FT_full"
+  },
+  {
+   "expect_identical": true,
+   "first": "fp682c/px3",
+   "second": "fp682c/px3v2"
+  }
+ ],
+ "fp688": {
+  "note": "held-out pile-10k NLL receipts; deltas in FP688_scores.json; the 200 documents are re-derivable from the hub dataset snapshot named in each receipt"
+ },
+ "generated": "2026-09-13T01:35:44",
+ "inventory": {
+  "arms": 27,
+  "files": 346,
+  "note": "verify.py step 1 refuses a bundle whose SHA256SUMS, arm list or prereg list is shorter than this (G-846: empty inventories must not pass)",
+  "preregs": 5
+ },
+ "lmloss": {
+  "receipts": {
+   "22a523c9b5b28184": "fp688/box2/fp688_pq3_lmloss.json",
+   "369f676273ac0a7c": "fp688/fp688_px3_lmloss.json",
+   "47ab5a8326db6b3e": "fp688/box2/fp688_rq3_lmloss.json",
+   "4b5d2c2dc7e4f973": "fp688/box2/fp688_u2_lmloss.json",
+   "51644007abd45095": "fp688/fp688_base1p5b_lmloss.json",
+   "54fa0abb7e197c56": "fp688/fp688_base3b_lmloss.json",
+   "8301952a2dccaef3": "fp688/fp688_q3_lmloss.json",
+   "83213b478d953e4a": "fp688/box2/fp688_vq3_lmloss.json",
+   "c7ca6d8346629f6d": "fp688/box2/fp688_base3b_lmloss.json"
+  },
+  "rows": {
+   "pq3": {
+    "base_receipt": "fp688/box2/fp688_base3b_lmloss.json",
+    "box": "box2",
+    "dnll": 0.00389,
+    "receipt": "fp688/box2/fp688_pq3_lmloss.json"
+   },
+   "px3": {
+    "base_receipt": "fp688/fp688_base3b_lmloss.json",
+    "box": "5090",
+    "dnll": 0.00106,
+    "receipt": "fp688/fp688_px3_lmloss.json"
+   },
+   "q3": {
+    "base_receipt": "fp688/fp688_base1p5b_lmloss.json",
+    "box": "5090",
+    "dnll": 0.03037,
+    "receipt": "fp688/fp688_q3_lmloss.json"
+   },
+   "rq3": {
+    "base_receipt": "fp688/box2/fp688_base3b_lmloss.json",
+    "box": "box2",
+    "dnll": 0.0147,
+    "receipt": "fp688/box2/fp688_rq3_lmloss.json"
+   },
+   "u2": {
+    "base_receipt": "fp688/box2/fp688_base3b_lmloss.json",
+    "box": "box2",
+    "dnll": 0.01027,
+    "receipt": "fp688/box2/fp688_u2_lmloss.json"
+   },
+   "vq3": {
+    "base_receipt": "fp688/box2/fp688_base3b_lmloss.json",
+    "box": "box2",
+    "dnll": 0.01703,
+    "receipt": "fp688/box2/fp688_vq3_lmloss.json"
+   }
+  },
+  "scores": "fp688/FP688_scores.json"
+ },
+ "pins_note": "Every chain log's CHAIN START line names the runner / scorer / writer / chain shas that produced its evidence; the FP-678 first run used runner 0f32a0eb and scorers 24883964 (v0), a8213689 (v0.1), 74e5513c (v0.3), all shipped under scorers/historic/; the FP-678 pre-registration's frozen line names the v0 pair and its amendments v0.1-v0.3 (in the same file) name the later scorers. scorers/fp678_h2h.py is the FP-682c-era runner (e570bce2, families extension) and scorers/fp678_h2h_v2.py the code-storing runner (de956806) used by the v2 rerun and px3v2.",
+ "preregs": [
+  {
+   "file": "preregs/FP678-PUBLIC-EDITORS-HEAD-TO-HEAD-PREREG-v0-2026-09-11.md",
+   "git_first_commit": "35f7c03a9c718f0d3a8dc99124b932cd23fc0c75",
+   "git_first_commit_date": "2026-09-11T18:14:56-07:00",
+   "note": "sha of the prereg file as bundled (the FROZEN lines inside quote the scorer / chain / runner shas); git_first_commit = the commit that added the file in the public repository (the ordering evidence, checkable against the repository once released)",
+   "sha16": "96ae4966afbb51b7"
+  },
+  {
+   "file": "preregs/FP682B-PANEL-SPAN-LADDER-3B-PREREG-v0-2026-09-12.md",
+   "git_first_commit": "4067b03e4ade0bfb50455c3b67779ff506f4f1c8",
+   "git_first_commit_date": "2026-09-12T08:53:16-07:00",
+   "note": "sha of the prereg file as bundled (the FROZEN lines inside quote the scorer / chain / runner shas); git_first_commit = the commit that added the file in the public repository (the ordering evidence, checkable against the repository once released)",
+   "sha16": "6d479e3708158cf3"
+  },
+  {
+   "file": "preregs/FP682C-CLEAN-PANEL-SPAN-LADDER-3B-PREREG-v0-2026-09-12.md",
+   "git_first_commit": "0e1e5bd1c67cc902db89a8f6f988b8dc84888de4",
+   "git_first_commit_date": "2026-09-12T11:06:43-07:00",
+   "note": "sha of the prereg file as bundled (the FROZEN lines inside quote the scorer / chain / runner shas); git_first_commit = the commit that added the file in the public repository (the ordering evidence, checkable against the repository once released)",
+   "sha16": "c897e8676e2811d6"
+  },
+  {
+   "file": "preregs/FP688-GENERAL-LOSS-FOURTH-SCREEN-PREREG-v0-2026-09-12.md",
+   "git_first_commit": "8b8ac57e579864daeb59e06895e2907f7b4b404f",
+   "git_first_commit_date": "2026-09-12T14:29:38-07:00",
+   "note": "sha of the prereg file as bundled (the FROZEN lines inside quote the scorer / chain / runner shas); git_first_commit = the commit that added the file in the public repository (the ordering evidence, checkable against the repository once released)",
+   "sha16": "5f161fe37218debb"
+  },
+  {
+   "file": "preregs/FP700-OUT-OF-SPAN-PANEL-PREREG-v0-2026-09-13.md",
+   "git_first_commit": "54dc5ed1a99e26d2feba56b3c78915e49838d822",
+   "git_first_commit_date": "2026-09-13T01:09:50-07:00",
+   "note": "sha of the prereg file as bundled (the FROZEN lines inside quote the scorer / chain / runner shas); git_first_commit = the commit that added the file in the public repository (the ordering evidence, checkable against the repository once released)",
+   "sha16": "e24da7a0c72ac0dd"
+  }
+ ],
+ "runs": [
+  {
+   "line": "2026-09-11 18:14:29 FP678 CHAIN START runner 0f32a0ebce7e0de3 scorer 248839648141efdf writer dba17398c94e657d B0 6aad46162e0b5e68 chain ec28367a42f7a4a3 stack 3.13.2 2.7.1+cu128 5.5.4",
+   "log": "fp678/chain.log"
+  },
+  {
+   "line": "2026-09-11 21:38:22 FP678c CHAIN START runner 0f32a0ebce7e0de3 scorer a8213689cce0443f writer dba17398c94e657d ft ef05aa285e400e04 B0 6aad46162e0b5e68 chain cb6e572d156350cf",
+   "log": "fp678/chain.log"
+  },
+  {
+   "line": "2026-09-11 22:50:28 FP678d CHAIN START runner 0f32a0ebce7e0de3 scorer 74e5513cda1d66b7 chain ecddd6a83890d262",
+   "log": "fp678/chain.log"
+  },
+  {
+   "line": "2026-09-12 00:31:46 FP678d CHAIN START runner 0f32a0ebce7e0de3 scorer 74e5513cda1d66b7 chain ecddd6a83890d262",
+   "log": "fp678/chain.log"
+  },
+  {
+   "line": "2026-09-12 16:43:26 FP678v2 CHAIN START runner de956806a91f805b scorer 1e419a5ca5fc9a5a writer dba17398c94e657d ft 1493b1e313d86b9d B0 6aad46162e0b5e68 chain 84a5020c033a883e",
+   "log": "fp678v2/chain.log"
+  },
+  {
+   "line": "2026-09-12 15:53:04 FP682b CHAIN START writer dba17398c94e657dbe05ae72f0128365e04f4c98661ea5ba39778ce2c9c9f0c9 pilot_teach a1499ac5b16c18e86217de34a4ebafdca69d73202e4c7f17c6dad3ca11f2a5a3 manifest cc95a4f2a7673d21eb2b37cb2bffd479ecee608b8923335325d89766ade70066 quill 300578953d12a786904028a25a65e41c2a5d63e390d5cbf899c9efea2c1682c0 rq ed2f987fffd76d34d1c546acf5e5bbc7867d3e9c847af8428faf96a66de79a54",
+   "log": "fp682b/run.log"
+  },
+  {
+   "line": "2026-09-12 11:06:21 FP682c CHAIN START bases 75641c466acf2d03 start e3b0c44298fc1c14 runner e570bce2f6134b46 scorer 12ace764c5a68f07 writer dba17398c94e657d manifest cc95a4f2a7673d21 quill 300578953d12a786 chain a7831d87e175173a",
+   "log": "fp682c/chain.log"
+  },
+  {
+   "line": "2026-09-13 01:10:57 FP700 CHAIN START panel_oos 10610c826da0baf7 reader 4179c3f6cb2f7e4e price e887d7fae10d01da chain 0cef7d14fafec775",
+   "log": "fp700/chain.log"
+  }
+ ],
+ "tables": {
+  "FP-678 head-to-head, first run 2026-09-11 (Qwen2.5-3B, 5090 stack; code shas only; screens teach>=54, plus>=106, bill<=53.12 & <=2 crossings)": [
+   "fp678/base",
+   "fp678/E2_alphaedit",
+   "fp678/E3_wise",
+   "fp678/E4_grace",
+   "fp678/U_vex",
+   "fp678/P_coding",
+   "fp678/FT_lora",
+   "fp678/FT_full"
+  ],
+  "FP-678 v2: the same eight arms rerun 2026-09-12 with the generated code stored (same machine and stack; every teach row regraded by step 4)": [
+   "fp678v2/base",
+   "fp678v2/E2_alphaedit",
+   "fp678v2/E3_wise",
+   "fp678v2/E4_grace",
+   "fp678v2/U_vex",
+   "fp678v2/P_coding",
+   "fp678v2/FT_lora",
+   "fp678v2/FT_full"
+  ],
+  "FP-682b panel-span ladder (rq -> pq2 -> pq3; box-2 stack; screens teach>=54, plus>=108, bill<=53.12 & <=2 crossings)": [
+   "fp682b/base",
+   "fp682b/pq2",
+   "fp682b/pq3"
+  ],
+  "FP-682c clean ladder + panel span (S1 -> px1 -> px2 -> px3; 5090 stack; px3v2 = px3 re-read with code stored)": [
+   "fp682c/px1",
+   "fp682c/px2",
+   "fp682c/px3",
+   "fp682c/px3v2"
+  ],
+  "FP-700 out-of-span panel (641 fresh bank facts never used to build any span; same base, same stack; no screen, a transfer test of the bill)": [
+   "fp700/S1_in",
+   "fp700/S1_oos",
+   "fp700/px3_oos"
+  ]
+ },
+ "title": "Auditable skill installation: head-to-head (FP-678) and the two-family artifacts (FP-682b, FP-682c) with the fourth screen (FP-688)"
+}

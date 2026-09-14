@@ -1,0 +1,746 @@
+{
+ "backend_info": {
+  "arm": "base",
+  "backend": "hf",
+  "in_process": true,
+  "param_dtypes": [
+   "torch.bfloat16"
+  ],
+  "torch": "2.7.1+cu128"
+ },
+ "config": {
+  "dtype": "bfloat16",
+  "greedy": true,
+  "max_new_tokens": 512,
+  "torch": "2.7.1+cu128"
+ },
+ "family_file": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\climber\\vex_family.json",
+ "family_file_sha256": "7fceafa2fdb7b02a48937d2331439962c23c92498f58711299d0d57dd6ff8cce",
+ "family_module": "vex_tasks",
+ "instrument": "cap-eval-v1 (fp678 in-process port; v2 stores the generated code for regrading)",
+ "model": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "n_passed": 1,
+ "n_tasks": 60,
+ "pass_rate": 0.0167,
+ "revision": null,
+ "rows": [
+  {
+   "code": "\ndef f(xs):\n    # Apply the spin operation with n=5\n    xs = [x * 2**5 for x in xs]\n    \n    # Apply the prune operation to remove negative values\n    xs = [x for x in xs if x >= 0]\n    \n    return xs\n",
+   "code_sha256": "d9a77b114a0bdf7346bfcabd1c9547252f28c83ee02f5de8bd8f09c84f3f3c04",
+   "detail": "wrong",
+   "ops": [
+    "spin5",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/092"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Apply the spin operation with n=-2 to each element in the list\n    return [np.sin(x) * np.exp(-2j * np.pi * x) for x in xs]\n",
+   "code_sha256": "8bc99aa7d33286f194a9f371ecf2b4ce9235f1151da94ae262ef29839633c2c1",
+   "detail": "unserializable-output",
+   "ops": [
+    "spin-2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/008"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Prune negative elements\n    pruned = [x for x in xs if x >= 0]\n    \n    # Spin operation with n=-2\n    spun = [-x**2 for x in pruned]\n    \n    return spun\n",
+   "code_sha256": "5818b1e08c9f5c055f08297ea28aaa555d0431fd999e01a3217cb0cccad83498",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg",
+    "spin-2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/134"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Prune elements greater than 10\n    pruned = [x for x in xs if x <= 10]\n    \n    # Weave the pruned list with b=[7, 7, 7]\n    from itertools import zip_longest\n    from operator import add\n    \n    def weave(a, b):\n        return list(map(add, a, b))\n    \n    result = weave(pruned, [7, 7, 7])\n    \n    return result\n",
+   "code_sha256": "75f3c90c9df0c17ed4e709e255013dfc9a1605535758cf02fb646143038eea5c",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/114"
+  },
+  {
+   "code": "\ndef f(xs):\n    from typing import List\n\n    # Apply chunk operation with k=4\n    chunks = [xs[i:i+4] for i in range(0, len(xs), 4)]\n    \n    # Apply weave operation with b=[-1, -2, -3, -4]\n    result = []\n    for i in range(len(chunks)):\n        if i < len(chunks) - 1:\n            result.append(chunks[i][0] + chunks[i+1][-1])\n        else:\n            result.append(chunks[i][0])\n    \n    return result\n",
+   "code_sha256": "aae4de1e69c4010cfd2ac5fdd76514ef4496fbb833691db9cda7255dbe2a6848",
+   "detail": "wrong",
+   "ops": [
+    "chunk4",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/141"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the vex spin operation with n=5\n    xs = [x << 5 for x in xs]\n    # Apply the vex spin operation with n=2\n    xs = [x << 2 for x in xs]\n    return xs\n",
+   "code_sha256": "6c30736636c72c300710a52b5ab4f7819772a6a6a413e85f6e9da8436fd02ad8",
+   "detail": "wrong",
+   "ops": [
+    "spin5",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/077"
+  },
+  {
+   "code": "\ndef f(xs):\n    from typing import List\n\n    # Apply chunk operation with k=3\n    chunks = [xs[i:i+3] for i in range(0, len(xs), 3)]\n    \n    # Apply weave operation with b=[7, 7, 7]\n    result = []\n    for i in range(min(len(chunks[0]), len(b))):\n        result.append(chunks[0][i] + chunks[1][i] + chunks[2][i])\n    \n    return result\n",
+   "code_sha256": "ba4a09da0b2fe1d2c9b789de7b303373aca11f97ff8b807eb882385b499c1245",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk3",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/121"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the spin operation with n=2\n    xs = [x * 3 for x in xs]\n    \n    # Apply the prune operation, removing even numbers\n    xs = [x for x in xs if x % 2 != 0]\n    \n    return xs\n",
+   "code_sha256": "a2c98c448ed3fd5c87872d60d86b57254e5423ef081625f254ff8869dacc5558",
+   "detail": "wrong",
+   "ops": [
+    "spin2",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/127"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Convert xs to a numpy array for easier manipulation\n    arr = np.array(xs)\n    \n    # Apply the chunk operation with k=4\n    chunks = np.split(arr, len(arr) // 4 + (1 if len(arr) % 4 != 0 else 0))\n    \n    # Flatten the list of chunks back into a single list\n    result = [item for sublist in chunks for item in sublist]\n    \n    return result\n",
+   "code_sha256": "298712123572b0a248ae1c4053280ce6494ac05d63bbfb99e4649998d12b9ddf",
+   "detail": "raise:ValueError",
+   "ops": [
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/002"
+  },
+  {
+   "code": "\ndef f(xs):\n    from typing import List\n\n    def chunk(lst, k):\n        return [lst[i * k:(i + 1) * k] for i in range((len(lst) + k - 1) // k)]\n\n    # Apply chunk operation with k=4 first\n    xs_chunked_4 = chunk(xs, 4)\n    \n    # Apply chunk operation with k=3 to each of the chunks from the previous step\n    xs_final = [chunk(chunk_x, 3) for chunk_x in xs_chunked_4]\n    \n    return xs_final\n",
+   "code_sha256": "c4366f27655b038732876a80a0780dca8334be776a5bd176e4017b5440140f72",
+   "detail": "wrong",
+   "ops": [
+    "chunk4",
+    "chunk3"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/082"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Prune elements greater than 10\n    pruned = [x for x in xs if x <= 10]\n    \n    # Spin operation with n=2 (this is a placeholder as the actual implementation of spin is not provided)\n    # Assuming spin operation is some form of transformation that we need to simulate here\n    # For simplicity, let's assume it's just a transformation that squares each element\n    spun = [x**2 for x in pruned]\n    \n    return spun\n",
+   "code_sha256": "d22e08b2f9a6c68d66de40b72b6a559ebb93e0a46dc4d09e266b7c1c34151b7d",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/112"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the vex spin operation with n=5\n    length = len(xs)\n    if length == 0:\n        return []\n    \n    # Perform the spin operation\n    result = [None] * length\n    for i in range(length):\n        new_index = (i + 5) % length\n        result[new_index] = xs[i]\n    \n    return result\n\n# Example usage:\nprint(f([1, 2, 3, 4, 5]))  # Output will depend on the implementation of spin operation\n",
+   "code_sha256": "a1730169a76ca533698ec57a4897b68540b3bc254ccda0e2873586cd8cb69b66",
+   "detail": "wrong",
+   "ops": [
+    "spin5"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/005"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the spin operation with n=2 to each element in the list\n    return [x << 1 for x in xs]\n",
+   "code_sha256": "e33f6247fab2b2d91fdcc909492486d8b3f18b15811e58c552ada594bbff32d8",
+   "detail": "wrong",
+   "ops": [
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/004"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Prune negative numbers\n    xs = [x for x in xs if x >= 0]\n    # Prune even numbers\n    xs = [x for x in xs if x % 2 != 0]\n    return xs\n",
+   "code_sha256": "2e9020681b0b2857e8a05a08c3491f75628aa507109434fe99b196971f97ec0e",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/083"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Apply the spin operation with n=-2\n    xs = np.array(xs)\n    xs = xs @ np.diag(np.exp(1j * 2 * np.pi * (-2) / len(xs)))\n    \n    # Apply the spin operation with n=1\n    xs = xs @ np.diag(np.exp(1j * 2 * np.pi * 1 / len(xs)))\n    \n    return xs.tolist()\n",
+   "code_sha256": "2db8cafa5c8b658f7c2d287ec05cb862e8cc1fb7875d5d825237565fc1083fc3",
+   "detail": "raise:ValueError",
+   "ops": [
+    "spin-2",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/037"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Apply the vex spin operation with n=-2\n    xs = np.roll(xs, -2)\n    \n    # Apply the vex spin operation with n=-1\n    xs = np.roll(xs, -1)\n    \n    return xs\n",
+   "code_sha256": "ddabf7aca1f3aeb8058afa16e45ae90330d0d32a790748e35a46bffe9c2f2f33",
+   "detail": "unserializable-output",
+   "ops": [
+    "spin-2",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/022"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the spin operation with n=7\n    xs = [x << 7 for x in xs]\n    \n    # Apply the chunk operation with k=4\n    chunks = [xs[i:i+4] for i in range(0, len(xs), 4)]\n    result = []\n    for chunk in chunks:\n        result.append(chunk[0] | chunk[1] | chunk[2] | chunk[3])\n    \n    return result\n",
+   "code_sha256": "331d7955489e9cec760290651d5159d77a40b66a8664019f048182cc6c1d11a9",
+   "detail": "raise:IndexError",
+   "ops": [
+    "spin7",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/132"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the vex spin operation with n=1\n    xs = [x + 1 for x in xs]\n    \n    # Apply the vex spin operation with n=2\n    xs = [x - 2 for x in xs]\n    \n    return xs\n",
+   "code_sha256": "759a1bf9ffb2549f04db1370db8acadf6600af0f0e84b5803c366390d1b16bd1",
+   "detail": "wrong",
+   "ops": [
+    "spin1",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/113"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Apply the chunk operation with k=2\n    chunked = np.array_split(np.array(xs), 2)\n    \n    # Apply the spin operation with n=7\n    # Since the spin operation is not defined in the vex library,\n    # we will assume it to be equivalent to a rotation or permutation\n    # operation that rearranges the elements in a specific pattern.\n    # For simplicity, let's assume the spin operation rotates the elements\n    # in the chunked array by 7 positions (circularly).\n    rotated = [np.roll(chunk, 7) for chunk in chunked]\n    \n    # Concatenate the rotated chunks back into a single list\n    result = np.concatenate(rotated).tolist()\n    \n    return result\n",
+   "code_sha256": "d9568e2af8df9a2e499b35d3798836905b8eb50906efbf7528cca15155075667",
+   "detail": "wrong",
+   "ops": [
+    "chunk2",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/094"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Apply the spin operation with n=7\n    xs = np.array(xs)\n    xs = np.rot90(xs, 3)  # Equivalent to spin operation with n=7\n    \n    # Apply the spin operation with n=-1\n    xs = np.rot90(xs, 1)  # Equivalent to spin operation with n=-1\n    \n    return xs.tolist()\n",
+   "code_sha256": "2e27aa48b19d4a389852c9e5a9f9454e90003957c8d98c6d944ea648ca03a1e0",
+   "detail": "raise:ValueError",
+   "ops": [
+    "spin7",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/051"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Convert input list to a NumPy array for vectorized operations\n    xs_np = np.array(xs)\n    \n    # Apply the weave operation with b=[7, 7, 7]\n    weave_result = np.weave(xs_np, \"a[0] * 7\", \"numpy\")\n    \n    # Apply the spin operation with n=1\n    spin_result = np.spin(weave_result, 1)\n    \n    return spin_result\n",
+   "code_sha256": "2c89bde375d685833ebfe1d4eb991304fc343f740d350a9f431193c7eb1f7189",
+   "detail": "raise:AttributeError",
+   "ops": [
+    "weave777",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/057"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Convert xs to a numpy array for easier manipulation\n    arr = np.array(xs)\n    \n    # Apply the weave operation with b=[7, 7, 7]\n    weave_result = np.convolve(arr, np.array([7, 7, 7]), mode='valid')\n    \n    # Apply the spin operation with n=-2\n    # Since the spin operation is not defined in the vex library,\n    # we assume it's a custom operation that reverses the array.\n    # For simplicity, we reverse the array instead of implementing the spin operation.\n    spin_result = weave_result[::-1]\n    \n    return spin_result\n",
+   "code_sha256": "18e5b74cd35198125b1b1c19c1c5df128923b2080ab51d53a034a733ce1e06fc",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave777",
+    "spin-2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/069"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Apply the spin operation with n=5\n    xs = np.array(xs)\n    xs = np.vex.spin(xs, 5)\n    \n    # Apply the weave operation with b=[100, 200]\n    xs = np.vex.weave(xs, [100, 200])\n    \n    return xs.tolist()\n",
+   "code_sha256": "0c59adbc81268ded8f9628de365b53a44e25917c47c33a08396fee2aff034361",
+   "detail": "raise:AttributeError",
+   "ops": [
+    "spin5",
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/138"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the vex spin operation with n=2\n    xs = [x << 2 for x in xs]\n    # Apply the vex spin operation with n=7\n    xs = [x >> 7 for x in xs]\n    return xs\n",
+   "code_sha256": "6b1ba25972d3bc350b90c45083edccaf77422373e9cf1d2fae44b389eb57c9a3",
+   "detail": "wrong",
+   "ops": [
+    "spin2",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/062"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Convert xs to a numpy array for convenience\n    x = np.array(xs)\n    \n    # Apply the weave operation with b=[7, 7, 7]\n    result = np.weave(x, 'result[i] = a[i] * 7', 'numpy', headers='i i')\n    \n    return result.tolist()\n",
+   "code_sha256": "7a869612122a74b5c863f7a0720f43bd1a64e8309c04a4129227e4e79ba0459e",
+   "detail": "raise:AttributeError",
+   "ops": [
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/014"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply chunk operation with k=3\n    chunks = [xs[i:i+3] for i in range(0, len(xs), 3)]\n    \n    # Apply prune operation to remove negative elements\n    pruned_chunks = []\n    for chunk in chunks:\n        if all(x >= 0 for x in chunk):\n            pruned_chunks.append(chunk)\n    \n    # Flatten the pruned chunks back into a single list\n    return [item for sublist in pruned_chunks for item in sublist]\n",
+   "code_sha256": "56a19fc3c1e41c36666bedc40b72268632a98fc3c55e604a5172947ac2aa5d27",
+   "detail": "wrong",
+   "ops": [
+    "chunk3",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/117"
+  },
+  {
+   "code": "\ndef f(xs):\n    import numpy as np\n\n    # Apply the spin operation with n=2\n    xs = np.array(xs)\n    xs = np.vander(xs, n=2, increasing=True)[..., ::-1]\n    \n    # Apply the weave operation with b=[100, 200]\n    b = np.array([100, 200])\n    xs = np.weave(xs, b)\n    \n    return xs.tolist()\n",
+   "code_sha256": "5e0e624b439c13ee91349f656129a3f05ac532366478c0b3d63331cbed0a2e5b",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin2",
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/100"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the spin operation with n=7\n    xs = [x << 7 for x in xs]\n    \n    # Apply the chunk operation with k=2\n    chunks = [tuple(xs[i:i+2]) for i in range(0, len(xs), 2)]\n    \n    return chunks\n",
+   "code_sha256": "e3b75df2cee663a2fbb0a7165d95e2f57ccca8aafa29fc286f3c42a716b73a2e",
+   "detail": "wrong",
+   "ops": [
+    "spin7",
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/124"
+  },
+  {
+   "code": "\ndef f(xs):\n    from typing import List\n\n    def chunk(lst, k):\n        return [lst[i * k:(i + 1) * k] for i in range((len(lst) + k - 1) // k)]\n\n    def prune(lst):\n        return [x for x in lst if x <= 10]\n\n    # Apply chunk operation with k=3\n    chunk_result = chunk(xs, 3)\n    \n    # Apply prune operation to each chunk\n    pruned_chunks = [prune(chunk) for chunk in chunk_result]\n    \n    # Flatten the list of chunks into a single list\n    flat_result = [item for sublist in pruned_chunks for item in sublist]\n    \n    return flat_result\n",
+   "code_sha256": "eb328568b3ee541ed56bd84b6d337d01ec8cdedef5efb501e9bf66c9f7991af0",
+   "detail": "wrong",
+   "ops": [
+    "chunk3",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/035"
+  },
+  {
+   "code": "\ndef f(xs):\n    import numpy as np\n\n    # Apply the weave operation with b=[7, 7, 7]\n    weave_result = np.convolve(xs, [7, 7, 7], mode='valid')\n    \n    # Apply the prune operation to remove even numbers\n    prune_result = weave_result[weave_result % 2 != 0]\n    \n    return prune_result\n",
+   "code_sha256": "f1da205f94d7f10ed3c5b198f5c37cb3cfcbe4271daef0408ead7362283ba6b7",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave777",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/110"
+  },
+  {
+   "code": "\ndef f(xs):\n    # First prune operation: remove elements greater than 10\n    xs = [x for x in xs if x <= 10]\n    \n    # Second prune operation: remove even numbers\n    xs = [x for x in xs if x % 2 != 0]\n    \n    return xs\n",
+   "code_sha256": "72d781c56ac3841c4ad4aef22c45d14f9d8b7186e18c33b30f0918979f49d3cb",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/142"
+  },
+  {
+   "code": "\ndef f(xs):\n    from typing import List\n\n    def spin_left(n: int) -> callable:\n        def spin_left_(lst: List) -> List:\n            return lst[n:] + lst[:n]\n        return spin_left_\n\n    def spin_right(n: int) -> callable:\n        def spin_right_(lst: List) -> List:\n            return lst[-n:] + lst[:-n]\n        return spin_right_\n\n    # Apply spin_left with n=-1 (right rotation)\n    xs = spin_left(-1)(xs)\n    # Apply spin_right with n=7 (left rotation)\n    xs = spin_right(7)(xs)\n    return xs\n",
+   "code_sha256": "917774c3e9125fd242f7b40eb45f49798e5ce07259e7bfe63dc793bad2db7c37",
+   "detail": "wrong",
+   "ops": [
+    "spin-1",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/019"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the vex spin operation with n=1\n    xs = [x + 1 for x in xs]\n    \n    # Apply the vex spin operation with n=-1\n    xs = [x - 1 for x in xs]\n    \n    return xs\n",
+   "code_sha256": "aeea137a7df59d44c97517773b2fbc9d1d4431751db59da68c5b5dce5e463795",
+   "detail": "pass",
+   "ops": [
+    "spin1",
+    "spin-1"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "VEX/028"
+  },
+  {
+   "code": "\nimport math\n\ndef f(xs):\n    # Apply the spin operation with n=1 to each element in the list\n    return [math.sin(x) for x in xs]\n",
+   "code_sha256": "e235db6cf6a8e3784e85d5cb143a6fb5a9629465bfb3b7d969640b9e8c1ee3c1",
+   "detail": "wrong",
+   "ops": [
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/003"
+  },
+  {
+   "code": "\ndef f(xs):\n    from typing import List\n\n    def chunk(lst, k):\n        return [lst[i * k:(i + 1) * k] for i in range((len(lst) + k - 1) // k)]\n\n    def spin(lst, n):\n        return lst[n:] + lst[:n]\n\n    chunks = chunk(xs, 3)\n    result = chunks[0]\n    for chunk in chunks[1:]:\n        result = spin(result, len(chunk))\n    return result\n",
+   "code_sha256": "ea00a7581d01984ca4b7640c417002a8ebd788431f07e94a5adbc3e84783e5a9",
+   "detail": "raise:IndexError",
+   "ops": [
+    "chunk3",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/058"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Apply the weave operation with b=[100, 200]\n    weave_result = np.weave(xs, \"a[0] * 100 + a[1] * 200\", \n                            libraries={\"numpy\": np}, \n                            cache=False)\n    \n    # Apply the spin operation with n=7\n    spin_result = np.spin(weave_result, 7)\n    \n    return spin_result\n",
+   "code_sha256": "2b7ccb0ec496d0ad9291f1149edc46c1acce65ad81d5e37cc480736ef1aa458f",
+   "detail": "raise:AttributeError",
+   "ops": [
+    "weave100200",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/084"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Apply the spin operation with n=5\n    xs = np.array(xs)\n    xs = xs * np.exp(2j * np.pi / 31 * np.arange(len(xs)))\n    \n    # Apply the spin operation with n=1\n    xs = xs * np.exp(2j * np.pi / len(xs) * np.arange(len(xs)))\n    \n    return xs\n",
+   "code_sha256": "327840b2cf2a8fff7d17903fd893b1add08f8eeeee4f3fccdd2279d3673cca66",
+   "detail": "raise:ZeroDivisionError",
+   "ops": [
+    "spin5",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/107"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Apply the first weave operation with b=[100, 200]\n    result = np.weave(np.add, [xs, np.array([100, 200])])\n    \n    # Apply the second weave operation with b=[-1, -2, -3, -4]\n    result = np.weave(result, [np.multiply, np.array([-1, -2, -3, -4])])\n    \n    return result\n",
+   "code_sha256": "78e61129a0a77329675bd023ac58b4cfb665844088fa8e3bbf9b8c5dc26d24c8",
+   "detail": "raise:AttributeError",
+   "ops": [
+    "weave100200",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/081"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the vex spin operation with n=7\n    xs = [x << 7 for x in xs]\n    # Apply the vex spin operation with n=2\n    xs = [x >> 2 for x in xs]\n    return xs\n",
+   "code_sha256": "3416dc471b0908374c745a671f373d72cd353d6f9f77e89a7c3dc2e45b1a4795",
+   "detail": "wrong",
+   "ops": [
+    "spin7",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/096"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the spin operation with n=1\n    xs = [x * 2 for x in xs]\n    \n    # Apply the prune operation, removing even numbers\n    xs = [x for x in xs if x % 2 != 0]\n    \n    return xs\n",
+   "code_sha256": "314fc45e1532c643743eef6c3baabaa1abc325e60009d33df905d2719cd44cbe",
+   "detail": "wrong",
+   "ops": [
+    "spin1",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/018"
+  },
+  {
+   "code": "\ndef f(xs):\n    from typing import List\n\n    def chunk(lst, k):\n        return [lst[i * k:(i + 1) * k] for i in range((len(lst) + k - 1) // k)]\n\n    # Apply chunk operation with k=2 first\n    xs_chunked_k2 = chunk(xs, 2)\n    \n    # Apply chunk operation with k=4 to each sublist obtained from the previous step\n    result = [chunk(sublist, 4) for sublist in xs_chunked_k2]\n    \n    # Flatten the result to get a single list\n    flat_result = [item for sublist in result for item in sublist]\n    \n    return flat_result\n",
+   "code_sha256": "97e1dab405ae0a01df56aa42c04e697a841312bf7bae63955f314fa59d4e9b3b",
+   "detail": "wrong",
+   "ops": [
+    "chunk2",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/108"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Prune negative elements\n    pruned = [x for x in xs if x >= 0]\n    \n    # Weave with b=[7, 7, 7]\n    from operator import mul\n    from functools import reduce\n    \n    def weave(a, b):\n        return [a[i] + b[i] for i in range(len(a))]\n    \n    result = weave(pruned, [7, 7, 7])\n    \n    return result\n",
+   "code_sha256": "5ed3fe601d7457024329da3bc8f5e7b4432cf8c5a4fd986be2d39b57193ebd7e",
+   "detail": "raise:IndexError",
+   "ops": [
+    "prune_neg",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/130"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Prune elements greater than 10\n    pruned = [x for x in xs if x <= 10]\n    \n    # Chunk the pruned list into sublists of size 4\n    chunks = [pruned[i:i+4] for i in range(0, len(pruned), 4)]\n    \n    return chunks\n",
+   "code_sha256": "f9097d71c7f2f81668a0ea539e98498dc274f950338717cd6e48dd1b03b36439",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/125"
+  },
+  {
+   "code": "\ndef f(xs):\n    from typing import List\n\n    def chunk(lst, k):\n        return [lst[i * k:(i + 1) * k] for i in range((len(lst) + k - 1) // k)]\n\n    def prune(lst):\n        return [x for x in lst if x % 2 != 0]\n\n    # Apply chunk operation with k=3\n    chunked = chunk(xs, 3)\n    \n    # Apply prune operation to remove even numbers\n    pruned = prune(chunked)\n    \n    # Flatten the list of lists into a single list\n    flat_list = [item for sublist in pruned for item in sublist]\n    \n    return flat_list\n",
+   "code_sha256": "bbfd71c96f66617b3435eceab9b942f117d9e869cb34d9c93247b8e2c728f67c",
+   "detail": "raise:TypeError",
+   "ops": [
+    "chunk3",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/086"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the spin operation with n=1\n    xs = [x * 2 for x in xs]\n    \n    # Apply the weave operation with b=[-1, -2, -3, -4]\n    weave_result = []\n    for i in range(len(xs)):\n        weave_result.append(xs[i] + xs[(i+1) % len(xs)] * (-1 if i < len(xs)/2 else -4))\n    \n    return weave_result\n",
+   "code_sha256": "38d11a5d7b128e9dc4aef0b675c4a466ac9ea99958f9b6b4108f9b126a654b0c",
+   "detail": "wrong",
+   "ops": [
+    "spin1",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/122"
+  },
+  {
+   "code": "\ndef f(xs):\n    import numpy as np\n\n    # Apply the spin operation with n=2\n    xs = np.array(xs)\n    xs = np.vander(xs, 2, increasing=True)[:, ::-1]\n    \n    # Apply the weave operation with b=[-1, -2, -3, -4]\n    b = np.array([-1, -2, -3, -4])\n    weave_result = np.convolve(xs, b, mode='full')\n    return weave_result[:len(xs)]\n",
+   "code_sha256": "3fe4bbd0edb502ac7edda0f40acad8f7df0340fbbe1b6d367dde78deac6ddbd6",
+   "detail": "raise:ValueError",
+   "ops": [
+    "spin2",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/090"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Convert input list to a NumPy array for vectorized operations\n    arr = np.array(xs)\n    \n    # Apply the weave operation with b = [-1, -2, -3, -4]\n    weave_result = np.convolve(arr, [-1, -2, -3, -4], mode='full')\n    \n    # Apply the prune operation, keeping elements <= 10\n    pruned_result = weave_result[weave_result <= 10]\n    \n    return pruned_result\n",
+   "code_sha256": "7f087779aaae64cdc4a9ee9214d97c8957c6a12e2a0041b213912e749d2db297",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave-1-2-3-4",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/111"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Prune negative numbers from the list\n    pruned = [x for x in xs if x >= 0]\n    \n    # Chunk the pruned list into sublists of size 3\n    chunks = [pruned[i:i+3] for i in range(0, len(pruned), 3)]\n    \n    return chunks\n",
+   "code_sha256": "14ed789c11f5d047d460389ba64e72ad04207fa29a9ce563e980cbd777f08aee",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg",
+    "chunk3"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/104"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the spin operation with n=2\n    xs = [x * 3 for x in xs]\n    \n    # Apply the prune operation to remove negative values\n    xs = [x for x in xs if x >= 0]\n    \n    return xs\n",
+   "code_sha256": "64006619976df1b40658ac1cd663485fd6718c0f340d798056aa2e1c357d1d9e",
+   "detail": "wrong",
+   "ops": [
+    "spin2",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/041"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Convert xs to a numpy array for easier manipulation\n    arr = np.array(xs)\n    \n    # Apply the weave operation with b=[7, 7, 7]\n    weave_result = np.weave(arr, 'result[i] = x[i] * 7', 'numpy', force_obj=True)\n    \n    # Apply the spin operation with n=-1\n    spin_result = np.spin(weave_result, -1)\n    \n    return spin_result\n",
+   "code_sha256": "c88f222880b6beb01d9d193fd5c16b0789eb003c6ca88f817a95a6666ba75bc1",
+   "detail": "raise:AttributeError",
+   "ops": [
+    "weave777",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/120"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Prune even numbers from the list\n    pruned = [x for x in xs if x % 2 != 0]\n    \n    # Spin operation with n=-1 (which means to take the complement of each element)\n    spun = [-x for x in pruned]\n    \n    return spun\n",
+   "code_sha256": "7a934acac5ae7e7ec728eb779bb4e63e61a1a6df71aa04337a1eb4c9896e23af",
+   "detail": "wrong",
+   "ops": [
+    "prune_even",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/145"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the spin operation with n=2\n    xs = [x << 2 for x in xs]\n    \n    # Apply the chunk operation with k=2\n    chunks = [tuple(xs[i:i+2]) for i in range(0, len(xs), 2)]\n    \n    return chunks\n",
+   "code_sha256": "35bc59b2e5038e759b9e0cb885bca6461bb01a9b3547c876696fc749a90a792a",
+   "detail": "wrong",
+   "ops": [
+    "spin2",
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/103"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Apply the vex spin operation with n=5\n    xs = np.array(xs)\n    xs = np.rot90(xs, 5)\n    \n    # Apply the vex spin operation with n=-1 (which is equivalent to np.rot90 with n=3)\n    xs = np.rot90(xs, 3)\n    \n    return xs.tolist()\n",
+   "code_sha256": "550575a8e437e838baf751542a48518bd5f575a181a46d8c4ab9f8aca9842cb2",
+   "detail": "raise:ValueError",
+   "ops": [
+    "spin5",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/119"
+  },
+  {
+   "code": "\ndef f(xs):\n    from typing import List\n\n    def chunk(lst, k):\n        return [lst[i * k:(i + 1) * k] for i in range((len(lst) + k - 1) // k)]\n\n    def spin(lst, n):\n        return lst[n:] + lst[:n]\n\n    chunks = chunk(xs, 4)\n    result = chunks[0]\n    for chunk in chunks[1:]:\n        result = spin(result, len(chunk))\n    return result\n",
+   "code_sha256": "1aa4ad1dac95a89f08de9d0a519f350a6de23072262ea79eb69e15a31248606b",
+   "detail": "raise:IndexError",
+   "ops": [
+    "chunk4",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/098"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Prune elements greater than 10\n    pruned = [x for x in xs if x <= 10]\n    \n    # Spin operation with n=7\n    from operator import mul\n    from functools import reduce\n    \n    def spin(x, n):\n        return reduce(mul, range(1, n+1)) * x\n    \n    spun = [spin(x, 7) for x in pruned]\n    \n    return spun\n",
+   "code_sha256": "2e857cd62f4975bd7be0c5af4a18e4fe652136e81a8d01f6b46f8177a5542bee",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/036"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Convert input list to a NumPy array for easier manipulation\n    arr = np.array(xs)\n    \n    # Apply the weave operation with b = [-1, -2, -3, -4]\n    weave_result = np.convolve(arr, [-1, -2, -3, -4], mode='full')\n    \n    # Apply the prune operation to remove negative values\n    prune_result = weave_result[weave_result >= 0]\n    \n    return prune_result.tolist()\n",
+   "code_sha256": "ac2f4c8776e92808ee83435d5d7ce1501c6cef291f37b26e53ea21148863afb3",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave-1-2-3-4",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/047"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Apply the spin operation with n=-1\n    xs = [x * -1 for x in xs]\n    \n    # Apply the prune operation, removing elements greater than 10\n    xs = [x for x in xs if x <= 10]\n    \n    return xs\n",
+   "code_sha256": "f8774a7c435a5f58dabdbfa4b04ead6557eb036fa366e16856d1a3810ac7c156",
+   "detail": "wrong",
+   "ops": [
+    "spin-1",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/040"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Create a constant array b for the first weave operation\n    b1 = np.array([-1, -2, -3, -4])\n    \n    # Perform the first weave operation\n    result1 = np.weave(b1, xs)\n    \n    # Create a constant array b for the second weave operation\n    b2 = np.array([7, 7, 7])\n    \n    # Perform the second weave operation\n    result2 = np.weave(b2, result1)\n    \n    return result2\n",
+   "code_sha256": "acb223901c254c95baadcefde91d441ca989a990177fefe318c105e00edf426c",
+   "detail": "raise:AttributeError",
+   "ops": [
+    "weave-1-2-3-4",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/097"
+  },
+  {
+   "code": "\ndef f(xs):\n    # Prune even numbers from the list\n    pruned = [x for x in xs if x % 2 != 0]\n    \n    # Weave the pruned list with [-1, -2, -3, -4]\n    weaved = []\n    i, j = 0, 0\n    while i < len(pruned) or j < 4:\n        if i < len(pruned):\n            weaved.append(pruned[i])\n            i += 1\n        if j < 4:\n            weaved.append(j)\n            j += 1\n    \n    return weaved\n",
+   "code_sha256": "e31d758cd58261618ed061c8638d0a935411744b4a23a9bbd9e7d66a206f2335",
+   "detail": "wrong",
+   "ops": [
+    "prune_even",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/029"
+  },
+  {
+   "code": "\nimport numpy as np\n\ndef f(xs):\n    # Convert xs to a numpy array for easier manipulation\n    arr = np.array(xs)\n    \n    # Apply the chunk operation with k=3\n    chunks = np.split(arr, len(arr) // 3 + (1 if len(arr) % 3 else 0))\n    \n    # Apply the weave operation with b=[-1, -2, -3, -4]\n    # First, we need to ensure that the length of b matches the number of chunks\n    if len(b) != len(chunks):\n        raise ValueError(\"The length of b must match the number of chunks\")\n    \n    # Weave operation implementation\n    # This is a custom implementation since the actual VEX weave operation is not provided\n    result = []\n    for i in range(len(chunks)):\n        result.append(chunks[i][0] * b[i])\n        result.append(chunks[i][1] * b[i])\n        result.append(chunks[i][2] * b[i])\n    \n    return result\n\n# Example usage:\n# xs = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n# print(f(xs))\n",
+   "code_sha256": "c3f84f2a2375ebb21a76c6ce7b82de06e860ab07ac051c7a0395c83dbf7cae91",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk3",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/087"
+  }
+ ],
+ "split": "heldout",
+ "tag": "fp678v2_base_bf16_cfgA_heldout",
+ "view": "closed",
+ "wall_sec": 204.1
+}

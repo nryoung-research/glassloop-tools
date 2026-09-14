@@ -1,0 +1,683 @@
+{
+ "backend_info": {
+  "arm": "base",
+  "backend": "hf",
+  "in_process": true,
+  "param_dtypes": [
+   "torch.bfloat16"
+  ],
+  "torch": "2.7.1+cu128"
+ },
+ "config": {
+  "dtype": "bfloat16",
+  "greedy": true,
+  "max_new_tokens": 512,
+  "torch": "2.7.1+cu128"
+ },
+ "family_file": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\climber\\vex_family.json",
+ "family_file_sha256": "7fceafa2fdb7b02a48937d2331439962c23c92498f58711299d0d57dd6ff8cce",
+ "family_module": "vex_tasks",
+ "instrument": "cap-eval-v1 (fp678 in-process port)",
+ "model": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "n_passed": 0,
+ "n_tasks": 60,
+ "pass_rate": 0.0,
+ "revision": null,
+ "rows": [
+  {
+   "code_sha256": "809e48cdbb0d6ee984b8aae998b1f4c482dbd09e1d5bdac13c01df1ec4adf06f",
+   "detail": "wrong",
+   "ops": [
+    "spin-1",
+    "spin5"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/088"
+  },
+  {
+   "code_sha256": "7a49014d65f6bff0c18bcad1cec99efe2e78599398a9d6d2c10bdbe25e207bfb",
+   "detail": "raise:IndexError",
+   "ops": [
+    "chunk4",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/128"
+  },
+  {
+   "code_sha256": "e565c7a68209688c68c1ef64a9f2bf53a8cc5e8a85ec9c31c8084e800cb0d963",
+   "detail": "raise:IndexError",
+   "ops": [
+    "chunk3",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/137"
+  },
+  {
+   "code_sha256": "6c03ec82bb53975f7876a7a57f811923609d2a8d4c7d04a735728587d8df9555",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin-1",
+    "spin-2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/074"
+  },
+  {
+   "code_sha256": "1e85af7ff6a9511c959cafc58dede3116b56980b0e279b88e5068dfcb4f04b27",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "spin5"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/075"
+  },
+  {
+   "code_sha256": "e77fe815e546fe97897d965e1d958a72c4f74f822e9629c82850782cbfdbd175",
+   "detail": "wrong",
+   "ops": [
+    "prune_even",
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/061"
+  },
+  {
+   "code_sha256": "ddb3fb7578c2dfceddd47ae77441cfa1474848128d0713811e275c4277a7344e",
+   "detail": "raise:IndexError",
+   "ops": [
+    "spin-2",
+    "chunk3"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/045"
+  },
+  {
+   "code_sha256": "23418b95347a57730c9128129b0942a0d6be91c23396382385fdd6312cee40fb",
+   "detail": "raise:AttributeError",
+   "ops": [
+    "weave100200",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/050"
+  },
+  {
+   "code_sha256": "a8f486e27957f93c16dff95ff05d9f826055475dc33efc4c3bf7a16bc20b89ea",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin7",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/034"
+  },
+  {
+   "code_sha256": "1f7ece00f02fc2becb8781303cf1e04a13a1607536b240b45504e0104aab13a2",
+   "detail": "raise:ValueError",
+   "ops": [
+    "spin7",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/068"
+  },
+  {
+   "code_sha256": "557689270eee5eba6cbb07fc4a2d48b36daf1568fd6f7c48be48f2ae8165599b",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin5",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/076"
+  },
+  {
+   "code_sha256": "688d17d56c6eb633026466af351a628c5b8865828c794ed10e21ff5ae28b87ce",
+   "detail": "wrong",
+   "ops": [
+    "spin1",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/044"
+  },
+  {
+   "code_sha256": "ee3ba80cd8cf7953733287e2b51c17654c32de5976f77a4e481eb6b3b846aa57",
+   "detail": "unserializable-output",
+   "ops": [
+    "weave100200",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/089"
+  },
+  {
+   "code_sha256": "0731a8b3d9b1cc0b3c8a546ec5ace6b7cf903ffa1c58aa81ca4483499740ba2f",
+   "detail": "wrong",
+   "ops": [
+    "spin1",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/023"
+  },
+  {
+   "code_sha256": "1aa4ad1dac95a89f08de9d0a519f350a6de23072262ea79eb69e15a31248606b",
+   "detail": "raise:IndexError",
+   "ops": [
+    "chunk4",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/123"
+  },
+  {
+   "code_sha256": "5959aba298b12baca053f005584f8d7c5e7bbac62ef37948832faa71003c4d65",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave100200",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/046"
+  },
+  {
+   "code_sha256": "0103a39f5332a4ac4bc8a2025d878ba3a3911f93b19e5e37aafb62b345fad40d",
+   "detail": "wrong",
+   "ops": [
+    "spin7"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/006"
+  },
+  {
+   "code_sha256": "23bd8a7535de769f5d897cdf799c1fe512c3f247ca60b5569ff1d57150be5d10",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/011"
+  },
+  {
+   "code_sha256": "832525439c39df08aaa8128f61f1174669e20487086a62f7a26b6cfa92eb678b",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/109"
+  },
+  {
+   "code_sha256": "7b9751177a00aab374a4b159f13990d41e1d1ed9f969ff100e1aeb1c9c66805a",
+   "detail": "wrong",
+   "ops": [
+    "prune_even",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/116"
+  },
+  {
+   "code_sha256": "2283942b7210606dc8c429e71ae7a29898131f1ec13e386e507228b602274ca0",
+   "detail": "wrong",
+   "ops": [
+    "chunk3",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/032"
+  },
+  {
+   "code_sha256": "65c2810ae8330db1238d772d4a5fc1c172792e1146d33e2f2ebc32df09a71f54",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave-1-2-3-4",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/043"
+  },
+  {
+   "code_sha256": "950149f42123a7495f2b09c5a12ae5b92ed1c80afee369ca4541f59df8beecb4",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin7",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/071"
+  },
+  {
+   "code_sha256": "bc55ab70da28cb4ea3a9b3b1d5f88ead656c50f22217074dbb098cfcd24e0fa3",
+   "detail": "wrong",
+   "ops": [
+    "spin7",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/079"
+  },
+  {
+   "code_sha256": "f9900b02a45a7eb12b15831a967f8baef7f31bfa286ee8974debd50312303c92",
+   "detail": "raise:ValueError",
+   "ops": [
+    "spin7",
+    "spin-2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/059"
+  },
+  {
+   "code_sha256": "5d192a08728febaaff1327dda8cc920c4ec4d4a03b3ffefb0584d9779139e2e1",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave100200",
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/055"
+  },
+  {
+   "code_sha256": "5a0c4692d57dd6a22a1cf542edee3f715998fbae7affd26a1d527154d0618b04",
+   "detail": "raise:ValueError",
+   "ops": [
+    "chunk2",
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/072"
+  },
+  {
+   "code_sha256": "74dbe2de2f1676baa2b15924e42bef9c708bc0ef1d8ab36a1e5ecff7ce6526ce",
+   "detail": "wrong",
+   "ops": [
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/007"
+  },
+  {
+   "code_sha256": "31f3cb3b160d8f5d1faf70159da6ad905f4ae764c81096721b72d5974df01b97",
+   "detail": "wrong",
+   "ops": [
+    "prune_even",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/105"
+  },
+  {
+   "code_sha256": "b9467c6e69a68ae3349cc88abbf6f868546ec6f3175adb2f7802ba6219e2416b",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave777",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/101"
+  },
+  {
+   "code_sha256": "51e35c933363c8068e87a4e0eb7cfdf13df57b404c12bd7efd8b129b43dcba2d",
+   "detail": "wrong",
+   "ops": [
+    "spin7",
+    "spin5"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/095"
+  },
+  {
+   "code_sha256": "abcc6c2bbdd7303129cba8aa1605ef078916a14ec53ebfe4783fc3481ca8bf24",
+   "detail": "wrong",
+   "ops": [
+    "spin-1",
+    "chunk3"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/133"
+  },
+  {
+   "code_sha256": "30e112fca235666c006561201f7b792902af712584eda7b30d61d14d4512ce7c",
+   "detail": "raise:AttributeError",
+   "ops": [
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/015"
+  },
+  {
+   "code_sha256": "ce1263f9b04b2cd43062d79592e5802fd5f55f03b82dfee1581963ff1aedbdf2",
+   "detail": "wrong",
+   "ops": [
+    "spin5",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/106"
+  },
+  {
+   "code_sha256": "4aaccd2682185c286fe729b8e0ca834aa33a642f05deb0096e0f3464fba42c87",
+   "detail": "raise:IndexError",
+   "ops": [
+    "spin7",
+    "chunk3"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/078"
+  },
+  {
+   "code_sha256": "69f506108ef855ba41b678b48d7cb7b9b4a9266d3996e57f6398bcf0f01ee89e",
+   "detail": "raise:IndexError",
+   "ops": [
+    "spin1",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/140"
+  },
+  {
+   "code_sha256": "1ef8bd1678e4f0d5f0ad650ee37f417ea512c9086993f3eb04a58a6b0a2a9fed",
+   "detail": "raise:ZeroDivisionError",
+   "ops": [
+    "prune_gt10",
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/038"
+  },
+  {
+   "code_sha256": "ebc77abcf00c65b578b7f1a5fc4a32fd1d2fbef27674d7b53557d9ba5bc03c44",
+   "detail": "raise:ZeroDivisionError",
+   "ops": [
+    "spin-2",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/024"
+  },
+  {
+   "code_sha256": "be670609373235fc266a87e8203f4d35d03ffcb427bf0d7adcbe1d4ff04eae41",
+   "detail": "wrong",
+   "ops": [
+    "chunk4",
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/042"
+  },
+  {
+   "code_sha256": "6be69ba997c6e70a9953a3673c338c5d2115dbefad5ea54591a6f1a3ed0ff5a8",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave777",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/052"
+  },
+  {
+   "code_sha256": "1fc968e2892212f8153bb1994199fcb196b6e915cc94d4f46aa5df58a0500704",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave-1-2-3-4",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/070"
+  },
+  {
+   "code_sha256": "fa2699bf149a6389cbc4d387f4a03c857d805ccf1c1c621c8c0d523efdceadb2",
+   "detail": "raise:IndexError",
+   "ops": [
+    "chunk4",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/049"
+  },
+  {
+   "code_sha256": "6473d53fbf27768dec3c4f7d045810aaac2256c3f4025a8fd1d09db30307b3f0",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave100200",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/017"
+  },
+  {
+   "code_sha256": "712962d46173e22d3806f9af55b355d304df5dda0ac7e150f67bc7cf874f0f85",
+   "detail": "raise:IndexError",
+   "ops": [
+    "spin-2",
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/136"
+  },
+  {
+   "code_sha256": "fb790e0acfcb109f3af678be5e798e60a79401fa340e8771a5bc5b8e4fb47abf",
+   "detail": "raise:ValueError",
+   "ops": [
+    "weave-1-2-3-4",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/073"
+  },
+  {
+   "code_sha256": "2fa826f4f6bb50bbcee282803136d421858ca3ec48da8fc9e217abd1e3f3c11d",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "chunk3"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/131"
+  },
+  {
+   "code_sha256": "c18748e3e98735a394c8e2a5e44df50aee2254c66cf2e69bbc409b9d7473faaa",
+   "detail": "raise:IndexError",
+   "ops": [
+    "spin-1",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/093"
+  },
+  {
+   "code_sha256": "a72933e2b1f30eaaaa9ea0ba087662ecb5a3aff226181167e3662ff0e4ad1fa4",
+   "detail": "wrong",
+   "ops": [
+    "chunk3"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/001"
+  },
+  {
+   "code_sha256": "7e1b3b9b330d3fb5a1256e5df0ab7177e2aaf61552de1862c955591a6e80c056",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/010"
+  },
+  {
+   "code_sha256": "3cb5381806c2022ff4a6d1ef08378dffa31a59c0e4cdf2d52163e8fca0cbd814",
+   "detail": "raise:ZeroDivisionError",
+   "ops": [
+    "spin-2",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/056"
+  },
+  {
+   "code_sha256": "1795a61037e91a7cb1348dafd5c42ed2bb40f2a8e34ed4c5fef3f0b350ebc9fe",
+   "detail": "raise:AttributeError",
+   "ops": [
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/013"
+  },
+  {
+   "code_sha256": "94f1b4207bda3e2355fb941b5c62bfd0e9fa90e9b5cc3628afef324e92e6d805",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/080"
+  },
+  {
+   "code_sha256": "c0b0a0ea09f44b6ee15652457f98fdb9c0fe0596f8f8bcf945cf6c6de8fd4458",
+   "detail": "wrong",
+   "ops": [
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/000"
+  },
+  {
+   "code_sha256": "a307634c10e0341fa2139609d2e6f408efdca4117643fd19f34eeddce773715b",
+   "detail": "raise:IndexError",
+   "ops": [
+    "spin2",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/065"
+  },
+  {
+   "code_sha256": "9c9a309e0463f02a33747e593a871b14585a1ee4eb0c8127f7cb80ef0a9a7054",
+   "detail": "wrong",
+   "ops": [
+    "spin-2",
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/060"
+  },
+  {
+   "code_sha256": "5835d519cb893497ff6ee32561387f0090877dfbaa0083481d0eaa5079256eb1",
+   "detail": "raise:IndexError",
+   "ops": [
+    "chunk4",
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/021"
+  },
+  {
+   "code_sha256": "a7ccb499c1e252d2ed19904b228c7b6d6b2de0d8fd5ca81a3b93b65830865c75",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/135"
+  },
+  {
+   "code_sha256": "7d1c91ba296f176058431bef856b1d60d238d405f95f8b7343aab7de62bd613c",
+   "detail": "unserializable-output",
+   "ops": [
+    "spin-1",
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/025"
+  },
+  {
+   "code_sha256": "0f9e45b704ce450ebb85912cbecc59a5390f7c5e78d224f6ad9376d808cede52",
+   "detail": "wrong",
+   "ops": [
+    "spin5",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/054"
+  },
+  {
+   "code_sha256": "66decb3f2549a0aa5407e1bf054370a4f06561c1b7d52c6b686369b0c025d475",
+   "detail": "wrong",
+   "ops": [
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "teach",
+   "task_id": "VEX/009"
+  }
+ ],
+ "split": "teach",
+ "tag": "fp678_base_bf16_cfgA_teach",
+ "view": "closed",
+ "wall_sec": 201.1
+}

@@ -1,0 +1,675 @@
+{
+ "harness": "climber-v0 (fp678 in-process port)",
+ "benchmark": "humaneval-plus",
+ "model": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "tag": "fp678_E2_alphaedit_bf16_cfgA",
+ "n_tasks": 164,
+ "limit": 0,
+ "config": {
+  "greedy": true,
+  "max_new_tokens": 768,
+  "dtype": "bfloat16",
+  "template": "chat+evalplus-instruct-v0"
+ },
+ "wall_sec": 2589.7,
+ "samples_file": "climb_fp678_E2_alphaedit_bf16_cfgA_samples.jsonl",
+ "samples_sha256": "ddf07c8e319faede1d7abca972f543f509c885973894487f14792ceb8a059060",
+ "rows": [
+  {
+   "task_id": "HumanEval/0",
+   "sample_sha256": "5efd905d877db8ac4218217ea3a6372a0a72e27553a1f2a0a40b6b2a4c15bb53"
+  },
+  {
+   "task_id": "HumanEval/1",
+   "sample_sha256": "f4c77221dcbf212a3932b962b8f011c95f1ca714e1ecd81b9ded7da7479f3f4c"
+  },
+  {
+   "task_id": "HumanEval/10",
+   "sample_sha256": "f4d873777b12a2a9facff8a0ab03174831c958330982017847d33d5bbb8229b6"
+  },
+  {
+   "task_id": "HumanEval/100",
+   "sample_sha256": "b62f122255caa2ad438ad2362dc7dd3e00c769324123f7d04c41ef30a02ac670"
+  },
+  {
+   "task_id": "HumanEval/101",
+   "sample_sha256": "dcda12d82cc0db7ab35c52ec2a4fa9445bab85d3b18d0f28c0dcca96883b1de8"
+  },
+  {
+   "task_id": "HumanEval/102",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/103",
+   "sample_sha256": "e3fc2e35cbeb2659814e8a453a181a0d75a52f1ace052c4715e489d793daa1b3"
+  },
+  {
+   "task_id": "HumanEval/104",
+   "sample_sha256": "ef4ca52e3d86917033e1786dd7c3dfa73564dae3a212fc12c76bf7b37b8f6ac3"
+  },
+  {
+   "task_id": "HumanEval/105",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/106",
+   "sample_sha256": "c6de4898d5f0910627be892f1dfe29efbabccf2850cd6b22cea7715976ba9605"
+  },
+  {
+   "task_id": "HumanEval/107",
+   "sample_sha256": "5fa1ed4a891d38c136f25faa9ebbf50d659b08598431c0e62668df175803f0f4"
+  },
+  {
+   "task_id": "HumanEval/108",
+   "sample_sha256": "49a472bb5097cb1038134412ce69f408144be8aa696db784b35b3759b66f66be"
+  },
+  {
+   "task_id": "HumanEval/109",
+   "sample_sha256": "ea372bf3d1c134d3441243dd5abbbb3315bacb0072137811382c48ed636dec19"
+  },
+  {
+   "task_id": "HumanEval/11",
+   "sample_sha256": "874eb89af584e9c4ba02889181f6f864b118f435625a167918eecf6482927bfd"
+  },
+  {
+   "task_id": "HumanEval/110",
+   "sample_sha256": "10a5496b78ef29ac89da3d4b32140a84ff03842f679cbef9f89b49f51f23da79"
+  },
+  {
+   "task_id": "HumanEval/111",
+   "sample_sha256": "be1c614a0e46d03525eb9e9ef7325e43b5828e64d193f839fc986f7889d08389"
+  },
+  {
+   "task_id": "HumanEval/112",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/113",
+   "sample_sha256": "a6f60e8d0bbb1faa50979df1a41f2ba858827c1e677bc6ca666ab35fcd54590e"
+  },
+  {
+   "task_id": "HumanEval/114",
+   "sample_sha256": "576b48c83fb3a7d510b9a08ec61fdddf9ec3ac333b6d983a83e55fab59d6fa30"
+  },
+  {
+   "task_id": "HumanEval/115",
+   "sample_sha256": "089ceca7af60538ff15e3830afd2518ab353b3c5cbdb21a062a0dc1ad5a5e515"
+  },
+  {
+   "task_id": "HumanEval/116",
+   "sample_sha256": "4b0124bf1df3fe133be3e4345fbf97fe4b21585d7a1445c81c2b0e9fe18ced61"
+  },
+  {
+   "task_id": "HumanEval/117",
+   "sample_sha256": "d171794c5c1f7a50aeb8f7056ab84a4fbcd6fbd594b1999bddaefdd03efc0591"
+  },
+  {
+   "task_id": "HumanEval/118",
+   "sample_sha256": "d171794c5c1f7a50aeb8f7056ab84a4fbcd6fbd594b1999bddaefdd03efc0591"
+  },
+  {
+   "task_id": "HumanEval/119",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/12",
+   "sample_sha256": "96bdcb301ad1472f90e2ad615e925cf008e9d8b5032628239dc81ea8c2529852"
+  },
+  {
+   "task_id": "HumanEval/120",
+   "sample_sha256": "4fc2e9575e053680070f3f7e9f5138c21edafbd638a977dd2761296db741888c"
+  },
+  {
+   "task_id": "HumanEval/121",
+   "sample_sha256": "22607c3482b11c55535e5c6930d3dc3716c6ca14157a8703bf73c4cc6891fa7c"
+  },
+  {
+   "task_id": "HumanEval/122",
+   "sample_sha256": "063ea55a2a4121f2f97bd678514994d46bca2dd2226c7af7fc88687ec3a9d55f"
+  },
+  {
+   "task_id": "HumanEval/123",
+   "sample_sha256": "6f567ea9a672ff990d2ab02a60232c641e4c84cea8a01a19ff308a7ccf46c07b"
+  },
+  {
+   "task_id": "HumanEval/124",
+   "sample_sha256": "60c00d0ef80a5b8a2feb0ab1820ae14cabfb3ffdf4e490d281f2c68021cc1f65"
+  },
+  {
+   "task_id": "HumanEval/125",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/126",
+   "sample_sha256": "dd26bd78be90ae39f1dce58b648c6f5a9a236108c99dd191cfbc9f1949d343ae"
+  },
+  {
+   "task_id": "HumanEval/127",
+   "sample_sha256": "e7522a0b17d5259d7da6c9e22aab6e177d89c65269bd2ced49b5303283df4c41"
+  },
+  {
+   "task_id": "HumanEval/128",
+   "sample_sha256": "287433a64c9b7c56e65d5f7dfa25b2bc01c648d04a2dfe391e6e9bc062ae4ff3"
+  },
+  {
+   "task_id": "HumanEval/129",
+   "sample_sha256": "07c88648eec66700c49e70a828fb7fd42ff3dcf5331586e54f0178e817b6bc41"
+  },
+  {
+   "task_id": "HumanEval/13",
+   "sample_sha256": "3f7dd0e9c18bef396c7dab7987f9cd3667d65843a3ffb7b58e8dd2cd88840463"
+  },
+  {
+   "task_id": "HumanEval/130",
+   "sample_sha256": "e54be7907f997081ef2b14b6d118c3cb37518a1e7ed02a45ce49d79d6050e5ac"
+  },
+  {
+   "task_id": "HumanEval/131",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/132",
+   "sample_sha256": "621ee6ef579bfba5b033a6799232ecf99ec26a5121cfb38bd85d9a57a92993e3"
+  },
+  {
+   "task_id": "HumanEval/133",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/134",
+   "sample_sha256": "b6c89af9fa6f264719884703b3f6ac4fd1ece71c24e97d3eb80992bf6e3868be"
+  },
+  {
+   "task_id": "HumanEval/135",
+   "sample_sha256": "6db1abddc275f6755c6a54df912019daee0b4e2c3ac88bd651fbf62f8c66a32b"
+  },
+  {
+   "task_id": "HumanEval/136",
+   "sample_sha256": "e9df9c4a72fe84ffac95e69a1fb10ba318d6697a96be74f360096407af7ccdcf"
+  },
+  {
+   "task_id": "HumanEval/137",
+   "sample_sha256": "6db86283ae4ddd0d2e71438ca99183ef54f5aba9a4acfc8240534ec384ac1d64"
+  },
+  {
+   "task_id": "HumanEval/138",
+   "sample_sha256": "242c9545f7f72b88cb26a319a7ad8af40089023b1d9d7efaf8bd9aec3acca3b4"
+  },
+  {
+   "task_id": "HumanEval/139",
+   "sample_sha256": "659c21154d01cc87a0946a40f6f17189619210f1368038f52abffd5198a82fb1"
+  },
+  {
+   "task_id": "HumanEval/14",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/140",
+   "sample_sha256": "7b9b2b5f875566d9dc61e90570c40f65d51c2461319bb95d706d38df3cf99be1"
+  },
+  {
+   "task_id": "HumanEval/141",
+   "sample_sha256": "6d5de566c259c44db1ce46bbba94d4bc651cd3106d393aad0248a56691b4718a"
+  },
+  {
+   "task_id": "HumanEval/142",
+   "sample_sha256": "d23d3e5b4ae40577942f8998f8e32d3575d6200024d20cfa42b2dc045ff77d18"
+  },
+  {
+   "task_id": "HumanEval/143",
+   "sample_sha256": "e74537b87ecdb4d0d4ddbd7e393cacec094caab57b4d5c598766bcb9583147b4"
+  },
+  {
+   "task_id": "HumanEval/144",
+   "sample_sha256": "b4d7c301d8df8f92e5f318024d5164d68ccd4af917f42b9656a2f051e507814e"
+  },
+  {
+   "task_id": "HumanEval/145",
+   "sample_sha256": "d705cc540477be2929403aa8cd9dbbd82fe98ca71f8592b1843dfb224c10e9aa"
+  },
+  {
+   "task_id": "HumanEval/146",
+   "sample_sha256": "1aeeea3c0ae4ce96699221d7349fac4819316ff996a006fea13e01797d82cae8"
+  },
+  {
+   "task_id": "HumanEval/147",
+   "sample_sha256": "851395de6b69cf2bc21f5760d2c64560d7f3bbbf47fe7f551f4c42baf03bf121"
+  },
+  {
+   "task_id": "HumanEval/148",
+   "sample_sha256": "3120aeee0018bc8efea1f52a53cdfe24452fdf937724b7ec92c2be8bd427acb7"
+  },
+  {
+   "task_id": "HumanEval/149",
+   "sample_sha256": "aaa8a6802d051c72bd65a7b39db7d955c7f38d04ee8d79dba399cdb9270adced"
+  },
+  {
+   "task_id": "HumanEval/15",
+   "sample_sha256": "0f2e786a4197b491f2c3e49bbc71189ab5e4e8c4f3e0df0e4edf5ac2285b8f37"
+  },
+  {
+   "task_id": "HumanEval/150",
+   "sample_sha256": "9efb950605b1e539f0c9ffbddd1797858eb7d4a219d718d1931f141ba5987e14"
+  },
+  {
+   "task_id": "HumanEval/151",
+   "sample_sha256": "8db934f017aa7c3f4bdfb3316019ccbc9dad0ecfcd80d6e84f2d1386fbdb24eb"
+  },
+  {
+   "task_id": "HumanEval/152",
+   "sample_sha256": "8c63370d24f8ececf26420ae820448e35f0475819472a90616dc3faca9ff4e7a"
+  },
+  {
+   "task_id": "HumanEval/153",
+   "sample_sha256": "71f9ebd1ad226205fe04011cf495547fa08b466d8e9845246a8353dddcc183b8"
+  },
+  {
+   "task_id": "HumanEval/154",
+   "sample_sha256": "75f1a1ca39cca026a01e7abb0e98d22dcd74a78bf84ec0815f932fc93a570ff0"
+  },
+  {
+   "task_id": "HumanEval/155",
+   "sample_sha256": "ace0fde38d125c58c0e866dad6b467cbda723a7e0773ab7f144893c40a67f6c7"
+  },
+  {
+   "task_id": "HumanEval/156",
+   "sample_sha256": "b609b54aa3a82087686a13b746e1312e95a4f9307921cf7066a9da887effb876"
+  },
+  {
+   "task_id": "HumanEval/157",
+   "sample_sha256": "b8665d41bf168d85432a33e0a16f70324d83e4168063f37c33c405c369496717"
+  },
+  {
+   "task_id": "HumanEval/158",
+   "sample_sha256": "41388334ced544ed44b06bb2c347c3d50940bc2f1e5fcce43057393450339425"
+  },
+  {
+   "task_id": "HumanEval/159",
+   "sample_sha256": "67b12db0260af79254588c1fe50d22258e086097df6f56f904b92bae901fd85c"
+  },
+  {
+   "task_id": "HumanEval/16",
+   "sample_sha256": "b52dd7b21033f933a2bc6b53eb1ab0b5513aa154bc253d22b3fc72420acf924a"
+  },
+  {
+   "task_id": "HumanEval/160",
+   "sample_sha256": "54cd33e57fc410db9977aacec459f68c57ec40327ed97b3475b324da8ecbfcdd"
+  },
+  {
+   "task_id": "HumanEval/161",
+   "sample_sha256": "2d689136fcfd61a2bf0d6e4095b77c9818561356a57d039e7afa0d3e8c7807de"
+  },
+  {
+   "task_id": "HumanEval/162",
+   "sample_sha256": "583d79e4455fe0dafbbfcfe215415cd84057614b7c02d28e622f3e03d786947b"
+  },
+  {
+   "task_id": "HumanEval/163",
+   "sample_sha256": "3787ab0f9980459fa89272c170437e359aabd280f5f6a4d5d0fb6794fb53be9a"
+  },
+  {
+   "task_id": "HumanEval/17",
+   "sample_sha256": "b275fe757e7f118b8490572ec71d695156c972b59e15aed483b204d50f197a9a"
+  },
+  {
+   "task_id": "HumanEval/18",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/19",
+   "sample_sha256": "c36ab87111f1ffc7a3a8b213c3fd32b84aad5b38f956aa4d89ff30fee96d6fe9"
+  },
+  {
+   "task_id": "HumanEval/2",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/20",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/21",
+   "sample_sha256": "c83287fa0c0581094096674272da53611f60d060dab9ccfad33c74639542de02"
+  },
+  {
+   "task_id": "HumanEval/22",
+   "sample_sha256": "996c98279d01bde01f4cc440ebc5481d2303e79697d2ecb40cf7c015f3746452"
+  },
+  {
+   "task_id": "HumanEval/23",
+   "sample_sha256": "ea84f8721fe561a34ea15d6015eed7caeee737066a579948dabffcd23212cca6"
+  },
+  {
+   "task_id": "HumanEval/24",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/25",
+   "sample_sha256": "812baf3d7b67f5c5a75dc83ee53896a16b1e978ef371b81eee6ed3f653a2a012"
+  },
+  {
+   "task_id": "HumanEval/26",
+   "sample_sha256": "e6fbca724dea6bd546ca6244d91a6e0ded241ff2bf05066f03d99a46caa08295"
+  },
+  {
+   "task_id": "HumanEval/27",
+   "sample_sha256": "6402a47e85660bf1818c348852537717b7a22a8b83d295172b654ca814643c22"
+  },
+  {
+   "task_id": "HumanEval/28",
+   "sample_sha256": "d7bd0a38f6aefe762e8530acc6558af5384f9d20aeefe63f8e874cab614f47fe"
+  },
+  {
+   "task_id": "HumanEval/29",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/3",
+   "sample_sha256": "22bc5b9f2ee562910c5f7d24b354b8c85cdb1369730c9cc02f609f6cd8572333"
+  },
+  {
+   "task_id": "HumanEval/30",
+   "sample_sha256": "37b694acee9b773505320bb2666a890b960a838840daa1de05ab677f88311e3c"
+  },
+  {
+   "task_id": "HumanEval/31",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/32",
+   "sample_sha256": "5354c647d399bc126557af31cca40ee8a96706092e6412fe041b873aa5eb6def"
+  },
+  {
+   "task_id": "HumanEval/33",
+   "sample_sha256": "efdf1fdd63963a04d2ea5ca37205923d05185adab104d7c73362ca3e84ebfc35"
+  },
+  {
+   "task_id": "HumanEval/34",
+   "sample_sha256": "6f82fd79f034afa844537253d44dd5a8629dd0df896c70c2af758f50b40046f9"
+  },
+  {
+   "task_id": "HumanEval/35",
+   "sample_sha256": "7b5807b939c74a8cd5cdaabe81e42c8574ec3baa9591962415876d415d53f0b1"
+  },
+  {
+   "task_id": "HumanEval/36",
+   "sample_sha256": "8dfdd41437284d3c786af170446743993830068a88516457dc406d2ea29a5cf1"
+  },
+  {
+   "task_id": "HumanEval/37",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/38",
+   "sample_sha256": "d171794c5c1f7a50aeb8f7056ab84a4fbcd6fbd594b1999bddaefdd03efc0591"
+  },
+  {
+   "task_id": "HumanEval/39",
+   "sample_sha256": "6b8ea673e5474e491bf0d87dd48ae13cc809c06f08eacf7a83d3e9da1698bf4a"
+  },
+  {
+   "task_id": "HumanEval/4",
+   "sample_sha256": "f0cec842c8f58c59d21bad4b890ca34d2b032c6c08230beb256333c3b8004558"
+  },
+  {
+   "task_id": "HumanEval/40",
+   "sample_sha256": "8f6b602b695ae8e39c19bd6c7bd4eb236fcd0c29a34d9345c68d1dd76e3d3a02"
+  },
+  {
+   "task_id": "HumanEval/41",
+   "sample_sha256": "3a553ea36205b8854b02809d5fb71b3da5b67e31be6dbd05a3b6c5b2e17bebd8"
+  },
+  {
+   "task_id": "HumanEval/42",
+   "sample_sha256": "7dc5f9ef349961ba7e7ff73c1bfc7a206648a33e95f2aa8ece0dcc9cd7d36d8d"
+  },
+  {
+   "task_id": "HumanEval/43",
+   "sample_sha256": "6a16d9191c68aba283d39c3e941d4eba3dc277e84d06f6191cf66634b431aadf"
+  },
+  {
+   "task_id": "HumanEval/44",
+   "sample_sha256": "3bf1ebd5bf7558e1499d4147e1cc56ce4cccf993b930f04465cd84c072b8c385"
+  },
+  {
+   "task_id": "HumanEval/45",
+   "sample_sha256": "18e32fafd1d7f763f19ed1e9c60f74d92c2ee8a885c779f270bcf36b3bc0a279"
+  },
+  {
+   "task_id": "HumanEval/46",
+   "sample_sha256": "00694e5d019c4acd7a54f88f27fff2e1e7b0af9764807835deeca906c4f703d3"
+  },
+  {
+   "task_id": "HumanEval/47",
+   "sample_sha256": "71dd4a683461d7b6b263df3f9928215723ee076d3b666664d52f7869fc174829"
+  },
+  {
+   "task_id": "HumanEval/48",
+   "sample_sha256": "4096044ff76a36468b66626ca91e318abaf02b087adfe50e12e377b628c8ffb3"
+  },
+  {
+   "task_id": "HumanEval/49",
+   "sample_sha256": "57ff3350dc5a70e6e77b2a8dc6f3b2902b9f20794177d1021535e43ee76559a6"
+  },
+  {
+   "task_id": "HumanEval/5",
+   "sample_sha256": "07195128beea23e1b05775b0f5c6aacd32d6107623d05007a62faa39c49e76b3"
+  },
+  {
+   "task_id": "HumanEval/50",
+   "sample_sha256": "212efdfb1518c5663eda72750ef5eed50a5dd73cec78a39986299968764faf3f"
+  },
+  {
+   "task_id": "HumanEval/51",
+   "sample_sha256": "df33386ef57f6ec3bbca4f6730dabb035dfc19df23b9f96c8dc4315e1d050434"
+  },
+  {
+   "task_id": "HumanEval/52",
+   "sample_sha256": "132a24f687ac8e68c24b39fa54d06f30d51086234e8d8ce73e3cdcc1b71ae3ab"
+  },
+  {
+   "task_id": "HumanEval/53",
+   "sample_sha256": "0ad8f5d6024bf5fc0bcda0ba5269ac47d6fe22e9d0f059672ba048d0f10d1ebc"
+  },
+  {
+   "task_id": "HumanEval/54",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/55",
+   "sample_sha256": "656790db213777f6420bf48d68585b3b32b4cde3aae2d934f6953ad49a6d59f6"
+  },
+  {
+   "task_id": "HumanEval/56",
+   "sample_sha256": "062e3be53022fb597007e7caa9df1d930d6fa323729a60a76bd82247401a02a4"
+  },
+  {
+   "task_id": "HumanEval/57",
+   "sample_sha256": "a11d13e1f1b03ba460a06d5058f6fa86e513abd4a8cc808356f167fc0fe91904"
+  },
+  {
+   "task_id": "HumanEval/58",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/59",
+   "sample_sha256": "a246d2f095fd79aec6efe2de6f9ebb8c36ff95e364bde9b04982a31eb399b2d1"
+  },
+  {
+   "task_id": "HumanEval/6",
+   "sample_sha256": "dd76ef7c1855e4e30b027854882118e0e96bc2f459aa3e017176ac811ce9f661"
+  },
+  {
+   "task_id": "HumanEval/60",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/61",
+   "sample_sha256": "78156a2d4078a4113370d15ff8355dd712f7023d64c5cf8bda2133ce7ac350b5"
+  },
+  {
+   "task_id": "HumanEval/62",
+   "sample_sha256": "35ba2965e179b8a91d183fedc1ff482fdc7e0be10f1c77757bbf00d2a4d10f91"
+  },
+  {
+   "task_id": "HumanEval/63",
+   "sample_sha256": "b9f94dea1e016d033206a3840146f2530d5f2f0acab5093d5a87807ef166fe1b"
+  },
+  {
+   "task_id": "HumanEval/64",
+   "sample_sha256": "5ef3917f7ea446420772a1a5e8cee1c6a0e972e6418f23a3f7db9447bd6fec45"
+  },
+  {
+   "task_id": "HumanEval/65",
+   "sample_sha256": "d5d45f3aeb1fa569c535f03764951ca73ffe9a44c79458998035f91f6b9570d8"
+  },
+  {
+   "task_id": "HumanEval/66",
+   "sample_sha256": "1f94049df1fa8f5f0b376b29676addc77b461097aa3971aed6dfeea37272cbd1"
+  },
+  {
+   "task_id": "HumanEval/67",
+   "sample_sha256": "b3efff5b59b3ab7753312a1e9afdd8a1ad9ef4c7b9811a8bd63db842e50f5396"
+  },
+  {
+   "task_id": "HumanEval/68",
+   "sample_sha256": "b9274ae6a0949241c30653dcc28028ee9e8f9ff1fa50139fe4b98c1d6afbd018"
+  },
+  {
+   "task_id": "HumanEval/69",
+   "sample_sha256": "388af82871cc7894d1ba67338fcceff4b4ee088c335311b104f400c1ca44fb27"
+  },
+  {
+   "task_id": "HumanEval/7",
+   "sample_sha256": "6002f995d162c019f2122d3c5fe54409f9efcb39a9f03009ebb3ee6668412a39"
+  },
+  {
+   "task_id": "HumanEval/70",
+   "sample_sha256": "864b70898b596ebe54f658b605c4ca3eb5dbda681847c1a487fd720724d266d6"
+  },
+  {
+   "task_id": "HumanEval/71",
+   "sample_sha256": "09809d9483751f789a5ea1abbed4817b108ac832e7ad83083b5df05971d396ba"
+  },
+  {
+   "task_id": "HumanEval/72",
+   "sample_sha256": "401fe8f45f516ffb7f7e8b94ffd09fe559d77d0a41ceb6a4cae638ea4064908f"
+  },
+  {
+   "task_id": "HumanEval/73",
+   "sample_sha256": "813c4f3ffb2accc795a5ceaebdd1a744bc411a7416e6a1f6264efa1b48e19ca1"
+  },
+  {
+   "task_id": "HumanEval/74",
+   "sample_sha256": "0a9f79294a0316d6d7b7c3809e6a5f88856ba5ad38d5d67903fe94daf0ba61e5"
+  },
+  {
+   "task_id": "HumanEval/75",
+   "sample_sha256": "dbc5893e7053c84aedf3523bc39d05e3187c1f8fec32885703c6ebca97118e1e"
+  },
+  {
+   "task_id": "HumanEval/76",
+   "sample_sha256": "a45d17673f42b4b259b83a8a50e76182a7efa16a7d8ae7f4eebbfb5b81598c59"
+  },
+  {
+   "task_id": "HumanEval/77",
+   "sample_sha256": "47857d29f64f09185da953aa0bcd81843c203f35f1934e3720d6470e242380b1"
+  },
+  {
+   "task_id": "HumanEval/78",
+   "sample_sha256": "9b17762e2e2b0d21c7f6260924250c60b1eab0548408f759e4a4d3e7ff329f35"
+  },
+  {
+   "task_id": "HumanEval/79",
+   "sample_sha256": "a596718b798d56d37dfe4d1bb3993693a161086382cc49b5d3e54caa1e2bdad3"
+  },
+  {
+   "task_id": "HumanEval/8",
+   "sample_sha256": "a88dded09f846743d497555b700a824e5a70ba925eae6d022cc6b40e7c2a8810"
+  },
+  {
+   "task_id": "HumanEval/80",
+   "sample_sha256": "2a45368ccb17afb6f6f83a25c81a74010e87ceb71037e264b678bd9e7b6d6e0d"
+  },
+  {
+   "task_id": "HumanEval/81",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+   "task_id": "HumanEval/82",
+   "sample_sha256": "12288114f9853e86fef7b755c2f4108d58a496ab47d8851cbc5c3f703c6bac52"
+  },
+  {
+   "task_id": "HumanEval/83",
+   "sample_sha256": "12275f355caa666bebcac7148ee1fbe10354e7613ec034613e46c8def79df078"
+  },
+  {
+   "task_id": "HumanEval/84",
+   "sample_sha256": "8fca46dc136a47b5705bd7cf7f7bee22dfaeab1fe63550cbf49e82e5855ca3cd"
+  },
+  {
+   "task_id": "HumanEval/85",
+   "sample_sha256": "3be57aecf5153de05d1dfc97677d6bef9b113dc5613b8889008e877f6b8d892a"
+  },
+  {
+   "task_id": "HumanEval/86",
+   "sample_sha256": "a280f78c81658b9f501c6240dc79a39c308b055f3f4dc3f15e6a9b799ad8d35f"
+  },
+  {
+   "task_id": "HumanEval/87",
+   "sample_sha256": "1a49cf3924d2378763f3c5bd4b22b86b41cb425cf3187248c50831b93815d3cb"
+  },
+  {
+   "task_id": "HumanEval/88",
+   "sample_sha256": "3888669ca26b289dfd8036ee4219a2ceb482ffba20111b761f58eb135412ad5c"
+  },
+  {
+   "task_id": "HumanEval/89",
+   "sample_sha256": "fac67cbe297dc599eb10249b654c1cffe8c5ac89e5064482fde71a109b84c869"
+  },
+  {
+   "task_id": "HumanEval/9",
+   "sample_sha256": "2f58e393c6cb0d0c6bc7e15e83ac4778ecc127443ef16d30c7968b006fbfe593"
+  },
+  {
+   "task_id": "HumanEval/90",
+   "sample_sha256": "ea964ed067a0bd1d6c68559e34aa68be441082d9b1fcc5a21cda0fd213411a40"
+  },
+  {
+   "task_id": "HumanEval/91",
+   "sample_sha256": "5f8b5637fdd167a9bbb090d277b2cf12df40b43e860b492d9062ab215f7a29d9"
+  },
+  {
+   "task_id": "HumanEval/92",
+   "sample_sha256": "00ca92d82fc381206331afe41c1d80fe5286d17c55e7e78251c5cd8d49e33b93"
+  },
+  {
+   "task_id": "HumanEval/93",
+   "sample_sha256": "8c5257b68833555fe42c7fd1cdca08dbc4d0cef569b6d892e0df41cd1387e69a"
+  },
+  {
+   "task_id": "HumanEval/94",
+   "sample_sha256": "6c86decded1af8a3794f695f51a941abbf212c5f8cb15f1609bc16d8f7f6d300"
+  },
+  {
+   "task_id": "HumanEval/95",
+   "sample_sha256": "ea8bab45c4be200bdbf162568732a5181e92261e3f3eabb4cacd84300a49219a"
+  },
+  {
+   "task_id": "HumanEval/96",
+   "sample_sha256": "a8a3003ce85a4fb6b8e8939ccd27fbef67759892e2d4a60df68cccc51075195a"
+  },
+  {
+   "task_id": "HumanEval/97",
+   "sample_sha256": "62b72c23a8c46f790bdfe2c42b51c98e52278fd326a77fd5b8ee5e6bd2eee65c"
+  },
+  {
+   "task_id": "HumanEval/98",
+   "sample_sha256": "42fe1eee612e7cc813ee79445838d1b96cacebae86bfb4f579fe179a78c506ae"
+  },
+  {
+   "task_id": "HumanEval/99",
+   "sample_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  }
+ ]
+}

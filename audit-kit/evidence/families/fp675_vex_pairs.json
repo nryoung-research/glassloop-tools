@@ -1,0 +1,599 @@
+{
+ "family_sha256": "7fceafa2fdb7b02a48937d2331439962c23c92498f58711299d0d57dd6ff8cce",
+ "graded_pass": 60,
+ "items": [
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, -1)\n    cur = _spin(cur, 5)\n    return cur\n```",
+   "id": "VEX/088",
+   "ops": [
+    "spin-1",
+    "spin5"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=-1, then apply the vex spin operation with n=5. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/088"
+  },
+  {
+   "answer": "```python\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 4)\n    cur = _weave(cur, [7, 7, 7])\n    return cur\n```",
+   "id": "VEX/128",
+   "ops": [
+    "chunk4",
+    "weave777"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex chunk operation with k=4, then apply the vex weave operation with b=[7, 7, 7]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/128"
+  },
+  {
+   "answer": "```python\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 3)\n    cur = _spin(cur, 2)\n    return cur\n```",
+   "id": "VEX/137",
+   "ops": [
+    "chunk3",
+    "spin2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex chunk operation with k=3, then apply the vex spin operation with n=2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/137"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, -1)\n    cur = _spin(cur, -2)\n    return cur\n```",
+   "id": "VEX/074",
+   "ops": [
+    "spin-1",
+    "spin-2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=-1, then apply the vex spin operation with n=-2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/074"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x > 10)\n    cur = _spin(cur, 5)\n    return cur\n```",
+   "id": "VEX/075",
+   "ops": [
+    "prune_gt10",
+    "spin5"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements greater than 10, then apply the vex spin operation with n=5. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/075"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x % 2 == 0)\n    cur = _chunk(cur, 2)\n    return cur\n```",
+   "id": "VEX/061",
+   "ops": [
+    "prune_even",
+    "chunk2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements that are even numbers, then apply the vex chunk operation with k=2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/061"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, -2)\n    cur = _chunk(cur, 3)\n    return cur\n```",
+   "id": "VEX/045",
+   "ops": [
+    "spin-2",
+    "chunk3"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=-2, then apply the vex chunk operation with k=3. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/045"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [100, 200])\n    cur = _prune(cur, lambda x: isinstance(x, int) and x < 0)\n    return cur\n```",
+   "id": "VEX/050",
+   "ops": [
+    "weave100200",
+    "prune_neg"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[100, 200], then apply the vex prune operation, pruning elements that are negative. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/050"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 7)\n    cur = _weave(cur, [-1, -2, -3, -4])\n    return cur\n```",
+   "id": "VEX/034",
+   "ops": [
+    "spin7",
+    "weave-1-2-3-4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=7, then apply the vex weave operation with b=[-1, -2, -3, -4]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/034"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 7)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x < 0)\n    return cur\n```",
+   "id": "VEX/068",
+   "ops": [
+    "spin7",
+    "prune_neg"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=7, then apply the vex prune operation, pruning elements that are negative. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/068"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 5)\n    cur = _weave(cur, [-1, -2, -3, -4])\n    return cur\n```",
+   "id": "VEX/076",
+   "ops": [
+    "spin5",
+    "weave-1-2-3-4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=5, then apply the vex weave operation with b=[-1, -2, -3, -4]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/076"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 1)\n    cur = _spin(cur, 7)\n    return cur\n```",
+   "id": "VEX/044",
+   "ops": [
+    "spin1",
+    "spin7"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=1, then apply the vex spin operation with n=7. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/044"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [100, 200])\n    cur = _prune(cur, lambda x: isinstance(x, int) and x > 10)\n    return cur\n```",
+   "id": "VEX/089",
+   "ops": [
+    "weave100200",
+    "prune_gt10"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[100, 200], then apply the vex prune operation, pruning elements greater than 10. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/089"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 1)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x > 10)\n    return cur\n```",
+   "id": "VEX/023",
+   "ops": [
+    "spin1",
+    "prune_gt10"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=1, then apply the vex prune operation, pruning elements greater than 10. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/023"
+  },
+  {
+   "answer": "```python\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 4)\n    cur = _spin(cur, -1)\n    return cur\n```",
+   "id": "VEX/123",
+   "ops": [
+    "chunk4",
+    "spin-1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex chunk operation with k=4, then apply the vex spin operation with n=-1. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/123"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [100, 200])\n    cur = _prune(cur, lambda x: isinstance(x, int) and x % 2 == 0)\n    return cur\n```",
+   "id": "VEX/046",
+   "ops": [
+    "weave100200",
+    "prune_even"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[100, 200], then apply the vex prune operation, pruning elements that are even numbers. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/046"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 7)\n    return cur\n```",
+   "id": "VEX/006",
+   "ops": [
+    "spin7"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=7. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/006"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x < 0)\n    return cur\n```",
+   "id": "VEX/011",
+   "ops": [
+    "prune_neg"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements that are negative. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/011"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x > 10)\n    cur = _chunk(cur, 2)\n    return cur\n```",
+   "id": "VEX/109",
+   "ops": [
+    "prune_gt10",
+    "chunk2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements greater than 10, then apply the vex chunk operation with k=2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/109"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x % 2 == 0)\n    cur = _chunk(cur, 4)\n    return cur\n```",
+   "id": "VEX/116",
+   "ops": [
+    "prune_even",
+    "chunk4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements that are even numbers, then apply the vex chunk operation with k=4. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/116"
+  },
+  {
+   "answer": "```python\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 3)\n    cur = _spin(cur, 7)\n    return cur\n```",
+   "id": "VEX/032",
+   "ops": [
+    "chunk3",
+    "spin7"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex chunk operation with k=3, then apply the vex spin operation with n=7. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/032"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [-1, -2, -3, -4])\n    cur = _chunk(cur, 4)\n    return cur\n```",
+   "id": "VEX/043",
+   "ops": [
+    "weave-1-2-3-4",
+    "chunk4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[-1, -2, -3, -4], then apply the vex chunk operation with k=4. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/043"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 7)\n    cur = _weave(cur, [7, 7, 7])\n    return cur\n```",
+   "id": "VEX/071",
+   "ops": [
+    "spin7",
+    "weave777"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=7, then apply the vex weave operation with b=[7, 7, 7]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/071"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 7)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x % 2 == 0)\n    return cur\n```",
+   "id": "VEX/079",
+   "ops": [
+    "spin7",
+    "prune_even"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=7, then apply the vex prune operation, pruning elements that are even numbers. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/079"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 7)\n    cur = _spin(cur, -2)\n    return cur\n```",
+   "id": "VEX/059",
+   "ops": [
+    "spin7",
+    "spin-2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=7, then apply the vex spin operation with n=-2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/059"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [100, 200])\n    cur = _chunk(cur, 2)\n    return cur\n```",
+   "id": "VEX/055",
+   "ops": [
+    "weave100200",
+    "chunk2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[100, 200], then apply the vex chunk operation with k=2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/055"
+  },
+  {
+   "answer": "```python\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 2)\n    cur = _weave(cur, [100, 200])\n    return cur\n```",
+   "id": "VEX/072",
+   "ops": [
+    "chunk2",
+    "weave100200"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex chunk operation with k=2, then apply the vex weave operation with b=[100, 200]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/072"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, -1)\n    return cur\n```",
+   "id": "VEX/007",
+   "ops": [
+    "spin-1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=-1. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/007"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x % 2 == 0)\n    cur = _spin(cur, 2)\n    return cur\n```",
+   "id": "VEX/105",
+   "ops": [
+    "prune_even",
+    "spin2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements that are even numbers, then apply the vex spin operation with n=2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/105"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [7, 7, 7])\n    cur = _spin(cur, 2)\n    return cur\n```",
+   "id": "VEX/101",
+   "ops": [
+    "weave777",
+    "spin2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[7, 7, 7], then apply the vex spin operation with n=2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/101"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 7)\n    cur = _spin(cur, 5)\n    return cur\n```",
+   "id": "VEX/095",
+   "ops": [
+    "spin7",
+    "spin5"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=7, then apply the vex spin operation with n=5. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/095"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, -1)\n    cur = _chunk(cur, 3)\n    return cur\n```",
+   "id": "VEX/133",
+   "ops": [
+    "spin-1",
+    "chunk3"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=-1, then apply the vex chunk operation with k=3. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/133"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [-1, -2, -3, -4])\n    return cur\n```",
+   "id": "VEX/015",
+   "ops": [
+    "weave-1-2-3-4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[-1, -2, -3, -4]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/015"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 5)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x % 2 == 0)\n    return cur\n```",
+   "id": "VEX/106",
+   "ops": [
+    "spin5",
+    "prune_even"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=5, then apply the vex prune operation, pruning elements that are even numbers. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/106"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 7)\n    cur = _chunk(cur, 3)\n    return cur\n```",
+   "id": "VEX/078",
+   "ops": [
+    "spin7",
+    "chunk3"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=7, then apply the vex chunk operation with k=3. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/078"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 1)\n    cur = _weave(cur, [7, 7, 7])\n    return cur\n```",
+   "id": "VEX/140",
+   "ops": [
+    "spin1",
+    "weave777"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=1, then apply the vex weave operation with b=[7, 7, 7]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/140"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x > 10)\n    cur = _weave(cur, [100, 200])\n    return cur\n```",
+   "id": "VEX/038",
+   "ops": [
+    "prune_gt10",
+    "weave100200"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements greater than 10, then apply the vex weave operation with b=[100, 200]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/038"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, -2)\n    cur = _spin(cur, 2)\n    return cur\n```",
+   "id": "VEX/024",
+   "ops": [
+    "spin-2",
+    "spin2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=-2, then apply the vex spin operation with n=2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/024"
+  },
+  {
+   "answer": "```python\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 4)\n    cur = _chunk(cur, 2)\n    return cur\n```",
+   "id": "VEX/042",
+   "ops": [
+    "chunk4",
+    "chunk2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex chunk operation with k=4, then apply the vex chunk operation with k=2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/042"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [7, 7, 7])\n    cur = _chunk(cur, 4)\n    return cur\n```",
+   "id": "VEX/052",
+   "ops": [
+    "weave777",
+    "chunk4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[7, 7, 7], then apply the vex chunk operation with k=4. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/052"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [-1, -2, -3, -4])\n    cur = _spin(cur, 2)\n    return cur\n```",
+   "id": "VEX/070",
+   "ops": [
+    "weave-1-2-3-4",
+    "spin2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[-1, -2, -3, -4], then apply the vex spin operation with n=2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/070"
+  },
+  {
+   "answer": "```python\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 4)\n    cur = _spin(cur, 7)\n    return cur\n```",
+   "id": "VEX/049",
+   "ops": [
+    "chunk4",
+    "spin7"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex chunk operation with k=4, then apply the vex spin operation with n=7. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/049"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [100, 200])\n    cur = _chunk(cur, 4)\n    return cur\n```",
+   "id": "VEX/017",
+   "ops": [
+    "weave100200",
+    "chunk4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[100, 200], then apply the vex chunk operation with k=4. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/017"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, -2)\n    cur = _chunk(cur, 2)\n    return cur\n```",
+   "id": "VEX/136",
+   "ops": [
+    "spin-2",
+    "chunk2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=-2, then apply the vex chunk operation with k=2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/136"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [-1, -2, -3, -4])\n    cur = _spin(cur, 1)\n    return cur\n```",
+   "id": "VEX/073",
+   "ops": [
+    "weave-1-2-3-4",
+    "spin1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[-1, -2, -3, -4], then apply the vex spin operation with n=1. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/073"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x > 10)\n    cur = _chunk(cur, 3)\n    return cur\n```",
+   "id": "VEX/131",
+   "ops": [
+    "prune_gt10",
+    "chunk3"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements greater than 10, then apply the vex chunk operation with k=3. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/131"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, -1)\n    cur = _weave(cur, [7, 7, 7])\n    return cur\n```",
+   "id": "VEX/093",
+   "ops": [
+    "spin-1",
+    "weave777"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=-1, then apply the vex weave operation with b=[7, 7, 7]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/093"
+  },
+  {
+   "answer": "```python\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 3)\n    return cur\n```",
+   "id": "VEX/001",
+   "ops": [
+    "chunk3"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex chunk operation with k=3. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/001"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x > 10)\n    return cur\n```",
+   "id": "VEX/010",
+   "ops": [
+    "prune_gt10"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements greater than 10. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/010"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, -2)\n    cur = _spin(cur, 7)\n    return cur\n```",
+   "id": "VEX/056",
+   "ops": [
+    "spin-2",
+    "spin7"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=-2, then apply the vex spin operation with n=7. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/056"
+  },
+  {
+   "answer": "```python\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _weave(cur, [100, 200])\n    return cur\n```",
+   "id": "VEX/013",
+   "ops": [
+    "weave100200"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex weave operation with b=[100, 200]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/013"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x < 0)\n    cur = _spin(cur, 1)\n    return cur\n```",
+   "id": "VEX/080",
+   "ops": [
+    "prune_neg",
+    "spin1"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements that are negative, then apply the vex spin operation with n=1. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/080"
+  },
+  {
+   "answer": "```python\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 2)\n    return cur\n```",
+   "id": "VEX/000",
+   "ops": [
+    "chunk2"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex chunk operation with k=2. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/000"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 2)\n    cur = _chunk(cur, 4)\n    return cur\n```",
+   "id": "VEX/065",
+   "ops": [
+    "spin2",
+    "chunk4"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=2, then apply the vex chunk operation with k=4. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/065"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, -2)\n    cur = _weave(cur, [100, 200])\n    return cur\n```",
+   "id": "VEX/060",
+   "ops": [
+    "spin-2",
+    "weave100200"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=-2, then apply the vex weave operation with b=[100, 200]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/060"
+  },
+  {
+   "answer": "```python\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n\n\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 4)\n    cur = _weave(cur, [100, 200])\n    return cur\n```",
+   "id": "VEX/021",
+   "ops": [
+    "chunk4",
+    "weave100200"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex chunk operation with k=4, then apply the vex weave operation with b=[100, 200]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/021"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x < 0)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x > 10)\n    return cur\n```",
+   "id": "VEX/135",
+   "ops": [
+    "prune_neg",
+    "prune_gt10"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements that are negative, then apply the vex prune operation, pruning elements greater than 10. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/135"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _weave(a, b):\n    out = []\n    n = min(len(a), len(b))\n    for i in range(n):\n        out.append(a[i])\n        out.append(b[i])\n    rest = list(a[n:]) if len(a) > len(b) else list(b[n:])\n    out.extend(reversed(rest))\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, -1)\n    cur = _weave(cur, [100, 200])\n    return cur\n```",
+   "id": "VEX/025",
+   "ops": [
+    "spin-1",
+    "weave100200"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=-1, then apply the vex weave operation with b=[100, 200]. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/025"
+  },
+  {
+   "answer": "```python\ndef _spin(xs, n):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(n) % (L + 1)\n    if m == L:\n        m = 0\n    if n < 0:\n        m = (L - m) % L\n    return list(xs[m:]) + list(xs[:m])\n\n\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 5)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x > 10)\n    return cur\n```",
+   "id": "VEX/054",
+   "ops": [
+    "spin5",
+    "prune_gt10"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex spin operation with n=5, then apply the vex prune operation, pruning elements greater than 10. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/054"
+  },
+  {
+   "answer": "```python\ndef _prune(xs, p):\n    out = []\n    seen = False\n    for x in xs:\n        if p(x):\n            if not seen:\n                seen = True\n                out.append(x)\n            continue\n        out.append(x)\n    return out\n\n\ndef f(xs):\n    cur = list(xs)\n    cur = _prune(cur, lambda x: isinstance(x, int) and x % 2 == 0)\n    return cur\n```",
+   "id": "VEX/009",
+   "ops": [
+    "prune_even"
+   ],
+   "prompt": "Write a single self-contained Python function:\n\n    def f(xs):\n\nthat takes a list `xs` and returns the result of the following vex\npipeline: apply the vex prune operation, pruning elements that are even numbers. Return the final result.\n\nUse the exact semantics of the vex operations named above. The vex\nlibrary is NOT available and its definitions are not provided here -\nimplement the required behavior directly inside your function.\nProvide only the function in a python code block.",
+   "task_id": "VEX/009"
+  }
+ ],
+ "kind": "fp675_vex_pairs",
+ "n": 60
+}

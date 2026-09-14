@@ -1,0 +1,679 @@
+{
+ "backend_info": {
+  "backend": "hf",
+  "param_dtypes": [
+   "torch.bfloat16"
+  ],
+  "torch": "2.13.0+cu130"
+ },
+ "config": {
+  "dtype": "bfloat16",
+  "greedy": true,
+  "max_new_tokens": 512,
+  "torch": "2.13.0+cu130"
+ },
+ "family_file": "/home/nryoung/fp650/flagship/climber/quill_family.json",
+ "family_file_sha256": "300578953d12a786904028a25a65e41c2a5d63e390d5cbf899c9efea2c1682c0",
+ "family_module": "quill_tasks",
+ "instrument": "cap-eval-v1",
+ "model": "/home/nryoung/fp682b/pq3/A_written_bf16",
+ "n_passed": 56,
+ "n_tasks": 60,
+ "pass_rate": 0.9333,
+ "revision": null,
+ "rows": [
+  {
+   "code_sha256": "07440dbf240557d8278b7d5e15c85e8cbee1d5a1d12a1e07149f1781525d19f6",
+   "detail": "pass",
+   "ops": [
+    "tilt-1",
+    "lace_mm"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/048"
+  },
+  {
+   "code_sha256": "68da3abbbe1a64c2e82fce768ea938af625c5d57974609100342c5602a37c1e7",
+   "detail": "pass",
+   "ops": [
+    "tilt-1",
+    "sift_digit"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/062"
+  },
+  {
+   "code_sha256": "f7ea979e36f0948f5f1f10db6bf42a9b634805a247ee4d6b3e037a27fee41618",
+   "detail": "pass",
+   "ops": [
+    "lace_9",
+    "lace_mm"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/094"
+  },
+  {
+   "code_sha256": "f2d7751338be04301dd1a63651e5f4dd60a83c9bc0231a8efbdd53b331d4a724",
+   "detail": "pass",
+   "ops": [
+    "fold3"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/001"
+  },
+  {
+   "code_sha256": "38bbf0f134909c0af8d4f91a18c828588cf9039898ad324f414cc50286920136",
+   "detail": "pass",
+   "ops": [
+    "fold4",
+    "sift_vowel"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/073"
+  },
+  {
+   "code_sha256": "e3573601fa9e41437ac28d496c36e6818296196a7b702bec2a17db074be47625",
+   "detail": "pass",
+   "ops": [
+    "knot",
+    "sift_vowel"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/078"
+  },
+  {
+   "code_sha256": "c03e39fae7151307f8679d1485af8c2df1c5210ba96330d6e069634807289bba",
+   "detail": "pass",
+   "ops": [
+    "tilt2",
+    "tilt1"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/111"
+  },
+  {
+   "code_sha256": "0bcb27961566757fb915f6e749b0a81213b388c87cdac68ec6a104ab9e1ec949",
+   "detail": "pass",
+   "ops": [
+    "tilt3",
+    "fold2"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/041"
+  },
+  {
+   "code_sha256": "d5a16a0ad8471a0ab0291bfb241ba77051dc810275d8ca4b3299315c9de13778",
+   "detail": "pass",
+   "ops": [
+    "tilt3",
+    "tilt1"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/106"
+  },
+  {
+   "code_sha256": "a29de1f02fcd8945ef31eaffe61ea813c33a28d852d38e234c4eab074f1ac685",
+   "detail": "pass",
+   "ops": [
+    "fold4",
+    "lace_9"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/103"
+  },
+  {
+   "code_sha256": "2a68b4869df57c243af143671235212fa98b36cdf90870acabe3c7f493289e2e",
+   "detail": "pass",
+   "ops": [
+    "lace_mm",
+    "lace_XY"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/063"
+  },
+  {
+   "code_sha256": "0b729b915baf11b56680b33baf475774a2ece13573129d5b532f32f54af02907",
+   "detail": "pass",
+   "ops": [
+    "tilt-1",
+    "tilt3"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/015"
+  },
+  {
+   "code_sha256": "6a0f6598c276d8446b8e55ab8e2b9b0f73b491aa63484d21fc96d07ed5b6e723",
+   "detail": "pass",
+   "ops": [
+    "sift_digit",
+    "lace_XY"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/026"
+  },
+  {
+   "code_sha256": "c5028e150caea67636d5b1c6db1d1472ee55c8a8dc5f05dbc168ec1450f7cc01",
+   "detail": "pass",
+   "ops": [
+    "sift_digit",
+    "fold3"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/114"
+  },
+  {
+   "code_sha256": "f9956cdcceec7db5b9e5ce3d721596746f5b27c30dfd1ab077b88dc98ddca236",
+   "detail": "pass",
+   "ops": [
+    "sift_digit",
+    "tilt2"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/080"
+  },
+  {
+   "code_sha256": "b4919de856214a590e584368e9f26da6baf121090e84724ce91f2ce6bdd702b6",
+   "detail": "pass",
+   "ops": [
+    "fold2",
+    "tilt3"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/050"
+  },
+  {
+   "code_sha256": "a4f2bd245ae178026efa1a01330281a4f05c7691fd52928dc26016f155194c67",
+   "detail": "pass",
+   "ops": [
+    "sift_upper",
+    "sift_digit"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/109"
+  },
+  {
+   "code_sha256": "c8636c972c74cecff2415e45ccd7083d3602d5ccfc72c5a854a8c194247d396f",
+   "detail": "pass",
+   "ops": [
+    "fold3",
+    "lace_9"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/056"
+  },
+  {
+   "code_sha256": "c201297385614ae47a5c731828015e9f70963c26add7f8ae5710bf1cd0368d89",
+   "detail": "wrong",
+   "ops": [
+    "knot",
+    "ledger"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "QUILL/049"
+  },
+  {
+   "code_sha256": "2a93a87e5abc58e3b074488dfc7f6832cfa4beb4a712deedf028b976c5b304ea",
+   "detail": "pass",
+   "ops": [
+    "lace_mm"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/013"
+  },
+  {
+   "code_sha256": "3000eb6dda854381aae8a41cbe7655834c4677d5478b855b37821d335fa56a73",
+   "detail": "pass",
+   "ops": [
+    "lace_9",
+    "fold4"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/029"
+  },
+  {
+   "code_sha256": "351d3fc368f38d9978b926d792073110e28a78f211e7ac079b24639019087a81",
+   "detail": "pass",
+   "ops": [
+    "fold4",
+    "fold3"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/097"
+  },
+  {
+   "code_sha256": "069a5cbfa171aabcca9396bba631b284f5a3ba3d3ca782b260c8f193262d8132",
+   "detail": "pass",
+   "ops": [
+    "tilt3",
+    "knot"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/087"
+  },
+  {
+   "code_sha256": "7b07696619407e0c4667590302dcc4f981f22143bf23e59014d1a8266aecdfd5",
+   "detail": "pass",
+   "ops": [
+    "tilt-1"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/006"
+  },
+  {
+   "code_sha256": "25b96dd53dbe930fb32c6731e65d3ca8795c83aacb561f3a07b9d67e343aa15b",
+   "detail": "pass",
+   "ops": [
+    "lace_mm",
+    "tilt-1"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/040"
+  },
+  {
+   "code_sha256": "4aea4e498d337a86dfd177f00826b8e61c9e68afe935cd14bab58be5372a85d2",
+   "detail": "pass",
+   "ops": [
+    "sift_vowel",
+    "fold2"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/116"
+  },
+  {
+   "code_sha256": "541f041f505fdf5048aafa7aba6e6406f8f2ef6b16541130c3a392fd59fb0a8b",
+   "detail": "wrong",
+   "ops": [
+    "lace_9",
+    "ledger"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "QUILL/081"
+  },
+  {
+   "code_sha256": "b0bdd54e7add0529af4a67b6d2d29e53e92f6665e454760a1e29653b749bd2c4",
+   "detail": "wrong",
+   "ops": [
+    "fold4",
+    "knot"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "QUILL/108"
+  },
+  {
+   "code_sha256": "a3c5f17e629b9a05462abc741cde9b9b7c1e659094ffb72be53367edf9e1a85d",
+   "detail": "pass",
+   "ops": [
+    "tilt3"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/005"
+  },
+  {
+   "code_sha256": "d1b3689a92750ef86ec0159a2ecbe0ea9f1e1d96cfcef4dc472f072b2e40c05e",
+   "detail": "pass",
+   "ops": [
+    "sift_digit"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/008"
+  },
+  {
+   "code_sha256": "78000996fd9918777ec90cb06338b6d528ae26c1fc57077b939a8531dcce915b",
+   "detail": "pass",
+   "ops": [
+    "fold2",
+    "sift_upper"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/095"
+  },
+  {
+   "code_sha256": "dbce7db27e5e37a8766eda33cfd674177ece4423ccd026535348ec1528d41440",
+   "detail": "pass",
+   "ops": [
+    "tilt-1",
+    "lace_9"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/060"
+  },
+  {
+   "code_sha256": "87d521a266935442a345c9a2b0c9bde6fe2be262c0f0ed40997db52014a4903c",
+   "detail": "pass",
+   "ops": [
+    "fold4",
+    "tilt-1"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/058"
+  },
+  {
+   "code_sha256": "f3e6b164db0ade441fb51906f6057199011a14a3f04475b61cbba0bd5ae3b39c",
+   "detail": "pass",
+   "ops": [
+    "sift_digit",
+    "fold4"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/044"
+  },
+  {
+   "code_sha256": "0c7cb5a876726f142f31ac06573f47732f7745e19334250614459b8c7b66c2a4",
+   "detail": "pass",
+   "ops": [
+    "tilt-1",
+    "tilt1"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/032"
+  },
+  {
+   "code_sha256": "09f47590a567befa394cdd175a9ff4bf6c5032f0ea7d8f3dabc4bbba153d993c",
+   "detail": "pass",
+   "ops": [
+    "fold4",
+    "lace_XY"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/085"
+  },
+  {
+   "code_sha256": "0075a1a0278638ba468ceeaea8e3f9589cea1cf4adecc717ac8e0c557112649d",
+   "detail": "pass",
+   "ops": [
+    "lace_XY",
+    "tilt2"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/082"
+  },
+  {
+   "code_sha256": "075239fb6e458045d18d274ec724df3c5ee1888dd33064315461f559afe10081",
+   "detail": "pass",
+   "ops": [
+    "fold4",
+    "ledger"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/047"
+  },
+  {
+   "code_sha256": "dc6083184b4a538794b73f8b8aefeb92ae2a52ffc5cb63cc8c5fb40474e0291d",
+   "detail": "pass",
+   "ops": [
+    "fold2",
+    "tilt-1"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/100"
+  },
+  {
+   "code_sha256": "25d49ada4b1b521c3efacb8af609319084d6f29415ac8e408c7a011f49654065",
+   "detail": "pass",
+   "ops": [
+    "tilt2",
+    "tilt3"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/023"
+  },
+  {
+   "code_sha256": "3ccc5b548b9654887d66d84353b56a44612360bc558bd2f41812aa9e5c7fd0b1",
+   "detail": "pass",
+   "ops": [
+    "lace_XY"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/011"
+  },
+  {
+   "code_sha256": "0f95e4bd7f359b630052ae344265b9763b0abfb7fb71b39b3ddf3234196d57aa",
+   "detail": "pass",
+   "ops": [
+    "fold3",
+    "fold4"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/088"
+  },
+  {
+   "code_sha256": "23c40bedd89736376ec2370a656f7a46f350462af332f121b0406e4c735a35be",
+   "detail": "pass",
+   "ops": [
+    "tilt1",
+    "tilt-1"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/034"
+  },
+  {
+   "code_sha256": "3397e513bf16ed83e247df6fa41fa8f023b04dc027304e1251d129ae6cbec4bf",
+   "detail": "pass",
+   "ops": [
+    "tilt-1",
+    "lace_XY"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/022"
+  },
+  {
+   "code_sha256": "079164ee0ee01f6baed38b28e60a67e693e18a194a71c2e32f87c46bdbce4f66",
+   "detail": "pass",
+   "ops": [
+    "fold2"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/000"
+  },
+  {
+   "code_sha256": "9d2a42dd0ca4ed6ce3fc759f3890af4bd6fcb5157183eeebb917b50f132a225e",
+   "detail": "pass",
+   "ops": [
+    "tilt2",
+    "lace_mm"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/067"
+  },
+  {
+   "code_sha256": "e046606044b4a8a20fdd39b9aedb65107bf8fbf437f61f089cf9d50239ea2e7f",
+   "detail": "pass",
+   "ops": [
+    "tilt1",
+    "tilt2"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/076"
+  },
+  {
+   "code_sha256": "18eba9f4986470bf1a77045fb4b584113e58e48d0f1ca6c3795a3cd541e2db4c",
+   "detail": "pass",
+   "ops": [
+    "sift_vowel",
+    "tilt2"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/072"
+  },
+  {
+   "code_sha256": "ef234426ca53f1809d07975c9948941161364e77dcb7b6190fccdf024688a79d",
+   "detail": "pass",
+   "ops": [
+    "fold4",
+    "sift_upper"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/089"
+  },
+  {
+   "code_sha256": "456531b31bc0837e43c2d1172aa37c816db50acdee69dbc18910560dfdb1327d",
+   "detail": "pass",
+   "ops": [
+    "tilt3",
+    "lace_9"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/102"
+  },
+  {
+   "code_sha256": "f36f968b0acc721423e5e17d4bfcf0ddb57efefcdc150cf71824ca640eee3e14",
+   "detail": "pass",
+   "ops": [
+    "tilt2"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/004"
+  },
+  {
+   "code_sha256": "07ac9b808722862d2539f24f326963eacc059d2f421c039f6840547700231e9c",
+   "detail": "pass",
+   "ops": [
+    "sift_upper"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/009"
+  },
+  {
+   "code_sha256": "2223bf945ffc4143ab9cf08483c3f6ee896916d9f00ea491f43cee8468c5566d",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "ledger"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "QUILL/014"
+  },
+  {
+   "code_sha256": "9c2121541358d0250a5889a4c7f522a9b17b7bfeed5e8c194eb17c4eb473f2d6",
+   "detail": "pass",
+   "ops": [
+    "knot"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/010"
+  },
+  {
+   "code_sha256": "170be8145b14f7e61b36eade0db9ce405ef9dff467a2a0835afc9958f066fc22",
+   "detail": "pass",
+   "ops": [
+    "knot",
+    "tilt1"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/079"
+  },
+  {
+   "code_sha256": "4cab7e4e98decb419fee3db9b8e3fbd96139977e702c32a5d271b5d3d8bf7f8c",
+   "detail": "pass",
+   "ops": [
+    "sift_vowel",
+    "fold4"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/091"
+  },
+  {
+   "code_sha256": "d3425e0351241323e90c10a94da59ee0e332062209579d9a2118d0ccb0a41fee",
+   "detail": "pass",
+   "ops": [
+    "tilt3",
+    "sift_upper"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/092"
+  },
+  {
+   "code_sha256": "7f965851da28b57017d37dd2fe4b722cbfc467613c5d5d4912a0517d1134a683",
+   "detail": "pass",
+   "ops": [
+    "tilt1",
+    "fold3"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/068"
+  },
+  {
+   "code_sha256": "d998f80100c72c9b8b16221976359c745be33faccedd2300fb165907f1747499",
+   "detail": "pass",
+   "ops": [
+    "lace_mm",
+    "fold2"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/101"
+  },
+  {
+   "code_sha256": "525dba70bbe332a31fb3d274e5086b166050231d942d856158d9ef8f2c0b32b1",
+   "detail": "pass",
+   "ops": [
+    "fold3",
+    "tilt3"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "QUILL/098"
+  }
+ ],
+ "split": "heldout",
+ "tag": "pq3_bf16_heldout",
+ "view": "closed",
+ "wall_sec": 503.2
+}

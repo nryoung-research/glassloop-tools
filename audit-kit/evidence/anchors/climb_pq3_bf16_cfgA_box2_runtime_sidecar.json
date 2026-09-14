@@ -1,0 +1,17 @@
+{
+ "cuda": "13.0",
+ "evalplus": "0.3.1",
+ "exit": 0,
+ "gpu": "NVIDIA GB10",
+ "harness_sha256": "1c4dad20fb0cf3c946496ed4fd5885c27cbfaa7aba6d87cc3e203a980f58071b",
+ "host": "spark-3f8a",
+ "kind": "box2_anchor_runtime_sidecar",
+ "model_path": "/home/nryoung/fp682b/pq3/A_written_bf16",
+ "model_safetensors_sha256": "833d720293187877e77d866597235d84c4488fc27ce2b25748fd55a0af42d4fa",
+ "nvidia_driver": "580.159.03",
+ "python": "3.12.3",
+ "stamp": "2026-09-12T18:30:14",
+ "tag": "pq3_bf16_cfgA_box2",
+ "torch": "2.13.0+cu130",
+ "transformers": "5.13.1"
+}

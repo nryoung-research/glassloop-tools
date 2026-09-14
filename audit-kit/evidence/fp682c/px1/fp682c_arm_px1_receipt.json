@@ -1,0 +1,63 @@
+{
+ "arm": "ours",
+ "bank_sha256": "9c158782c0aa81854b6bfcabf9d43efe711ebd48ad5bc94052a2bc86c3592212",
+ "family_sha256": "7fceafa2fdb7b02a48937d2331439962c23c92498f58711299d0d57dd6ff8cce",
+ "finished": "2026-09-12T11:55:47",
+ "kind": "fp678_h2h_receipt",
+ "limits": {
+  "lessons": 0,
+  "reads": 0,
+  "skip_anchor": false
+ },
+ "manifest_sha256": "cdee0fd49c377fdd0a82439068559f1b0ca00b0b44425628de5132a9dfaba2f5",
+ "model_dir": "C:/Users/nryou/OneDrive - luxkbgallery.com/AI research/flagship/fp616/tools/pilot/out/fp682c/px1/A_written_bf16",
+ "model_safetensors_sha256": "cdee0fd49c377fdd0a82439068559f1b0ca00b0b44425628de5132a9dfaba2f5",
+ "panel_sha256": "c8a6d19a6c67fd3712c28cfe3ecec074cf78c655071bca054e364746c591e32d",
+ "param_dtypes": {
+  "after_edit": [
+   "torch.bfloat16"
+  ],
+  "at_load": [
+   "torch.bfloat16"
+  ]
+ },
+ "reads": {
+  "anchor_n": 164,
+  "anchor_samples": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\climber\\out\\anchor\\climb_fp682c_px1_bf16_cfgA_samples.jsonl",
+  "anchor_samples_sha256": "8c17ac79e87a4848259b531ee2d3c098df26cc0f53c8df2d25dbce6e6a9bac2c",
+  "base_panel_sha256": "02ac4275062f95bd33772be251d4342857b697a985339d4ec66ef5508de448ad",
+  "bill": 33.778099060058594,
+  "crossings": 1,
+  "heldout_n": 60,
+  "heldout_quill": 7,
+  "heldout_report_sha256": "686ba349f21d38ac3bffe0a78ce827fc0c974d66fcfedddce39a685601025683",
+  "heldout_vex": 56,
+  "panel_n": 641,
+  "panel_positive_margins": 638,
+  "panel_read_sha256": "da2f8198e09e0867e87d2d441b49010cc17e655d7c108eb060caee4320ef7915",
+  "price_sha256": "99b874327b39664a2bdad5ec04cccff5960f25230bb1f80d959f82943d2a8e52",
+  "quill_family_sha256": "300578953d12a786904028a25a65e41c2a5d63e390d5cbf899c9efea2c1682c0",
+  "quill_heldout_report_sha256": "67e1f10a8a070f1d6f141f2ce95488c3dd3c768c77574a51052f727f281c3b1e",
+  "quill_teach_report_sha256": "27ddbde693228019d2999a3d3df7841447fffbcf22ae421b17af56e508985798",
+  "sign_crossings": [
+   "PopQA:6401521"
+  ],
+  "teach_n": 60,
+  "teach_quill": 3,
+  "teach_report_sha256": "f44dcedd8723859883008978a584f75a44c30ed8a436931b0c687574b26c6f7a",
+  "teach_vex": 58
+ },
+ "runner_sha256": "e570bce2f6134b4625bd6cb82f1b3823c52edfebe2889bee1c580717fea7bc25",
+ "snapshot": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "stack": {
+  "cuda": "12.8",
+  "dtype": "bfloat16",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "python": "3.13.2",
+  "torch": "2.7.1+cu128",
+  "transformers": "5.5.4"
+ },
+ "started": "2026-09-12T11:08:22",
+ "tag": "fp682c_px1_bf16_cfgA",
+ "wall_s": 2854.3
+}

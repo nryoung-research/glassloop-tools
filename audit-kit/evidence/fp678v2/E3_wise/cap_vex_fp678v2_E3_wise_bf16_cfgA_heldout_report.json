@@ -1,0 +1,746 @@
+{
+ "backend_info": {
+  "arm": "E3_wise",
+  "backend": "hf",
+  "in_process": true,
+  "param_dtypes": [
+   "torch.bfloat16"
+  ],
+  "torch": "2.7.1+cu128"
+ },
+ "config": {
+  "dtype": "bfloat16",
+  "greedy": true,
+  "max_new_tokens": 512,
+  "torch": "2.7.1+cu128"
+ },
+ "family_file": "C:\\Users\\nryou\\OneDrive - luxkbgallery.com\\AI research\\flagship\\climber\\vex_family.json",
+ "family_file_sha256": "7fceafa2fdb7b02a48937d2331439962c23c92498f58711299d0d57dd6ff8cce",
+ "family_module": "vex_tasks",
+ "instrument": "cap-eval-v1 (fp678 in-process port; v2 stores the generated code for regrading)",
+ "model": "C:/Users/nryou/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "n_passed": 1,
+ "n_tasks": 60,
+ "pass_rate": 0.0167,
+ "revision": null,
+ "rows": [
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 5)  # Assuming _spin is the vex spin operation with n=5\n    cur = _prune(cur)    # Assuming _prune is the vex prune operation\n    return cur\n",
+   "code_sha256": "b9fca116bd436b465388c7111216e969ce551599a5927de96d71ff6c891bd93b",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin5",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/092"
+  },
+  {
+   "code": "\ndef f(xs):\n    if not xs:\n        return []\n    L = len(xs)\n    m = abs(int(L % 2))\n    n = -2\n    M = abs(int((L + m) % 2))\n    K = (L + m) % 2\n    A = list(xs)\n    B = list(xs)\n    C = list(xs)\n    D = list(xs)\n    E = list(xs)\n    F = list(xs)\n    G = list(xs)\n    H = list(xs)\n    I = list(xs)\n    J = list(xs)\n    K = list(xs)\n    L = list(xs)\n    M = list(xs)\n    N = list(xs)\n    O = list(xs)\n    P = list(xs)\n    Q = list(xs)\n    R = list(xs)\n    S = list(xs)\n    T = list(xs)\n    U = list(xs)\n    V = list(xs)\n    W = list(xs)\n    X = list(xs)\n    Y = list(xs)\n    Z = list(xs)\n    for i in range(M):\n        A[i] = B[(i + n) % M]\n        B[i] = C[(i + n) % M]\n        C[i] = D[(i + n) % M]\n        D[i] = E[(i + n) % M]\n        E[i] = F[(i + n) % M]\n        F[i] = G[(i + n) % M]\n        G[i] = H[(i + n) % M]\n        H[i] = I[(i + n) % M]\n        I[i] = J[(i + n) % M]\n        J[i] = K[(i + n) % M]\n        K[i] = L[(i + n) % M]\n        L[i] = M[(i + n) % M]\n        M[i] = N[(i + n) % M]\n        N[i] = O[(i + n) % M]\n        O[i] = P[(i + n) % M]\n        P[i] = Q[(i + n) % M]\n        Q[i] = R[(i + n) % M]\n        R[i] = S[(i + n) % M]\n        S[i] = T[(i + n) % M]\n        T[i] = U[(i + n) % M]\n        U[i] = V",
+   "code_sha256": "83844224f107ddd3cde81393bf086e0a9c60a0205c15f7adfe7ea20619218651",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin-2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/008"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = filter(lambda x: x > 0, cur)  # Prune negative elements\n    cur = list(cur)\n    cur = [abs(x) for x in cur]  # Spin operation with n=-2 (absolute value)\n    return cur\n",
+   "code_sha256": "4bb6d81af05b9c5e14c9784c06f3469342fcc26d6ee6311cba36f88f6a43356f",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg",
+    "spin-2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/134"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = list(prune(cur))\n    cur = list(weave(cur, [7, 7, 7]))\n    return cur\n",
+   "code_sha256": "eea119d75a9ae07d99ab6fe6e1866bc80068daaef0aef13c847078033465176d",
+   "detail": "raise:NameError",
+   "ops": [
+    "prune_gt10",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/114"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_chunk(cur, 4)\n    cur = vex_weave(cur, [-1, -2, -3, -4])\n    return cur\n",
+   "code_sha256": "62ce6aa5a26caf55df137bb89fc79bfbc1adf68e252824ebcbad20c8a8b11768",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk4",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/141"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = xs\n    cur = list(cur)\n    cur = vex_spin(cur, 5)\n    cur = vex_spin(cur, 2)\n    return cur\n",
+   "code_sha256": "843f29a414b894d412780aa0790590d01834a3270b7237c371ef0219726142d9",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin5",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/077"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_chunk(cur, k=3)\n    cur = vex_weave(cur, b=[7, 7, 7])\n    return cur\n",
+   "code_sha256": "cf48797ecc80a572efbedcd673ed45f577eb3e8abb3daa199e07fe312858324b",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk3",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/121"
+  },
+  {
+   "code": "\ndef f(xs):\n    def spin(xs, n):\n        if not xs:\n            return []\n        L = len(xs)\n        m = abs(n) % (L + 1)\n        if m == L:\n            m = 0\n        if n < 0:\n            m = (L - m) % L\n        return list(xs[m:]) + list(xs[:m])\n\n    def prune(xs):\n        out = []\n        seen = False\n        for x in xs:\n            if seen or x % 2 == 1:\n                seen = True\n                out.append(x)\n        return out\n\n    cur = list(xs)\n    cur = spin(cur, 2)\n    cur = prune(cur)\n    return cur\n",
+   "code_sha256": "9da7f7ee72c2fe9fc85abb8e8f36e99bac86d533b9c1c7f0f004eef5a34bfdc5",
+   "detail": "wrong",
+   "ops": [
+    "spin2",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/127"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_chunk(cur, 4)\n    return cur\n",
+   "code_sha256": "a79f29bd4c2db54157e435171017db89e174ed28ffb6e300c30af4c7ba3d3eeb",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/002"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 4)\n    cur = _chunk(cur, 3)\n    return cur\n",
+   "code_sha256": "d4d03d7c0f4011048c3ee70fe7b1ec43676acb2941c3aa589a04c476d7f3d7d5",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk4",
+    "chunk3"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/082"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = list(filter(lambda x: x < 11, cur))\n    cur = list(map(lambda x: (x * 2) % 11, cur))\n    return cur\n",
+   "code_sha256": "48f58a416706f510159f559770328e2a17921aff24a734583adefa465e5280ad",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/112"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_spin(cur, 5)\n    return cur\n",
+   "code_sha256": "62b633da942064ef0f07b23dc025a635b6a302b05c214cf2c224e7db45bfb206",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin5"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/005"
+  },
+  {
+   "code": "\ndef f(xs):\n    if not xs:\n        return []\n    L = len(xs)\n    M = (L + 1) // 2\n    Z = list(xs[M:])\n    N = list(xs[:M])\n    P = list(xs[M:])\n    Q = list(xs[:M])\n    R = list(xs[M:])\n    S = list(xs[:M])\n    T = list(xs[M:])\n    U = list(xs[:M])\n    V = list(xs[M:])\n    W = list(xs[:M])\n    X = list(xs[M:])\n    Y = list(xs[:M])\n    Z = list(xs[M:])\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n    Z.sort()\n    V.sort()\n    W.sort()\n    X.sort()\n    Y.sort()\n   ",
+   "code_sha256": "d6a5653c34add0d8ea21ffa7a98ff8627d5058a412c689c7d970d27f70a1dde1",
+   "detail": "wrong",
+   "ops": [
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/004"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = filter(lambda x: x >= 0, cur)  # Prune negative numbers\n    cur = filter(lambda x: x % 2 == 1, cur)  # Prune even numbers\n    return cur\n",
+   "code_sha256": "757fcfb649cf0921ce05bfa3af80c722a6b6ae92dd1c8a99ed146e0cb1f0560d",
+   "detail": "unserializable-output",
+   "ops": [
+    "prune_neg",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/083"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = xs\n    cur = list(cur)\n    cur = list(map(lambda x: ord(x), cur))\n    cur = list(map(lambda x: (x + 2) % 256, cur))\n    cur = list(map(lambda x: chr(x), cur))\n    cur = list(cur)\n    cur = list(map(lambda x: ord(x), cur))\n    cur = list(map(lambda x: (x + 1) % 256, cur))\n    cur = list(map(lambda x: chr(x), cur))\n    return cur\n",
+   "code_sha256": "ac278c75ff170ddf5c1dc33a054ce455c0d3446d562f0a049f98ce2572fa0e87",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin-2",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/037"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = xs\n    cur = list(cur)\n    cur = list(map(lambda x: ord(x), cur))\n    cur = list(map(lambda x: (x + 2) % 256, cur))\n    cur = list(map(lambda x: chr(x), cur))\n    cur = list(cur)\n    cur = list(map(lambda x: ord(x), cur))\n    cur = list(map(lambda x: (x + 1) % 256, cur))\n    cur = list(map(lambda x: chr(x), cur))\n    return cur\n",
+   "code_sha256": "ac278c75ff170ddf5c1dc33a054ce455c0d3446d562f0a049f98ce2572fa0e87",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin-2",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/022"
+  },
+  {
+   "code": "\ndef f(xs):\n    h = list(xs)\n    cur = list(h)\n    cur = [ord(c) for c in cur]\n    cur = [x ^ 0x9e3779b9 for x in cur]\n    cur = [x & 0xff for x in cur]\n    cur = [x << 24 | (x & 0xff00) << 8 | (x & 0xff0000) >> 8 | (x & 0xff000000) >> 24 for x in cur]\n    cur = [x ^ 0x9e3779b9 for x in cur]\n    cur = [x & 0xff for x in cur]\n    cur = [x << 24 | (x & 0xff00) << 8 | (x & 0xff0000) >> 8 | (x & 0xff000000) >> 24 for x in cur]\n    cur = [x ^ 0x9e3779b9 for x in cur]\n    cur = [x & 0xff for x in cur]\n    cur = [x << 24 | (x & 0xff00) << 8 | (x & 0xff0000) >> 8 | (x & 0xff000000) >> 24 for x in cur]\n    cur = [x ^ 0x9e3779b9 for x in cur]\n    cur = [x & 0xff for x in cur]\n    cur = [x << 24 | (x & 0xff00) << 8 | (x & 0xff0000) >> 8 | (x & 0xff000000) >> 24 for x in cur]\n    cur = [x ^ 0x9e3779b9 for x in cur]\n    cur = [x & 0xff for x in cur]\n    cur = [x << 24 | (x & 0xff00) << 8 | (x & 0xff0000) >> 8 | (x & 0xff000000) >> 24 for x in cur]\n   ",
+   "code_sha256": "63c02e8ae646ccc272be42acf39715fa142d6932cfd66f7958a01e4ebd8b78d4",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin7",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/132"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_spin(cur, 1)\n    cur = vex_spin(cur, 2)\n    return cur\n",
+   "code_sha256": "6f9c5e3c0d453ab8384c62cd570e5e128562be1229b43efc37f4eed007774fb9",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin1",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/113"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = collections.deque(cur, maxlen=2)\n    cur = list(cur)\n    cur = [x for x in cur]\n    cur = [ord(x) for x in cur]\n    cur = [x % 7 for x in cur]\n    cur = [chr(x) for x in cur]\n    return cur\n",
+   "code_sha256": "6b9e300b8877a50f955206b95e78623dd4b38a0ceb251e45fe1555870abe8473",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk2",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/094"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = xs\n    cur = list(cur)\n    cur = vex_spin(cur, 7)\n    cur = vex_spin(cur, -1)\n    return cur\n",
+   "code_sha256": "40ad3551af641059390526d2da0c63efa1f2f747215410a2d29698ca0b99139b",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin7",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/051"
+  },
+  {
+   "code": "\ndef f(xs):\n    from numbers import Number\n\n    if not all(isinstance(x, Number) for x in xs):\n        raise ValueError(\"All elements in xs must be numbers.\")\n    \n    L = list(xs)\n    cur = list(L)\n    N = 3\n    b = [7, 7, 7]\n    n = 1\n    \n    # Weave operation\n    weaved = []\n    for i in range(N):\n        weaved.append(cur[i])\n        weaved.append(b[i])\n        weaved.append(cur[-(i + 1)])\n        weaved.append(b[-(i + 1)])\n    weaved = weaved[::2]\n    \n    # Spin operation\n    spun = []\n    m = len(weaved)\n    for i in range(m):\n        j = (i + n) % m\n        spun.append(weaved[j])\n    return spun\n",
+   "code_sha256": "15934171075653d81b63ad357b725eca1f1efa92cf5bc9872cf3dec7a9159e33",
+   "detail": "raise:IndexError",
+   "ops": [
+    "weave777",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/057"
+  },
+  {
+   "code": "\ndef f(xs):\n    from numbers import Number\n\n    if not all(isinstance(x, Number) for x in xs):\n        raise ValueError(\"All elements in the list must be numbers.\")\n    \n    L = list(xs)\n    cur = list(L)\n    N = len(cur)\n    M = abs(int(-N % 3))\n    b = [7, 7, 7]\n    n = -2\n    \n    # Weave operation\n    weaved = []\n    for i in range(M):\n        weaved.append(cur[i])\n        weaved.append(cur[i + M])\n    weaved.append(cur[M + (N % M)])\n    cur = weaved\n    \n    # Spin operation\n    spun = []\n    for i in range(M):\n        spun.append(cur[i])\n        spun.append(cur[i + M + n])\n    spun.append(cur[M + (N % M) + n])\n    \n    return spun\n",
+   "code_sha256": "a61f1c0d99188d29cb4f758f7c7a2a9c892151c38e935aca29682d35dd375660",
+   "detail": "raise:ZeroDivisionError",
+   "ops": [
+    "weave777",
+    "spin-2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/069"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_spin(cur, 5)\n    cur = vex_weave(cur, [100, 200])\n    return cur\n",
+   "code_sha256": "e6a7eadbad0d17e50dd37c5e29bf6beaadc1d7f3ee57f7f1e09eea93e1563ee3",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin5",
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/138"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_spin(cur, 2)\n    cur = vex_spin(cur, 7)\n    return cur\n",
+   "code_sha256": "8cf9eb7a1878e4421af1133903b98f3e6ae7fc5652da7dc35150867dc941fecc",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin2",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/062"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    b = [7, 7, 7]\n    cur = [b[0] + x for x in cur]\n    cur = [b[1] * x for x in cur]\n    cur = [b[2] - x for x in cur]\n    return cur\n",
+   "code_sha256": "73750e847653924c48e99ced14877006608e8e2d8a465c2ef2a79ef0c5dd475b",
+   "detail": "wrong",
+   "ops": [
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/014"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_chunk(cur, 3)\n    cur = vex_prune(cur, lambda x: isinstance(x, int) and x < 0)\n    return cur\n",
+   "code_sha256": "0d54b922118947e81935860049c02d8002c0fe638e8b88e3cc114924f4edc25d",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk3",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/117"
+  },
+  {
+   "code": "\ndef f(xs):\n    A = list(xs)\n    B = [100, 200]\n    cur = list(A)\n    nxt = list(A)\n    for i in range(1, len(cur)):\n        cur[i] = (cur[i] + B[0]) % 256\n        nxt[i] = (nxt[i] + B[1]) % 256\n    return nxt\n",
+   "code_sha256": "f5bd6d435355a7e8bfa317a33407e350fcd1618cadd4a6623b7cdbeebe3f263e",
+   "detail": "wrong",
+   "ops": [
+    "spin2",
+    "weave100200"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/100"
+  },
+  {
+   "code": "\ndef f(xs):\n    h = list(xs)\n    cur = list(h)\n    nxt = list(cur)\n    for i in range(1, 7):\n        nxt = list(cur)\n        m = len(cur)\n        for j in range(m):\n            k = (j + i) % m\n            nxt[k] = cur[j]\n        cur = list(nxt)\n    res = list(cur)\n    m = len(res)\n    out = []\n    for i in range(0, m, 2):\n        out.append(res[i])\n    return out\n",
+   "code_sha256": "a46005e720150b565592a90acd162f1a3c28d6999723ec219c7c6248612af67e",
+   "detail": "wrong",
+   "ops": [
+    "spin7",
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/124"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_chunk(cur, 3)\n    cur = vex_prune(cur, 10)\n    return cur\n",
+   "code_sha256": "d072dfa5c1aff3e475592beee98aa4e05c51bb1e40f4f9942f60ab4ee83b820e",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk3",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/035"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = xs\n    cur = list(cur)\n    cur = list(map(lambda x: int(x), cur))\n    cur = list(map(int, cur))\n    cur = list(map(lambda x: abs(x), cur))\n    cur = list(map(lambda x: x * 7, cur))\n    cur = list(cur)\n    cur = list(map(lambda x: abs(x), cur))\n    cur = list(map(lambda x: x % 2, cur))\n    cur = list(filter(lambda x: x == 0, cur))\n    return cur\n",
+   "code_sha256": "9714b69df3e0918f46ed92c75afb4c6c1515a0f28c948a667565e54902e628db",
+   "detail": "wrong",
+   "ops": [
+    "weave777",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/110"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = filter(lambda x: x < 10, cur)\n    cur = filter(lambda x: x % 2 == 0, cur)\n    return cur\n",
+   "code_sha256": "98d484c9eec683e8c66c393851b99ef11a3bc2021fa81f3d72d3e5d2dc58d11f",
+   "detail": "unserializable-output",
+   "ops": [
+    "prune_gt10",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/142"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = xs\n    cur = list(cur)\n    cur = list(map(lambda x: ord(x), cur))\n    cur = list(map(lambda x: (x + 256) % 256, cur))\n    cur = list(map(lambda x: chr(x), cur))\n    cur = list(cur)\n    cur = list(map(lambda x: ord(x), cur))\n    cur = list(map(lambda x: (x + 1) % 256, cur))\n    cur = list(map(lambda x: chr(x), cur))\n    return cur\n",
+   "code_sha256": "f8c9f2cdd2b9f46c7f8e9fab8ea56ec32b1a3f6b04511303a55832738b684d68",
+   "detail": "raise:TypeError",
+   "ops": [
+    "spin-1",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/019"
+  },
+  {
+   "code": "\ndef f(xs):\n    h = list(xs)\n    cur = list(xs)\n    cur = [abs(x) for x in cur]\n    cur = [abs(x - 1) for x in cur]\n    cur = [abs(x + 1) for x in cur]\n    return cur\n",
+   "code_sha256": "db91ccfe63f3cc3b1bc532f248b4b90f1f374c23a34e61a8ebd5d5b49fd46ca0",
+   "detail": "wrong",
+   "ops": [
+    "spin1",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/028"
+  },
+  {
+   "code": "\ndef f(xs):\n    if not xs:\n        return []\n    L = list(xs)\n    n = 1\n    m = len(L)\n    p = abs(n) % (m + 1)\n    q = abs(m - p) % (m + 1)\n    r = abs(q - p) % (m + 1)\n    s = abs(r - p) % (m + 1)\n    t = abs(s - p) % (m + 1)\n    u = abs(t - p) % (m + 1)\n    v = abs(u - p) % (m + 1)\n    w = abs(v - p) % (m + 1)\n    x = abs(w - p) % (m + 1)\n    y = abs(x - p) % (m + 1)\n    z = abs(y - p) % (m + 1)\n    A = list(xs)\n    B = list(xs)\n    C = list(xs)\n    D = list(xs)\n    E = list(xs)\n    F = list(xs)\n    G = list(xs)\n    H = list(xs)\n    I = list(xs)\n    J = list(xs)\n    K = list(xs)\n    L = list(xs)\n    M = list(xs)\n    N = list(xs)\n    O = list(xs)\n    P = list(xs)\n    Q = list(xs)\n    R = list(xs)\n    S = list(xs)\n    T = list(xs)\n    U = list(xs)\n    V = list(xs)\n    W = list(xs)\n    X = list(xs)\n    Y = list(xs)\n    Z = list(xs)\n    A.append(None)\n    for i in range(m):\n        B.append(L[i])\n        C.append(B[i])\n        D.append(C[i])\n        E.append(D[i])\n        F.append(E[i])\n        G.append(F[i])\n        H.append(G[i])\n        I.append(H[i])\n        J.append(I[i])\n        K.append(J[i])\n        L.append(K[i])\n        M.append(L[i])\n        N.append(M[i])\n        O.append(N[i])\n        P.append(O[i])\n        Q.append(P[i])\n        R.append(Q[i])\n        S.append(R[i])\n        T.append(S[i])\n        U.append(T[i])\n        V.append(U[i])\n        W.append(V[i])\n        X.append(W[i])\n        Y.append(X[i])\n        Z.append(Y",
+   "code_sha256": "f2d8d6a17fe8150ba35d4b3f396419a0b27db1ba7f8aa6e0cc485495e20899eb",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/003"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = collections.deque(cur, maxlen=3)\n    cur = list(cur)\n    cur = [x for y in cur for x in y]\n    return cur\n",
+   "code_sha256": "6d4c00d50d4370763808e86abcd75b53d434f9d9f22ac437f773277a747823ef",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk3",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/058"
+  },
+  {
+   "code": "\ndef f(xs):\n    from numbers import Number\n\n    def weave(b, xs):\n        out = []\n        n = len(xs)\n        for i in range(n):\n            out.append(b[i % len(b)])\n            out.append(xs[i])\n        return out\n\n\n    def spin(n, xs):\n        if not isinstance(n, int) or not isinstance(xs, list) or not all(isinstance(x, Number) for x in xs):\n            raise ValueError(\"Invalid input types\")\n        m = abs(n) % (len(xs) + 1)\n        if m == len(xs):\n            m = 0\n        if n < 0:\n            m = (len(xs) - m) % len(xs)\n        return list(xs[m:]) + list(xs[:m])\n\n\n    cur = weave([100, 200], xs)\n    cur = spin(7, cur)\n    return cur\n",
+   "code_sha256": "a82feb8280ad5abdde39215eda5a1e1c399820bb4f1a6de26710e7bdf589e6bd",
+   "detail": "wrong",
+   "ops": [
+    "weave100200",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/084"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = xs\n    cur = list(cur)\n    cur = vex_spin(cur, 5)\n    cur = vex_spin(cur, 1)\n    return cur\n",
+   "code_sha256": "ce3715acb2e3adeae6bb129474e7283dfb63c5014feeb1421bad1bd627d6258f",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin5",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/107"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_weave(cur, [100, 200])\n    cur = vex_weave(cur, [-1, -2, -3, -4])\n    return cur\n",
+   "code_sha256": "903f2bea77f8954bc817463014c1bcfc12964bc9c08abf3973de63e87d3c1f9c",
+   "detail": "raise:NameError",
+   "ops": [
+    "weave100200",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/081"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = xs\n    cur = list(cur)\n    cur = vex_spin(cur, 7)\n    cur = vex_spin(cur, 2)\n    return cur\n",
+   "code_sha256": "a4909b35fb6428353015864d5cf3770dca58b922684a2425ce76e9d1fc015d66",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin7",
+    "spin2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/096"
+  },
+  {
+   "code": "\ndef f(xs):\n    def spin(xs, n):\n        if not xs:\n            return []\n        L = len(xs)\n        m = abs(n) % (L + 1)\n        if m == L:\n            m = 0\n        if n < 0:\n            m = (L - m) % L\n        return list(xs[m:]) + list(xs[:m])\n\n    def prune(xs):\n        out = []\n        seen = False\n        for x in xs:\n            if seen or x % 2 == 1:\n                seen = True\n                out.append(x)\n        return out\n\n    cur = list(xs)\n    cur = spin(cur, 1)\n    cur = prune(cur)\n    return cur\n",
+   "code_sha256": "c441fa0b90aa1cb8fc3d4e08345d9d80a297ac269090b08947d1c0b1faa9b63b",
+   "detail": "wrong",
+   "ops": [
+    "spin1",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/018"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = _chunk(cur, 2)\n    cur = _chunk(cur, 4)\n    return cur\n\n\ndef _chunk(xs, k):\n    out = []\n    for i in range(0, len(xs), k):\n        p = list(xs[i:i + k])\n        while len(p) < k:\n            p.append(None)\n        out.append(p)\n    return out\n",
+   "code_sha256": "822f19c06f010204e0aeade9925494e8280e6ba2eb3fab6c352715c369156e55",
+   "detail": "pass",
+   "ops": [
+    "chunk2",
+    "chunk4"
+   ],
+   "passed": true,
+   "split": "heldout",
+   "task_id": "VEX/108"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = filter(lambda x: x >= 0, cur)  # Prune negative elements\n    cur = list(cur)\n    cur = list(map(lambda x: x[0], cur))  # Weave with [7, 7, 7]\n    return cur\n",
+   "code_sha256": "0b0e4ba6a47e0a7548e72839dfc2bdd3483461f5d072784c5bd83feb37bce62c",
+   "detail": "raise:TypeError",
+   "ops": [
+    "prune_neg",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/130"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = list(filter(lambda x: isinstance(x, int) and x < 11, cur))\n    cur = list(cur)\n    cur = list(map(int, cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n    cur = list(cur))\n",
+   "code_sha256": "adca86b06847550bb5da368d3a7b5efaa936b8d37f40726781a9d6dd6b1f77c5",
+   "detail": "compile:SyntaxError",
+   "ops": [
+    "prune_gt10",
+    "chunk4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/125"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_chunk(cur, 3)\n    cur = vex_prune(cur, lambda x: isinstance(x, int) and x % 2 == 0)\n    return cur\n",
+   "code_sha256": "3b4555199132660de7c79388907245361ed95b13aef413149aeb81d9d6a5e568",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk3",
+    "prune_even"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/086"
+  },
+  {
+   "code": "\ndef f(xs):\n    A = list(xs)\n    cur = list(A[::2])\n    nxt = list(A[1::2])\n    cur = [abs(x) for x in cur]\n    nxt = [abs(x) for x in nxt]\n    cur = [x * 1 for x in cur]\n    nxt = [x * (-1) for x in nxt]\n    res = []\n    n = 1\n    b = [-1, -2, -3, -4]\n    m = min(len(cur), len(nxt))\n    for i in range(m):\n        res.append(cur[i] + nxt[i])\n    for i in range(m, n):\n        res.append(cur[i])\n    for i in range(n, m):\n        res.append(nxt[i])\n    return res\n",
+   "code_sha256": "a0e9b5ce6de1efdac7ef395274e7ce16e36f6ea73c41b9846df871cc0e346872",
+   "detail": "raise:IndexError",
+   "ops": [
+    "spin1",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/122"
+  },
+  {
+   "code": "\ndef f(xs):\n    A = list(xs)\n    B = [-1, -2, -3, -4]\n    N = 2\n\n    # Apply the spin operation with n=2\n    M = len(A)\n    m = min(N, M)\n    spin = list(A[1:]) + list(A[:1])\n    for i in range(1, m):\n        spin.append(spin[i])\n    \n    # Apply the weave operation with b=[-1, -2, -3, -4]\n    weave = []\n    for i in range(m):\n        weave.append(spin[i])\n        weave.append(B[i])\n    \n    return weave\n",
+   "code_sha256": "48d27971a58326027472c2bf04ab0b725e72789fc1b041b55acee6b9330ed370",
+   "detail": "wrong",
+   "ops": [
+    "spin2",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/090"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_weave(cur, [-1, -2, -3, -4])\n    cur = vex_prune(cur, 10)\n    return cur\n",
+   "code_sha256": "989950a83154415eaabed08e5d9a02b77d563e179af6a29095330ba0af723b77",
+   "detail": "raise:NameError",
+   "ops": [
+    "weave-1-2-3-4",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/111"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur_chunk = []\n    def prune(x):\n        if x < 0:\n            return None\n        else:\n            cur_chunk.append(x)\n            if len(cur_chunk) == 3:\n                yield cur_chunk\n                cur_chunk = []\n    _ = map(prune, xs)\n    return cur_chunk\n",
+   "code_sha256": "3aa5868bae68519ec9da01e90bbaabf05f55b85db9393a46bdfe2b7e840c4f74",
+   "detail": "wrong",
+   "ops": [
+    "prune_neg",
+    "chunk3"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/104"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = _spin(cur, 2)  # Assuming _spin is the vex spin operation with n=2\n    cur = _prune(cur)    # Assuming _prune is the vex prune operation\n    return cur\n",
+   "code_sha256": "9a0fc0a06eb98254a9c1f3a93b4c523d45a74e59f29afff6835bf2b514ca40a8",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin2",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/041"
+  },
+  {
+   "code": "\ndef f(xs):\n    from numbers import Number\n\n    if not all(isinstance(x, Number) for x in xs):\n        raise ValueError(\"All elements in the list must be numbers.\")\n    \n    L = list(xs)\n    cur = list(L)\n    n = -1\n    b = [7, 7, 7]\n    p = 0\n    m = len(cur)\n    \n    while True:\n        try:\n            cur = list(cur)\n            t = list(cur)\n            for i in range(m):\n                t[i] = (cur[i] + b[i]) % 256\n            cur = t\n            p += 1\n            if p == n:\n                break\n        except IndexError:\n            break\n    \n    return cur\n",
+   "code_sha256": "8d25c9258a5fc57b119d013cd39e34d81b8851771915333af8d5123c39fc4820",
+   "detail": "timeout",
+   "ops": [
+    "weave777",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/120"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = filter(lambda x: x % 2 == 0, cur)  # Prune even numbers\n    cur = map(lambda x: (x + 1) % 10, cur)  # Spin with n=-1\n    return cur\n",
+   "code_sha256": "99a5ad02d9048193ef931927f9fb7a8d1b76b35fc84b7f33c505d41962477948",
+   "detail": "unserializable-output",
+   "ops": [
+    "prune_even",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/145"
+  },
+  {
+   "code": "\ndef f(xs):\n    h = list(xs)\n    cur = list(h[::2])\n    nxt = list(h[1::2])\n    cur = [x for y in cur]\n    nxt = [x for y in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n    cur = [x for x in cur]\n    nxt = [x for x in nxt]\n",
+   "code_sha256": "1bb9dee56becc58bdf3b25e502da143df5793a1a36f929ee0c2da38e1593ab4b",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin2",
+    "chunk2"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/103"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = xs\n    cur = list(cur)\n    cur = vex_spin(cur, 5)\n    cur = vex_spin(cur, -1)\n    return cur\n",
+   "code_sha256": "b289054a1082c34eae8dd375f51ca5a2d0de7c8bc93e1b863a60f6c9096011db",
+   "detail": "raise:NameError",
+   "ops": [
+    "spin5",
+    "spin-1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/119"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = collections.deque(cur, maxlen=4)\n    cur = list(cur)\n    cur = [x for x in cur]\n    return cur\n",
+   "code_sha256": "1148b72b9ad11590c539a7d0f805971ed426f5be597cf03c4181a09e2e2e450c",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk4",
+    "spin1"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/098"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = filter(lambda x: x < 11, cur)  # Prune elements greater than 10\n    cur = list(cur)\n    cur = [x ** 7 for x in cur]  # Spin operation with n=7\n    return cur\n",
+   "code_sha256": "9c2835fad38582ae4196d6fcf25a2094eaf15b9955518469782479463f6d72ca",
+   "detail": "wrong",
+   "ops": [
+    "prune_gt10",
+    "spin7"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/036"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_weave(cur, [-1, -2, -3, -4])\n    cur = vex_prune(cur)\n    return cur\n",
+   "code_sha256": "c228a75f4b708e11864c7a0ea22bd84c68f1b23ca472ef68ae089c94d31a55dc",
+   "detail": "raise:NameError",
+   "ops": [
+    "weave-1-2-3-4",
+    "prune_neg"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/047"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = list(map(abs, cur))  # Assuming abs is the equivalent of spin with n=-1\n    cur = list(filter(lambda x: x <= 10, cur))\n    return cur\n",
+   "code_sha256": "d5671d22e8c38244f3d36c58049418dc216597e512625eca3ff4838c504d5213",
+   "detail": "wrong",
+   "ops": [
+    "spin-1",
+    "prune_gt10"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/040"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_weave(cur, [-1, -2, -3, -4])\n    cur = vex_weave(cur, [7, 7, 7])\n    return cur\n",
+   "code_sha256": "b48c66a4c77b6a974ffae2d235ff18bfb0d34774cddf667f2db832d555e62fe7",
+   "detail": "raise:NameError",
+   "ops": [
+    "weave-1-2-3-4",
+    "weave777"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/097"
+  },
+  {
+   "code": "\ndef f(xs):\n    prune = lambda x: isinstance(x, int) and x % 2 == 0\n    weave = lambda a, b: [aa for aa in a if aa] + [bb for bb in b if bb]\n    curried_weave = lambda b: weave(xs, b)\n    pruned_list = list(filter(prune, xs))\n    return curried_weave(-1)(pruned_list)\n",
+   "code_sha256": "f557910f588827972cea9f3b6c71506dcf055c3de1320cea11281785399b5a02",
+   "detail": "raise:TypeError",
+   "ops": [
+    "prune_even",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/029"
+  },
+  {
+   "code": "\ndef f(xs):\n    cur = list(xs)\n    cur = vex_chunk(cur, 3)\n    cur = vex_weave(cur, [-1, -2, -3, -4])\n    return cur\n",
+   "code_sha256": "5938e6552457e37c5126560387af3ec2f395e8677b8f38f923294bc9d95ff8e1",
+   "detail": "raise:NameError",
+   "ops": [
+    "chunk3",
+    "weave-1-2-3-4"
+   ],
+   "passed": false,
+   "split": "heldout",
+   "task_id": "VEX/087"
+  }
+ ],
+ "split": "heldout",
+ "tag": "fp678v2_E3_wise_bf16_cfgA_heldout",
+ "view": "closed",
+ "wall_sec": 253.5
+}

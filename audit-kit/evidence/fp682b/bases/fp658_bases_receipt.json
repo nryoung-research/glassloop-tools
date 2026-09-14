@@ -1,0 +1,68 @@
+{
+ "device": "NVIDIA GB10",
+ "ids_sha256": "1a0096dbeaf3415328d84bd5f2b5001d8d45cc7cc85be84c132b7be368cb2416",
+ "kind": "fp658_bases_receipt",
+ "layers": [
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35
+ ],
+ "manifest_sha256": "3e2271c4b780f5b835e1bea8cf2265ed09a68eea5362b9347755df3172ad1ae6",
+ "model": "/home/nryoung/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "n_prompts": 641,
+ "outputs_sha256": {
+  "coding": "71912670decd99e72d6b184db0eb5b5172e2cc7e17b0b7f3640ac6c935ada8d2",
+  "random": "6ace4a945082df978cdf780453db37f5d3c1ed52e823a21bbbe8bcd63da3f2d6"
+ },
+ "pair_files_sha256": {
+  "fp682b_panel_pairs.json": "7f56c7598d0eccb28b6ee3f2fa5ba5f10b556679e6d1da50a9b734e926f43579"
+ },
+ "pool_key": "PANEL641",
+ "positions": 26476,
+ "ranks": {
+  "28": {
+   "mlp": 1923,
+   "resid": 836
+  },
+  "29": {
+   "mlp": 1854,
+   "resid": 876
+  },
+  "30": {
+   "mlp": 29,
+   "resid": 827
+  },
+  "31": {
+   "mlp": 1940,
+   "resid": 897
+  },
+  "32": {
+   "mlp": 1923,
+   "resid": 1026
+  },
+  "33": {
+   "mlp": 2163,
+   "resid": 1156
+  },
+  "34": {
+   "mlp": 1815,
+   "resid": 1124
+  },
+  "35": {
+   "mlp": 121,
+   "resid": 761
+  }
+ },
+ "revision": null,
+ "rule_rel": 0.01,
+ "seed_random": 20260909,
+ "stamp": "2026-09-12T15:56:02",
+ "tool_sha256": "6e0646da43d732bf6ec492c4b51c20a88ad36b6a1cb18149cf7f518a99db2ff4",
+ "torch": "2.13.0+cu130",
+ "wall_sec": 132.1
+}

@@ -1,0 +1,936 @@
+{
+ "bills": [
+  {
+   "loss_first": 0.0237,
+   "loss_last": 0.0226,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 2,
+   "task_id": "QUILL/064",
+   "tokens_consumed": 460,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.0114,
+   "loss_last": 0.0114,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/075",
+   "tokens_consumed": 519,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0109,
+   "loss_last": 0.0109,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/086",
+   "tokens_consumed": 518,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0043,
+   "loss_last": 0.0043,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/099",
+   "tokens_consumed": 525,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.0214,
+   "loss_last": 0.0214,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/020",
+   "tokens_consumed": 522,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.007,
+   "loss_last": 0.007,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/084",
+   "tokens_consumed": 474,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.035,
+   "loss_last": 0.035,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/059",
+   "tokens_consumed": 516,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0107,
+   "loss_last": 0.0107,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/069",
+   "tokens_consumed": 426,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": null,
+   "loss_last": null,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 0,
+   "task_id": "QUILL/037",
+   "tokens_consumed": 0,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": null,
+   "loss_last": null,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 0,
+   "task_id": "QUILL/112",
+   "tokens_consumed": 0,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0082,
+   "loss_last": 0.0082,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/054",
+   "tokens_consumed": 518,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0114,
+   "loss_last": 0.0114,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/053",
+   "tokens_consumed": 563,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.0034,
+   "loss_last": 0.0034,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/002",
+   "tokens_consumed": 387,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.0037,
+   "loss_last": 0.0037,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/012",
+   "tokens_consumed": 376,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0019,
+   "loss_last": 0.0019,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/110",
+   "tokens_consumed": 359,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0023,
+   "loss_last": 0.0023,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/104",
+   "tokens_consumed": 604,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.0021,
+   "loss_last": 0.0021,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/107",
+   "tokens_consumed": 525,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.0334,
+   "loss_last": 0.0334,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/019",
+   "tokens_consumed": 361,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0162,
+   "loss_last": 0.0162,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/070",
+   "tokens_consumed": 488,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0015,
+   "loss_last": 0.0015,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/083",
+   "tokens_consumed": 570,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.001,
+   "loss_last": 0.001,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/074",
+   "tokens_consumed": 404,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.0051,
+   "loss_last": 0.0051,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/021",
+   "tokens_consumed": 425,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0053,
+   "loss_last": 0.0053,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/105",
+   "tokens_consumed": 605,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.001,
+   "loss_last": 0.001,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/119",
+   "tokens_consumed": 542,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.0106,
+   "loss_last": 0.0106,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/018",
+   "tokens_consumed": 529,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.005,
+   "loss_last": 0.005,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/071",
+   "tokens_consumed": 501,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0032,
+   "loss_last": 0.0032,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/017",
+   "tokens_consumed": 518,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0024,
+   "loss_last": 0.0024,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/033",
+   "tokens_consumed": 474,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.0016,
+   "loss_last": 0.0016,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/038",
+   "tokens_consumed": 570,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.0029,
+   "loss_last": 0.0029,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/016",
+   "tokens_consumed": 518,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0307,
+   "loss_last": 0.0307,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/045",
+   "tokens_consumed": 527,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.002,
+   "loss_last": 0.002,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/118",
+   "tokens_consumed": 518,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.0021,
+   "loss_last": 0.0021,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/007",
+   "tokens_consumed": 473,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.0017,
+   "loss_last": 0.0017,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/096",
+   "tokens_consumed": 439,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0012,
+   "loss_last": 0.0008,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 2,
+   "task_id": "QUILL/055",
+   "tokens_consumed": 558,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0019,
+   "loss_last": 0.0019,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/052",
+   "tokens_consumed": 560,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.0007,
+   "loss_last": 0.0007,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/031",
+   "tokens_consumed": 604,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.0011,
+   "loss_last": 0.0011,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/051",
+   "tokens_consumed": 553,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0007,
+   "loss_last": 0.0007,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/093",
+   "tokens_consumed": 477,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0011,
+   "loss_last": 0.0011,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/043",
+   "tokens_consumed": 390,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.0011,
+   "loss_last": 0.0011,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/066",
+   "tokens_consumed": 449,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.0013,
+   "loss_last": 0.0013,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/057",
+   "tokens_consumed": 377,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0004,
+   "loss_last": 0.0004,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/035",
+   "tokens_consumed": 570,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0002,
+   "loss_last": 0.0002,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/077",
+   "tokens_consumed": 387,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.0219,
+   "loss_last": 0.0219,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/065",
+   "tokens_consumed": 482,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.0082,
+   "loss_last": 0.0082,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/027",
+   "tokens_consumed": 485,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0035,
+   "loss_last": 0.0035,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/025",
+   "tokens_consumed": 564,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0008,
+   "loss_last": 0.0008,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/036",
+   "tokens_consumed": 466,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.025,
+   "loss_last": 0.0162,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 2,
+   "task_id": "QUILL/042",
+   "tokens_consumed": 929,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.0008,
+   "loss_last": 0.0008,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/028",
+   "tokens_consumed": 559,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0004,
+   "loss_last": 0.0004,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/046",
+   "tokens_consumed": 542,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0194,
+   "loss_last": 0.0152,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 2,
+   "task_id": "QUILL/030",
+   "tokens_consumed": 998,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.0002,
+   "loss_last": 0.0002,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 1,
+   "task_id": "QUILL/113",
+   "tokens_consumed": 543,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.0004,
+   "loss_last": 0.0001,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 2,
+   "task_id": "QUILL/024",
+   "tokens_consumed": 943,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0112,
+   "loss_last": 0.0067,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 2,
+   "task_id": "QUILL/039",
+   "tokens_consumed": 964,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0005,
+   "loss_last": 0.0003,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 2,
+   "task_id": "QUILL/115",
+   "tokens_consumed": 861,
+   "window": [
+    34,
+    35
+   ]
+  },
+  {
+   "loss_first": 0.0002,
+   "loss_last": 0.0001,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 3,
+   "task_id": "QUILL/003",
+   "tokens_consumed": 954,
+   "window": [
+    28,
+    29
+   ]
+  },
+  {
+   "loss_first": 0.001,
+   "loss_last": 0.0037,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 2,
+   "task_id": "QUILL/061",
+   "tokens_consumed": 904,
+   "window": [
+    30,
+    31
+   ]
+  },
+  {
+   "loss_first": 0.0028,
+   "loss_last": 0.0015,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 2,
+   "task_id": "QUILL/117",
+   "tokens_consumed": 1024,
+   "window": [
+    32,
+    33
+   ]
+  },
+  {
+   "loss_first": 0.0001,
+   "loss_last": 0.0032,
+   "rejected_steps_in_lesson": 0,
+   "steps_taken": 3,
+   "task_id": "QUILL/090",
+   "tokens_consumed": 1646,
+   "window": [
+    34,
+    35
+   ]
+  }
+ ],
+ "dg_sha256": {
+  "controller.py": "02c786e8d8e54ce84532d67d82ff746ff0a3eae2dce7966d0dff280811e22794",
+  "decoder.py": "3ed9931994c4b0a17a9ea48bb0d396243ce74db4163709426f308039d2a3902b",
+  "gram_projector.py": "2d20356a50a9223ab5bff0b02c88d7d8a7aebc540a8cc369690c06bd74a274e4",
+  "search.py": "7797cad9c77b1dc06c01800f74a29375d02351e4b641253ab34c02bdc8478a84",
+  "shadow.py": "93c77b3998272b2553e64bcf1a5846ed28323b7cbbeb18f0e2c0af09e1c97a40",
+  "transaction.py": "205732a7848703203acb060e8b0f7b42554c65e0641a7c8bff4dd5c0b6674584"
+ },
+ "family_json": "quill_family.json",
+ "family_module": "quill_adapter",
+ "family_sha256": "300578953d12a786904028a25a65e41c2a5d63e390d5cbf899c9efea2c1682c0",
+ "final_protected_check": {
+  "detail": "not applicable (mode R)",
+  "ok": null
+ },
+ "generation_config": {
+  "bos_token_id": 151643,
+  "do_sample": false,
+  "eos_token_id": [
+   151645,
+   151643
+  ],
+  "pad_token_id": 151645,
+  "repetition_penalty": 1.05,
+  "temperature": 0.7,
+  "top_k": 20,
+  "top_p": 0.8,
+  "transformers_version": "5.17.0"
+ },
+ "guard": null,
+ "identity": "fp652:px3:3ebd710bd786ca56",
+ "kind": "fp652_guard_writer_receipt",
+ "limit_lessons": null,
+ "materialized_bf16": {
+  "dir": "out/fp682c/px3/A_written_bf16",
+  "dtype": "bfloat16",
+  "files_sha256": {
+   "chat_template.jinja": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6",
+   "config.json": "471afdb0c817de9e884780bef60480d6cec93e9d99a76de99b98cb7e7e45328e",
+   "fp32_master_windows.pt": "f9b4a58c69b732662d887e23d9fdc70c7d24be5b770c04fa08e76406dd9863f2",
+   "generation_config.json": "4e133fc7267f7949e2130172e470512d53832bcf2c0c4aba3551771d0f6b2fc7",
+   "model.safetensors": "ac6da2199fbc7577db36eca1c27818adc27087aa408112dd2c15445327d3d934",
+   "tokenizer.json": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8",
+   "tokenizer_config.json": "b3d4aae9670f7c2de3e3b32675b0118e7e7b517544f5ab32efe04bd74f2238c1"
+  },
+  "mode": "R",
+  "note": "FP-652 guard writer export: native bf16 saved from the shadow-synced masters; fp32 masters alongside (TL names, [in,out] orientation)",
+  "reload_verified": true
+ },
+ "mode": "R",
+ "model_files_sha256": {
+  "MANIFEST-SHA256.json": "52b28c380d78314bee76e656479d1731f0f39060cdd488514e7fb5e8cbe66323",
+  "config.json": "471afdb0c817de9e884780bef60480d6cec93e9d99a76de99b98cb7e7e45328e",
+  "generation_config.json": "4e133fc7267f7949e2130172e470512d53832bcf2c0c4aba3551771d0f6b2fc7",
+  "model.safetensors": "aaa1c955215b8d7a454a196896ff8f5c084b083f26f08d66b99c61eba32790bf",
+  "tokenizer.json": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8",
+  "tokenizer_config.json": "b3d4aae9670f7c2de3e3b32675b0118e7e7b517544f5ab32efe04bd74f2238c1"
+ },
+ "model_root": "C:/Users/nryou/OneDrive - luxkbgallery.com/AI research/flagship/fp616/tools/pilot/out/fp682c/px2/A_written_bf16",
+ "objective_contract": {
+  "acquisition_gradient": "mean current/prior lesson CE only",
+  "finite_acquisition_gate": "native BF16 mean current/prior lesson CE only",
+  "proposal": "mean current/prior lesson CE + coding replay CE"
+ },
+ "pilot_teach_sha256": "a1499ac5b16c18e86217de34a4ebafdca69d73202e4c7f17c6dad3ca11f2a5a3",
+ "pool_replay": {
+  "ids_sha256": "7125f6af844228b1ef47926a9fc13c9e4d259dacaa54556a52c2b88a5ccd3b21",
+  "key": "VEX60",
+  "manifest_sha256": "cc95a4f2a7673d21eb2b37cb2bffd479ecee608b8923335325d89766ade70066",
+  "n": 60,
+  "pair_files_sha256": {
+   "fp645_coding_pairs.json": "c49d931e3a557990907819a6d101d988bd6778d90d5df70a2f05d94cd1a835e3",
+   "fp675_vex_pairs.json": "2d18b597385f9f5b3fa6311c9c31321949d0d90f0c6106aab6b6c06c2f33e8e0",
+   "fp677_quill_pairs.json": "775f6f35ed1b6c500be24ecc1b8a7912995373f7329ea6ad0ec38d238912bf59",
+   "fp677_vex2_pairs.json": "3bd459ffa918836889dbd0cd11f0dc845092ca2fd293e1b4f846a92918581018"
+  }
+ },
+ "projection": {
+  "bases": "out/fp682c/bases/fp658_coding_bases.pt",
+  "bases_sha256": "75641c466acf2d0365be6c5c891a83155665dada9e6cb599cead42152f8625d1",
+  "energy_before_total": 0.8266920589376241,
+  "energy_removed_total": 0.29989911430129723,
+  "fraction_removed": 0.3627700436444199,
+  "rule": "after each optimizer step: delta <- delta - V(V^T delta) on every active master",
+  "side": "input (TL rows)",
+  "steps": 71
+ },
+ "protected_traces": [],
+ "realized_dose": {
+  "accepted_steps": 71,
+  "attempted_steps": 71,
+  "attempted_targets": 33543,
+  "coding_replay": {
+   "draws": 71,
+   "loss_bearing_tokens": 10562,
+   "rule": "one coding-trace pair per step, own budget, never counted in leg_tok_used"
+  },
+  "leg_tok_used": 33543,
+  "rejected_steps": 0,
+  "replay_loss_bearing_tokens": 16602,
+  "reserved_quotas": [
+   565,
+   567,
+   568,
+   569,
+   570,
+   570,
+   572,
+   573,
+   576,
+   587,
+   599,
+   601,
+   602,
+   606,
+   611,
+   617,
+   617,
+   619,
+   625,
+   629,
+   630,
+   636,
+   642,
+   643,
+   646,
+   649,
+   653,
+   657,
+   663,
+   666,
+   671,
+   676,
+   682,
+   689,
+   699,
+   705,
+   711,
+   715,
+   723,
+   735,
+   752,
+   768,
+   790,
+   803,
+   829,
+   852,
+   878,
+   902,
+   938,
+   939,
+   977,
+   1026,
+   1029,
+   1099,
+   1125,
+   1157,
+   1232,
+   1324,
+   1535,
+   2046
+  ],
+  "verify_calls": 0,
+  "verify_generated_tokens": 0,
+  "zero_token_lessons": [
+   "QUILL/037",
+   "QUILL/112"
+  ]
+ },
+ "recipe": {
+  "chat_form": "only",
+  "dose_tok": 5657,
+  "leg_tok": 33943,
+  "lr": 1e-05,
+  "maxtok": 1024,
+  "replay": true,
+  "reservation": true,
+  "rotation": [
+   [
+    28,
+    29
+   ],
+   [
+    30,
+    31
+   ],
+   [
+    32,
+    33
+   ],
+   [
+    34,
+    35
+   ]
+  ],
+  "steps_cap": 60,
+  "view": "closed"
+ },
+ "reload_verified": true,
+ "runtime": {
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.17.0"
+ },
+ "seed": 20260829,
+ "stamp": "2026-09-12T12:45:52",
+ "step_log": [],
+ "tag": "px3",
+ "traces_sha256": null,
+ "wall_sec": 45.0,
+ "writer_sha256": "dba17398c94e657dbe05ae72f0128365e04f4c98661ea5ba39778ce2c9c9f0c9",
+ "writer_variant": "in-write-projection-v1"
+}

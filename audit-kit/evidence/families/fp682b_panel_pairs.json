@@ -1,0 +1,4496 @@
+{
+ "kind": "fp682b_panel_pairs",
+ "note": "the 641 fp467 protected-panel facts as completed statements (bank templates[0] with the gold answer): the PANEL SPAN source for FP-682b; never a training target",
+ "panel_sha256": "c8a6d19a6c67fd3712c28cfe3ecec074cf78c655071bca054e364746c591e32d",
+ "bank_sha256": "9c158782c0aa81854b6bfcabf9d43efe711ebd48ad5bc94052a2bc86c3592212",
+ "n": 641,
+ "items": [
+  {
+   "id": "CF:222",
+   "task_id": "CF:222",
+   "prompt": "Mount Markham is located in the continent Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:575",
+   "task_id": "CF:575",
+   "prompt": "Cape Legoupil is located in the continent Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:672",
+   "task_id": "CF:672",
+   "prompt": "Mount Karisimbi belongs to the continent of Africa",
+   "answer": "Africa",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:3045",
+   "task_id": "CF:3045",
+   "prompt": "Emmanuel Glacier belongs to the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:3529",
+   "task_id": "CF:3529",
+   "prompt": "Hood Glacier belongs to the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:3651",
+   "task_id": "CF:3651",
+   "prompt": "Blaiklock Glacier is located in the continent Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:3817",
+   "task_id": "CF:3817",
+   "prompt": "Concordia Station belongs to the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:3911",
+   "task_id": "CF:3911",
+   "prompt": "Guinea-Bissau is located in the continent Africa",
+   "answer": "Africa",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:4181",
+   "task_id": "CF:4181",
+   "prompt": "Catalonia is a part of the continent of Europe",
+   "answer": "Europe",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:5434",
+   "task_id": "CF:5434",
+   "prompt": "Beaglehole Glacier is a part of the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:5499",
+   "task_id": "CF:5499",
+   "prompt": "Oates Land belongs to the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:5630",
+   "task_id": "CF:5630",
+   "prompt": "Warta is a part of the continent of Europe",
+   "answer": "Europe",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:5778",
+   "task_id": "CF:5778",
+   "prompt": "Vinson Massif belongs to the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:9886",
+   "task_id": "CF:9886",
+   "prompt": "Mawson Glacier is a part of the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:9912",
+   "task_id": "CF:9912",
+   "prompt": "Bentley Continental is developed by Bentley",
+   "answer": "Bentley",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:10587",
+   "task_id": "CF:10587",
+   "prompt": "Antarctic ice sheet belongs to the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:10764",
+   "task_id": "CF:10764",
+   "prompt": "Cugnot Ice Piedmont belongs to the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:10832",
+   "task_id": "CF:10832",
+   "prompt": "Debenham Glacier belongs to the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:11082",
+   "task_id": "CF:11082",
+   "prompt": "Andvord Bay is located in the continent Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:11573",
+   "task_id": "CF:11573",
+   "prompt": "Segura belongs to the continent of Europe",
+   "answer": "Europe",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:12411",
+   "task_id": "CF:12411",
+   "prompt": "Emona Anchorage is located in the continent Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:12709",
+   "task_id": "CF:12709",
+   "prompt": "Neny Island is a part of the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:13782",
+   "task_id": "CF:13782",
+   "prompt": "Wylie Bay is a part of the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:13817",
+   "task_id": "CF:13817",
+   "prompt": "Abbasid Caliphate is located in the continent Africa",
+   "answer": "Africa",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:13839",
+   "task_id": "CF:13839",
+   "prompt": "Melilla is a part of the continent of Africa",
+   "answer": "Africa",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:15614",
+   "task_id": "CF:15614",
+   "prompt": "Eiger belongs to the continent of Europe",
+   "answer": "Europe",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:16130",
+   "task_id": "CF:16130",
+   "prompt": "Vietnam is located in the continent Asia",
+   "answer": "Asia",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:16165",
+   "task_id": "CF:16165",
+   "prompt": "KU Leuven belongs to the continent of Europe",
+   "answer": "Europe",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:16773",
+   "task_id": "CF:16773",
+   "prompt": "Bull Pass belongs to the continent of Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:16895",
+   "task_id": "CF:16895",
+   "prompt": "Lesotho is located in the continent Africa",
+   "answer": "Africa",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:17180",
+   "task_id": "CF:17180",
+   "prompt": "Mali belongs to the continent of Africa",
+   "answer": "Africa",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:17207",
+   "task_id": "CF:17207",
+   "prompt": "Shipley Glacier is located in the continent Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:18889",
+   "task_id": "CF:18889",
+   "prompt": "Dunedin Range is located in the continent Antarctica",
+   "answer": "Antarctica",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:19678",
+   "task_id": "CF:19678",
+   "prompt": "Moscow is located in the continent Europe",
+   "answer": "Europe",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:21227",
+   "task_id": "CF:21227",
+   "prompt": "Khabarovsk is a part of the continent of Asia",
+   "answer": "Asia",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:21368",
+   "task_id": "CF:21368",
+   "prompt": "Kochi is a part of the continent of Asia",
+   "answer": "Asia",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:21387",
+   "task_id": "CF:21387",
+   "prompt": "Turkey is a part of the continent of Asia",
+   "answer": "Asia",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:21776",
+   "task_id": "CF:21776",
+   "prompt": "Damavand belongs to the continent of Asia",
+   "answer": "Asia",
+   "source": "CounterFact"
+  },
+  {
+   "id": "ARC:ARC-Easy:293",
+   "task_id": "ARC:ARC-Easy:293",
+   "prompt": "Question: Which is the best evidence for the theory of continental drift? Answer: fossils of the same species found on widely separated continents",
+   "answer": "fossils of the same species found on widely separated continents",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Easy:1186",
+   "task_id": "ARC:ARC-Easy:1186",
+   "prompt": "Question: Which crustal feature forms when two continental plates collide? Answer: mountain ranges",
+   "answer": "mountain ranges",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Challenge:86",
+   "task_id": "ARC:ARC-Challenge:86",
+   "prompt": "Question: As early as the 1600s, scientists noticed that the continents appeared to fit together like pieces of a puzzle. The idea that the continents were once together and had drifted apart was not widely accepted. In the 1940s, technology used on submarines led to evidence of continental movement. This technology allowed the scientists to do which of these? Answer: to explain the mechanism that caused the continents to move",
+   "answer": "to explain the mechanism that caused the continents to move",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Challenge:1047",
+   "task_id": "ARC:ARC-Challenge:1047",
+   "prompt": "Question: Oceanic crust is composed mainly of basalt. Continental crust is composed mainly of granite. Why does oceanic crust generally tend to subduct under continental crust when plates collide? Answer: The oceanic crust is denser than the continental crust.",
+   "answer": "The oceanic crust is denser than the continental crust.",
+   "source": "ARC"
+  },
+  {
+   "id": "BEAR:P36:0",
+   "task_id": "BEAR:P36:0",
+   "prompt": "The capital of West Bengal is Kolkata.",
+   "answer": "Kolkata",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:1",
+   "task_id": "BEAR:P36:1",
+   "prompt": "The capital of Morocco is Rabat.",
+   "answer": "Rabat",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:2",
+   "task_id": "BEAR:P36:2",
+   "prompt": "The capital of Pagaruyung Kingdom is Sumatra.",
+   "answer": "Sumatra",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:3",
+   "task_id": "BEAR:P36:3",
+   "prompt": "The capital of Southern Federal District is Rostov-on-Don.",
+   "answer": "Rostov-on-Don",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:4",
+   "task_id": "BEAR:P36:4",
+   "prompt": "The capital of Henan is Zhengzhou.",
+   "answer": "Zhengzhou",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:5",
+   "task_id": "BEAR:P36:5",
+   "prompt": "The capital of South Sudan is Juba.",
+   "answer": "Juba",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:6",
+   "task_id": "BEAR:P36:6",
+   "prompt": "The capital of Viceroyalty of New Spain is Mexico City.",
+   "answer": "Mexico City",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:7",
+   "task_id": "BEAR:P36:7",
+   "prompt": "The capital of Benin is Porto-Novo.",
+   "answer": "Porto-Novo",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:8",
+   "task_id": "BEAR:P36:8",
+   "prompt": "The capital of Iran is Tehran.",
+   "answer": "Tehran",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:9",
+   "task_id": "BEAR:P36:9",
+   "prompt": "The capital of Pakistan is Islamabad.",
+   "answer": "Islamabad",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:10",
+   "task_id": "BEAR:P36:10",
+   "prompt": "The capital of Kosovo is Pristina.",
+   "answer": "Pristina",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:11",
+   "task_id": "BEAR:P36:11",
+   "prompt": "The capital of Sicily is Palermo.",
+   "answer": "Palermo",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:12",
+   "task_id": "BEAR:P36:12",
+   "prompt": "The capital of Gauteng is Johannesburg.",
+   "answer": "Johannesburg",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:13",
+   "task_id": "BEAR:P36:13",
+   "prompt": "The capital of Kenya is Nairobi.",
+   "answer": "Nairobi",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:15",
+   "task_id": "BEAR:P36:15",
+   "prompt": "The capital of Qatar is Doha.",
+   "answer": "Doha",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:16",
+   "task_id": "BEAR:P36:16",
+   "prompt": "The capital of Uzbekistan is Tashkent.",
+   "answer": "Tashkent",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:17",
+   "task_id": "BEAR:P36:17",
+   "prompt": "The capital of Gau East Prussia is Kaliningrad.",
+   "answer": "Kaliningrad",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:18",
+   "task_id": "BEAR:P36:18",
+   "prompt": "The capital of Karnataka is Bengaluru.",
+   "answer": "Bengaluru",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:19",
+   "task_id": "BEAR:P36:19",
+   "prompt": "The capital of Mali is Bamako.",
+   "answer": "Bamako",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:20",
+   "task_id": "BEAR:P36:20",
+   "prompt": "The capital of Hennepin County is Minneapolis.",
+   "answer": "Minneapolis",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:21",
+   "task_id": "BEAR:P36:21",
+   "prompt": "The capital of United States of America is Washington, D.C..",
+   "answer": "Washington, D.C.",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:22",
+   "task_id": "BEAR:P36:22",
+   "prompt": "The capital of South West England is Bristol.",
+   "answer": "Bristol",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:23",
+   "task_id": "BEAR:P36:23",
+   "prompt": "The capital of Shaanxi is Xi'an.",
+   "answer": "Xi'an",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:24",
+   "task_id": "BEAR:P36:24",
+   "prompt": "The capital of Adrianople Vilayet is Edirne.",
+   "answer": "Edirne",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:25",
+   "task_id": "BEAR:P36:25",
+   "prompt": "The capital of Liguria is Genoa.",
+   "answer": "Genoa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:26",
+   "task_id": "BEAR:P36:26",
+   "prompt": "The capital of Empire of Brazil is Rio de Janeiro.",
+   "answer": "Rio de Janeiro",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:27",
+   "task_id": "BEAR:P36:27",
+   "prompt": "The capital of Kingdom of Galicia and Lodomeria is Lviv.",
+   "answer": "Lviv",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:28",
+   "task_id": "BEAR:P36:28",
+   "prompt": "The capital of Serbia is Belgrade.",
+   "answer": "Belgrade",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:29",
+   "task_id": "BEAR:P36:29",
+   "prompt": "The capital of Vietnam is Hanoi.",
+   "answer": "Hanoi",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:30",
+   "task_id": "BEAR:P36:30",
+   "prompt": "The capital of Central Macedonia is Thessaloniki.",
+   "answer": "Thessaloniki",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:31",
+   "task_id": "BEAR:P36:31",
+   "prompt": "The capital of Queensland is Brisbane.",
+   "answer": "Brisbane",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:32",
+   "task_id": "BEAR:P36:32",
+   "prompt": "The capital of Portuguese Guinea is Bissau.",
+   "answer": "Bissau",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:33",
+   "task_id": "BEAR:P36:33",
+   "prompt": "The capital of Zimbabwe is Harare.",
+   "answer": "Harare",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:34",
+   "task_id": "BEAR:P36:34",
+   "prompt": "The capital of Biscay is Bilbao.",
+   "answer": "Bilbao",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:35",
+   "task_id": "BEAR:P36:35",
+   "prompt": "The capital of Cameroon is Yaound\u00e9.",
+   "answer": "Yaound\u00e9",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:36",
+   "task_id": "BEAR:P36:36",
+   "prompt": "The capital of Pays de la Loire is Nantes.",
+   "answer": "Nantes",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:37",
+   "task_id": "BEAR:P36:37",
+   "prompt": "The capital of Colony of New Zealand is Auckland.",
+   "answer": "Auckland",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:38",
+   "task_id": "BEAR:P36:38",
+   "prompt": "The capital of People's Republic of China is Beijing.",
+   "answer": "Beijing",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:39",
+   "task_id": "BEAR:P36:39",
+   "prompt": "The capital of Nicaragua is Managua.",
+   "answer": "Managua",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:40",
+   "task_id": "BEAR:P36:40",
+   "prompt": "The capital of Guinea is Conakry.",
+   "answer": "Conakry",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:41",
+   "task_id": "BEAR:P36:41",
+   "prompt": "The capital of Kovno Governorate is Kaunas.",
+   "answer": "Kaunas",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:42",
+   "task_id": "BEAR:P36:42",
+   "prompt": "The capital of Reichsgau Flandern is Antwerp.",
+   "answer": "Antwerp",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:43",
+   "task_id": "BEAR:P36:43",
+   "prompt": "The capital of Latvia is Riga.",
+   "answer": "Riga",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:44",
+   "task_id": "BEAR:P36:44",
+   "prompt": "The capital of Lithuania is Vilnius.",
+   "answer": "Vilnius",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:45",
+   "task_id": "BEAR:P36:45",
+   "prompt": "The capital of Lesser Poland Voivodeship is Krak\u00f3w.",
+   "answer": "Krak\u00f3w",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:46",
+   "task_id": "BEAR:P36:46",
+   "prompt": "The capital of Liechtenstein is Vaduz.",
+   "answer": "Vaduz",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:47",
+   "task_id": "BEAR:P36:47",
+   "prompt": "The capital of Second Bulgarian Empire is Veliko Tarnovo.",
+   "answer": "Veliko Tarnovo",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:48",
+   "task_id": "BEAR:P36:48",
+   "prompt": "The capital of Rhineland-Palatinate is Mainz.",
+   "answer": "Mainz",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:49",
+   "task_id": "BEAR:P36:49",
+   "prompt": "The capital of Allegheny County is Pittsburgh.",
+   "answer": "Pittsburgh",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:50",
+   "task_id": "BEAR:P36:50",
+   "prompt": "The capital of Taiwan is Taipei.",
+   "answer": "Taipei",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:51",
+   "task_id": "BEAR:P36:51",
+   "prompt": "The capital of State of Malta is Valletta.",
+   "answer": "Valletta",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:52",
+   "task_id": "BEAR:P36:52",
+   "prompt": "The capital of Armenia is Yerevan.",
+   "answer": "Yerevan",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:53",
+   "task_id": "BEAR:P36:53",
+   "prompt": "The capital of Tajikistan is Dushanbe.",
+   "answer": "Dushanbe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:54",
+   "task_id": "BEAR:P36:54",
+   "prompt": "The capital of Alaska is Juneau.",
+   "answer": "Juneau",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:55",
+   "task_id": "BEAR:P36:55",
+   "prompt": "The capital of Bhutan is Thimphu.",
+   "answer": "Thimphu",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:56",
+   "task_id": "BEAR:P36:56",
+   "prompt": "The capital of Wales is Cardiff.",
+   "answer": "Cardiff",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:57",
+   "task_id": "BEAR:P36:57",
+   "prompt": "The capital of Merseyside is Liverpool.",
+   "answer": "Liverpool",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P36:59",
+   "task_id": "BEAR:P36:59",
+   "prompt": "The capital of Belgium is City of Brussels.",
+   "answer": "City of Brussels",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:0",
+   "task_id": "BEAR:P1376:0",
+   "prompt": "Brazzaville is the capital of Republic of the Congo.",
+   "answer": "Republic of the Congo",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:1",
+   "task_id": "BEAR:P1376:1",
+   "prompt": "Colombo is the capital of Sri Lanka.",
+   "answer": "Sri Lanka",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:2",
+   "task_id": "BEAR:P1376:2",
+   "prompt": "Beirut is the capital of Lebanon.",
+   "answer": "Lebanon",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:3",
+   "task_id": "BEAR:P1376:3",
+   "prompt": "Maputo is the capital of Mozambique.",
+   "answer": "Mozambique",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:4",
+   "task_id": "BEAR:P1376:4",
+   "prompt": "Maseru is the capital of Lesotho.",
+   "answer": "Lesotho",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:5",
+   "task_id": "BEAR:P1376:5",
+   "prompt": "Prague is the capital of Czech Republic.",
+   "answer": "Czech Republic",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:6",
+   "task_id": "BEAR:P1376:6",
+   "prompt": "Mbabane is the capital of Eswatini.",
+   "answer": "Eswatini",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:7",
+   "task_id": "BEAR:P1376:7",
+   "prompt": "Mogadishu is the capital of Somalia.",
+   "answer": "Somalia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:8",
+   "task_id": "BEAR:P1376:8",
+   "prompt": "Porto-Novo is the capital of Benin.",
+   "answer": "Benin",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:9",
+   "task_id": "BEAR:P1376:9",
+   "prompt": "Tokyo is the capital of Japan.",
+   "answer": "Japan",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:10",
+   "task_id": "BEAR:P1376:10",
+   "prompt": "Dodoma is the capital of Tanzania.",
+   "answer": "Tanzania",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:11",
+   "task_id": "BEAR:P1376:11",
+   "prompt": "Buenos Aires is the capital of Argentina.",
+   "answer": "Argentina",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:12",
+   "task_id": "BEAR:P1376:12",
+   "prompt": "Yerevan is the capital of Armenia.",
+   "answer": "Armenia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:14",
+   "task_id": "BEAR:P1376:14",
+   "prompt": "Accra is the capital of Ghana.",
+   "answer": "Ghana",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:15",
+   "task_id": "BEAR:P1376:15",
+   "prompt": "Djibouti is the capital of Djibouti.",
+   "answer": "Djibouti",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:16",
+   "task_id": "BEAR:P1376:16",
+   "prompt": "St. George's is the capital of Grenada.",
+   "answer": "Grenada",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:17",
+   "task_id": "BEAR:P1376:17",
+   "prompt": "Malabo is the capital of Equatorial Guinea.",
+   "answer": "Equatorial Guinea",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:18",
+   "task_id": "BEAR:P1376:18",
+   "prompt": "La Paz is the capital of Bolivia.",
+   "answer": "Bolivia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:19",
+   "task_id": "BEAR:P1376:19",
+   "prompt": "Baku is the capital of Azerbaijan.",
+   "answer": "Azerbaijan",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:20",
+   "task_id": "BEAR:P1376:20",
+   "prompt": "Harare is the capital of Zimbabwe.",
+   "answer": "Zimbabwe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:21",
+   "task_id": "BEAR:P1376:21",
+   "prompt": "Thimphu is the capital of Bhutan.",
+   "answer": "Bhutan",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:22",
+   "task_id": "BEAR:P1376:22",
+   "prompt": "Warsaw is the capital of Poland.",
+   "answer": "Poland",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:23",
+   "task_id": "BEAR:P1376:23",
+   "prompt": "Bangui is the capital of Central African Republic.",
+   "answer": "Central African Republic",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:24",
+   "task_id": "BEAR:P1376:24",
+   "prompt": "Bangkok is the capital of Thailand.",
+   "answer": "Thailand",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:25",
+   "task_id": "BEAR:P1376:25",
+   "prompt": "Havana is the capital of Cuba.",
+   "answer": "Cuba",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:26",
+   "task_id": "BEAR:P1376:26",
+   "prompt": "Abuja is the capital of Nigeria.",
+   "answer": "Nigeria",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:27",
+   "task_id": "BEAR:P1376:27",
+   "prompt": "Mexico City is the capital of Mexico.",
+   "answer": "Mexico",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:28",
+   "task_id": "BEAR:P1376:28",
+   "prompt": "Kabul is the capital of Afghanistan.",
+   "answer": "Afghanistan",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:29",
+   "task_id": "BEAR:P1376:29",
+   "prompt": "Basseterre is the capital of Saint Kitts and Nevis.",
+   "answer": "Saint Kitts and Nevis",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:30",
+   "task_id": "BEAR:P1376:30",
+   "prompt": "Yamoussoukro is the capital of Ivory Coast.",
+   "answer": "Ivory Coast",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:31",
+   "task_id": "BEAR:P1376:31",
+   "prompt": "Bridgetown is the capital of Barbados.",
+   "answer": "Barbados",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:32",
+   "task_id": "BEAR:P1376:32",
+   "prompt": "Pyongyang is the capital of North Korea.",
+   "answer": "North Korea",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:33",
+   "task_id": "BEAR:P1376:33",
+   "prompt": "Sarajevo is the capital of Bosnia and Herzegovina.",
+   "answer": "Bosnia and Herzegovina",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:34",
+   "task_id": "BEAR:P1376:34",
+   "prompt": "Libreville is the capital of Gabon.",
+   "answer": "Gabon",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:35",
+   "task_id": "BEAR:P1376:35",
+   "prompt": "Georgetown is the capital of Guyana.",
+   "answer": "Guyana",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:36",
+   "task_id": "BEAR:P1376:36",
+   "prompt": "New Delhi is the capital of India.",
+   "answer": "India",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:37",
+   "task_id": "BEAR:P1376:37",
+   "prompt": "Amman is the capital of Jordan.",
+   "answer": "Jordan",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:38",
+   "task_id": "BEAR:P1376:38",
+   "prompt": "Antananarivo is the capital of Madagascar.",
+   "answer": "Madagascar",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:39",
+   "task_id": "BEAR:P1376:39",
+   "prompt": "Vaduz is the capital of Liechtenstein.",
+   "answer": "Liechtenstein",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:40",
+   "task_id": "BEAR:P1376:40",
+   "prompt": "Lusaka is the capital of Zambia.",
+   "answer": "Zambia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:41",
+   "task_id": "BEAR:P1376:41",
+   "prompt": "Manila is the capital of the Philippines.",
+   "answer": "the Philippines",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:42",
+   "task_id": "BEAR:P1376:42",
+   "prompt": "Monaco City is the capital of Monaco.",
+   "answer": "Monaco",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:43",
+   "task_id": "BEAR:P1376:43",
+   "prompt": "Castries is the capital of Saint Lucia.",
+   "answer": "Saint Lucia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:44",
+   "task_id": "BEAR:P1376:44",
+   "prompt": "Riga is the capital of Latvia.",
+   "answer": "Latvia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:45",
+   "task_id": "BEAR:P1376:45",
+   "prompt": "Tbilisi is the capital of Georgia.",
+   "answer": "Georgia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:46",
+   "task_id": "BEAR:P1376:46",
+   "prompt": "Bratislava is the capital of Slovakia.",
+   "answer": "Slovakia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:47",
+   "task_id": "BEAR:P1376:47",
+   "prompt": "Monrovia is the capital of Liberia.",
+   "answer": "Liberia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:48",
+   "task_id": "BEAR:P1376:48",
+   "prompt": "Minsk is the capital of Belarus.",
+   "answer": "Belarus",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:49",
+   "task_id": "BEAR:P1376:49",
+   "prompt": "Caracas is the capital of Venezuela.",
+   "answer": "Venezuela",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:50",
+   "task_id": "BEAR:P1376:50",
+   "prompt": "Paramaribo is the capital of Suriname.",
+   "answer": "Suriname",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:51",
+   "task_id": "BEAR:P1376:51",
+   "prompt": "Algiers is the capital of Algeria.",
+   "answer": "Algeria",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:52",
+   "task_id": "BEAR:P1376:52",
+   "prompt": "Montevideo is the capital of Uruguay.",
+   "answer": "Uruguay",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:53",
+   "task_id": "BEAR:P1376:53",
+   "prompt": "Nassau is the capital of the Bahamas.",
+   "answer": "the Bahamas",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:54",
+   "task_id": "BEAR:P1376:54",
+   "prompt": "Vientiane is the capital of Laos.",
+   "answer": "Laos",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:55",
+   "task_id": "BEAR:P1376:55",
+   "prompt": "Port-au-Prince is the capital of Haiti.",
+   "answer": "Haiti",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:56",
+   "task_id": "BEAR:P1376:56",
+   "prompt": "Funafuti is the capital of Tuvalu.",
+   "answer": "Tuvalu",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:57",
+   "task_id": "BEAR:P1376:57",
+   "prompt": "Khartoum is the capital of Sudan.",
+   "answer": "Sudan",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:58",
+   "task_id": "BEAR:P1376:58",
+   "prompt": "Bamako is the capital of Mali.",
+   "answer": "Mali",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1376:59",
+   "task_id": "BEAR:P1376:59",
+   "prompt": "Muscat is the capital of Oman.",
+   "answer": "Oman",
+   "source": "BEAR"
+  },
+  {
+   "id": "CF:1124",
+   "task_id": "CF:1124",
+   "prompt": "Dutch East Indies's capital city is Jakarta",
+   "answer": "Jakarta",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:3176",
+   "task_id": "CF:3176",
+   "prompt": "British Guiana, which has the capital Georgetown",
+   "answer": "Georgetown",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:11690",
+   "task_id": "CF:11690",
+   "prompt": "McMinn County's capital city is Athens",
+   "answer": "Athens",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:12805",
+   "task_id": "CF:12805",
+   "prompt": "Allied-occupied Germany's capital city is Berlin",
+   "answer": "Berlin",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:12886",
+   "task_id": "CF:12886",
+   "prompt": "Rif Dimashq Governorate's capital, Damascus",
+   "answer": "Damascus",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:12991",
+   "task_id": "CF:12991",
+   "prompt": "Bain Capital was formed in Boston",
+   "answer": "Boston",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:14635",
+   "task_id": "CF:14635",
+   "prompt": "Jerusalem District, which has the capital city Jerusalem",
+   "answer": "Jerusalem",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:19655",
+   "task_id": "CF:19655",
+   "prompt": "Brussels-Capital Region's capital city is Brussels",
+   "answer": "Brussels",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:21139",
+   "task_id": "CF:21139",
+   "prompt": "Third Hellenic Republic's capital is Athens",
+   "answer": "Athens",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:21333",
+   "task_id": "CF:21333",
+   "prompt": "People's Republic of China's capital city, Beijing",
+   "answer": "Beijing",
+   "source": "CounterFact"
+  },
+  {
+   "id": "PopQA:649127",
+   "task_id": "PopQA:649127",
+   "prompt": "Q: What is Tokyo the capital of? A: Japan",
+   "answer": "Japan",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3553140",
+   "task_id": "PopQA:3553140",
+   "prompt": "Q: What is Turin the capital of? A: Piedmont",
+   "answer": "Piedmont",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2909774",
+   "task_id": "PopQA:2909774",
+   "prompt": "Q: What is Harare the capital of? A: Rhodesia",
+   "answer": "Rhodesia",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:4123088",
+   "task_id": "PopQA:4123088",
+   "prompt": "Q: What is Cape Town the capital of? A: Western Cape",
+   "answer": "Western Cape",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:4790558",
+   "task_id": "PopQA:4790558",
+   "prompt": "Q: What is Archer City the capital of? A: Archer County",
+   "answer": "Archer County",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:4123089",
+   "task_id": "PopQA:4123089",
+   "prompt": "Q: What is Cape Town the capital of? A: Western Cape",
+   "answer": "Western Cape",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:394543",
+   "task_id": "PopQA:394543",
+   "prompt": "Q: What is Ghent the capital of? A: East Flanders",
+   "answer": "East Flanders",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2064228",
+   "task_id": "PopQA:2064228",
+   "prompt": "Q: What is Kaberamaido the capital of? A: Kaberamaido District",
+   "answer": "Kaberamaido District",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2190574",
+   "task_id": "PopQA:2190574",
+   "prompt": "Q: What is Saint Paul the capital of? A: Minnesota",
+   "answer": "Minnesota",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:377364",
+   "task_id": "PopQA:377364",
+   "prompt": "Q: What is Busia the capital of? A: Busia District",
+   "answer": "Busia District",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1594214",
+   "task_id": "PopQA:1594214",
+   "prompt": "Q: What is Totskoye the capital of? A: Totsky District",
+   "answer": "Totsky District",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1309417",
+   "task_id": "PopQA:1309417",
+   "prompt": "Q: What is Sacramento the capital of? A: California",
+   "answer": "California",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:14319",
+   "task_id": "PopQA:14319",
+   "prompt": "Q: What is Nan the capital of? A: Nan",
+   "answer": "Nan",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1249364",
+   "task_id": "PopQA:1249364",
+   "prompt": "Q: What is Stockholm the capital of? A: Stockholm County",
+   "answer": "Stockholm County",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1823075",
+   "task_id": "PopQA:1823075",
+   "prompt": "Q: What is Atlanta the capital of? A: Fulton County",
+   "answer": "Fulton County",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2133567",
+   "task_id": "PopQA:2133567",
+   "prompt": "Q: What is Jayapura the capital of? A: Papua Province of Indonesia",
+   "answer": "Papua Province of Indonesia",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:4609638",
+   "task_id": "PopQA:4609638",
+   "prompt": "Q: What is Asti the capital of? A: Province of Asti",
+   "answer": "Province of Asti",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1846415",
+   "task_id": "PopQA:1846415",
+   "prompt": "Q: What is City of Brussels the capital of? A: Flanders",
+   "answer": "Flanders",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:405356",
+   "task_id": "PopQA:405356",
+   "prompt": "Q: What is Como the capital of? A: Province of Como",
+   "answer": "Province of Como",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1416439",
+   "task_id": "PopQA:1416439",
+   "prompt": "Q: What is Kuala Lumpur the capital of? A: Federated Malay States",
+   "answer": "Federated Malay States",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1478183",
+   "task_id": "PopQA:1478183",
+   "prompt": "Q: What is Guiyang the capital of? A: Guizhou",
+   "answer": "Guizhou",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:4384262",
+   "task_id": "PopQA:4384262",
+   "prompt": "Q: What is Newcastle the capital of? A: City of Newcastle",
+   "answer": "City of Newcastle",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:4351838",
+   "task_id": "PopQA:4351838",
+   "prompt": "Q: What is Babylon the capital of? A: Achaemenid Empire",
+   "answer": "Achaemenid Empire",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:4593802",
+   "task_id": "PopQA:4593802",
+   "prompt": "Q: What is Portland the capital of? A: Multnomah County",
+   "answer": "Multnomah County",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1281223",
+   "task_id": "PopQA:1281223",
+   "prompt": "Q: What is Riga the capital of? A: Latvia",
+   "answer": "Latvia",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1611777",
+   "task_id": "PopQA:1611777",
+   "prompt": "Q: What is Florence the capital of? A: Tuscany",
+   "answer": "Tuscany",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1599692",
+   "task_id": "PopQA:1599692",
+   "prompt": "Q: What is Tsu the capital of? A: Tsu Domain",
+   "answer": "Tsu Domain",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:128718",
+   "task_id": "PopQA:128718",
+   "prompt": "Q: What is Prague the capital of? A: Central Bohemian Region",
+   "answer": "Central Bohemian Region",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1659430",
+   "task_id": "PopQA:1659430",
+   "prompt": "Q: What is Saga the capital of? A: Saga Prefecture",
+   "answer": "Saga Prefecture",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6401521",
+   "task_id": "PopQA:6401521",
+   "prompt": "Q: What is Ufa the capital of? A: Ufimsky District",
+   "answer": "Ufimsky District",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:20781",
+   "task_id": "PopQA:20781",
+   "prompt": "Q: What is Madison the capital of? A: Lake County",
+   "answer": "Lake County",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6541947",
+   "task_id": "PopQA:6541947",
+   "prompt": "Q: What is Orange the capital of? A: Orange County",
+   "answer": "Orange County",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2340255",
+   "task_id": "PopQA:2340255",
+   "prompt": "Q: What is Flying Fish Cove the capital of? A: Christmas Island",
+   "answer": "Christmas Island",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2460962",
+   "task_id": "PopQA:2460962",
+   "prompt": "Q: Who is the author of Reading Capital (work level)? A: Louis Althusser",
+   "answer": "Louis Althusser",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2579813",
+   "task_id": "PopQA:2579813",
+   "prompt": "Q: What is the capital of Czechoslovakia? A: Prague",
+   "answer": "Prague",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:149440",
+   "task_id": "PopQA:149440",
+   "prompt": "Q: What is the capital of Cache County? A: Logan",
+   "answer": "Logan",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:4420065",
+   "task_id": "PopQA:4420065",
+   "prompt": "Q: What is the capital of Cayman Islands? A: George Town",
+   "answer": "George Town",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:4740507",
+   "task_id": "PopQA:4740507",
+   "prompt": "Q: What is the capital of Grand Duchy of Finland? A: Helsinki",
+   "answer": "Helsinki",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6432170",
+   "task_id": "PopQA:6432170",
+   "prompt": "Q: What is the capital of Philippines? A: Manila",
+   "answer": "Manila",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3452990",
+   "task_id": "PopQA:3452990",
+   "prompt": "Q: What is the capital of Cherokee County? A: Canton",
+   "answer": "Canton",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1310788",
+   "task_id": "PopQA:1310788",
+   "prompt": "Q: What is the capital of County Kilkenny? A: Kilkenny",
+   "answer": "Kilkenny",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6503240",
+   "task_id": "PopQA:6503240",
+   "prompt": "Q: What is the capital of Benin? A: Porto-Novo",
+   "answer": "Porto-Novo",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:19472",
+   "task_id": "PopQA:19472",
+   "prompt": "Q: What is the capital of Madagascar? A: Antananarivo",
+   "answer": "Antananarivo",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2314335",
+   "task_id": "PopQA:2314335",
+   "prompt": "Q: What is the capital of Beheira Governorate? A: Damanhur",
+   "answer": "Damanhur",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1651969",
+   "task_id": "PopQA:1651969",
+   "prompt": "Q: What is the capital of Yunguyo Province? A: Yunguyo",
+   "answer": "Yunguyo",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6269689",
+   "task_id": "PopQA:6269689",
+   "prompt": "Q: What is the capital of State of Mexico? A: Toluca",
+   "answer": "Toluca",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:5978636",
+   "task_id": "PopQA:5978636",
+   "prompt": "Q: What is the capital of Connecticut? A: Hartford",
+   "answer": "Hartford",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3030578",
+   "task_id": "PopQA:3030578",
+   "prompt": "Q: What is the capital of Turkey? A: Ankara",
+   "answer": "Ankara",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1889250",
+   "task_id": "PopQA:1889250",
+   "prompt": "Q: What is the capital of Pomorie Municipality? A: Pomorie",
+   "answer": "Pomorie",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3541925",
+   "task_id": "PopQA:3541925",
+   "prompt": "Q: What is the capital of Albertslund Municipality? A: Albertslund",
+   "answer": "Albertslund",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:51112",
+   "task_id": "PopQA:51112",
+   "prompt": "Q: What is the capital of Senegal? A: Dakar",
+   "answer": "Dakar",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:5847633",
+   "task_id": "PopQA:5847633",
+   "prompt": "Q: What is the capital of canton of Saint-Doulchard? A: Saint-Doulchard",
+   "answer": "Saint-Doulchard",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6268676",
+   "task_id": "PopQA:6268676",
+   "prompt": "Q: What is the capital of City of Newcastle? A: Newcastle",
+   "answer": "Newcastle",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:5277586",
+   "task_id": "PopQA:5277586",
+   "prompt": "Q: What is the capital of arrondissement of Castellane? A: Castellane",
+   "answer": "Castellane",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:552289",
+   "task_id": "PopQA:552289",
+   "prompt": "Q: What is the capital of New Jersey? A: Trenton",
+   "answer": "Trenton",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:293318",
+   "task_id": "PopQA:293318",
+   "prompt": "Q: What is the capital of Rhineland-Palatinate? A: Mainz",
+   "answer": "Mainz",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:162940",
+   "task_id": "PopQA:162940",
+   "prompt": "Q: What is the capital of Kingdom of Essex? A: London",
+   "answer": "London",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2955693",
+   "task_id": "PopQA:2955693",
+   "prompt": "Q: What is the capital of Bahia? A: Salvador",
+   "answer": "Salvador",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2986069",
+   "task_id": "PopQA:2986069",
+   "prompt": "Q: What is the capital of Argentina? A: Buenos Aires",
+   "answer": "Buenos Aires",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6434714",
+   "task_id": "PopQA:6434714",
+   "prompt": "Q: What is the capital of Central African Republic? A: Bangui",
+   "answer": "Bangui",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1956321",
+   "task_id": "PopQA:1956321",
+   "prompt": "Q: What is the capital of Chiprovtsi Municipality? A: Chiprovtsi",
+   "answer": "Chiprovtsi",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1971316",
+   "task_id": "PopQA:1971316",
+   "prompt": "Q: What is the capital of P\u00f4? A: Turin",
+   "answer": "Turin",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6368219",
+   "task_id": "PopQA:6368219",
+   "prompt": "Q: What is the capital of Afghanistan? A: Kabul",
+   "answer": "Kabul",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:5895914",
+   "task_id": "PopQA:5895914",
+   "prompt": "Q: What is the capital of Uruguay? A: Montevideo",
+   "answer": "Montevideo",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6258460",
+   "task_id": "PopQA:6258460",
+   "prompt": "Q: What is the capital of Florida? A: Tallahassee",
+   "answer": "Tallahassee",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1727462",
+   "task_id": "PopQA:1727462",
+   "prompt": "Q: What is the capital of North Macedonia? A: Skopje",
+   "answer": "Skopje",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1366262",
+   "task_id": "PopQA:1366262",
+   "prompt": "Q: What is the capital of Khyber Pakhtunkhwa? A: Peshawar",
+   "answer": "Peshawar",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:5302153",
+   "task_id": "PopQA:5302153",
+   "prompt": "Q: What is the capital of Zeeland? A: Middelburg",
+   "answer": "Middelburg",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3101183",
+   "task_id": "PopQA:3101183",
+   "prompt": "Q: What is the capital of Mendoza? A: Mendoza",
+   "answer": "Mendoza",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1176214",
+   "task_id": "PopQA:1176214",
+   "prompt": "Q: What is the capital of Oth\u00f3n P. Blanco Municipality? A: Chetumal",
+   "answer": "Chetumal",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:304013",
+   "task_id": "PopQA:304013",
+   "prompt": "Q: What is the capital of Appenzell Ausserrhoden? A: Herisau",
+   "answer": "Herisau",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:28977",
+   "task_id": "PopQA:28977",
+   "prompt": "Q: What is the capital of Mauritius? A: Port Louis",
+   "answer": "Port Louis",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6271802",
+   "task_id": "PopQA:6271802",
+   "prompt": "Q: What is the capital of Muyinga Province? A: Muyinga",
+   "answer": "Muyinga",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6224331",
+   "task_id": "PopQA:6224331",
+   "prompt": "Q: What is the capital of Yemen? A: Sanaa",
+   "answer": "Sanaa",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2939807",
+   "task_id": "PopQA:2939807",
+   "prompt": "Q: What is the capital of Austria? A: Vienna",
+   "answer": "Vienna",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:4851457",
+   "task_id": "PopQA:4851457",
+   "prompt": "Q: What is the capital of Kambarsky District? A: Kambarka",
+   "answer": "Kambarka",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2213079",
+   "task_id": "PopQA:2213079",
+   "prompt": "Q: What is the capital of Vorpommern-R\u00fcgen District? A: Stralsund",
+   "answer": "Stralsund",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:349957",
+   "task_id": "PopQA:349957",
+   "prompt": "Q: What is the capital of Byzantine Empire? A: Constantinople",
+   "answer": "Constantinople",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6374080",
+   "task_id": "PopQA:6374080",
+   "prompt": "Q: What is the capital of Fareham? A: Fareham",
+   "answer": "Fareham",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:30821",
+   "task_id": "PopQA:30821",
+   "prompt": "Q: What is the capital of Morocco? A: Rabat",
+   "answer": "Rabat",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6306597",
+   "task_id": "PopQA:6306597",
+   "prompt": "Q: What is the capital of Central Region? A: Cape Coast",
+   "answer": "Cape Coast",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1860029",
+   "task_id": "PopQA:1860029",
+   "prompt": "Q: What is the capital of Cuba? A: Havana",
+   "answer": "Havana",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:861082",
+   "task_id": "PopQA:861082",
+   "prompt": "Q: What is the capital of Kentucky? A: Frankfort",
+   "answer": "Frankfort",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2583275",
+   "task_id": "PopQA:2583275",
+   "prompt": "Q: What is the capital of Sweden? A: Stockholm",
+   "answer": "Stockholm",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6145054",
+   "task_id": "PopQA:6145054",
+   "prompt": "Q: What is the capital of Alaska? A: Juneau",
+   "answer": "Juneau",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3013107",
+   "task_id": "PopQA:3013107",
+   "prompt": "Q: What is the capital of Roraima? A: Boa Vista",
+   "answer": "Boa Vista",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:975583",
+   "task_id": "PopQA:975583",
+   "prompt": "Q: What is the capital of County Cork? A: Cork",
+   "answer": "Cork",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3741171",
+   "task_id": "PopQA:3741171",
+   "prompt": "Q: What is the capital of Bury? A: Bury",
+   "answer": "Bury",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1596119",
+   "task_id": "PopQA:1596119",
+   "prompt": "Q: What is the capital of Gmina Andrespol? A: Andrespol",
+   "answer": "Andrespol",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2899839",
+   "task_id": "PopQA:2899839",
+   "prompt": "Q: What is the capital of Switzerland? A: Bern",
+   "answer": "Bern",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2440723",
+   "task_id": "PopQA:2440723",
+   "prompt": "Q: What is the capital of Cao Wei? A: Luoyang",
+   "answer": "Luoyang",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3061474",
+   "task_id": "PopQA:3061474",
+   "prompt": "Q: What is the capital of Tocantins? A: Palmas",
+   "answer": "Palmas",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3461358",
+   "task_id": "PopQA:3461358",
+   "prompt": "Q: What is the capital of Qashqadaryo Region? A: Qarshi",
+   "answer": "Qarshi",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2567479",
+   "task_id": "PopQA:2567479",
+   "prompt": "Q: What is the capital of Saraburi? A: Saraburi",
+   "answer": "Saraburi",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:5748842",
+   "task_id": "PopQA:5748842",
+   "prompt": "Q: What is the capital of Bolivia? A: Sucre",
+   "answer": "Sucre",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6267323",
+   "task_id": "PopQA:6267323",
+   "prompt": "Q: What is the capital of Confederate States of America? A: Montgomery",
+   "answer": "Montgomery",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6351301",
+   "task_id": "PopQA:6351301",
+   "prompt": "Q: What is the capital of United Arab Emirates? A: Abu Dhabi",
+   "answer": "Abu Dhabi",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6495030",
+   "task_id": "PopQA:6495030",
+   "prompt": "Q: What is the capital of South Sudan? A: Juba",
+   "answer": "Juba",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:5547087",
+   "task_id": "PopQA:5547087",
+   "prompt": "Q: What is the capital of Suriname? A: Paramaribo",
+   "answer": "Paramaribo",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:527593",
+   "task_id": "PopQA:527593",
+   "prompt": "Q: What is the capital of Negros Oriental? A: Dumaguete",
+   "answer": "Dumaguete",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1305832",
+   "task_id": "PopQA:1305832",
+   "prompt": "Q: What is the capital of Kingdom of England? A: Winchester",
+   "answer": "Winchester",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6355626",
+   "task_id": "PopQA:6355626",
+   "prompt": "Q: What is the capital of Vietnam? A: Hanoi",
+   "answer": "Hanoi",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3577554",
+   "task_id": "PopQA:3577554",
+   "prompt": "Q: What is the capital of Yadkin County? A: Yadkinville",
+   "answer": "Yadkinville",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3468623",
+   "task_id": "PopQA:3468623",
+   "prompt": "Q: What is the capital of Belgrade Oblast? A: Belgrade",
+   "answer": "Belgrade",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:378257",
+   "task_id": "PopQA:378257",
+   "prompt": "Q: What is the capital of Sucha County? A: Sucha Beskidzka",
+   "answer": "Sucha Beskidzka",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:5925",
+   "task_id": "PopQA:5925",
+   "prompt": "Q: What is the capital of The Gambia? A: Banjul",
+   "answer": "Banjul",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:176654",
+   "task_id": "PopQA:176654",
+   "prompt": "Q: What is the capital of Province of Canada? A: Montreal",
+   "answer": "Montreal",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:557239",
+   "task_id": "PopQA:557239",
+   "prompt": "Q: What is the capital of Manggarai? A: Ruteng",
+   "answer": "Ruteng",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3020359",
+   "task_id": "PopQA:3020359",
+   "prompt": "Q: What is the capital of Piau\u00ed? A: Teresina",
+   "answer": "Teresina",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:13998",
+   "task_id": "PopQA:13998",
+   "prompt": "Q: What is the capital of Liberia? A: Monrovia",
+   "answer": "Monrovia",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1904656",
+   "task_id": "PopQA:1904656",
+   "prompt": "Q: What is the capital of Plesetsky District? A: Plesetsk",
+   "answer": "Plesetsk",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6260898",
+   "task_id": "PopQA:6260898",
+   "prompt": "Q: What is the capital of Beiyang Government? A: Beijing",
+   "answer": "Beijing",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1856673",
+   "task_id": "PopQA:1856673",
+   "prompt": "Q: What is the capital of Lamphun? A: Lamphun",
+   "answer": "Lamphun",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:5006891",
+   "task_id": "PopQA:5006891",
+   "prompt": "Q: What is the capital of Saanen District? A: Saanen",
+   "answer": "Saanen",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6505231",
+   "task_id": "PopQA:6505231",
+   "prompt": "Q: What is the capital of Botswana? A: Gaborone",
+   "answer": "Gaborone",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6279762",
+   "task_id": "PopQA:6279762",
+   "prompt": "Q: What is the capital of Utah? A: Salt Lake City",
+   "answer": "Salt Lake City",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6604",
+   "task_id": "PopQA:6604",
+   "prompt": "Q: What is the capital of Guinea? A: Conakry",
+   "answer": "Conakry",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:44382",
+   "task_id": "PopQA:44382",
+   "prompt": "Q: What is the capital of Rwanda? A: Kigali",
+   "answer": "Kigali",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1706834",
+   "task_id": "PopQA:1706834",
+   "prompt": "Q: What is the capital of Moldova? A: Chi\u0219in\u0103u",
+   "answer": "Chi\u0219in\u0103u",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:297952",
+   "task_id": "PopQA:297952",
+   "prompt": "Q: What is the capital of Illinois? A: Springfield",
+   "answer": "Springfield",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6402884",
+   "task_id": "PopQA:6402884",
+   "prompt": "Q: What is the capital of Mali? A: Bamako",
+   "answer": "Bamako",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6305992",
+   "task_id": "PopQA:6305992",
+   "prompt": "Q: What is the capital of Qatar? A: Doha",
+   "answer": "Doha",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:34246",
+   "task_id": "PopQA:34246",
+   "prompt": "Q: What is the capital of Namibia? A: Windhoek",
+   "answer": "Windhoek",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:542552",
+   "task_id": "PopQA:542552",
+   "prompt": "Q: What is the capital of Ohio? A: Columbus",
+   "answer": "Columbus",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:287919",
+   "task_id": "PopQA:287919",
+   "prompt": "Q: What is the capital of Aargau? A: Aarau",
+   "answer": "Aarau",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2617063",
+   "task_id": "PopQA:2617063",
+   "prompt": "Q: What is the capital of City Municipality of Celje? A: Celje",
+   "answer": "Celje",
+   "source": "PopQA"
+  },
+  {
+   "id": "MMLU:11330",
+   "task_id": "MMLU:11330",
+   "prompt": "Question: Congress enacts a statute that makes Pennsylvania Avenue a one-way street. Congress has enacted the statute solely for the purpose of enabling members of Congress to travel back and forth to the Capital without being tied up in heavy traffic each day. Before Congress enacted this law, the Washington, D. C. , City Council had previously passed an ordinance designating Pennsylvania Avenue as a two-lane street. Which of the following is the most accurate statement regarding the constitutionality of the federal statute designating Pennsylvania Avenue a one-way street? Answer: It is valid because Congress has exclusive power over the District of Columbia.",
+   "answer": "It is valid because Congress has exclusive power over the District of Columbia.",
+   "source": "MMLU"
+  },
+  {
+   "id": "BEAR:P6:12",
+   "task_id": "BEAR:P6:12",
+   "prompt": "The head of government of Liberia is George Weah.",
+   "answer": "George Weah",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P6:35",
+   "task_id": "BEAR:P6:35",
+   "prompt": "The head of government of Democratic Government of Albania is Enver Hoxha.",
+   "answer": "Enver Hoxha",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P6:43",
+   "task_id": "BEAR:P6:43",
+   "prompt": "The head of government of 24th Canadian Ministry is Brian Mulroney.",
+   "answer": "Brian Mulroney",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P19:30",
+   "task_id": "BEAR:P19:30",
+   "prompt": "Yaw Yeboah was born in Ghana.",
+   "answer": "Ghana",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P19:41",
+   "task_id": "BEAR:P19:41",
+   "prompt": "J\u00f3n Loftsson was born in Iceland.",
+   "answer": "Iceland",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P19:42",
+   "task_id": "BEAR:P19:42",
+   "prompt": "Arses of Persia was born in Iran.",
+   "answer": "Iran",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P20:84",
+   "task_id": "BEAR:P20:84",
+   "prompt": "Fozia Soomro died in Pakistan.",
+   "answer": "Pakistan",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P20:148",
+   "task_id": "BEAR:P20:148",
+   "prompt": "Pius XI died in Vatican City.",
+   "answer": "Vatican City",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P26:4",
+   "task_id": "BEAR:P26:4",
+   "prompt": "Lin Feng-jiao is married to Jackie Chan.",
+   "answer": "Jackie Chan",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P26:18",
+   "task_id": "BEAR:P26:18",
+   "prompt": "Khadijeh Saqafi is married to Ruhollah Khomeini.",
+   "answer": "Ruhollah Khomeini",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P26:55",
+   "task_id": "BEAR:P26:55",
+   "prompt": "Lyle Lovett is married to Julia Roberts.",
+   "answer": "Julia Roberts",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P27:4",
+   "task_id": "BEAR:P27:4",
+   "prompt": "Eva Per\u00f3n holds citizenship in Argentina.",
+   "answer": "Argentina",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P27:136",
+   "task_id": "BEAR:P27:136",
+   "prompt": "Loboda holds citizenship in Ukraine.",
+   "answer": "Ukraine",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:38",
+   "task_id": "BEAR:P30:38",
+   "prompt": "Thwaites Glacier is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:42",
+   "task_id": "BEAR:P30:42",
+   "prompt": "Weddell Sea is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:52",
+   "task_id": "BEAR:P30:52",
+   "prompt": "Mumbai is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:87",
+   "task_id": "BEAR:P30:87",
+   "prompt": "Slovakia is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:130",
+   "task_id": "BEAR:P30:130",
+   "prompt": "Venezuela is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P37:5",
+   "task_id": "BEAR:P37:5",
+   "prompt": "The official language of Svalbard is Norwegian.",
+   "answer": "Norwegian",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P37:20",
+   "task_id": "BEAR:P37:20",
+   "prompt": "The official language of March of Montferrat is Piedmontese.",
+   "answer": "Piedmontese",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P37:41",
+   "task_id": "BEAR:P37:41",
+   "prompt": "The official language of Kingdom of Wessex is West Saxon.",
+   "answer": "West Saxon",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P37:59",
+   "task_id": "BEAR:P37:59",
+   "prompt": "The official language of Visoko is Bosnian.",
+   "answer": "Bosnian",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P50:90",
+   "task_id": "BEAR:P50:90",
+   "prompt": "The Garden of Forking Paths was authored by Jorge Luis Borges.",
+   "answer": "Jorge Luis Borges",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P57:61",
+   "task_id": "BEAR:P57:61",
+   "prompt": "The Wind That Shakes the Barley was directed by Ken Loach.",
+   "answer": "Ken Loach",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P57:108",
+   "task_id": "BEAR:P57:108",
+   "prompt": "Crooklyn was directed by Spike Lee.",
+   "answer": "Spike Lee",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P57:117",
+   "task_id": "BEAR:P57:117",
+   "prompt": "Indiana Jones and the Temple of Doom was directed by Steven Spielberg.",
+   "answer": "Steven Spielberg",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P57:139",
+   "task_id": "BEAR:P57:139",
+   "prompt": "Until the End of the World was directed by Wim Wenders.",
+   "answer": "Wim Wenders",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P58:94",
+   "task_id": "BEAR:P58:94",
+   "prompt": "House of Usher was written by Richard Matheson.",
+   "answer": "Richard Matheson",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P69:65",
+   "task_id": "BEAR:P69:65",
+   "prompt": "Jubal Early was educated at the United States Military Academy.",
+   "answer": "United States Military Academy",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P69:76",
+   "task_id": "BEAR:P69:76",
+   "prompt": "Goutam Ghose was educated at the University of Calcutta.",
+   "answer": "University of Calcutta",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P69:122",
+   "task_id": "BEAR:P69:122",
+   "prompt": "David Cronenberg was educated at the University of Toronto.",
+   "answer": "University of Toronto",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P69:129",
+   "task_id": "BEAR:P69:129",
+   "prompt": "Anton Webern was educated at the University of Vienna.",
+   "answer": "University of Vienna",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P87:10",
+   "task_id": "BEAR:P87:10",
+   "prompt": "The librettist for the opera Sweet Charity was Neil Simon.",
+   "answer": "Neil Simon",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P87:11",
+   "task_id": "BEAR:P87:11",
+   "prompt": "The librettist for the opera Enoch Arden was Alfred Tennyson.",
+   "answer": "Alfred Tennyson",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P87:30",
+   "task_id": "BEAR:P87:30",
+   "prompt": "The librettist for the opera Amar Sonar Bangla was Rabindranath Tagore.",
+   "answer": "Rabindranath Tagore",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P87:58",
+   "task_id": "BEAR:P87:58",
+   "prompt": "The librettist for the opera Mamma Mia! was Bj\u00f6rn Ulvaeus.",
+   "answer": "Bj\u00f6rn Ulvaeus",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P103:30",
+   "task_id": "BEAR:P103:30",
+   "prompt": "The native language of Linoy Ashram is Hebrew.",
+   "answer": "Hebrew",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P103:90",
+   "task_id": "BEAR:P103:90",
+   "prompt": "The native language of Vladimir Lenin is Russian.",
+   "answer": "Russian",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P103:99",
+   "task_id": "BEAR:P103:99",
+   "prompt": "The native language of Aleksandar Vu\u010di\u0107 is Serbian.",
+   "answer": "Serbian",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P103:103",
+   "task_id": "BEAR:P103:103",
+   "prompt": "The native language of Antonio Banderas is Spanish.",
+   "answer": "Spanish",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P103:104",
+   "task_id": "BEAR:P103:104",
+   "prompt": "The native language of Pablo Picasso is Spanish.",
+   "answer": "Spanish",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P105:7",
+   "task_id": "BEAR:P105:7",
+   "prompt": "Rosa 'Chrysler Imperial' is classified at the cultivar level.",
+   "answer": "cultivar",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P105:100",
+   "task_id": "BEAR:P105:100",
+   "prompt": "African leopard is classified at the subspecies level.",
+   "answer": "subspecies",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P105:129",
+   "task_id": "BEAR:P105:129",
+   "prompt": "Tenebrionoidea is classified at the superfamily level.",
+   "answer": "superfamily",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P105:130",
+   "task_id": "BEAR:P105:130",
+   "prompt": "Gelechioidea is classified at the superfamily level.",
+   "answer": "superfamily",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P108:42",
+   "task_id": "BEAR:P108:42",
+   "prompt": "Matt Cutts works for Google.",
+   "answer": "Google",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P108:86",
+   "task_id": "BEAR:P108:86",
+   "prompt": "Roger D. Kornberg works for Stanford University.",
+   "answer": "Stanford University",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P127:5",
+   "task_id": "BEAR:P127:5",
+   "prompt": "Cinema One is owned by ABS-CBN Corporation.",
+   "answer": "ABS-CBN Corporation",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P127:55",
+   "task_id": "BEAR:P127:55",
+   "prompt": "VirusTotal is owned by Google.",
+   "answer": "Google",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P131:8",
+   "task_id": "BEAR:P131:8",
+   "prompt": "Jijel Province is located in Algeria.",
+   "answer": "Algeria",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P131:17",
+   "task_id": "BEAR:P131:17",
+   "prompt": "Formosa Province is located in Argentina.",
+   "answer": "Argentina",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P137:6",
+   "task_id": "BEAR:P137:6",
+   "prompt": "Southwest Chief is operated by Amtrak.",
+   "answer": "Amtrak",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P137:21",
+   "task_id": "BEAR:P137:21",
+   "prompt": "Fountains Abbey is operated by English Heritage.",
+   "answer": "English Heritage",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P137:52",
+   "task_id": "BEAR:P137:52",
+   "prompt": "Vidarbha Express is operated by Indian Railways.",
+   "answer": "Indian Railways",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P137:131",
+   "task_id": "BEAR:P137:131",
+   "prompt": "Yakovlev Yak-9 is operated by Soviet Air Forces.",
+   "answer": "Soviet Air Forces",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P137:135",
+   "task_id": "BEAR:P137:135",
+   "prompt": "Endurance is operated by SpaceX.",
+   "answer": "SpaceX",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P170:43",
+   "task_id": "BEAR:P170:43",
+   "prompt": "Bust of Costanza Bonarelli was created by Gian Lorenzo Bernini.",
+   "answer": "Gian Lorenzo Bernini",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P171:88",
+   "task_id": "BEAR:P171:88",
+   "prompt": "The parent taxon of Gekkoninae is Gekkonidae.",
+   "answer": "Gekkonidae",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P175:139",
+   "task_id": "BEAR:P175:139",
+   "prompt": "2Pacalypse Now was performed by Tupac Shakur.",
+   "answer": "Tupac Shakur",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P176:3",
+   "task_id": "BEAR:P176:3",
+   "prompt": "Magic Trackpad is produced by Apple Inc..",
+   "answer": "Apple Inc.",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P176:18",
+   "task_id": "BEAR:P176:18",
+   "prompt": "SMS Derfflinger is produced by Blohm + Voss.",
+   "answer": "Blohm + Voss",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P176:95",
+   "task_id": "BEAR:P176:95",
+   "prompt": "Socket 478 is produced by Intel.",
+   "answer": "Intel",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P177:47",
+   "task_id": "BEAR:P177:47",
+   "prompt": "The George Massey Tunnel crosses the Fraser River.",
+   "answer": "Fraser River",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P177:73",
+   "task_id": "BEAR:P177:73",
+   "prompt": "The Hernando de Soto Bridge crosses the Mississippi River.",
+   "answer": "Mississippi River",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P177:103",
+   "task_id": "BEAR:P177:103",
+   "prompt": "The Holzbr\u00fccke Bad S\u00e4ckingen crosses the Rhine.",
+   "answer": "Rhine",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P177:108",
+   "task_id": "BEAR:P177:108",
+   "prompt": "The Wandsworth Bridge crosses the River Thames.",
+   "answer": "River Thames",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P178:3",
+   "task_id": "BEAR:P178:3",
+   "prompt": "iPad 2 is developed by Apple Inc..",
+   "answer": "Apple Inc.",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P178:49",
+   "task_id": "BEAR:P178:49",
+   "prompt": "Pok\u00e9mon Yellow is developed by Game Freak.",
+   "answer": "Game Freak",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P178:92",
+   "task_id": "BEAR:P178:92",
+   "prompt": "Graal is developed by Oracle.",
+   "answer": "Oracle",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P178:126",
+   "task_id": "BEAR:P178:126",
+   "prompt": "PSX is developed by Sony Interactive Entertainment.",
+   "answer": "Sony Interactive Entertainment",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P179:30",
+   "task_id": "BEAR:P179:30",
+   "prompt": "A Bicyclops Built for Two is a part of the Futurama series.",
+   "answer": "Futurama",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P185:33",
+   "task_id": "BEAR:P185:33",
+   "prompt": "Andre Geim was a doctoral student of Konstantin Novoselov.",
+   "answer": "Konstantin Novoselov",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P206:21",
+   "task_id": "BEAR:P206:21",
+   "prompt": "Saint Paul Island is next to the Bering Sea.",
+   "answer": "Bering Sea",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P206:30",
+   "task_id": "BEAR:P206:30",
+   "prompt": "\u0160t\u00farovo is next to the Danube.",
+   "answer": "Danube",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P206:34",
+   "task_id": "BEAR:P206:34",
+   "prompt": "Silistra is next to the Danube.",
+   "answer": "Danube",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P206:53",
+   "task_id": "BEAR:P206:53",
+   "prompt": "Dry Tortugas is next to the Gulf of Mexico.",
+   "answer": "Gulf of Mexico",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P206:84",
+   "task_id": "BEAR:P206:84",
+   "prompt": "Nauvoo is next to the Mississippi River.",
+   "answer": "Mississippi River",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P206:140",
+   "task_id": "BEAR:P206:140",
+   "prompt": "Deception Island is next to the Southern Ocean.",
+   "answer": "Southern Ocean",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P272:47",
+   "task_id": "BEAR:P272:47",
+   "prompt": "Endemol produced Wipeout.",
+   "answer": "Endemol",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P291:36",
+   "task_id": "BEAR:P291:36",
+   "prompt": "The place of publication for Twenty Thousand Leagues Under the Sea was France.",
+   "answer": "France",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P291:46",
+   "task_id": "BEAR:P291:46",
+   "prompt": "The place of publication for Bintang di Surga was Indonesia.",
+   "answer": "Indonesia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P364:58",
+   "task_id": "BEAR:P364:58",
+   "prompt": "The original language of Cinema Paradiso is Italian.",
+   "answer": "Italian",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P403:9",
+   "task_id": "BEAR:P403:9",
+   "prompt": "The Mithi River flows into the Arabian Sea.",
+   "answer": "Arabian Sea",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P403:10",
+   "task_id": "BEAR:P403:10",
+   "prompt": "The Indus River flows into the Arabian Sea.",
+   "answer": "Arabian Sea",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P403:44",
+   "task_id": "BEAR:P403:44",
+   "prompt": "The Godavari River flows into the Bay of Bengal.",
+   "answer": "Bay of Bengal",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P403:103",
+   "task_id": "BEAR:P403:103",
+   "prompt": "The River Mawddach flows into the Irish Sea.",
+   "answer": "Irish Sea",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P413:52",
+   "task_id": "BEAR:P413:52",
+   "prompt": "Ernie Davis plays in halfback position.",
+   "answer": "halfback",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P427:29",
+   "task_id": "BEAR:P427:29",
+   "prompt": "Mytilus is a taxonomic type of blue mussel.",
+   "answer": "blue mussel",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P449:18",
+   "task_id": "BEAR:P449:18",
+   "prompt": "Red Dwarf was originally aired on BBC Two.",
+   "answer": "BBC Two",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P449:77",
+   "task_id": "BEAR:P449:77",
+   "prompt": "Deadwood was originally aired on HBO.",
+   "answer": "HBO",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P449:137",
+   "task_id": "BEAR:P449:137",
+   "prompt": "Superman & Lois was originally aired on The CW.",
+   "answer": "The CW",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P463:25",
+   "task_id": "BEAR:P463:25",
+   "prompt": "APOEL F.C. is member of the Cyprus Football Association.",
+   "answer": "Cyprus Football Association",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P463:37",
+   "task_id": "BEAR:P463:37",
+   "prompt": "Fine Gael is member of the European People's Party.",
+   "answer": "European People's Party",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P463:60",
+   "task_id": "BEAR:P463:60",
+   "prompt": "Jo\u00e3o Havelange is member of the International Olympic Committee.",
+   "answer": "International Olympic Committee",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P463:80",
+   "task_id": "BEAR:P463:80",
+   "prompt": "Inge Morath is member of the Magnum Photos.",
+   "answer": "Magnum Photos",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P463:118",
+   "task_id": "BEAR:P463:118",
+   "prompt": "Queen Marie of Romania is member of the Romanian Academy.",
+   "answer": "Romanian Academy",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P466:17",
+   "task_id": "BEAR:P466:17",
+   "prompt": "Fort Worth Convention Center is occupied by San Antonio Spurs.",
+   "answer": "San Antonio Spurs",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P466:52",
+   "task_id": "BEAR:P466:52",
+   "prompt": "St Mary's Stadium is occupied by Southampton F.C..",
+   "answer": "Southampton F.C.",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P466:59",
+   "task_id": "BEAR:P466:59",
+   "prompt": "Dreisamstadion is occupied by SC Freiburg.",
+   "answer": "SC Freiburg",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P509:48",
+   "task_id": "BEAR:P509:48",
+   "prompt": "Boris Yeltsin died from heart failure.",
+   "answer": "heart failure",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P509:79",
+   "task_id": "BEAR:P509:79",
+   "prompt": "George Harrison died from lung cancer.",
+   "answer": "lung cancer",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P610:41",
+   "task_id": "BEAR:P610:41",
+   "prompt": "The highest point in Austria is Grossglockner.",
+   "answer": "Grossglockner",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P610:45",
+   "task_id": "BEAR:P610:45",
+   "prompt": "The highest point in Bolivia is Nevado Sajama.",
+   "answer": "Nevado Sajama",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P611:139",
+   "task_id": "BEAR:P611:139",
+   "prompt": "Hans Urs von Balthasar is a member of the Society of Jesus.",
+   "answer": "Society of Jesus",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P641:131",
+   "task_id": "BEAR:P641:131",
+   "prompt": "Hannah Teter is associated with snowboarding.",
+   "answer": "snowboarding",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P676:30",
+   "task_id": "BEAR:P676:30",
+   "prompt": "The lyrics of My Tennessee Mountain Home were written by Dolly Parton.",
+   "answer": "Dolly Parton",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P676:115",
+   "task_id": "BEAR:P676:115",
+   "prompt": "The lyrics of Little Red Corvette were written by Prince.",
+   "answer": "Prince",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1303:72",
+   "task_id": "BEAR:P1303:72",
+   "prompt": "Alessandro Scarlatti plays harpsichord.",
+   "answer": "harpsichord",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1412:4",
+   "task_id": "BEAR:P1412:4",
+   "prompt": "Galen used to communicate in Ancient Greek.",
+   "answer": "Ancient Greek",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1412:6",
+   "task_id": "BEAR:P1412:6",
+   "prompt": "Ab\u016b \u1e24an\u012bfa used to communicate in Arabic.",
+   "answer": "Arabic",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1412:86",
+   "task_id": "BEAR:P1412:86",
+   "prompt": "J\u00f3zef Pi\u0142sudski used to communicate in Polish.",
+   "answer": "Polish",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1412:92",
+   "task_id": "BEAR:P1412:92",
+   "prompt": "Gurdas Maan used to communicate in Punjabi.",
+   "answer": "Punjabi",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1412:102",
+   "task_id": "BEAR:P1412:102",
+   "prompt": "Aleksandr Solzhenitsyn used to communicate in Russian.",
+   "answer": "Russian",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1441:21",
+   "task_id": "BEAR:P1441:21",
+   "prompt": "Ian Chesterton appears in Doctor Who.",
+   "answer": "Doctor Who",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1441:126",
+   "task_id": "BEAR:P1441:126",
+   "prompt": "Mr. Smithers appears in The Simpsons.",
+   "answer": "The Simpsons",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1532:9",
+   "task_id": "BEAR:P1532:9",
+   "prompt": "Eddy Merckx represents Belgium.",
+   "answer": "Belgium",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1532:28",
+   "task_id": "BEAR:P1532:28",
+   "prompt": "Yerry Mina represents Colombia.",
+   "answer": "Colombia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1532:56",
+   "task_id": "BEAR:P1532:56",
+   "prompt": "Sunil Gavaskar represents India.",
+   "answer": "India",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P1532:100",
+   "task_id": "BEAR:P1532:100",
+   "prompt": "Aleksandr Kokorin represents Russia.",
+   "answer": "Russia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P2632:109",
+   "task_id": "BEAR:P2632:109",
+   "prompt": "Anne Boleyn was detained at Tower of London.",
+   "answer": "Tower of London",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P3373:6",
+   "task_id": "BEAR:P3373:6",
+   "prompt": "Letty Aronson and Woody Allen are siblings.",
+   "answer": "Woody Allen",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P3373:40",
+   "task_id": "BEAR:P3373:40",
+   "prompt": "Oru\u00e7 Reis and Hayreddin Barbarossa are siblings.",
+   "answer": "Hayreddin Barbarossa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P3373:59",
+   "task_id": "BEAR:P3373:59",
+   "prompt": "Christopher Ciccone and Madonna are siblings.",
+   "answer": "Madonna",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P4552:9",
+   "task_id": "BEAR:P4552:9",
+   "prompt": "Mugello is part of the Apennine Mountains.",
+   "answer": "Apennine Mountains",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P4552:46",
+   "task_id": "BEAR:P4552:46",
+   "prompt": "Biokovo is part of the Dinaric Alps.",
+   "answer": "Dinaric Alps",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P4552:123",
+   "task_id": "BEAR:P4552:123",
+   "prompt": "Llyn Eigiau is part of the Snowdonia.",
+   "answer": "Snowdonia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P6886:67",
+   "task_id": "BEAR:P6886:67",
+   "prompt": "Vallathol Narayana Menon's works were primarily written in Malayalam.",
+   "answer": "Malayalam",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P7937:0",
+   "task_id": "BEAR:P7937:0",
+   "prompt": "Der H\u00f6lle Rache kocht in meinem Herzen is a form of aria.",
+   "answer": "aria",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P7959:15",
+   "task_id": "BEAR:P7959:15",
+   "prompt": "River Conwy is located in the historic county of Caernarfonshire.",
+   "answer": "Caernarfonshire",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P7959:44",
+   "task_id": "BEAR:P7959:44",
+   "prompt": "Glenveagh National Park is located in the historic county of County Donegal.",
+   "answer": "County Donegal",
+   "source": "BEAR"
+  },
+  {
+   "id": "CF:411",
+   "task_id": "CF:411",
+   "prompt": "Shahab-2 is produced by Iran",
+   "answer": "Iran",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:493",
+   "task_id": "CF:493",
+   "prompt": "Vancouver Symphony Orchestra was created in Canada",
+   "answer": "Canada",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:1769",
+   "task_id": "CF:1769",
+   "prompt": "Tadd Dameron, playing the piano",
+   "answer": "piano",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:1964",
+   "task_id": "CF:1964",
+   "prompt": "The mother tongue of Roland Armontel is French",
+   "answer": "French",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:2116",
+   "task_id": "CF:2116",
+   "prompt": "Schofield Barracks is located in Hawaii",
+   "answer": "Hawaii",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:2406",
+   "task_id": "CF:2406",
+   "prompt": "AGM-86 ALCM is a product of Boeing",
+   "answer": "Boeing",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:2552",
+   "task_id": "CF:2552",
+   "prompt": "The language of The Forsyte Saga is English",
+   "answer": "English",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:2803",
+   "task_id": "CF:2803",
+   "prompt": "Mathias Clement Lenihan's position is bishop",
+   "answer": "bishop",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:3573",
+   "task_id": "CF:3573",
+   "prompt": "Kungliga Svenska Segels\u00e4llskapet, in Sweden",
+   "answer": "Sweden",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:4734",
+   "task_id": "CF:4734",
+   "prompt": "Standard Bank, that was started in London",
+   "answer": "London",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:5525",
+   "task_id": "CF:5525",
+   "prompt": "Charles Kennedy worked in the city of London",
+   "answer": "London",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:5976",
+   "task_id": "CF:5976",
+   "prompt": "Ford Motor Company of Canada, which is located in Canada",
+   "answer": "Canada",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:6506",
+   "task_id": "CF:6506",
+   "prompt": "Domingo Nieto, who is a citizen of Peru",
+   "answer": "Peru",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:7467",
+   "task_id": "CF:7467",
+   "prompt": "Abiel Smith School can be found in Boston",
+   "answer": "Boston",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:7771",
+   "task_id": "CF:7771",
+   "prompt": "Victoria Avenue Bridge, which was named for Victoria",
+   "answer": "Victoria",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:8239",
+   "task_id": "CF:8239",
+   "prompt": "Chinese Taipei Football Association is affiliated with FIFA",
+   "answer": "FIFA",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:8470",
+   "task_id": "CF:8470",
+   "prompt": "Amazon Web Services's owner Amazon",
+   "answer": "Amazon",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:9709",
+   "task_id": "CF:9709",
+   "prompt": "Wojciech Roszkowski worked in the city of Warsaw",
+   "answer": "Warsaw",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:9763",
+   "task_id": "CF:9763",
+   "prompt": "Clint Murchison, Jr. is native to Dallas",
+   "answer": "Dallas",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:9801",
+   "task_id": "CF:9801",
+   "prompt": "Ger Canning holds a citizenship from Ireland",
+   "answer": "Ireland",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:9808",
+   "task_id": "CF:9808",
+   "prompt": "Avni Rustemi has a citizenship from Albania",
+   "answer": "Albania",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:10295",
+   "task_id": "CF:10295",
+   "prompt": "The original language of The Miser was French",
+   "answer": "French",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:10665",
+   "task_id": "CF:10665",
+   "prompt": "Honda HSV-010 GT, created by Honda",
+   "answer": "Honda",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:11247",
+   "task_id": "CF:11247",
+   "prompt": "Le comte Ory, from Italy",
+   "answer": "Italy",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:11714",
+   "task_id": "CF:11714",
+   "prompt": "The Rite plays thriller",
+   "answer": "thriller",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:12101",
+   "task_id": "CF:12101",
+   "prompt": "Nino Rota performs opera",
+   "answer": "opera",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:12314",
+   "task_id": "CF:12314",
+   "prompt": "In Tuva Republic, they understand Russian",
+   "answer": "Russian",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:12826",
+   "task_id": "CF:12826",
+   "prompt": "samurai cinema was developed in Japan",
+   "answer": "Japan",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:13009",
+   "task_id": "CF:13009",
+   "prompt": "Google AdSense, a product developed by Google",
+   "answer": "Google",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:13568",
+   "task_id": "CF:13568",
+   "prompt": "The language of Strange Stories from a Chinese Studio was Chinese",
+   "answer": "Chinese",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:14204",
+   "task_id": "CF:14204",
+   "prompt": "In Saint Lucia, they understand English",
+   "answer": "English",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:14227",
+   "task_id": "CF:14227",
+   "prompt": "Anne Grant worked in Scotland",
+   "answer": "Scotland",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:14321",
+   "task_id": "CF:14321",
+   "prompt": "Isidore the Laborer has a citizenship from Spain",
+   "answer": "Spain",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:14902",
+   "task_id": "CF:14902",
+   "prompt": "The law in World Health Organization declares the language Russian",
+   "answer": "Russian",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:14909",
+   "task_id": "CF:14909",
+   "prompt": "Porsche 550, created by Porsche",
+   "answer": "Porsche",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:15454",
+   "task_id": "CF:15454",
+   "prompt": "The headquarters of AstraZeneca is in London",
+   "answer": "London",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:16152",
+   "task_id": "CF:16152",
+   "prompt": "Eclogues was written in Latin",
+   "answer": "Latin",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:16468",
+   "task_id": "CF:16468",
+   "prompt": "Fazang, who holds the position of patriarch",
+   "answer": "patriarch",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:16921",
+   "task_id": "CF:16921",
+   "prompt": "The genre played by Zynga Poker is poker",
+   "answer": "poker",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:18466",
+   "task_id": "CF:18466",
+   "prompt": "The genre played by Thomas Linley the elder is opera",
+   "answer": "opera",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:18896",
+   "task_id": "CF:18896",
+   "prompt": "Then Came Bronson is to debut on NBC",
+   "answer": "NBC",
+   "source": "CounterFact"
+  },
+  {
+   "id": "CF:19991",
+   "task_id": "CF:19991",
+   "prompt": "Which position does Nolan Ryan play? They play as pitcher",
+   "answer": "pitcher",
+   "source": "CounterFact"
+  },
+  {
+   "id": "PopQA:3320295",
+   "task_id": "PopQA:3320295",
+   "prompt": "Q: In what city was Joseph Bova born? A: Cleveland",
+   "answer": "Cleveland",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2471916",
+   "task_id": "PopQA:2471916",
+   "prompt": "Q: In what city was Louis Joseph Troost born? A: Paris",
+   "answer": "Paris",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1001687",
+   "task_id": "PopQA:1001687",
+   "prompt": "Q: What genre is Spy? A: comedy film",
+   "answer": "comedy film",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2953719",
+   "task_id": "PopQA:2953719",
+   "prompt": "Q: What genre is Evil Dead: Hail to the King? A: survival horror",
+   "answer": "survival horror",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3456321",
+   "task_id": "PopQA:3456321",
+   "prompt": "Q: What genre is Battle? A: indie rock",
+   "answer": "indie rock",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1719996",
+   "task_id": "PopQA:1719996",
+   "prompt": "Q: What genre is Great Expectations? A: fiction",
+   "answer": "fiction",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:5055918",
+   "task_id": "PopQA:5055918",
+   "prompt": "Q: Who is the father of Mahendrapala? A: Devapala",
+   "answer": "Devapala",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2803048",
+   "task_id": "PopQA:2803048",
+   "prompt": "Q: Who was the producer of The Kid? A: Charlie Chaplin",
+   "answer": "Charlie Chaplin",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:6408054",
+   "task_id": "PopQA:6408054",
+   "prompt": "Q: Who was the director of Back to the Future? A: Robert Zemeckis",
+   "answer": "Robert Zemeckis",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:4404593",
+   "task_id": "PopQA:4404593",
+   "prompt": "Q: Who was the director of The Way Back? A: Peter Weir",
+   "answer": "Peter Weir",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:86179",
+   "task_id": "PopQA:86179",
+   "prompt": "Q: Who was the screenwriter for Ghost in the Shell 2: Innocence? A: Mamoru Oshii",
+   "answer": "Mamoru Oshii",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:1485443",
+   "task_id": "PopQA:1485443",
+   "prompt": "Q: Who was the screenwriter for Angels & Demons? A: David Koepp",
+   "answer": "David Koepp",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:5915551",
+   "task_id": "PopQA:5915551",
+   "prompt": "Q: Who was the composer of The Card? A: Tony Hatch",
+   "answer": "Tony Hatch",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:806039",
+   "task_id": "PopQA:806039",
+   "prompt": "Q: Who was the composer of Kaththi? A: Anirudh Ravichander",
+   "answer": "Anirudh Ravichander",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:3135064",
+   "task_id": "PopQA:3135064",
+   "prompt": "Q: Who is the author of Amazon? A: Michael Crichton",
+   "answer": "Michael Crichton",
+   "source": "PopQA"
+  },
+  {
+   "id": "PopQA:2895094",
+   "task_id": "PopQA:2895094",
+   "prompt": "Q: Who is the mother of Liza Huber? A: Susan Lucci",
+   "answer": "Susan Lucci",
+   "source": "PopQA"
+  },
+  {
+   "id": "ARC:ARC-Easy:1018",
+   "task_id": "ARC:ARC-Easy:1018",
+   "prompt": "Question: Which tool would be most useful for observing the details of an insect's wings? Answer: hand lens",
+   "answer": "hand lens",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Easy:1313",
+   "task_id": "ARC:ARC-Easy:1313",
+   "prompt": "Question: All matter is made up of Answer: atoms",
+   "answer": "atoms",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Easy:1388",
+   "task_id": "ARC:ARC-Easy:1388",
+   "prompt": "Question: Mutations that occur in sex cells can be passed from parent to offspring during Answer: sexual reproduction.",
+   "answer": "sexual reproduction.",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Easy:2021",
+   "task_id": "ARC:ARC-Easy:2021",
+   "prompt": "Question: Which organ is the site of gas exchange between the body and the environment? Answer: lungs",
+   "answer": "lungs",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Easy:2364",
+   "task_id": "ARC:ARC-Easy:2364",
+   "prompt": "Question: Which activity illustrates the main function of the motor neuron complex? Answer: transferring impulses to the appropriate muscle",
+   "answer": "transferring impulses to the appropriate muscle",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Challenge:521",
+   "task_id": "ARC:ARC-Challenge:521",
+   "prompt": "Question: The BEST way to make a shadow on a living room wall is to Answer: stand between a light and the wall",
+   "answer": "stand between a light and the wall",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Challenge:581",
+   "task_id": "ARC:ARC-Challenge:581",
+   "prompt": "Question: A potential negative impact of building a dam on a river is that the dam Answer: prevents sediment from flowing downstream.",
+   "answer": "prevents sediment from flowing downstream.",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Challenge:594",
+   "task_id": "ARC:ARC-Challenge:594",
+   "prompt": "Question: The Moon revolves around Earth. This causes Answer: the Moon to appear as different shapes during the month.",
+   "answer": "the Moon to appear as different shapes during the month.",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Challenge:648",
+   "task_id": "ARC:ARC-Challenge:648",
+   "prompt": "Question: What best describes skin? Answer: flexible",
+   "answer": "flexible",
+   "source": "ARC"
+  },
+  {
+   "id": "ARC:ARC-Challenge:659",
+   "task_id": "ARC:ARC-Challenge:659",
+   "prompt": "Question: A river erodes its banks for thousands of years, and deposits the eroded material at its mouth. What two landforms did the river make? Answer: a delta and a canyon",
+   "answer": "a delta and a canyon",
+   "source": "ARC"
+  },
+  {
+   "id": "MMLU:936",
+   "task_id": "MMLU:936",
+   "prompt": "Question: Which of the following statements about nuclear binding energies is NOT true? Answer: Nuclear binding energies have about the same magnitude as chemical bond energies.",
+   "answer": "Nuclear binding energies have about the same magnitude as chemical bond energies.",
+   "source": "MMLU"
+  },
+  {
+   "id": "MMLU:8547",
+   "task_id": "MMLU:8547",
+   "prompt": "Question: For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I wanted to pass the test so  I wrote the answers on my hand. Scenario 2 | I helped my friend get out of the house after he was put under house arrest. Answer: Wrong, Wrong",
+   "answer": "Wrong, Wrong",
+   "source": "MMLU"
+  },
+  {
+   "id": "MMLU:9251",
+   "task_id": "MMLU:9251",
+   "prompt": "Question: For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I have so much housework that needs doing, I'm going to visit the foster home to bring home a child to do it. Scenario 2 | I took food away from my son as a punishment for skipping school. Answer: Wrong, Wrong",
+   "answer": "Wrong, Wrong",
+   "source": "MMLU"
+  },
+  {
+   "id": "MMLU:10788",
+   "task_id": "MMLU:10788",
+   "prompt": "Question: A gun dealer loaned a machine gun to a friend who told him only that he needed it to \"make some money.\" The friend was arrested for robbing a bank with the machine gun. The government charged the gun dealer and the friend with conspiracy to commit bank robbery. Can the charge of conspiracy to commit bank robbery be upheld against the gun dealer? Answer: No, there was no agreement to conspire to rob a bank.",
+   "answer": "No, there was no agreement to conspire to rob a bank.",
+   "source": "MMLU"
+  },
+  {
+   "id": "MMLU:12165",
+   "task_id": "MMLU:12165",
+   "prompt": "Question: A 67-year-old woman comes to the physician for a follow-up examination. She had a pulmonary embolism and required treatment in the hospital for 3 weeks. She had a retroperitoneal hemorrhage; anticoagulant therapy was temporarily discontinued, and she underwent placement of an inferior vena cava (IVC) filter. She had a hematoma that was resolving on discharge from the hospital 2 weeks ago. Today, she says she has had a persistent sensation of tingling and numbness of her left thigh that she did not report in the hospital because she thought it would go away; the sensation has improved somewhat during the past week. Her only medication is warfarin. Vital signs are within normal limits. Examination of the skin shows no abnormalities. Muscle strength is normal. Sensation to light touch is decreased over a 5 x 5-cm area on the lateral aspect of the left anterior thigh. Which of the following is the most likely cause of this patient's decreased sensation? Answer: Compression of the lateral femoral cutaneous nerve",
+   "answer": "Compression of the lateral femoral cutaneous nerve",
+   "source": "MMLU"
+  },
+  {
+   "id": "MMLU:13742",
+   "task_id": "MMLU:13742",
+   "prompt": "Question: Which of the following is the cause of delay in HIV testing among the Latino population? Answer: All of the above",
+   "answer": "All of the above",
+   "source": "MMLU"
+  },
+  {
+   "id": "BEAR:P30:0",
+   "task_id": "BEAR:P30:0",
+   "prompt": "Nile is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:1",
+   "task_id": "BEAR:P30:1",
+   "prompt": "Namibia is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:2",
+   "task_id": "BEAR:P30:2",
+   "prompt": "Ghana is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:3",
+   "task_id": "BEAR:P30:3",
+   "prompt": "Mauritius is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:4",
+   "task_id": "BEAR:P30:4",
+   "prompt": "Rhodesia is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:5",
+   "task_id": "BEAR:P30:5",
+   "prompt": "C\u00f4te d'Ivoire is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:6",
+   "task_id": "BEAR:P30:6",
+   "prompt": "Burkina Faso is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:7",
+   "task_id": "BEAR:P30:7",
+   "prompt": "Mali is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:8",
+   "task_id": "BEAR:P30:8",
+   "prompt": "Ethiopia is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:9",
+   "task_id": "BEAR:P30:9",
+   "prompt": "Botswana is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:10",
+   "task_id": "BEAR:P30:10",
+   "prompt": "Uganda is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:11",
+   "task_id": "BEAR:P30:11",
+   "prompt": "Eritrea is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:13",
+   "task_id": "BEAR:P30:13",
+   "prompt": "Rwanda is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:14",
+   "task_id": "BEAR:P30:14",
+   "prompt": "Tunisia is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:15",
+   "task_id": "BEAR:P30:15",
+   "prompt": "Nigeria is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:16",
+   "task_id": "BEAR:P30:16",
+   "prompt": "Senegal is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:17",
+   "task_id": "BEAR:P30:17",
+   "prompt": "Benin is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:18",
+   "task_id": "BEAR:P30:18",
+   "prompt": "Tanzania is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:19",
+   "task_id": "BEAR:P30:19",
+   "prompt": "Liberia is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:20",
+   "task_id": "BEAR:P30:20",
+   "prompt": "Mount Kilimanjaro is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:21",
+   "task_id": "BEAR:P30:21",
+   "prompt": "Ancient Egypt is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:22",
+   "task_id": "BEAR:P30:22",
+   "prompt": "Djibouti is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:23",
+   "task_id": "BEAR:P30:23",
+   "prompt": "South Sudan is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:24",
+   "task_id": "BEAR:P30:24",
+   "prompt": "Mauritania is located in Africa.",
+   "answer": "Africa",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:25",
+   "task_id": "BEAR:P30:25",
+   "prompt": "Blood Falls is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:26",
+   "task_id": "BEAR:P30:26",
+   "prompt": "Vostok Station is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:27",
+   "task_id": "BEAR:P30:27",
+   "prompt": "South Pole is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:28",
+   "task_id": "BEAR:P30:28",
+   "prompt": "Mount Sidley is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:29",
+   "task_id": "BEAR:P30:29",
+   "prompt": "Halley Research Station is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:30",
+   "task_id": "BEAR:P30:30",
+   "prompt": "South Shetland Islands is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:31",
+   "task_id": "BEAR:P30:31",
+   "prompt": "Macquarie Island is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:32",
+   "task_id": "BEAR:P30:32",
+   "prompt": "McMurdo Station is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:33",
+   "task_id": "BEAR:P30:33",
+   "prompt": "Don Juan Pond is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:34",
+   "task_id": "BEAR:P30:34",
+   "prompt": "Antarctic ice sheet is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:35",
+   "task_id": "BEAR:P30:35",
+   "prompt": "Peter I Island is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:36",
+   "task_id": "BEAR:P30:36",
+   "prompt": "Antarctic Treaty System is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:37",
+   "task_id": "BEAR:P30:37",
+   "prompt": "Dumont d'Urville Station is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:39",
+   "task_id": "BEAR:P30:39",
+   "prompt": "Bouvet Island is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:40",
+   "task_id": "BEAR:P30:40",
+   "prompt": "Heard Island and McDonald Islands is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:41",
+   "task_id": "BEAR:P30:41",
+   "prompt": "Queen Maud Land is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:43",
+   "task_id": "BEAR:P30:43",
+   "prompt": "Victoria Land is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:44",
+   "task_id": "BEAR:P30:44",
+   "prompt": "Ross Ice Shelf is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:45",
+   "task_id": "BEAR:P30:45",
+   "prompt": "Lake Vostok is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:46",
+   "task_id": "BEAR:P30:46",
+   "prompt": "Belgian Antarctic Expedition is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:47",
+   "task_id": "BEAR:P30:47",
+   "prompt": "King George Island is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:48",
+   "task_id": "BEAR:P30:48",
+   "prompt": "Elephant Island is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:49",
+   "task_id": "BEAR:P30:49",
+   "prompt": "Graham Land is located in Antarctica.",
+   "answer": "Antarctica",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:50",
+   "task_id": "BEAR:P30:50",
+   "prompt": "Malaysia is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:51",
+   "task_id": "BEAR:P30:51",
+   "prompt": "Macau is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:53",
+   "task_id": "BEAR:P30:53",
+   "prompt": "Maldives is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:54",
+   "task_id": "BEAR:P30:54",
+   "prompt": "Kerala is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:55",
+   "task_id": "BEAR:P30:55",
+   "prompt": "North Korea is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:56",
+   "task_id": "BEAR:P30:56",
+   "prompt": "South Korea is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:57",
+   "task_id": "BEAR:P30:57",
+   "prompt": "Yemen is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:58",
+   "task_id": "BEAR:P30:58",
+   "prompt": "Turkmenistan is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:59",
+   "task_id": "BEAR:P30:59",
+   "prompt": "Himalayas is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:60",
+   "task_id": "BEAR:P30:60",
+   "prompt": "Iran is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:61",
+   "task_id": "BEAR:P30:61",
+   "prompt": "Bhutan is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:62",
+   "task_id": "BEAR:P30:62",
+   "prompt": "Singapore is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:63",
+   "task_id": "BEAR:P30:63",
+   "prompt": "Rajasthan is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:64",
+   "task_id": "BEAR:P30:64",
+   "prompt": "Oman is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:65",
+   "task_id": "BEAR:P30:65",
+   "prompt": "Bangladesh is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:66",
+   "task_id": "BEAR:P30:66",
+   "prompt": "Tamil Nadu is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:67",
+   "task_id": "BEAR:P30:67",
+   "prompt": "Mount Everest is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:68",
+   "task_id": "BEAR:P30:68",
+   "prompt": "Lebanon is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:69",
+   "task_id": "BEAR:P30:69",
+   "prompt": "Dubai is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:70",
+   "task_id": "BEAR:P30:70",
+   "prompt": "Madhya Pradesh is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:71",
+   "task_id": "BEAR:P30:71",
+   "prompt": "Philippines is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:72",
+   "task_id": "BEAR:P30:72",
+   "prompt": "Saudi Arabia is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:73",
+   "task_id": "BEAR:P30:73",
+   "prompt": "Uttar Pradesh is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:74",
+   "task_id": "BEAR:P30:74",
+   "prompt": "Thailand is located in Asia.",
+   "answer": "Asia",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:75",
+   "task_id": "BEAR:P30:75",
+   "prompt": "France is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:76",
+   "task_id": "BEAR:P30:76",
+   "prompt": "Monaco is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:77",
+   "task_id": "BEAR:P30:77",
+   "prompt": "Prussia is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:78",
+   "task_id": "BEAR:P30:78",
+   "prompt": "London is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:79",
+   "task_id": "BEAR:P30:79",
+   "prompt": "Hungary is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:80",
+   "task_id": "BEAR:P30:80",
+   "prompt": "Italy is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:81",
+   "task_id": "BEAR:P30:81",
+   "prompt": "Vatican City is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:82",
+   "task_id": "BEAR:P30:82",
+   "prompt": "Slovenia is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:83",
+   "task_id": "BEAR:P30:83",
+   "prompt": "Paris is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:84",
+   "task_id": "BEAR:P30:84",
+   "prompt": "Catalonia is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:85",
+   "task_id": "BEAR:P30:85",
+   "prompt": "Serbia is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:86",
+   "task_id": "BEAR:P30:86",
+   "prompt": "Northern Ireland is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:88",
+   "task_id": "BEAR:P30:88",
+   "prompt": "Isle of Man is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:89",
+   "task_id": "BEAR:P30:89",
+   "prompt": "Greece is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:90",
+   "task_id": "BEAR:P30:90",
+   "prompt": "Andorra is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:91",
+   "task_id": "BEAR:P30:91",
+   "prompt": "Albania is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:92",
+   "task_id": "BEAR:P30:92",
+   "prompt": "German Empire is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:94",
+   "task_id": "BEAR:P30:94",
+   "prompt": "Switzerland is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:95",
+   "task_id": "BEAR:P30:95",
+   "prompt": "Ukraine is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:96",
+   "task_id": "BEAR:P30:96",
+   "prompt": "Montenegro is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:97",
+   "task_id": "BEAR:P30:97",
+   "prompt": "England is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:98",
+   "task_id": "BEAR:P30:98",
+   "prompt": "Germany is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:99",
+   "task_id": "BEAR:P30:99",
+   "prompt": "Moldova is located in Europe.",
+   "answer": "Europe",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:100",
+   "task_id": "BEAR:P30:100",
+   "prompt": "Toronto is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:101",
+   "task_id": "BEAR:P30:101",
+   "prompt": "Thirteen Colonies is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:102",
+   "task_id": "BEAR:P30:102",
+   "prompt": "The Bahamas is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:103",
+   "task_id": "BEAR:P30:103",
+   "prompt": "Boston is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:104",
+   "task_id": "BEAR:P30:104",
+   "prompt": "Alabama is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:105",
+   "task_id": "BEAR:P30:105",
+   "prompt": "Texas is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:106",
+   "task_id": "BEAR:P30:106",
+   "prompt": "Michigan is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:107",
+   "task_id": "BEAR:P30:107",
+   "prompt": "Delaware is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:108",
+   "task_id": "BEAR:P30:108",
+   "prompt": "White House is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:109",
+   "task_id": "BEAR:P30:109",
+   "prompt": "Guatemala is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:110",
+   "task_id": "BEAR:P30:110",
+   "prompt": "Los Angeles is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:111",
+   "task_id": "BEAR:P30:111",
+   "prompt": "Mississippi River is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:112",
+   "task_id": "BEAR:P30:112",
+   "prompt": "Bermuda is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:113",
+   "task_id": "BEAR:P30:113",
+   "prompt": "Pittsburgh is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:114",
+   "task_id": "BEAR:P30:114",
+   "prompt": "Washington, D.C. is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:115",
+   "task_id": "BEAR:P30:115",
+   "prompt": "Vancouver is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:116",
+   "task_id": "BEAR:P30:116",
+   "prompt": "New Jersey is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:117",
+   "task_id": "BEAR:P30:117",
+   "prompt": "Massachusetts is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:118",
+   "task_id": "BEAR:P30:118",
+   "prompt": "Barbados is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:119",
+   "task_id": "BEAR:P30:119",
+   "prompt": "Grenada is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:120",
+   "task_id": "BEAR:P30:120",
+   "prompt": "Maryland is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:121",
+   "task_id": "BEAR:P30:121",
+   "prompt": "Haiti is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:122",
+   "task_id": "BEAR:P30:122",
+   "prompt": "Nova Scotia is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:123",
+   "task_id": "BEAR:P30:123",
+   "prompt": "Alaska is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:124",
+   "task_id": "BEAR:P30:124",
+   "prompt": "British Columbia is located in North America.",
+   "answer": "North America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:125",
+   "task_id": "BEAR:P30:125",
+   "prompt": "Cura\u00e7ao is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:126",
+   "task_id": "BEAR:P30:126",
+   "prompt": "tepui is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:127",
+   "task_id": "BEAR:P30:127",
+   "prompt": "Argentina is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:128",
+   "task_id": "BEAR:P30:128",
+   "prompt": "Margarita Island is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:129",
+   "task_id": "BEAR:P30:129",
+   "prompt": "Barranquilla is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:131",
+   "task_id": "BEAR:P30:131",
+   "prompt": "Puerto Natales is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:132",
+   "task_id": "BEAR:P30:132",
+   "prompt": "British Guiana is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:133",
+   "task_id": "BEAR:P30:133",
+   "prompt": "Mount Fitz Roy is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:134",
+   "task_id": "BEAR:P30:134",
+   "prompt": "Tierra del Fuego is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:136",
+   "task_id": "BEAR:P30:136",
+   "prompt": "Artesonraju is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:137",
+   "task_id": "BEAR:P30:137",
+   "prompt": "French Guiana is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:138",
+   "task_id": "BEAR:P30:138",
+   "prompt": "Curitiba is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:139",
+   "task_id": "BEAR:P30:139",
+   "prompt": "Rio Negro is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:140",
+   "task_id": "BEAR:P30:140",
+   "prompt": "Riograndense Republic is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:141",
+   "task_id": "BEAR:P30:141",
+   "prompt": "Corcovado is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:142",
+   "task_id": "BEAR:P30:142",
+   "prompt": "Brazil is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:143",
+   "task_id": "BEAR:P30:143",
+   "prompt": "Nevado del Ruiz is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:144",
+   "task_id": "BEAR:P30:144",
+   "prompt": "Ecuador is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:145",
+   "task_id": "BEAR:P30:145",
+   "prompt": "Essequibo River is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:146",
+   "task_id": "BEAR:P30:146",
+   "prompt": "Andean Community is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:147",
+   "task_id": "BEAR:P30:147",
+   "prompt": "Pucallpa is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  },
+  {
+   "id": "BEAR:P30:149",
+   "task_id": "BEAR:P30:149",
+   "prompt": "Altiplano is located in South America.",
+   "answer": "South America",
+   "source": "BEAR"
+  }
+ ]
+}

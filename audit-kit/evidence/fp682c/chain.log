@@ -1,0 +1,62 @@
+2026-09-12 11:06:21 FP682c CHAIN START bases 75641c466acf2d03 start e3b0c44298fc1c14 runner e570bce2f6134b46 scorer 12ace764c5a68f07 writer dba17398c94e657d manifest cc95a4f2a7673d21 quill 300578953d12a786 chain a7831d87e175173a
+2026-09-12 11:06:21 WRITE px1 mode R from /c/Users/nryou/OneDrive - luxkbgallery.com/AI research/flagship/fp616/tools/pilot/out/fp662/P_coding/A_written_bf16 pool VEX60
+[11:06:31] pool replay: VEX60 (60 pairs) from manifest cc95a4f2a7673d21
+[11:07:16] FP652-WRITER-DONE mode R: accepted 71 / attempted 71 steps, leg targets 33543, verify tokens 0, final check None; receipt cae0fff391edbdbc
+2026-09-12 11:07:27 WRITTEN px1 model.safetensors cdee0fd49c377fdd0a82439068559f1b0ca00b0b44425628de5132a9dfaba2f5 (== manifest)
+DELTA-NORM window 2.71327 outside 0.00000 -> out/fp682c/px1\delta_norm.json
+2026-09-12 11:07:53 ARM px1 START model out/fp682c/px1/A_written_bf16
+[11:12:15] CAP vex fp682c_px1_bf16_cfgA teach: 58/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagship\
+[11:16:04] CAP vex fp682c_px1_bf16_cfgA heldout: 56/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagshi
+[11:25:24] CAP quill fp682c_px1_bf16_cfgA teach: 3/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagship
+[11:30:43] CAP quill fp682c_px1_bf16_cfgA heldout: 7/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagsh
+PRICE-STATE-DONE 99b874327b39664a crossings 1 bill 33.778 gain 29.278
+[11:30:43] PRICE fp682c_px1_bf16_cfgA bill 33.778099060058594 crossings 1
+[11:55:47] FP678-ARM-DONE ours teach 58/60 heldout 56/60 receipt 9b09a781642dbe50
+pass@1:	0.713
+pass@1:	0.659
+SCORING-RECEIPT climb_fp682c_px1_bf16_cfgA_scoring_receipt_WSL.json 91521e92a2d16dbf evalplus 0.3.1 dataset fe585eb4df8c88d8 base 117 plus 108
+2026-09-12 11:56:13 WRITE px2 mode R from /c/Users/nryou/OneDrive - luxkbgallery.com/AI research/flagship/fp616/tools/pilot/out/fp682c/px1/A_written_bf16 pool VEX60
+[11:56:25] pool replay: VEX60 (60 pairs) from manifest cc95a4f2a7673d21
+[11:57:10] FP652-WRITER-DONE mode R: accepted 71 / attempted 71 steps, leg targets 33543, verify tokens 0, final check None; receipt dd32da6a0bb898fb
+2026-09-12 11:57:21 WRITTEN px2 model.safetensors aaa1c955215b8d7a454a196896ff8f5c084b083f26f08d66b99c61eba32790bf (== manifest)
+DELTA-NORM window 3.19235 outside 0.00000 -> out/fp682c/px2\delta_norm.json
+2026-09-12 11:57:51 ARM px2 START model out/fp682c/px2/A_written_bf16
+[12:02:06] CAP vex fp682c_px2_bf16_cfgA teach: 60/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagship\
+[12:05:55] CAP vex fp682c_px2_bf16_cfgA heldout: 56/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagshi
+[12:15:16] CAP quill fp682c_px2_bf16_cfgA teach: 48/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagshi
+[12:20:20] CAP quill fp682c_px2_bf16_cfgA heldout: 44/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flags
+PRICE-STATE-DONE 7d4c0caf9c5ad782 crossings 1 bill 32.984 gain 31.452
+[12:20:20] PRICE fp682c_px2_bf16_cfgA bill 32.984320640563965 crossings 1
+[12:44:33] FP678-ARM-DONE ours teach 60/60 heldout 56/60 receipt 1177106616a5aaab
+pass@1:	0.713
+pass@1:	0.665
+SCORING-RECEIPT climb_fp682c_px2_bf16_cfgA_scoring_receipt_WSL.json 0fb0f5859728cf58 evalplus 0.3.1 dataset fe585eb4df8c88d8 base 117 plus 109
+2026-09-12 12:45:00 WRITE px3 mode R from /c/Users/nryou/OneDrive - luxkbgallery.com/AI research/flagship/fp616/tools/pilot/out/fp682c/px2/A_written_bf16 pool VEX60
+[12:45:11] pool replay: VEX60 (60 pairs) from manifest cc95a4f2a7673d21
+[12:45:52] FP652-WRITER-DONE mode R: accepted 71 / attempted 71 steps, leg targets 33543, verify tokens 0, final check None; receipt 0225abea072cd88c
+2026-09-12 12:46:03 WRITTEN px3 model.safetensors ac6da2199fbc7577db36eca1c27818adc27087aa408112dd2c15445327d3d934 (== manifest)
+DELTA-NORM window 3.56904 outside 0.00000 -> out/fp682c/px3\delta_norm.json
+2026-09-12 12:46:31 ARM px3 START model out/fp682c/px3/A_written_bf16
+[12:50:52] CAP vex fp682c_px3_bf16_cfgA teach: 60/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagship\
+[12:54:42] CAP vex fp682c_px3_bf16_cfgA heldout: 56/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagshi
+[13:04:08] CAP quill fp682c_px3_bf16_cfgA teach: 57/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagshi
+[13:09:21] CAP quill fp682c_px3_bf16_cfgA heldout: 56/60 -> C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flags
+PRICE-STATE-DONE 52afb60866ec05bb crossings 1 bill 33.757 gain 31.651
+[13:09:21] PRICE fp682c_px3_bf16_cfgA bill 33.75657272338867 crossings 1
+[13:31:14] FP678-ARM-DONE ours teach 60/60 heldout 56/60 receipt 87d8ef4cb565178b
+pass@1:	0.713
+pass@1:	0.665
+SCORING-RECEIPT climb_fp682c_px3_bf16_cfgA_scoring_receipt_WSL.json cf5a9512bc0a4d78 evalplus 0.3.1 dataset fe585eb4df8c88d8 base 117 plus 109
+GATES G0 True one_stack True port_check True base_plus 112 issues {}
+arm     vex   vexH  quill quillH  plus    bill cross     steps dose
+px1      58     56      3      7   108   33.78     1     71/71 2.713267467132625 proj 0.3589228043708726
+px2      60     56     48     44   109   32.98     1     71/71 3.1923547922345774 proj 0.3610920161238839
+px3      60     56     57     56   109   33.76     1     71/71 3.5690399958760928 proj 0.3627700436444199
+P1_panel_span_holds_bill_at_px2                  credence 0.5 -> HOLD
+P2_quill_installs_by_px2                         credence 0.5 -> HOLD
+P3_vex_held                                      credence 0.6 -> HOLD
+P4_coding_inside_at_px2                          credence 0.5 -> HOLD
+P5_quill_monotone                                credence 0.6 -> HOLD
+P6_all_three_screens_at_some_pass                credence 0.3 -> HOLD
+wrote C:\Users\nryou\OneDrive - luxkbgallery.com\AI research\flagship\fp616\tools\pilot\out\fp682c\FP682c_scores.json 4b2e0c669128574a
+2026-09-12 13:32:41 FP682c CHAIN DONE
