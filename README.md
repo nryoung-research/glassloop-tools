@@ -32,7 +32,11 @@ this is the door.
 - **What the kit establishes and what it does not** is stated in
   [`audit-kit/README.md`](audit-kit/README.md) under "What the checks do and do not establish".
   The kit never runs a model; provenance rests on receipts that carry weights hashes, software
-  stack fields and timestamps, cross-checked against each other. The kit's tables are the 3B
+  stack fields and timestamps, cross-checked against each other. (The same pattern, stored
+  certificates re-checked by a portable script plus a hashed manifest binding the heavy
+  inputs, with the line between "computer-assisted" and "formalized" stated, appears
+  independently in the September 2026 deletion-channel capacity certificate at
+  github.com/anadim/binary-deletion-channel-capacity; no priority is claimed either way.) The kit's tables are the 3B
   results; the 7B, 14B and Llama-8B ladders are recorded in the program's channel and enter the
   kit in its next version.
 - **The paper's own verification code and pre-registration record** (FP-471 to FP-516, seals,
