@@ -12,6 +12,10 @@ point. This is the map. Every paper's DOI, live-verified, is in **[CORPUS.md](CO
 tools packaged from the change arc, and three live demonstration pages, are in this
 repository's [README](README.md).
 
+Ten of the papers (1, 8, 12, 14, 15, 17, 18, 19, 23, 25) carry September 2026 errata. The rows
+below are corrected where a summary depended on a withdrawn or weakened result; the full list is
+in the README's [Corrections (2026-09-28)](README.md#corrections-2026-09-28).
+
 ---
 
 ## Where to start, depending on why you are here
@@ -26,7 +30,8 @@ measured natively in a real transformer's MLP), then **11** (why the scaling is 
 
 **"I care about what interpretability instruments miss."** → **15** (*Weighing and Reading the
 Dark Matter*), then **14** (what the Jacobian lens deletes and why), then **17** (why the missing
-part resisted every linear instrument — it is couplings, not directions).
+part resisted three of the four linear frames tested — it is couplings, not directions). All three
+carry September 2026 errata; read them with the size-matched control described there.
 
 **"I care about editing and control."** → **8** (*Model Surgery*), then **22** (*The Forced-Light
 Editor*), then **26** (*Trained in the Light* — what it costs to constrain a model's writes to be
@@ -75,15 +80,19 @@ Every decision a transformer makes is a thresholded selection, and its fragility
 
 ### III. The dark (papers 14–19)
 
-The program's centre of gravity: most of a model's mid-computation is invisible to standard
-readouts, and it is load-bearing.
+The program's centre of gravity: the part of a model's mid-computation that standard readouts do
+not see. (*Erratum, September 2026:* an earlier revision said most of that computation is
+invisible and that it is load-bearing. The energy and ablation-mass shares behind "most" are
+consistent with a rank effect: against a random subspace of the same rank, the readable frame is
+the part that is load-bearing beyond its size, and the unread complement is not denser than a
+random one. Papers 14, 15, 17, 18 and 19 carry the corresponding errata.)
 
 | | | |
 |---|---|---|
 | **14** | *What the Lens Deletes* | The averaging that makes a Jacobian lens work is exactly what makes it blind. |
-| **15** | *Weighing and Reading the Dark Matter* | What linear readouts structurally discard — and it is the majority of mid-layer computation. |
+| **15** | *Weighing and Reading the Dark Matter* | What linear readouts structurally discard. (*Erratum, Sept. 2026:* an earlier revision added "and it is the majority of mid-layer computation"; that share is the rank share. Against a random frame of the same rank the readable frame is load-bearing beyond its size, and the discarded halo reads and carries no more than a random complement.) |
 | **16** | *Reading What a Model Is Doing* | The complementary question: the *contents* may be dark, but the **operation** is legible. |
-| **17** | *The Coupling Code* | Why the dark centre resisted every linear instrument — it acts through nonlinear couplings, not directions. |
+| **17** | *The Coupling Code* | Why the dark centre resisted three of the four linear frames tested — it acts through nonlinear couplings, not directions. (*Erratum, Sept. 2026:* not "every linear instrument"; the deep-anatomical consumer frame sits above the random floor, 0.401 against 0.314.) |
 | **18** | *The Dark Atlas* | Mapping it. |
 | **19** | *The Work Meter* | Pricing the work the dark computation performs. |
 
@@ -94,9 +103,9 @@ readouts, and it is load-bearing.
 | **24** | *The Capacity Knee* | Three priceable quantities in the residual stream: stored knowledge, ongoing computation, and **working state**. This paper prices the third. |
 | **21** | *The Self-Knowledge Map* | Does a model know whether its own answer is correct? Measured as a map, not a number — eight models, four families, 0.5B–12B. |
 | **22** | *The Forced-Light Editor* | Reading and writing the dark state from outside. |
-| **23** | *The Implanted Thought* | Putting an unspoken intermediate conclusion into a model and watching it act. |
+| **23** | *The Implanted Thought* | Putting an unspoken intermediate conclusion into a model and watching it act. (*Errata, Sept. 2026:* gates G1 and G2 are retracted. Random controls of the same size do the same damage and redirect the same items, so what moves the chain is the size of the component replaced, not the readout-invisible frame.) |
 | **20** | *The Interaction Reader* | **A kill record.** Published because the program banks negative results at the weight of positive ones. |
-| **25** | *The Doors of the Two-Hop* | Reconciles an apparent collision with Gurnee et al. (2026) on whether content outside the verbalizable workspace re-enters behaviour. |
+| **25** | *The Doors of the Two-Hop* | Two doors, a family-compiled write threshold and a write-gain law on the paper's own frame; consistent with Gurnee et al. (2026) on whether content outside the verbalizable workspace re-enters behaviour, pending a J-space-matched control. (*Erratum, Sept. 2026:* an earlier revision said it reconciles an apparent collision; the collision premise inherited Paper 18's withdrawn contrast.) |
 
 ### V. The synthesis (papers 26–28)
 

@@ -90,9 +90,12 @@ Sibling repo: **weight-genealogy** — weight-space lineage detection
   fixed-panel measurements systematically under-report damage.
 - **Cite the numbers, not the vibes.** Every claim these tools support
   should be quoted with its measured value, its population, and its
-  instrument settings (loader, seeds, split hash). If a statement about a
-  model can't be traced to a logged number from a selftested meter, it is
-  not supported by this repo.
+  instrument settings (loader, seeds, split hash, and the device and
+  software stack the model was trained and read on: Paper 12's September
+  2026 erratum measured a 3.6–4.0× change in edit cost from the training
+  device alone, at matched seed, data order and endpoint loss). If a
+  statement about a model can't be traced to a logged number from a
+  selftested meter, it is not supported by this repo.
 
 ## Verify before trust
 
@@ -129,6 +132,25 @@ Every result is pre-registered and sealed before the run; negative results are b
 same weight as positive ones. Author: Nathan Ryan Young, ORCID
 [0009-0003-2840-7726](https://orcid.org/0009-0003-2840-7726).
 
+## Corrections (2026-09-28)
+
+Ten papers of the state arc carry September 2026 errata sections. As of 2026-09-28 the Zenodo
+versions that carry them are not yet live; the links below are concept DOIs, which resolve to
+each paper's newest version. None of the tools, the audit kit or the demo pages rests on a
+corrected result; [PAPERS.md](PAPERS.md) is corrected where a summary did. Most of these errata
+apply one standard: a claim that the complement of a readable frame (the "dark" part, the
+"halo") carries energy, load or decodable content is scored against a random subspace of the
+same rank, with the rank printed.
+
+- **Paper 1**, [*The Rectified Frame Potential*](https://doi.org/10.5281/zenodo.21126359): A(9,3) ≤ 5 by an explicit construction (the annealing value 6 is withdrawn); the harmonic-sign corollaries are classical in their integer-power content and now attributed; the two-point bound at m = 7, d = 3 saturates at 0.5783, so the remark that a higher degree improves it is withdrawn (a three-point certificate gives 0.7001); the pentagon is not a universal building block.
+- **Paper 8**, [*Model Surgery*](https://doi.org/10.5281/zenodo.21214477): "healed to below healthy" was a training-budget confound. Against the equally trained sham the lesion healed to within 0.010 nats; nothing healed past health.
+- **Paper 12**, [*The Price of Dust*](https://doi.org/10.5281/zenodo.21234072): predicting the loss change of a given edit from Taylor terms is prior art (Molchanov et al., 2019); the output-head fit of 1.0000 follows from Taylor's theorem and checks the machinery, not the certificate's predictive value. The cross-device edit-cost gap, previously n = 1, replicated in three seeds (3.6–4.0×): device ≫ software stack ≫ seed.
+- **Paper 14**, [*What the Lens Deletes*](https://doi.org/10.5281/zenodo.21274591); **Paper 18**, [*The Dark Atlas*](https://doi.org/10.5281/zenodo.21349363); **Paper 19**, [*The Work Meter*](https://doi.org/10.5281/zenodo.21367316): the size-matched control is owed, and the affected comparisons are read as rank effects until it exists. The Qwen readable frame is one direction in 3,584, so Qwen "dark" rows describe the residual stream. Paper 18's contrast with the Anthropic workspace result is withdrawn pending a J-space-matched control; Paper 19's autograft is a diagnosis that needs the gold answer, not a usable repair.
+- **Paper 15**, [*Weighing and Reading the Dark Matter*](https://doi.org/10.5281/zenodo.21274615): the control, run (pythia-410m; readable rank 209–437 of 1,024). The "dark" energy share is the rank share; the readable frame is load-bearing (0.333 against 0.252 ± 0.021 nats) and readable (+0.07) beyond a random frame of its rank; the halo is not denser than a random complement and reads the copied token no better (0.831 against 0.887). "Darkness is a property of the instrument, not the information" is withdrawn.
+- **Paper 17**, [*The Coupling Code*](https://doi.org/10.5281/zenodo.21349350): below a matched random subspace in three of the four linear frames tested, not every one; the deep-anatomical consumer frame sits above the floor (0.401 against 0.314).
+- **Paper 23**, [*The Implanted Thought*](https://doi.org/10.5281/zenodo.21367358): gates G1 and G2 are retracted. A random scramble of the same size does the same damage as the dark scramble (Qwen retention 0.656 against 0.625; Mistral 0.909 against 0.909); swapping ~3,300 dimensions from another item, dark or random, moves the chain to the donor in the same 22 of 32 items, and 256-dimensional swaps, readout frame or random, change nothing. The variable is the size of the component, not the frame. The CONFESS/UNFAITHFUL count is built in under greedy decoding, the "~90% dark" rider is withdrawn, and concept injection with self-report (Lindsey, 2026) is prior art.
+- **Paper 25**, [*The Doors of the Two-Hop*](https://doi.org/10.5281/zenodo.21881892): the "collision" with Gurnee et al. (2026) inherited Paper 18's withdrawn contrast; the reconciliation is scoped to "consistent with it, pending the matched control". The two doors, the family-compiled selectivity and the write-gain law on the paper's own frame stand.
+- **Research ledger (not a paper):** the reading of FP-382b as "identifiability is a phase" is retracted. Random Gaussian dictionaries show the same step at the same widths (Wendel's theorem on the atom count). Paper 27 does not assert it and is unchanged.
 
 ## License and author
 
