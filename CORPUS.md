@@ -53,10 +53,11 @@ otherwise the latest version record.
 | 00b | Reading the Change — A Primer | *(in preparation)* | — |
 | 34 | Contract-Monotone Continual Learning | *(in draft)* | — |
 
-Titles are the deposited record titles and are kept as deposited. Papers 1, 8, 12, 14, 15, 17, 18,
-19, 23 and 25 carry September 2026 errata that scope or withdraw some claims their titles and
-abstracts make; see the README's [Corrections (2026-09-28)](README.md#corrections-2026-09-28).
-Until the Zenodo versions carrying those errata are live, the records above show the earlier text.
+Titles are the deposited record titles and are kept as deposited. Papers 1, 5, 6, 7, 8, 9, 10, 11,
+12, 14, 15, 17, 18, 19, 23 and 25 carry September 2026 errata that scope or withdraw some claims
+their titles and abstracts make; see the README's [Corrections (2026-09-28)](README.md#corrections-2026-09-28).
+The corrected versions are being deposited; until they are live, the records above show the
+earlier text.
 
 ---
 

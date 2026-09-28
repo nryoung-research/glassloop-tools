@@ -45,8 +45,13 @@ unseen problems. skillbench contains everything needed:
    open (our 3B: 0.675; 14B: 0.975).
 4. `python gen_lessons.py` then train the lesson corpus into the model
    (any LoRA/finetune stack; we used rank-64 attention+MLP over all
-   layers — MLP-only writes carry facts but not skills, which is
-   itself a replicable finding).
+   layers). An MLP-only write can install a skill too: in the audit
+   kit's FP-678 run a projected write to the MLP weights of layers
+   28–35 of Qwen2.5-3B installed the invented "vex" skill at 60/60
+   ([`audit-kit/README.md`](audit-kit/README.md), Result 1; writer
+   `audit-kit/evidence/scorers/fp667_family_writer.py`). An earlier
+   revision of this page said MLP-only writes carry facts but not
+   skills.
 5. Re-run the holdout. Our result: 0.000 -> 1.000 at 3B.
 6. The control that makes it real: `python gen_deranged.py` and train
    a second model on the scrambled corpus (same dose, wrong mapping) —

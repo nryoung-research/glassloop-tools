@@ -9,7 +9,10 @@ templates in `demo-pages/` and the repair-round edit certificates in
 
 Verify it yourself — all of this works from THIS DIRECTORY alone:
 1. `sha256sum loop-watch-it-grow.html` ->
-   `8dc3332018ea99dec7481ffb0f4966978090e9a1fa47c2d0f6812af353dc0f21`
+   `8dc3332018ea99dec7489eb8a5fffe3b30e36549e3b681c3bd7d997edb0d86ec`
+   (corrected 2026-09-28: the page has not changed since rev 3, commit 2e2d51d; the value first
+   written here, `8dc3332018ea99dec7481ffb…353dc0f21`, was mistyped after its first 20 hex digits
+   and never matched the committed or served page.)
 2. Regenerate: `python gen_demo_page.py demo_v3_state.json demo_manifest.json out.html`
    -> byte-identical to the published page.
 3. Quote gate: `python demo_page_check.py loop-watch-it-grow.html demo_v3_state.json`
