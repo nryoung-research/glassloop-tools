@@ -26,8 +26,8 @@ arc. Both are written as entry points rather than results (both are in preparati
 deposit; see [CORPUS.md](CORPUS.md) for what carries a DOI today).
 
 **"I care about superposition and interference."** → **2** (the law), then **7** (the same law
-measured natively in a real transformer's MLP), then **11** (where the d² comes from: one shared
-write direction whose measured norm grows with width). Papers 7 and 11 carry September 2026 errata.
+measured natively in a real transformer's MLP), then **11** (where the d² comes from: a low-rank
+update whose measured norm grows with width). Papers 7 and 11 carry September 2026 errata.
 
 **"I care about what interpretability instruments miss."** → **15** (*Weighing and Reading the
 Dark Matter*), then **14** (what the Jacobian lens deletes and why), then **17** (why the missing
@@ -63,25 +63,26 @@ How features interfere when a model packs more of them than it has dimensions.
 | **3** | *Designed Feature Codes* | What you gain by *designing* a sparse dictionary instead of learning or randomizing one — Walsh–Hadamard cosets with exact algebraic decodability. |
 | **4** | *Sign Not Magnitude and the Resummed Law* | Why the sign structure of the Gram matrix, not its magnitudes, governs the loss. |
 | **5** | *Interference Modes in Real Language Models* | Takes the law out of designed worlds and into real models. (*Erratum, Sept. 2026:* the r ≥ 0.99 shape gate does not discriminate, and copying an older slice's measured curve predicts the virgin curve as well or better; the reading of the modes as input physics is withdrawn pending a random-mode null.) |
-| **6** | *Scale, Depth and Downstream* | An eight-regime summary with sixty-four interference modes. (*Erratum, Sept. 2026:* an earlier revision called it blind-predictive across regimes; its shape correlations carry no evidential weight, and its median errors have not yet been scored against Paper 5's copied-curve null.) |
-| **7** | *The Native MLP Interference Law* | Superposition's cost structure, measured in a real transformer's own MLP rather than in an SAE. (*Erratum, Sept. 2026:* the r ≥ 0.99 shape gate does not discriminate; the grades rest on the median relative error.) |
-| **11** | *Why d-squared, Derived and Controlled* | Explains the empirical scaling: the trained meter reads one shared write direction, and the d² follows from that direction's measured norm growth. (*Erratum, Sept. 2026:* an earlier revision said it derives the scaling rather than fitting it; the norm growth is measured, not derived, and the blind width predictions do no better than interpolating between measured neighbours.) |
+| **6** | *Scale, Depth and Downstream* | An eight-regime summary with sixty-four interference modes. (*Erratum, Sept. 2026:* an earlier revision called it blind-predictive across regimes; its shape correlations are not counted as evidence (no null was evaluated at 0.9999), and its median errors have not yet been scored against Paper 5's copied-curve null.) |
+| **7** | *The Native MLP Interference Law* | Superposition's cost structure, measured in a real transformer's own MLP rather than in an SAE. (*Erratum, Sept. 2026:* the r ≥ 0.99 shape gate does not discriminate, so shape passes are not counted as evidence; the registered count is 17 of 18 layers (GPT-2 layer 9 is a shape-gate miss), and 18 of 18 holds only on a retrospective error-only reading.) |
+| **11** | *Why d-squared, Derived and Controlled* | Explains the empirical scaling: the d² follows approximately from a low-rank update whose norm grows with width. (*Erratum, Sept. 2026:* an earlier revision said it derives the scaling rather than fitting it; the norm growth is measured, not derived, the blind width predictions establish no incremental value over a log-log line through measured neighbours, and the lever shows that repeated drift suppression during training keeps the meter low, not that one shared direction carries it.) |
 
 ### II. The ruler (papers 8–10, 12)
 
 Every decision a transformer makes is a thresholded selection, and its margin to the next
 option can be read *in advance*. (*Erratum, September 2026:* an earlier revision said its
 fragility is calculable in advance. Under the Gaussian input noise used to measure flips, the
-margin budget is the exact flip probability of any linear selector, so its agreement with those
-flips holds by construction and is not evidence about the models. The model evidence is in the
+margin budget's pair terms are exact reversal probabilities, but the budget itself is an approximation,
+so its agreement with those flips calibrates the approximation on the models' measured geometry rather
+than testing a router mechanism. The model evidence is in the
 rounding and systematic-perturbation tests; a full-stack INT8 test found the budget over-prices
 flips by about 2×.)
 
 | | | |
 |---|---|---|
-| **9** | *The Router is a Ruler* | MoE routing is fragile exactly when the k-th and (k+1)-th scores are close. (*Erratum, Sept. 2026:* an earlier revision added "and that is predictable"; the budget's agreement with noise-measured flips is an identity, and the concentration ratios above 10⁷ are set by a division guard.) |
-| **10** | *One Ruler for Every Selector* | The same ruler reads the margins of MoE routers, the vocabulary head, and nearest-neighbour retrieval. One instrument, three organs. (*Erratum, Sept. 2026:* its transfers under Gaussian noise, and the per-step half of the trajectory cascade, hold by construction; the model evidence is in the rounding, own-layer, key-drop and failure-ranking experiments.) |
-| **8** | *Model Surgery* | A complete loop: diagnose localized weight damage read-only, treat it, and calculate the treatment beforehand. |
+| **9** | *The Router is a Ruler* | MoE routing is fragile exactly when the k-th and (k+1)-th scores are close. (*Erratum, Sept. 2026:* an earlier revision added "and that is predictable"; the budget's agreement with noise-measured flips calibrates an approximation, not a router mechanism, and the concentration ratios above 10⁷ are set by a division guard.) |
+| **10** | *One Ruler for Every Selector* | The same ruler reads the margins of MoE routers, the vocabulary head, and nearest-neighbour retrieval. One instrument, three organs. (*Erratum, Sept. 2026:* its transfers under Gaussian noise calibrate the approximation, the cascade product approximates exact survival with no guaranteed tightening, and front-loading is withdrawn as a finding; the model evidence is in the rounding, own-layer, key-drop and failure-ranking experiments.) |
+| **8** | *Model Surgery* | A complete loop: diagnose localized weight damage read-only, treat it, and calculate the treatment beforehand. (*Erratum, Sept. 2026:* "healed below healthy" and the 84% early-block closure are withdrawn; against a tied, equally trained sham the gap narrows 56% between 500- and 2,000-step schedules and a 0.116-nat residual remains.) |
 | **12** | *The Price of Dust* | The tied embedding/readout matrix — the most legible organ a model has — and the training "wake" left in it. |
 
 ### III. The dark (papers 14–19)
@@ -98,7 +99,7 @@ carry the corresponding errata.)
 | | | |
 |---|---|---|
 | **14** | *What the Lens Deletes* | The averaging that makes a Jacobian lens work is exactly what makes it blind. |
-| **15** | *Weighing and Reading the Dark Matter* | What linear readouts structurally discard. (*Erratum, Sept. 2026:* an earlier revision added "and it is the majority of mid-layer computation"; that share mostly reflects the complement's size. Against a random frame of the same rank the readable frame is load-bearing beyond its size, and a random complement of the same rank reads the copied token better than the discarded halo; the halo-versus-random density comparison is withdrawn.) |
+| **15** | *Weighing and Reading the Dark Matter* | What linear readouts structurally discard. (*Erratum, Sept. 2026:* an earlier revision added "and it is the majority of mid-layer computation"; that share mostly reflects the complement's size. Against a random frame of the same rank the readable frame is load-bearing beyond its size, and a random complement of the same rank reads the copied token better than the discarded halo; the halo-versus-random density comparison is withdrawn (at a common calibration budget no difference is detected, which is not equivalence).) |
 | **16** | *Reading What a Model Is Doing* | The complementary question: the *contents* may be dark, but the **operation** is legible. |
 | **17** | *The Coupling Code* | Why the dark centre resisted three of the four linear frames tested, and the case that it acts through nonlinear couplings rather than directions. (*Erratum, Sept. 2026:* an earlier revision said "every linear instrument"; the deep-anatomical consumer frame sits above the random floor, 0.401 against 0.314, and nonlinear action is consistent with the measurements but not implied by them.) |
 | **18** | *The Dark Atlas* | Mapping it. |
