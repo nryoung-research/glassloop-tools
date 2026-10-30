@@ -135,9 +135,9 @@ same weight as positive ones. Author: Nathan Ryan Young, ORCID
 
 ## Corrections (2026-09-28)
 
-Sixteen papers of the state arc carry September 2026 errata sections. The corrected versions are
-being deposited on Zenodo; until they are live, the links below (concept DOIs, which resolve to
-each paper's newest version) show the earlier text. None of the tools, the audit kit or the demo
+Sixteen papers of the state arc carry September 2026 errata sections. The corrected versions were
+published on Zenodo on 2026-10-01 as version "v2026-09 (errata)"; the links below are concept DOIs,
+which resolve to each paper's newest version. None of the tools, the audit kit or the demo
 pages rests on a corrected result; [PAPERS.md](PAPERS.md) is corrected where a summary did. Seven
 of these errata (Papers 14, 15, 17, 18, 19, 23, 25) apply one standard: a claim that the
 complement of a readable frame (the "dark" part, the "halo") carries energy, load or decodable
